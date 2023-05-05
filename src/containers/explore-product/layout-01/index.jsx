@@ -4,7 +4,7 @@ import { slideToggle } from "@utils/methods";
 import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useCallback, useEffect, useReducer, useRef } from "react";
+import { useReducer, useRef } from "react";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -51,44 +51,6 @@ const ExploreProductArea = ({ className, space, data }) => {
         dispatch({ type: "SET_PRODUCTS", payload: sortedProducts });
     };
 
-    const filterMethods = (item, filterKey, value) => {
-        if (value === "all") return false;
-        let itemKey = filterKey;
-        if (filterKey === "category") {
-            itemKey = "categories";
-        }
-        if (filterKey === "price") {
-            return (
-                item[itemKey].amount <= value[0] / 100 ||
-                item[itemKey].amount >= value[1] / 100
-            );
-        }
-        if (Array.isArray(item[itemKey])) {
-            return !item[itemKey].includes(value);
-        }
-        if (filterKey === "collection") {
-            return item[itemKey].name !== value;
-        }
-        return item[itemKey] !== value;
-    };
-
-    const itemFilterHandler = useCallback(() => {
-        let filteredItems = [];
-
-        filteredItems = itemsToFilter.filter((item) => {
-            // eslint-disable-next-line no-restricted-syntax
-            for (const key in state.inputs) {
-                if (filterMethods(item, key, state.inputs[key])) return false;
-            }
-            return true;
-        });
-        dispatch({ type: "SET_PRODUCTS", payload: filteredItems });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [state.inputs]);
-
-    useEffect(() => {
-        itemFilterHandler();
-    }, [itemFilterHandler]);
     return (
         <div
             className={clsx(

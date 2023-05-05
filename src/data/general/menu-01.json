@@ -11,12 +11,12 @@
     },
     {
         "id": 3,
-        "text": "Projects",
+        "text": "Communities",
         "path": "/product"
     },
     {
-        "id": 3,
-        "text": "Communities",
-        "path": "/product"
+        "id": 4,
+        "text": "Projects",
+        "path": "/collection"
     }
 ]
