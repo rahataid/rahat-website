@@ -1,9 +1,9 @@
-import SEO from "@components/seo";
-import Wrapper from "@layout/wrapper";
-import Header from "@layout/header/header-01";
-import Footer from "@layout/footer/footer-01";
 import Breadcrumb from "@components/breadcrumb";
+import SEO from "@components/seo";
 import ProductArea from "@containers/explore-product/layout-01";
+import Footer from "@layout/footer/footer-01";
+import Header from "@layout/header/header-01";
+import Wrapper from "@layout/wrapper";
 
 // Demo Data
 import productData from "../data/products.json";
@@ -17,7 +17,7 @@ const Product = () => (
         <SEO pageTitle="Product" />
         <Header />
         <main id="main-content">
-            <Breadcrumb pageTitle="Our Product" currentPage="Our Product" />
+            <Breadcrumb pageTitle="Donate" currentPage="Donate" />
             <ProductArea data={{ products: productData }} />
         </main>
         <Footer />

@@ -7,11 +7,16 @@
     {
         "id": 2,
         "text": "About",
-        "path": "/about"
+        "path": "/ranking"
     },
     {
         "id": 3,
-        "text": "Explore",
-        "path": "#!"
+        "text": "Projects",
+        "path": "/product"
+    },
+    {
+        "id": 3,
+        "text": "Communities",
+        "path": "/product"
     }
 ]

@@ -4,21 +4,17 @@ import { useMoralis } from "react-moralis";
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
-import SearchForm from "@components/search-form/layout-01";
-import FlyoutSearchForm from "@components/search-form/layout-02";
 import UserDropdown from "@components/user-dropdown";
 import ColorSwitcher from "@components/color-switcher";
 import BurgerButton from "@ui/burger-button";
-import Anchor from "@ui/anchor";
 import Button from "@ui/button";
-import { useOffcanvas, useSticky, useFlyoutSearch } from "@hooks";
+import { useOffcanvas, useSticky } from "@hooks";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
 
 const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
-    const { search, searchHandler } = useFlyoutSearch();
     const { authenticate, isAuthenticated } = useMoralis();
 
     return (
