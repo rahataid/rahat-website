@@ -1,12 +1,11 @@
-import PropTypes from "prop-types";
-import SEO from "@components/seo";
-import Wrapper from "@layout/wrapper";
-import Header from "@layout/header/header-01";
-import Footer from "@layout/footer/footer-01";
 import Breadcrumb from "@components/breadcrumb";
+import SEO from "@components/seo";
 import ProductDetailsArea from "@containers/product-details";
-import ProductArea from "@containers/product/layout-03";
+import Footer from "@layout/footer/footer-01";
+import Header from "@layout/header/header-01";
+import Wrapper from "@layout/wrapper";
 import { shuffleArray } from "@utils/methods";
+import PropTypes from "prop-types";
 
 // demo data
 import productData from "../../data/products.json";
@@ -21,18 +20,6 @@ const ProductDetails = ({ product, recentViewProducts, relatedProducts }) => (
                 currentPage="Product Details"
             />
             <ProductDetailsArea product={product} />
-            <ProductArea
-                data={{
-                    section_title: { title: "Recent View" },
-                    products: recentViewProducts,
-                }}
-            />
-            <ProductArea
-                data={{
-                    section_title: { title: "Related Item" },
-                    products: relatedProducts,
-                }}
-            />
         </main>
         <Footer />
     </Wrapper>

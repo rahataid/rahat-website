@@ -1,12 +1,10 @@
-import { useReducer, useRef, useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import SectionTitle from "@components/section-title/layout-02";
 import Product from "@components/product/layout-01";
-import ProductFilter from "@components/product-filter/layout-01";
-import FilterButton from "@ui/filter-button";
+import SectionTitle from "@components/section-title/layout-02";
 import { slideToggle } from "@utils/methods";
-import { SectionTitleType, ProductType } from "@utils/types";
+import { ProductType, SectionTitleType } from "@utils/types";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -95,7 +93,6 @@ const ExploreProductArea = ({ className, space, data }) => {
         <div
             className={clsx(
                 "rn-product-area",
-                space === 1 && "rn-section-gapTop",
                 className
             )}
         >
@@ -109,21 +106,7 @@ const ExploreProductArea = ({ className, space, data }) => {
                             />
                         )}
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-6 col-12 mt_mobile--15">
-                        <FilterButton
-                            open={state.filterToggle}
-                            onClick={filterHandler}
-                        />
-                    </div>
                 </div>
-
-                <ProductFilter
-                    ref={filterRef}
-                    slectHandler={slectHandler}
-                    sortHandler={sortHandler}
-                    priceHandler={priceHandler}
-                    inputs={state.inputs}
-                />
                 <div className="row g-5">
                     {state.products.length > 0 ? (
                         <>
@@ -134,16 +117,9 @@ const ExploreProductArea = ({ className, space, data }) => {
                                 >
                                     <Product
                                         overlay
-                                        placeBid={!!data.placeBid}
                                         title={prod.title}
                                         slug={prod.slug}
-                                        latestBid={prod.latestBid}
-                                        price={prod.price}
-                                        likeCount={prod.likeCount}
-                                        auction_date={prod.auction_date}
                                         image={prod.images?.[0]}
-                                        authors={prod.authors}
-                                        bitCount={prod.bitCount}
                                     />
                                 </div>
                             ))}
