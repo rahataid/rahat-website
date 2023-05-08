@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
 import Product from "@components/product/layout-01";
 import { ProductType } from "@utils/types";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const ProductArea = ({ space, className, data }) => (
     <div

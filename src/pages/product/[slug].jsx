@@ -1,6 +1,7 @@
 import Breadcrumb from "@components/breadcrumb";
 import SEO from "@components/seo";
 import ProductDetailsArea from "@containers/product-details";
+import ProductArea from "@containers/product/layout-03";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
@@ -12,14 +13,20 @@ import productData from "../../data/products.json";
 
 const ProductDetails = ({ product, recentViewProducts, relatedProducts }) => (
     <Wrapper>
-        <SEO pageTitle="Product Details" />
+        <SEO pageTitle="Community Details" />
         <Header />
         <main id="main-content">
             <Breadcrumb
-                pageTitle="Product Details"
-                currentPage="Product Details"
+                pageTitle="Community Details"
+                currentPage="Community Details"
             />
             <ProductDetailsArea product={product} />
+            <ProductArea
+                data={{
+                    section_title: { title: "Related Projects" },
+                    products: relatedProducts,
+                }}
+            />
         </main>
         <Footer />
     </Wrapper>
