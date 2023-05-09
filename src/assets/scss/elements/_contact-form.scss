@@ -3,7 +3,6 @@
     padding: 40px 35px;
     border-radius: 6px;
     background: var(--background-color-1);
-    height: 100%;
     border: 1px solid var(--color-border);
 
     .input-box {
@@ -125,6 +124,7 @@ button {
         border: 1px solid var(--color-border);
         display: flex;
         align-items: center;
+
         &:hover {
             background: var(--color-primary-alta);
         }
@@ -139,6 +139,7 @@ button {
             margin-right: 7px;
         }
     }
+
     .small-image {
         max-width: 30px;
         margin-right: 10px;
@@ -186,6 +187,7 @@ button {
             color: var(--color-primary);
             margin-bottom: 10px;
         }
+
         p {
             font-size: 14px;
             font-weight: 300;
@@ -216,6 +218,7 @@ button {
         position: relative;
         border: 2px dashed #575767;
         border-radius: 5px;
+
         input {
             position: absolute;
             height: 100%;
@@ -223,6 +226,7 @@ button {
             opacity: 0;
             cursor: pointer;
         }
+
         img {
             position: absolute;
             height: 100%;
@@ -232,11 +236,13 @@ button {
             border-radius: 5px;
             object-fit: cover;
         }
+
         label {
             position: relative;
             z-index: 10;
             transition: var(--transition);
         }
+
         &:hover {
             label {
                 transform: scale(0.8);
@@ -253,12 +259,15 @@ button {
     background: var(--background-color-1);
     padding: 25px;
     border-radius: 5px;
+
     .title {
         text-align: center;
     }
+
     .form-label {
         margin-bottom: 15px;
     }
+
     .form-control {
         background: var(--background-color-2) !important;
         height: 42px !important;
@@ -267,27 +276,34 @@ button {
         font-size: 18px;
         padding: 0 10px;
         border: 2px solid transparent !important;
+
         &:focus {
             border: 2px solid var(--color-primary) !important;
             box-shadow: none;
         }
     }
+
     .rn-check-box {
         margin-bottom: 30px;
+
         .rn-check-box-input {
             margin-bottom: 10px;
         }
+
         label {
             color: var(--color-body);
+
             a {
                 color: var(--color-primary);
                 transition: var(--transition);
+
                 &:hover {
                     text-decoration: underline;
                 }
             }
         }
     }
+
     a {
         &.btn {
             display: flex;
@@ -295,6 +311,7 @@ button {
             align-items: center;
         }
     }
+
     .notice {
         p {
             font-size: 14px;
