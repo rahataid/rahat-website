@@ -1,5 +1,5 @@
-import Countdown, { zeroPad } from "react-countdown";
 import PropTypes from "prop-types";
+import Countdown, { zeroPad } from "react-countdown";
 
 const CountdownTimer = ({ date }) => {
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -8,15 +8,15 @@ const CountdownTimer = ({ date }) => {
             <div className="countdown">
                 <div className="countdown-container days">
                     <span className="countdown-value">{days}</span>
-                    <span className="countdown-heading">D&apos;s</span>
+                    <span className="countdown-heading">D</span>
                 </div>
                 <div className="countdown-container hours">
                     <span className="countdown-value">{zeroPad(hours)}</span>
-                    <span className="countdown-heading">H&apos;s</span>
+                    <span className="countdown-heading">H</span>
                 </div>
                 <div className="countdown-container minutes">
                     <span className="countdown-value">{zeroPad(minutes)}</span>
-                    <span className="countdown-heading">Min&apos;s</span>
+                    <span className="countdown-heading">Min</span>
                 </div>
                 <div className="countdown-container seconds">
                     <span className="countdown-value">{zeroPad(seconds)}</span>
