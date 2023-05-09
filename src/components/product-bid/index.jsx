@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 
-const ProductBid = ({ published_at }) => (
+const ProductBid = ({ price, published_at }) => (
     <div className="bid-react-area">
-
+        <div className="last-bid">
+            {price.amount}
+            {price.currency}
+        </div>
         <div className="react-area">
             <span className="number">{published_at}</span>
         </div>

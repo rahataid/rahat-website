@@ -80,6 +80,7 @@ const ExploreProductArea = ({ className, space, data }) => {
                                     <Product
                                         overlay
                                         title={prod.title}
+                                        price={prod.price}
                                         slug={prod.slug}
                                         image={prod.images?.[0]}
                                     />
