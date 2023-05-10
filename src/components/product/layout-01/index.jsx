@@ -1,17 +1,27 @@
+import PlaceBidModal from "@components/modals/placebid-modal";
+import ProductBid from "@components/product-bid";
 import Anchor from "@ui/anchor";
-import Button from "@ui/button";
+import CountdownTimer from "@ui/countdown/layout-01";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const Product = ({
     overlay,
     title,
     slug,
+    price,
+    published_at,
+    auction_date,
     image,
     placeBid,
 }) => {
+    const [showBidModal, setShowBidModal] = useState(false);
+    const handleBidModal = () => {
+        setShowBidModal((prev) => !prev);
+    };
     return (
         <>
             <div
@@ -32,14 +42,15 @@ const Product = ({
                             />
                         </Anchor>
                     )}
+                    {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
                 <Anchor path={`/product/${slug}`}>
                     <span className="product-name">{title}</span>
                 </Anchor>
-                <Button size="small" className="mt-4">
-                    Donate
-                </Button>
+                <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
+                <ProductBid price={price} published_at={published_at} />
             </div>
+            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
     );
 };

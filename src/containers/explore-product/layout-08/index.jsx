@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import SectionTitle from "@components/section-title/layout-02";
 import Product from "@components/product/layout-01";
+import SectionTitle from "@components/section-title/layout-02";
 import Button from "@ui/button";
-import { SectionTitleType, ProductType } from "@utils/types";
+import { ProductType, SectionTitleType } from "@utils/types";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
 
 const ExploreProductArea = ({ className, space, data }) => {
     const [products, setProducts] = useState([]);
@@ -53,7 +53,7 @@ const ExploreProductArea = ({ className, space, data }) => {
                                     slug={prod.slug}
                                     latestBid={prod.latestBid}
                                     price={prod.price}
-                                    likeCount={prod.likeCount}
+                                    published_at={prod.published_at}
                                     auction_date={prod.auction_date}
                                     image={prod.images?.[0]}
                                     authors={prod.authors}

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
 import Image from "next/image";
+import { useState } from "react";
 
 const EditProfileImage = () => {
     const [selectedImage, setSelectedImage] = useState({
@@ -18,10 +18,10 @@ const EditProfileImage = () => {
 
     return (
         <div className="nuron-information">
-            <div className="profile-change row g-5">
+            <div className="profile-change">
                 <div className="profile-left col-lg-4">
                     <div className="profile-image mb--30">
-                        <h6 className="title">Change Your Profile Picture</h6>
+                        <h6 className="title">Donor Information</h6>
                         <div className="img-wrap">
                             {selectedImage?.profile ? (
                                 <img
@@ -40,6 +40,10 @@ const EditProfileImage = () => {
                                 />
                             )}
                         </div>
+                        <h6 className="title">PepsiCo</h6>
+                        <span className="latest-bid">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas
+                        </span>
                     </div>
                     <div className="button-area">
                         <div className="brows-file-wrapper">
@@ -51,46 +55,50 @@ const EditProfileImage = () => {
                             />
                             <label htmlFor="fatima" title="No File Choosen">
                                 <span className="text-center color-white">
-                                    Upload Profile
+                                    More Info
                                 </span>
                             </label>
                         </div>
                     </div>
                 </div>
 
-                <div className="profile-left right col-lg-8">
+                <div className="profile-left col-lg-4">
                     <div className="profile-image mb--30">
-                        <h6 className="title">Change Your Cover Photo</h6>
+                        <h6 className="title">Beneficiary Information</h6>
                         <div className="img-wrap">
-                            {selectedImage?.cover ? (
+                            {selectedImage?.profile ? (
                                 <img
                                     src={URL.createObjectURL(
-                                        selectedImage.cover
+                                        selectedImage.profile
                                     )}
                                     alt=""
                                     data-black-overlay="6"
                                 />
                             ) : (
                                 <Image
-                                    id="rbtinput2"
-                                    src="/images/profile/cover-01.jpg"
+                                    id="rbtinput1"
+                                    src="/images/profile/profile-01.jpg"
                                     alt="Profile-NFT"
                                     layout="fill"
                                 />
                             )}
                         </div>
+                        <h6 className="title">Oxfam</h6>
+                        <span className="latest-bid">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas
+                        </span>
                     </div>
                     <div className="button-area">
                         <div className="brows-file-wrapper">
                             <input
-                                name="cover"
-                                id="nipa"
+                                name="profile"
+                                id="fatima"
                                 type="file"
                                 onChange={imageChange}
                             />
-                            <label htmlFor="nipa" title="No File Choosen">
+                            <label htmlFor="fatima" title="No File Choosen">
                                 <span className="text-center color-white">
-                                    Upload Cover
+                                    More Info
                                 </span>
                             </label>
                         </div>
