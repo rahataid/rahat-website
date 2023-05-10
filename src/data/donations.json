@@ -16,13 +16,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/red-cross.png"
+                "src": "/images/portfolio/red-cross.jpeg"
             },
             {
-                "src": "/images/portfolio/red-cross.png"
+                "src": "/images/portfolio/red-cross.jpeg"
             },
             {
-                "src": "/images/portfolio/red-cross.png"
+                "src": "/images/portfolio/red-cross.jpeg"
             }
         ],
         "auction_date": "2022-10-08",
@@ -307,13 +307,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/oxfam.png"
+                "src": "/images/portfolio/oxfam.jpeg"
             },
             {
-                "src": "/images/portfolio/oxfam.png"
+                "src": "/images/portfolio/oxfam.jpeg"
             },
             {
-                "src": "/images/portfolio/oxfam.png"
+                "src": "/images/portfolio/oxfam.jpeg"
             }
         ],
         "auction_date": "2023-11-08",
