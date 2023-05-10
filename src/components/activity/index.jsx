@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
 import Image from "next/image";
-import Anchor from "@ui/anchor";
+import PropTypes from "prop-types";
 
 const Activity = ({
     className,
@@ -14,48 +13,81 @@ const Activity = ({
     image,
     status,
 }) => (
-    <div className={clsx("single-activity-wrapper", className)}>
-        <div className="inner">
-            <div className="read-content">
-                {image?.src && (
+    <>
+        <div className={clsx("single-activity-wrapper", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
+            <div className="inner">
+                <div className="read-content">
                     <div className="thumbnail">
-                        <Anchor path={path}>
-                            <Image
-                                src={image.src}
-                                alt={image?.alt || "Nft_Profile"}
-                                width={image?.width || 500}
-                                height={image?.height || 500}
-                            />
-                        </Anchor>
+                        <Image
+                            src="/images/profile/pepsico.png"
+                            alt={"Nft_Profile"}
+                            width={500}
+                            height={500}
+                        />
                     </div>
-                )}
-                <div className="content">
-                    <Anchor path={path}>
-                        <h6 className="title">{title}</h6>
-                    </Anchor>
-                    <p dangerouslySetInnerHTML={{ __html: desc }} />
-                    <div className="time-maintane">
-                        <div className="time data">
-                            <i className="feather-clock" />
-                            <span>
-                                {time} on {date}
-                            </span>
-                        </div>
-                        <div className="user-area data">
-                            <i className="feather-user" />
-                            <Anchor path={author.slug}>{author.name}</Anchor>
+                    <div className="content">
+                        <h6 className="title">Donation offered</h6>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda quasi quam vero temporibus deleniti iusto saepe veritatis qui porro ab deserunt illum in  </p>
+                        <div className="time-maintane">
+                            <div className="time data">
+                                <i className="feather-clock" />
+                                <span>
+                                    10-04-2023
+                                </span>
+                            </div>
+                            <div className="user-area data">
+                                <i className="feather-user" />
+                                <span>Pepsico</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="icone-area">
-                {status === "follow" && <i className="feather-thumbs-up" />}
-                {status === "sale" && <i className="feather-shopping-cart" />}
-                {status === "like" && <i className="feather-heart" />}
-                {status === "offer" && <i className="feather-user-plus" />}
+                <div className="icone-area">
+                    {status === "follow" && <i className="feather-thumbs-up" />}
+                    {status === "sale" && <i className="feather-shopping-cart" />}
+                    {status === "like" && <i className="feather-heart" />}
+                    {status === "offer" && <i className="feather-user-plus" />}
+                </div>
             </div>
         </div>
-    </div>
+        <div className={clsx("single-activity-wrapper", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
+            <div className="inner">
+                <div className="read-content">
+                    <div className="thumbnail">
+                        <Image
+                            src="/images/portfolio/oxfam.jpeg"
+                            alt={"Nft_Profile"}
+                            width={500}
+                            height={500}
+                        />
+                    </div>
+                    <div className="content">
+                        <h6 className="title">Pending Acceptance</h6>
+                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda quasi quam vero temporibus deleniti iusto saepe veritatis qui porro ab deserunt illum in  </p>
+                        <div className="time-maintane">
+                            <div className="time data">
+                                <i className="feather-clock" />
+                                <span>
+                                    10-04-2023
+                                </span>
+                            </div>
+                            <div className="user-area data">
+                                <i className="feather-user" />
+                                <span>Oxfam</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="icone-area">
+                    {status === "follow" && <i className="feather-thumbs-up" />}
+                    {status === "sale" && <i className="feather-shopping-cart" />}
+                    {status === "like" && <i className="feather-heart" />}
+                    {status === "offer" && <i className="feather-user-plus" />}
+                </div>
+            </div>
+        </div>
+    </>
+
 );
 
 Activity.propTypes = {
