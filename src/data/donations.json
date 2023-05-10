@@ -16,13 +16,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/lg/portfolio-01.jpg"
+                "src": "/images/portfolio/red-cross.png"
             },
             {
-                "src": "/images/portfolio/lg/portfolio-02.jpg"
+                "src": "/images/portfolio/red-cross.png"
             },
             {
-                "src": "/images/portfolio/lg/portfolio-03.jpg"
+                "src": "/images/portfolio/red-cross.png"
             }
         ],
         "auction_date": "2022-10-08",
@@ -307,13 +307,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/lg/1.jpg"
+                "src": "/images/portfolio/oxfam.png"
             },
             {
-                "src": "/images/portfolio/lg/2.jpg"
+                "src": "/images/portfolio/oxfam.png"
             },
             {
-                "src": "/images/portfolio/lg/3.jpg"
+                "src": "/images/portfolio/oxfam.png"
             }
         ],
         "auction_date": "2023-11-08",
@@ -584,7 +584,7 @@
     {
         "id": 3,
         "title": "Save The Children",
-        "slug": "orbid6",
+        "slug": "save-the-children",
         "published_at": "25-JAN-2022",
         "latestBid": "2/31",
         "price": {
@@ -597,13 +597,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/lg/2.jpg"
+                "src": "/images/portfolio/stc.jpeg"
             },
             {
-                "src": "/images/portfolio/lg/5.jpg"
+                "src": "/images/portfolio/stc.jpeg"
             },
             {
-                "src": "/images/portfolio/lg/6.jpg"
+                "src": "/images/portfolio/stc.jpeg"
             }
         ],
         "auction_date": "2022-11-08",
@@ -888,13 +888,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/lg/7.jpg"
+                "src": "/images/portfolio/unicef.png"
             },
             {
-                "src": "/images/portfolio/lg/8.jpg"
+                "src": "/images/portfolio/unicef.png"
             },
             {
-                "src": "/images/portfolio/lg/9.jpg"
+                "src": "/images/portfolio/unicef.png"
             }
         ],
         "auction_date": "2023-11-08",
@@ -1179,13 +1179,13 @@
         ],
         "images": [
             {
-                "src": "/images/portfolio/lg/8.jpg"
+                "src": "/images/portfolio/dwb.png"
             },
             {
-                "src": "/images/portfolio/lg/6.jpg"
+                "src": "/images/portfolio/dwb.png"
             },
             {
-                "src": "/images/portfolio/lg/2.jpg"
+                "src": "/images/portfolio/dwb.png"
             }
         ],
         "authors": [
