@@ -5,10 +5,10 @@
         "slug": "/jaleshwor",
         "total_item": 27,
         "image": {
-            "src": "/images/collection/collection-lg-01.jpg"
+            "src": "/images/portfolio/rahat.jpeg"
         },
         "profile_image": {
-            "src": "/images/client/client-15.png"
+            "src": "/images/portfolio/rahat.jpeg"
         }
     },
     {
@@ -17,10 +17,10 @@
         "slug": "/h20-wheels",
         "total_item": 20,
         "image": {
-            "src": "/images/collection/collection-lg-02.jpg"
+            "src": "/images/portfolio/h20.jpeg"
         },
         "profile_image": {
-            "src": "/images/client/client-12.png"
+            "src": "/images/portfolio/h20.jpeg"
         }
     }
 ]
