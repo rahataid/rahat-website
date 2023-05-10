@@ -10,17 +10,33 @@ import { normalizedData } from "@utils/methods";
 // Demo Data
 import homepageData from "../data/homepages/home-01.json";
 import productData from "../data/products.json";
+import { wrapper } from "@redux/store";
+import { getCommunities } from "@redux/slices/communities";
+import { communityApi, useGetCommunitiesQuery } from "@services/communities";
 
-export async function getStaticProps() {
-    return { props: { className: "template-color-1" } };
-}
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) => async (context) => {
+        const pokemon = context.params?.pokemon;
+        store.dispatch(getCommunities(pokemon));
+
+        await Promise.all(
+            store.dispatch(communityApi.util.getRunningQueriesThunk())
+        );
+
+        return {
+            props: {
+                className: "template-color-1",
+            },
+        };
+    }
+);
 
 const Home = () => {
     const content = normalizedData(homepageData?.content || []);
-    const liveAuctionData = productData.filter(
-        (prod) =>
-            prod?.auction_date && new Date() <= new Date(prod?.auction_date)
-    );
+
+    // use this data and replace the api
+    const { data, isLoading } = useGetCommunitiesQuery("pikachu");
+
     const newestData = productData
         .sort(
             (a, b) =>

@@ -10,10 +10,18 @@ import "../assets/css/modal-video.css";
 import "react-toastify/dist/ReactToastify.css";
 import "../assets/scss/style.scss";
 
+import { Provider as ReduxProvider } from "react-redux";
+
+import App from "next/app";
+import { PersistGate } from "redux-persist/integration/react";
+import { wrapper } from "../redux/store";
+
 const moralisAppId = "Zgi9h3xvYrvXHJZmYjgzbfxlTPnDq6H3RytmW0qt";
 const moralisServerURL = "https://mrnuat16od8z.usemoralis.com:2053/server";
 
 const MyApp = ({ Component, pageProps }) => {
+    const { store, props } = wrapper.useWrappedStore(pageProps);
+
     const router = useRouter();
     useEffect(() => {
         sal({ threshold: 0.1, once: true });
@@ -26,13 +34,33 @@ const MyApp = ({ Component, pageProps }) => {
         document.body.className = `${pageProps.className}`;
     });
     return (
-        <MoralisProvider appId={moralisAppId} serverUrl={moralisServerURL}>
+        <ReduxProvider store={store}>
             <ThemeProvider defaultTheme="dark">
-                <Component {...pageProps} />
+                <PersistGate loading={null} persistor={store.__persistor}>
+                    <MoralisProvider
+                        appId={moralisAppId}
+                        serverUrl={moralisServerURL}
+                    >
+                        <Component {...props.pageProps} />
+                    </MoralisProvider>
+                </PersistGate>
             </ThemeProvider>
-        </MoralisProvider>
+        </ReduxProvider>
     );
 };
+
+MyApp.getInitialProps = wrapper.getInitialAppProps(
+    (store) => async (appCtx) => {
+        const childrenGip = await App.getInitialProps(appCtx);
+
+        return {
+            pageProps: {
+                ...childrenGip.pageProps,
+                appName: "Rahat",
+            },
+        };
+    }
+);
 
 MyApp.propTypes = {
     Component: PropTypes.elementType,

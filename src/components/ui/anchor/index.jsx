@@ -44,15 +44,15 @@ const Anchor = ({
     }
 
     return (
-        <Link rel="preload" href={path} passHref>
-            <a
-                href="passRef"
-                className={className}
-                aria-label={label}
-                {...rest}
-            >
-                {children}
-            </a>
+        <Link
+            rel="preload"
+            href={path}
+            passHref
+            className={className}
+            aria-label={label}
+            {...rest}
+        >
+            {children}
         </Link>
     );
 };
