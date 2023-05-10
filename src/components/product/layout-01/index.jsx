@@ -33,7 +33,7 @@ const Product = ({
             >
                 <div className="card-thumbnail">
                     {image?.src && (
-                        <Anchor path={`/product/${slug}`}>
+                        <Anchor path={`/${slug}`}>
                             <Image
                                 src={image.src}
                                 alt={image?.alt || "NFT_portfolio"}
@@ -44,7 +44,7 @@ const Product = ({
                     )}
                     {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
-                <Anchor path={`/product/${slug}`}>
+                <Anchor path={`/${slug}`}>
                     <span className="product-name">{title}</span>
                 </Anchor>
                 <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>

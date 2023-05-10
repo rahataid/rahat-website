@@ -34,7 +34,7 @@ const EditProfileImage = () => {
                             ) : (
                                 <Image
                                     id="rbtinput1"
-                                    src="/images/profile/profile-01.jpg"
+                                    src="/images/profile/pepsico.png"
                                     alt="Profile-NFT"
                                     layout="fill"
                                 />
@@ -77,7 +77,7 @@ const EditProfileImage = () => {
                             ) : (
                                 <Image
                                     id="rbtinput1"
-                                    src="/images/profile/profile-01.jpg"
+                                    src="/images/portfolio/oxfam.jpeg"
                                     alt="Profile-NFT"
                                     layout="fill"
                                 />
