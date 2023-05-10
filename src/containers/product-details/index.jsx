@@ -23,21 +23,13 @@ const ProductDetailsArea = ({ space, className, product }) => (
             <div className="row g-5">
                 <div className="col-lg-7 col-md-12 col-sm-12">
                     <Sticky>
-                        <GalleryTab images={product.images} />
+                        <GalleryTab images={product?.images} />
                     </Sticky>
                 </div>
                 <div className="col-lg-5 col-md-12 col-sm-12 mt_md--50 mt_sm--60">
                     <div className="rn-pd-content-area">
-                        <ProductTitle
-                            title={product.title}
-                        />
-                        <span className="bid">
-                            Height bid{" "}
-                            <span className="price">
-                                {product.price.amount}
-                                {product.price.currency}
-                            </span>
-                        </span>
+                        <ProductTitle title={product.title} />
+                        <span className="bid">Height bid </span>
                         <h6 className="title-name">subtitle</h6>
                         <div className="catagory-collection">
                             <ProductCategory owner={product.owner} />
@@ -71,10 +63,7 @@ ProductDetailsArea.propTypes = {
     product: PropTypes.shape({
         title: PropTypes.string.isRequired,
         likeCount: PropTypes.number,
-        price: PropTypes.shape({
-            amount: PropTypes.number.isRequired,
-            currency: PropTypes.string.isRequired,
-        }).isRequired,
+
         owner: PropTypes.shape({}),
         collection: PropTypes.shape({}),
         bids: PropTypes.arrayOf(PropTypes.shape({})),

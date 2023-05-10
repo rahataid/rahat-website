@@ -9,7 +9,10 @@
             "@containers/*": ["src/containers/*"],
             "@layout/*": ["src/layouts/*"],
             "@utils/*": ["src/utils/*"],
-            "@hooks": ["src/hooks"]
+            "@hooks": ["src/hooks"],
+            "@services/*": ["src/services/*"],
+            "@redux/*": ["src/redux/*"],
+            "@slices/*": ["src/redux/slices/*"]
         }
     }
 }
