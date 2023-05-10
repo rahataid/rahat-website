@@ -3,7 +3,7 @@ import Countdown, { zeroPad } from "react-countdown";
 
 const CountdownTimer = ({ date }) => {
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
-        if (completed) return <div>Completed</div>;
+        if (completed) return <div className="pill">Completed</div>;
         return (
             <div className="countdown">
                 <div className="countdown-container days">

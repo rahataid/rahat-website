@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
-import { useForm } from "react-hook-form";
+import clsx from "clsx";
 import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import { useForm } from "react-hook-form";
 
 const SignupForm = ({ className }) => {
     const router = useRouter();
@@ -30,7 +30,7 @@ const SignupForm = ({ className }) => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-5">
                     <label htmlFor="firstName" className="form-label">
-                        First name
+                        Full name
                     </label>
                     <input
                         type="text"
@@ -45,7 +45,7 @@ const SignupForm = ({ className }) => {
                 </div>
                 <div className="mb-5">
                     <label htmlFor="sastName" className="form-label">
-                        Last name
+                        Organization Name
                     </label>
                     <input
                         type="text"

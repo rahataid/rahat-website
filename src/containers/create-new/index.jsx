@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { useForm } from "react-hook-form";
-import Button from "@ui/button";
 import ProductModal from "@components/modals/product-modal";
+import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
 const CreateNewArea = ({ className, space }) => {
@@ -67,7 +67,7 @@ const CreateNewArea = ({ className, space }) => {
                             <div className="col-lg-3 offset-1 ml_md--0 ml_sm--0">
                                 <div className="upload-area">
                                     <div className="upload-formate mb--30">
-                                        <h6 className="title">Upload file</h6>
+                                        <h6 className="title">Upload logo</h6>
                                         <p className="formate">
                                             Drag or choose your file to upload
                                         </p>
@@ -136,11 +136,11 @@ const CreateNewArea = ({ className, space }) => {
                                                     htmlFor="name"
                                                     className="form-label"
                                                 >
-                                                    Product Name
+                                                    Organization Name
                                                 </label>
                                                 <input
                                                     id="name"
-                                                    placeholder="e. g. `Digital Awesome Game`"
+                                                    placeholder="Red Cross"
                                                     {...register("name", {
                                                         required:
                                                             "Name is required",
@@ -165,7 +165,7 @@ const CreateNewArea = ({ className, space }) => {
                                                 <textarea
                                                     id="discription"
                                                     rows="3"
-                                                    placeholder="e. g. “After purchasing the product you can get item...”"
+                                                    placeholder="After purchasing the product you can get item..."
                                                     {...register(
                                                         "discription",
                                                         {
@@ -184,18 +184,17 @@ const CreateNewArea = ({ className, space }) => {
                                                 )}
                                             </div>
                                         </div>
-
-                                        <div className="col-md-4">
+                                        <div className="col-md-12">
                                             <div className="input-box pb--20">
                                                 <label
                                                     htmlFor="price"
                                                     className="form-label"
                                                 >
-                                                    Item Price in $
+                                                    Wallet Address
                                                 </label>
                                                 <input
                                                     id="price"
-                                                    placeholder="e. g. `20$`"
+                                                    placeholder=""
                                                     {...register("price", {
                                                         pattern: {
                                                             value: /^[0-9]+$/,
@@ -214,152 +213,10 @@ const CreateNewArea = ({ className, space }) => {
                                             </div>
                                         </div>
 
-                                        <div className="col-md-4">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Size"
-                                                    className="form-label"
-                                                >
-                                                    Size
-                                                </label>
-                                                <input
-                                                    id="size"
-                                                    placeholder="e. g. `Size`"
-                                                    {...register("size", {
-                                                        required:
-                                                            "Size is required",
-                                                    })}
-                                                />
-                                                {errors.size && (
-                                                    <ErrorText>
-                                                        {errors.size?.message}
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-4">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Propertie"
-                                                    className="form-label"
-                                                >
-                                                    Properties
-                                                </label>
-                                                <input
-                                                    id="propertiy"
-                                                    placeholder="e. g. `Propertie`"
-                                                    {...register("propertiy", {
-                                                        required:
-                                                            "Propertiy is required",
-                                                    })}
-                                                />
-                                                {errors.propertiy && (
-                                                    <ErrorText>
-                                                        {
-                                                            errors.propertiy
-                                                                ?.message
-                                                        }
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-12">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Royality"
-                                                    className="form-label"
-                                                >
-                                                    Royality
-                                                </label>
-                                                <input
-                                                    id="royality"
-                                                    placeholder="e. g. `20%`"
-                                                    {...register("royality", {
-                                                        required:
-                                                            "Royality is required",
-                                                    })}
-                                                />
-                                                {errors.royality && (
-                                                    <ErrorText>
-                                                        {
-                                                            errors.royality
-                                                                ?.message
-                                                        }
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="input-box pb--20 rn-check-box">
-                                                <input
-                                                    className="rn-check-box-input"
-                                                    type="checkbox"
-                                                    id="putonsale"
-                                                />
-                                                <label
-                                                    className="rn-check-box-label"
-                                                    htmlFor="putonsale"
-                                                >
-                                                    Put on Sale
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="input-box pb--20 rn-check-box">
-                                                <input
-                                                    className="rn-check-box-input"
-                                                    type="checkbox"
-                                                    id="instantsaleprice"
-                                                />
-                                                <label
-                                                    className="rn-check-box-label"
-                                                    htmlFor="instantsaleprice"
-                                                >
-                                                    Instant Sale Price
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-4 col-sm-4">
-                                            <div className="input-box pb--20 rn-check-box">
-                                                <input
-                                                    className="rn-check-box-input"
-                                                    type="checkbox"
-                                                    id="unlockpurchased"
-                                                />
-                                                <label
-                                                    className="rn-check-box-label"
-                                                    htmlFor="unlockpurchased"
-                                                >
-                                                    Unlock Purchased
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-md-12 col-xl-4">
-                                            <div className="input-box">
-                                                <Button
-                                                    color="primary-alta"
-                                                    fullwidth
-                                                    type="submit"
-                                                    data-btn="preview"
-                                                    onClick={handleSubmit(
-                                                        onSubmit
-                                                    )}
-                                                >
-                                                    Preview
-                                                </Button>
-                                            </div>
-                                        </div>
-
                                         <div className="col-md-12 col-xl-8 mt_lg--15 mt_md--15 mt_sm--15">
                                             <div className="input-box">
                                                 <Button type="submit" fullwidth>
-                                                    Submit Item
+                                                    Submit
                                                 </Button>
                                             </div>
                                         </div>
