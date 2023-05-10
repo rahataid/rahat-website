@@ -8,6 +8,7 @@ import Wrapper from "@layout/wrapper";
 import { normalizedData } from "@utils/methods";
 
 // Demo Data
+
 import homepageData from "../data/homepages/home-01.json";
 import productData from "../data/products.json";
 import { wrapper } from "@redux/store";
@@ -31,7 +32,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
     }
 );
 
-const Home = () => {
+const Home = ({ ...props }) => {
     const content = normalizedData(homepageData?.content || []);
 
     // use this data and replace the api
@@ -47,7 +48,7 @@ const Home = () => {
 
     return (
         <Wrapper>
-            <SEO pageTitle="Home Default" />
+            <SEO pageTitle="Home" />
             <Header />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />

@@ -1,7 +1,6 @@
 import PlaceBidModal from "@components/modals/placebid-modal";
 import ProductBid from "@components/product-bid";
 import Anchor from "@ui/anchor";
-import Button from "@ui/button";
 import CountdownTimer from "@ui/countdown/layout-01";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
@@ -44,11 +43,6 @@ const Product = ({
                         </Anchor>
                     )}
                     {auction_date && <CountdownTimer date={auction_date} />}
-                    {placeBid && (
-                        <Button onClick={handleBidModal} size="small">
-                            Place Bid
-                        </Button>
-                    )}
                 </div>
                 <Anchor path={`/product/${slug}`}>
                     <span className="product-name">{title}</span>

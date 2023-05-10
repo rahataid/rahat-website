@@ -1,17 +1,15 @@
-import { useEffect } from "react";
-import PropTypes from "prop-types";
-import { useRouter } from "next/router";
-import { MoralisProvider } from "react-moralis";
-import sal from "sal.js";
 import { ThemeProvider } from "next-themes";
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import { useEffect } from "react";
+import { MoralisProvider } from "react-moralis";
+import "react-toastify/dist/ReactToastify.css";
+import sal from "sal.js";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/feather.css";
 import "../assets/css/modal-video.css";
-import "react-toastify/dist/ReactToastify.css";
 import "../assets/scss/style.scss";
-
 import { Provider as ReduxProvider } from "react-redux";
-
 import App from "next/app";
 import { PersistGate } from "redux-persist/integration/react";
 import { wrapper } from "../redux/store";
@@ -19,7 +17,7 @@ import { wrapper } from "../redux/store";
 const moralisAppId = "Zgi9h3xvYrvXHJZmYjgzbfxlTPnDq6H3RytmW0qt";
 const moralisServerURL = "https://mrnuat16od8z.usemoralis.com:2053/server";
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, ...pageProps }) => {
     const { store, props } = wrapper.useWrappedStore(pageProps);
 
     const router = useRouter();
@@ -30,9 +28,11 @@ const MyApp = ({ Component, pageProps }) => {
     useEffect(() => {
         sal();
     }, []);
+
     useEffect(() => {
         document.body.className = `${pageProps.className}`;
     });
+
     return (
         <ReduxProvider store={store}>
             <ThemeProvider defaultTheme="dark">
