@@ -1,4 +1,3 @@
-import Breadcrumb from "@components/breadcrumb";
 import SEO from "@components/seo";
 import ExploreProductArea from "@containers/explore-product/layout-08";
 import Footer from "@layout/footer/footer-01";
@@ -17,7 +16,6 @@ const Home02 = () => (
         <SEO pageTitle="Donations" />
         <Header />
         <main id="main-content">
-            <Breadcrumb pageTitle="Donations" currentPage="Donations" />
             <ExploreProductArea
                 data={{
                     products: productData,

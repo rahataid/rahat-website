@@ -13,10 +13,5 @@
         "id": 3,
         "text": "Communities",
         "path": "/communities"
-    },
-    {
-        "id": 4,
-        "text": "Projects",
-        "path": "/projects"
     }
 ]
