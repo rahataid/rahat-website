@@ -1,14 +1,15 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { useMoralis } from "react-moralis";
+import ColorSwitcher from "@components/color-switcher";
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
 import UserDropdown from "@components/user-dropdown";
-import ColorSwitcher from "@components/color-switcher";
+import { useOffcanvas, useSticky } from "@hooks";
 import BurgerButton from "@ui/burger-button";
 import Button from "@ui/button";
-import { useOffcanvas, useSticky } from "@hooks";
+import clsx from "clsx";
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import { useMoralis } from "react-moralis";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
 
@@ -16,6 +17,7 @@ const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
     const { authenticate, isAuthenticated } = useMoralis();
+    const { push } = useRouter();
 
     return (
         <>
@@ -47,9 +49,9 @@ const Header = ({ className }) => {
                                             color="primary-alta"
                                             className="connectBtn"
                                             size="small"
-                                            onClick={() => authenticate()}
+                                            onClick={() => push('/login')}
                                         >
-                                            Wallet connect
+                                            Login
                                         </Button>
                                     </div>
                                 </div>
