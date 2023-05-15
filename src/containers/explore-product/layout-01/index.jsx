@@ -27,13 +27,12 @@ const ExploreProductArea = ({ className, space, data }) => {
     return (
         <div
             className={clsx(
-                "rn-product-area",
-                space === 1 && "rn-section-gapTop",
+                "rn-product-area mt--50",
                 className
             )}
         >
             <div className="container">
-                <div className="row mb--50 align-items-center">
+                <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-6 col-12">
                         <h3>Communities</h3>
                     </div>

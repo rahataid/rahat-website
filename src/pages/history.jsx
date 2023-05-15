@@ -1,24 +1,25 @@
 import SEO from "@components/seo";
-import CommunityList from "@containers/communityList";
+import UpcomingProjectsArea from "@containers/upcoming-projects";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
 // Demo Data
-import activityData from "../data/activity.json";
+import upcomingData from "../data/upcoming-projects.json";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
 }
-const Home = () => (
+
+const UpcomingProjects = () => (
     <Wrapper>
-        <SEO pageTitle="Acivity" />
+        <SEO pageTitle="Upcoming Projects" />
         <Header />
         <main id="main-content">
-            <CommunityList data={{ activities: activityData }} />
+            <UpcomingProjectsArea data={{ upcomingProjects: upcomingData }} />
         </main>
-        <Footer />
+        <Footer space={2} />
     </Wrapper>
 );
 
-export default Home;
+export default UpcomingProjects;

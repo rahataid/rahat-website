@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const ProjectTable = ({ className, title, projects }) => (
     <div className={clsx("row", className)}>
         <div className="col-12">
             <div className="table-title-area d-flex">
                 <i className="feather-calendar" />
-                <h3>{title}</h3>
+                <h3>Donation History</h3>
             </div>
 
             <div className="box-table table-responsive">
