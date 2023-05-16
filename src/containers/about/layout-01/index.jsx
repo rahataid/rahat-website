@@ -1,22 +1,21 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const AboutArea = ({ className, space, data }) => (
     <div
         className={clsx(
-            "about-market-area",
-            space === 1 && "rn-section-gapTop",
+            "rn-about-card mt--30",
             className
         )}
     >
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <div className="about-wrapper text-center">
-                        {data?.title && <h2>{data.title}</h2>}
-                        {data?.description && (
-                            <p className="discription">{data.description}</p>
-                        )}
+                    <div className="about-wrapper">
+                        <h5>Rumsan</h5>
+                        <p className="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae aperiam</p>
+                        <hr className="mt--30" />
+                        <p className="discription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad molestiae aperiam, nulla dicta id tenetur hic inventore eveniet maiores mollitia, voluptatum dolore soluta, voluptate vel error sed incidunt libero dolor!</p>
                     </div>
                 </div>
             </div>

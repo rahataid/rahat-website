@@ -1,5 +1,4 @@
 import Product from "@components/product/layout-01";
-import SectionTitle from "@components/section-title/layout-02";
 import Button from "@ui/button";
 import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
@@ -31,21 +30,16 @@ const ExploreProductArea = ({ className, space, data }) => {
             )}
         >
             <div className="container">
-                {data?.section_title && (
-                    <div className="row mb--50 align-items-center">
-                        <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <SectionTitle
-                                className="mb--0"
-                                {...data.section_title}
-                            />
-                        </div>
+                <div className="row mb--50 align-items-center">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                        <h3>Impact Flow</h3>
                     </div>
-                )}
+                </div>
 
                 {products.length > 0 && (
                     <div className="row g-5">
                         {products.map((prod) => (
-                            <div className="col-5 col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Product
                                     overlay
                                     placeBid={!!data.placeBid}

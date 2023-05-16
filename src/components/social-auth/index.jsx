@@ -1,3 +1,4 @@
+import { setWalletName } from "@utils/sessionManager";
 import MetaMaskCard from "@web3/components/Metamask";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 // import { useWalletConnector } from "@web3/hooks/useWalletConnector";
@@ -14,12 +15,16 @@ const WalletLoginButton = ({
     connector,
     ...restProps
 }) => {
+    const connectedWalletName = getName(connector);
     const onClick = async () => {
+        setWalletName(connectedWalletName);
         await connector.activate();
     };
 
+    console.log("connector", connector);
+
     const preTitle = isActive ? "Connected to " : "Login with ";
-    const walletName = preTitle + getName(connector);
+    const walletName = preTitle + connectedWalletName;
     return (
         <div
             onClick={onClick}
@@ -42,7 +47,13 @@ const WalletLoginButton = ({
                     <Button
                         className="connectBtn"
                         size="small"
-                        onClick={() => {}}
+                        onClick={() => {
+                            if (connector?.deactivate) {
+                                void connector.deactivate();
+                            } else {
+                                void connector.resetState();
+                            }
+                        }}
                     >
                         Disconnect
                     </Button>

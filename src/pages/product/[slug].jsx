@@ -1,4 +1,3 @@
-import Breadcrumb from "@components/breadcrumb";
 import SEO from "@components/seo";
 import ProductDetailsArea from "@containers/product-details";
 import ProductArea from "@containers/product/layout-03";
@@ -11,19 +10,15 @@ import PropTypes from "prop-types";
 // demo data
 import productData from "../../data/products.json";
 
-const ProductDetails = ({ product, recentViewProducts, relatedProducts }) => (
+const ProductDetails = ({ product, relatedProducts }) => (
     <Wrapper>
         <SEO pageTitle="Community Details" />
         <Header />
         <main id="main-content">
-            <Breadcrumb
-                pageTitle="Community Details"
-                currentPage="Community Details"
-            />
             <ProductDetailsArea product={product} />
             <ProductArea
                 data={{
-                    section_title: { title: "Related Projects" },
+                    section_title: { title: "Community Details" },
                     products: relatedProducts,
                 }}
             />

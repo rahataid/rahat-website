@@ -4,16 +4,24 @@ import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
 import UserDropdown from "@components/user-dropdown";
 import { useOffcanvas, useSticky } from "@hooks";
+import { selectIsAuthenticated, selectUser } from "@redux/slices/app";
 import BurgerButton from "@ui/burger-button";
 import Button from "@ui/button";
+import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
+import { useRouter } from "next/router";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
 
 const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
+    const { accounts, balances } = useWalletConnector();
+    const isAuthenticated = useSelector(selectIsAuthenticated);
+    const user = useSelector(selectUser);
+    const { push } = useRouter();
 
     return (
         <>
@@ -38,23 +46,29 @@ const Header = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {true && (
+                            {!isAuthenticated && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
                                         <Button
                                             color="primary-alta"
                                             className="connectBtn"
                                             size="small"
-                                            onClick={() => {}}
+                                            onClick={() => {
+                                                push("/login");
+                                            }}
                                         >
-                                            Wallet connect
+                                            Login
                                         </Button>
                                     </div>
                                 </div>
                             )}
-                            {false && (
+                            {isAuthenticated && (
                                 <div className="setting-option rn-icon-list user-account">
-                                    <UserDropdown />
+                                    <UserDropdown
+                                        accounts={accounts}
+                                        balances={balances}
+                                        details={user}
+                                    />
                                 </div>
                             )}
 

@@ -2,9 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     isAuthenticated: false,
-    isInitialized: false,
+    isInitialized: true,
     token: null,
-    user: null,
+    user: {
+        name: "Rahat Donor",
+        email: "donor@mailinator.com",
+    },
     chainUrl: null,
     chainId: null,
     chainWebSocket: null,
@@ -24,10 +27,18 @@ export const appSlice = createSlice({
     initialState,
     reducers: {
         login: (state, action) => {
-            state.user = action.payload;
+            state.user = action.payload.user;
+            state.token = action.payload.token;
+            state.isAuthenticated = true;
+            state.isInitialized = true;
         },
         addUser: (state, action) => {
             state.user = action.payload;
+        },
+        logout: (state) => {
+            state.user = null;
+            state.token = null;
+            state.isAuthenticated = false;
         },
     },
 });

@@ -1,4 +1,3 @@
-import Breadcrumb from "@components/breadcrumb";
 import SEO from "@components/seo";
 import CreateNewArea from "@containers/create-new";
 import Footer from "@layout/footer/footer-01";
@@ -14,7 +13,6 @@ const Home = () => (
         <SEO pageTitle="Sign Up" />
         <Header />
         <main id="main-content">
-            <Breadcrumb pageTitle="Sign Up" />
             <CreateNewArea />
         </main>
         <Footer />

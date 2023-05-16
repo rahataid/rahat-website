@@ -1,29 +1,25 @@
 import SEO from "@components/seo";
-import ExploreProductArea from "@containers/explore-product/layout-08";
+import UpcomingProjectsArea from "@containers/upcoming-projects";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
-// Demo data
-import productData from "../data/donations.json";
+// Demo Data
+import upcomingData from "../data/upcoming-projects.json";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
 }
 
-const Home02 = () => (
+const UpcomingProjects = () => (
     <Wrapper>
-        <SEO pageTitle="Donations" />
+        <SEO pageTitle="Upcoming Projects" />
         <Header />
         <main id="main-content">
-            <ExploreProductArea
-                data={{
-                    products: productData,
-                }}
-            />
+            <UpcomingProjectsArea data={{ upcomingProjects: upcomingData }} />
         </main>
-        <Footer />
+        <Footer space={2} />
     </Wrapper>
 );
 
-export default Home02;
+export default UpcomingProjects;
