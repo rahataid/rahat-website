@@ -1,9 +1,7 @@
-import Image from "next/image";
 import Anchor from "@ui/anchor";
-import { useMoralis } from "react-moralis";
+import Image from "next/image";
 
 const UserDropdown = () => {
-    const { logout } = useMoralis();
     return (
         <div className="icon-box">
             <Anchor path="/author">
@@ -87,7 +85,7 @@ const UserDropdown = () => {
                         <Anchor path="/connect">Manage funds</Anchor>
                     </li>
                     <li>
-                        <button type="button" onClick={logout}>
+                        <button type="button" onClick={() => {}}>
                             Sign Out
                         </button>
                     </li>

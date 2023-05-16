@@ -1,25 +1,71 @@
+import MetaMaskCard from "@web3/components/Metamask";
+import { useWalletConnector } from "@web3/hooks/useWalletConnector";
+// import { useWalletConnector } from "@web3/hooks/useWalletConnector";
+import { getName } from "@web3/utils";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 
-const SocialAuth = ({ className }) => (
-    <div className={clsx("social-share-media form-wrapper-one", className)}>
-        <h6>Connect Wallet</h6>
-        <p>Lorem ipsum dolor sit, amet sectetur adipisicing elit.cumque.</p>
-        <button type="button" className="another-login login-facebook">
+const WalletLoginButton = ({
+    title,
+    imgSrc,
+    isActive,
+    connector,
+    ...restProps
+}) => {
+    const onClick = async () => {
+        await connector.activate();
+    };
+
+    const preTitle = isActive ? "Connected to " : "Login with ";
+    const walletName = preTitle + getName(connector);
+    return (
+        <div
+            onClick={onClick}
+            type="button"
+            className="another-login login-facebook"
+            style={{ display: "flex", alignItems: "center" }}
+        >
             <span className="small-image">
                 <Image
-                    src="/images/icons/wallet/1.png"
+                    src={imgSrc}
                     alt="google login"
                     width={26}
                     height={27}
                     layout="fixed"
                 />
             </span>
-            <span>Log in with Metamask</span>
-        </button>
-    </div>
-);
+            <span>{walletName}</span>
+            {isActive && (
+                <div style={{ marginLeft: "auto" }}>
+                    <Button
+                        className="connectBtn"
+                        size="small"
+                        onClick={() => {}}
+                    >
+                        Disconnect
+                    </Button>
+                </div>
+            )}
+        </div>
+    );
+};
+
+const SocialAuth = ({ className }) => {
+    const { account, accounts, provider, balances } = useWalletConnector();
+    return (
+        <div className={clsx("social-share-media form-wrapper-one", className)}>
+            <h6>Connect Wallet</h6>
+            <p>Lorem ipsum dolor sit, amet sectetur adipisicing elit.cumque.</p>
+            <MetaMaskCard
+                imgSrc={"/images/icons/wallet/1.png"}
+                title={"MetaMask"}
+                component={WalletLoginButton}
+            />
+        </div>
+    );
+};
 
 SocialAuth.propTypes = {
     className: PropTypes.string,

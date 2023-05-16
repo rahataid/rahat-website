@@ -12,7 +12,9 @@
             "@hooks": ["src/hooks"],
             "@services/*": ["src/services/*"],
             "@redux/*": ["src/redux/*"],
-            "@slices/*": ["src/redux/slices/*"]
+            "@slices/*": ["src/redux/slices/*"],
+            "@web3/*": ["src/web3/*"],
+            "@guards/*": ["src/guards/*"]
         }
     }
 }

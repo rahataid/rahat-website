@@ -1,6 +1,7 @@
 import { communityApi } from "@services/communities";
 import { combineReducers } from "redux";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
+import { appSlice } from "./slices/app";
 // slices
 
 // ----------------------------------------------------------------------
@@ -38,6 +39,7 @@ const rootPersistConfig = {
 
 const rootReducer = combineReducers({
     [communityApi.reducerPath]: communityApi.reducer,
+    [appSlice.name]: appSlice.reducer,
 });
 
 export { rootPersistConfig, rootReducer };

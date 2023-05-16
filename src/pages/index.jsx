@@ -9,11 +9,11 @@ import { normalizedData } from "@utils/methods";
 
 // Demo Data
 
+import { getCommunities } from "@redux/slices/communities";
+import { wrapper } from "@redux/store";
+import { communityApi, useGetCommunitiesQuery } from "@services/communities";
 import homepageData from "../data/homepages/home-01.json";
 import productData from "../data/products.json";
-import { wrapper } from "@redux/store";
-import { getCommunities } from "@redux/slices/communities";
-import { communityApi, useGetCommunitiesQuery } from "@services/communities";
 
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async (context) => {

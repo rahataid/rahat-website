@@ -1,21 +1,19 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { useMoralis } from "react-moralis";
+import ColorSwitcher from "@components/color-switcher";
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
 import UserDropdown from "@components/user-dropdown";
-import ColorSwitcher from "@components/color-switcher";
+import { useOffcanvas, useSticky } from "@hooks";
 import BurgerButton from "@ui/burger-button";
 import Button from "@ui/button";
-import { useOffcanvas, useSticky } from "@hooks";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
 
 const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
-    const { authenticate, isAuthenticated } = useMoralis();
 
     return (
         <>
@@ -40,21 +38,21 @@ const Header = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {!isAuthenticated && (
+                            {true && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
                                         <Button
                                             color="primary-alta"
                                             className="connectBtn"
                                             size="small"
-                                            onClick={() => authenticate()}
+                                            onClick={() => {}}
                                         >
                                             Wallet connect
                                         </Button>
                                     </div>
                                 </div>
                             )}
-                            {isAuthenticated && (
+                            {false && (
                                 <div className="setting-option rn-icon-list user-account">
                                     <UserDropdown />
                                 </div>
