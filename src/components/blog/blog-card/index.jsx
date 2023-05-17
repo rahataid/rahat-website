@@ -1,8 +1,8 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import Image from "next/image";
 import Anchor from "@ui/anchor";
 import { ImageType } from "@utils/types";
+import clsx from "clsx";
+import Image from "next/image";
+import PropTypes from "prop-types";
 
 const BlogCard = ({
     className,
@@ -14,41 +14,61 @@ const BlogCard = ({
     rootPage,
     ...rest
 }) => (
-    <div className={clsx("rn-blog", className)} {...rest}>
-        <div className="inner">
-            {image?.src && (
-                <div className="thumbnail">
-                    <Anchor path={`${rootPage}/${slug}`}>
+    <div className="row">
+        <div className="col-6">
+            <div className={clsx("rn-blog", className)} {...rest}>
+                <div className="inner">
+                    <div className="thumbnail">
                         <Image
-                            src={image.src}
-                            alt={image?.alt || "Personal Portfolio Images"}
-                            width={image?.width ? image.width : 489}
-                            height={image?.height ? image.height : 366}
+                            src="/images/profile/pepsico.png"
+                            alt={"Nft_Profile"}
+                            width={200}
+                            height={200}
                         />
-                    </Anchor>
-                </div>
-            )}
-            <div className="content">
-                <div className="category-info">
-                    <div className="category-list">
-                        <Anchor path={`${rootPage}/category/${category.slug}`}>
-                            {category.title}
-                        </Anchor>
                     </div>
-                    <div className="meta">
-                        <span>
-                            <i className="feather-clock" /> {timeToRead} min
-                            read
-                        </span>
+                    <div className="content">
+                        <div className="category-info">
+                            <div className="category-list">
+                                <Anchor>
+                                    Pepsico
+                                </Anchor>
+                            </div>
+                        </div>
+                        <h4 className="title">
+                            <Anchor path={`${rootPage}/${slug}`}>
+                                Pepsico
+                            </Anchor>
+                        </h4>
                     </div>
                 </div>
-                <h4 className="title">
-                    <Anchor path={`${rootPage}/${slug}`}>
-                        {title}
-                        <i className="feather-arrow-up-right" />
-                    </Anchor>
-                </h4>
             </div>
+            <div className={clsx("rn-blog", className)} {...rest}>
+                <div className="inner">
+                    <div className="thumbnail">
+                        <Image
+                            src="/images/profile/pepsico.png"
+                            alt={"Nft_Profile"}
+                            width={200}
+                            height={200}
+                        />
+                    </div>
+                    <div className="content">
+                        <div className="category-info">
+                            <div className="category-list">
+                                <Anchor>
+                                    Pepsico
+                                </Anchor>
+                            </div>
+                        </div>
+                        <h4 className="title">
+                            <Anchor path={`${rootPage}/${slug}`}>
+                                Pepsico
+                            </Anchor>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 );
