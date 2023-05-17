@@ -58,3 +58,11 @@ export const selectRoles = (state) => state.globalApp.roles;
 export const selectApp = (state) => state.globalApp;
 
 export default appSlice.reducer;
+
+export const loginUser = (type, payload, provider) => async (dispatch) => {
+    console.log("provider", type, payload, provider);
+
+    // if(type=='')
+    // const signed = await signMessage(provider, text);
+    // console.log("signed", signed);
+};

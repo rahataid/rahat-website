@@ -9,7 +9,7 @@ const AppContainer = ({ children }) => {
     console.log("provider", provider);
 
     useEffect(() => {
-        // Dispatch the login action
+        // // Dispatch the login action
         // dispatch(
         //     login({
         //         user: {

@@ -14,3 +14,11 @@ export function getName(connector) {
     if (connector instanceof GnosisSafe) return "Gnosis Safe";
     return "Unknown";
 }
+
+export async function signMessage(provider, message) {
+    const signer = provider.getSigner(message);
+    const hexMessage = provider.utils.hexlify(utils.toUtf8Bytes(message));
+    const signature = await signer.signMessage(hexMessage);
+
+    return signature;
+}
