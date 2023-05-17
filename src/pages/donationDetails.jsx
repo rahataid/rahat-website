@@ -1,3 +1,4 @@
+import Activity from "@components/activity";
 import SEO from "@components/seo";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
@@ -26,6 +27,7 @@ const EditProfile = () => (
                                 <TabPane eventKey="nav-home">
                                     <EditProfileImage />
                                 </TabPane>
+                                <Activity />
                             </TabContent>
                         </div>
                     </div>

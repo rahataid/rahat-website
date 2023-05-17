@@ -14,7 +14,7 @@ const Activity = ({
     status,
 }) => (
     <>
-        <div className={clsx("single-activity-wrapper", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
+        <div className={clsx("single-activity-wrapper mt--50", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
             <div className="inner">
                 <div className="read-content">
                     <div className="thumbnail">

@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Activity from "@components/activity";
 import Image from "next/image";
 
 const EditProfileImage = () => {
@@ -65,7 +64,7 @@ const EditProfileImage = () => {
                 </div>
             </div>
             <div className="mt--30">
-                <Activity />
+
             </div>
 
         </>
