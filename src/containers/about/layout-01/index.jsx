@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-const AboutArea = ({ className, space, data }) => (
+const AboutArea = ({ className }) => (
     <div
         className={clsx(
             "rn-about-card mt--30",
