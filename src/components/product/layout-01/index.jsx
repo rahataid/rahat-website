@@ -45,7 +45,7 @@ const Product = ({
                     {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
                 <Anchor path={`/${slug}`}>
-                    <span className="product-name">{title}</span>
+                    <span className="product-name mt-5">{title}</span>
                 </Anchor>
                 <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
                 <ProductBid price={price} published_at={published_at} />
