@@ -63,9 +63,6 @@ const EditProfileImage = () => {
                     </div>
                 </div>
             </div>
-            <div className="mt--30">
-
-            </div>
 
         </>
 

@@ -9,9 +9,11 @@
 .left-nav {
     padding-right: 10px;
     position: sticky;
+
     @media #{$sm-layout} {
         padding-right: 0;
     }
+
     .nav {
         &.nav-tabs {
             border-bottom: none;
@@ -21,6 +23,7 @@
             background: var(--background-color-1);
             border: 1px solid var(--color-border);
             border-radius: 6px;
+
             button {
                 height: max-content;
                 border: none;
@@ -77,7 +80,7 @@
     .nuron-information {
         .profile-change {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
 
             @media #{$sm-layout} {
                 flex-wrap: wrap;
@@ -108,6 +111,7 @@
                         border: 5px solid var(--color-border);
                         overflow: hidden;
                     }
+
                     img {
                         object-fit: cover;
                         height: 100%;
@@ -281,12 +285,15 @@
 .input-two-wrapepr-prifile {
     display: flex;
     align-items: center;
+
     @media #{$sm-layout} {
         flex-wrap: wrap;
     }
+
     .role-area,
     .profile-edit-select {
         width: 50%;
+
         @media #{$sm-layout} {
             width: 100%;
         }
@@ -294,6 +301,7 @@
 
     .role-area {
         margin-right: 15px;
+
         @media #{$sm-layout} {
             margin-right: 0;
         }
@@ -441,6 +449,7 @@
     .title {
         margin-bottom: 15px;
     }
+
     label {
         margin: 0;
 
@@ -476,12 +485,12 @@
 
 // theme switcher
 
-.theme-switch__input:checked ~ main,
-.theme-switch__input:checked ~ label {
+.theme-switch__input:checked~main,
+.theme-switch__input:checked~label {
     --text: white;
 }
 
-.theme-switch__input:checked ~ main {
+.theme-switch__input:checked~main {
     --gradDark: hsl(198, 44%, 11%);
     --gradLight: hsl(198, 39%, 29%);
 }
@@ -562,7 +571,7 @@
 }
 
 // Checked label styles
-.theme-switch__input:checked ~ .theme-switch__label {
+.theme-switch__input:checked~.theme-switch__label {
     background-color: var(--color-primary);
 
     &::before {
