@@ -1,5 +1,4 @@
 import ShareModal from "@components/modals/share-modal";
-import Anchor from "@ui/anchor";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
@@ -37,20 +36,6 @@ const AuthorIntroArea = ({ className, space, data }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper">
                                 <div className="author-inner">
-                                    {data?.image?.src && (
-                                        <div className="user-thumbnail">
-                                            <Image
-                                                src={data.image.src}
-                                                alt={
-                                                    data.image?.alt || data.name
-                                                }
-                                                width={140}
-                                                height={140}
-                                                layout="fixed"
-                                            />
-                                        </div>
-                                    )}
-
                                     <div className="rn-author-info-content">
                                         <h4 className="title">{data.name}</h4>
                                         <a
@@ -64,21 +49,6 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                                 {data.twitter}
                                             </span>
                                         </a>
-                                        <div className="author-button-area">
-                                            <button
-                                                type="button"
-                                                className="btn at-follw share-button"
-                                                onClick={shareModalHandler}
-                                            >
-                                                <i className="feather-share-2" />
-                                            </button>
-                                            <Anchor
-                                                path="/edit-profile"
-                                                className="btn at-follw follow-button edit-btn"
-                                            >
-                                                <i className="feather feather-edit" />
-                                            </Anchor>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
