@@ -1,6 +1,6 @@
 import PlaceBidModal from "@components/modals/placebid-modal";
-import ProductBid from "@components/product-bid";
 import Anchor from "@ui/anchor";
+import Button from "@ui/button";
 import CountdownTimer from "@ui/countdown/layout-01";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
@@ -48,7 +48,16 @@ const Product = ({
                     <span className="product-name mt-5">{title}</span>
                 </Anchor>
                 <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
-                <ProductBid price={price} published_at={published_at} />
+                <div className="bid-react-area">
+                    <Button
+                        // path={path}
+                        color="primary-alta"
+                        className="sal-animate mt--5"
+                        size="small"
+                    >
+                        More Details
+                    </Button>
+                </div>
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
