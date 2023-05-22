@@ -15,10 +15,8 @@ export function getName(connector) {
     return "Unknown";
 }
 
-export async function signMessage(provider, message) {
-    const signer = provider.getSigner(message);
-    const hexMessage = provider.utils.hexlify(utils.toUtf8Bytes(message));
-    const signature = await signer.signMessage(hexMessage);
-
-    return signature;
+export async function signMessage(provider, account, message) {
+    const signed = provider.getSigner(account);
+    const sign = await signed.signMessage(message);
+    return sign;
 }

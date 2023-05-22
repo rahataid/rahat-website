@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { communityApi } from "@services/communities";
+import { CommunitiesService } from "@services/communities";
 
 const initialState = {
     isLoading: false,
@@ -17,7 +17,7 @@ const slice = createSlice({
         },
         hasError(state, action) {
             state.isLoading = false;
-            state.error = action.payload;
+            state.error = action.payload.message;
         },
         getCommunitiesSuccess(state, action) {
             state.isLoading = false;
@@ -30,17 +30,18 @@ const slice = createSlice({
     },
 });
 
-export default slice.reducer;
+export default slice;
 
 export const { hasError } = slice.actions;
 
-export const { useGetCommunitiesQuery } = communityApi;
+export const selectCommunities = (state) => state.communities.communities;
 
 // Thunk for fetching communities
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
-            dispatch(communityApi.endpoints.getCommunities.initiate(params));
+            const { data: res } = await CommunitiesService.getCommunitiesList();
+            dispatch(slice.actions.getCommunitiesSuccess(res?.abilities));
         } catch (error) {
             dispatch(hasError(error));
         }

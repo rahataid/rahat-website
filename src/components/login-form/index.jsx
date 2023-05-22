@@ -1,4 +1,4 @@
-import { loginUser } from "@redux/slices/app";
+import { loginWithCreds } from "@redux/slices/app";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
@@ -22,7 +22,7 @@ const LoginForm = ({ className }) => {
 
     const onSubmit = (data, e) => {
         e.preventDefault();
-        dispatch(loginUser("email", data.email, provider));
+        dispatch(loginWithCreds(data.email));
         // eslint-disable-next-line no-console
         // router.push({
         //     pathname: "/",

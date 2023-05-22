@@ -59,10 +59,8 @@ export const selectApp = (state) => state.globalApp;
 
 export default appSlice.reducer;
 
-export const loginUser = (type, payload, provider) => async (dispatch) => {
-    console.log("provider", type, payload, provider);
+export const loginWithCreds = (data) => async (dispatch) => {};
 
-    // if(type=='')
-    // const signed = await signMessage(provider, text);
-    // console.log("signed", signed);
+export const loginWithWallet = (signMessage) => async (dispatch) => {
+    if (!signMessage) return;
 };

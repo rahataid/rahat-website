@@ -1,7 +1,6 @@
 import AppContainer from "@containers/AppContainer";
 import ProviderExample from "@web3/Provider";
 import { ThemeProvider } from "next-themes";
-import App from "next/app";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
@@ -47,18 +46,18 @@ const MyApp = ({ Component, ...pageProps }) => {
     );
 };
 
-MyApp.getInitialProps = wrapper.getInitialAppProps(
-    (store) => async (appCtx) => {
-        const childrenGip = await App.getInitialProps(appCtx);
+// MyApp.getInitialProps = wrapper.getInitialAppProps(
+//     (store) => async (appCtx) => {
+//         const childrenGip = await App.getInitialProps(appCtx);
 
-        return {
-            pageProps: {
-                ...childrenGip.pageProps,
-                appName: "Rahat",
-            },
-        };
-    }
-);
+//         return {
+//             pageProps: {
+//                 ...childrenGip.pageProps,
+//                 appName: "Rahat",
+//             },
+//         };
+//     }
+// );
 
 MyApp.propTypes = {
     Component: PropTypes.elementType,

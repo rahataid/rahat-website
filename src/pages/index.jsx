@@ -9,21 +9,12 @@ import { normalizedData } from "@utils/methods";
 
 // Demo Data
 
-import { getCommunities } from "@redux/slices/communities";
 import { wrapper } from "@redux/store";
-import { communityApi, useGetCommunitiesQuery } from "@services/communities";
 import homepageData from "../data/homepages/home-01.json";
 import productData from "../data/products.json";
 
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async (context) => {
-        const pokemon = context.params?.pokemon;
-        store.dispatch(getCommunities(pokemon));
-
-        await Promise.all(
-            store.dispatch(communityApi.util.getRunningQueriesThunk())
-        );
-
         return {
             props: {
                 className: "template-color-1",
@@ -34,9 +25,6 @@ export const getServerSideProps = wrapper.getServerSideProps(
 
 const Home = ({ ...props }) => {
     const content = normalizedData(homepageData?.content || []);
-
-    // use this data and replace the api
-    const { data, isLoading } = useGetCommunitiesQuery("pikachu");
 
     const newestData = productData
         .sort(
