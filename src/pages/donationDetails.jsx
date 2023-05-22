@@ -13,7 +13,7 @@ const EditProfile = () => (
     <Wrapper>
         <SEO pageTitle="Donation Details" />
         <Header />
-        <div className="edit-profile-area rn-section-gapTop">
+        <div className="edit-profile-area mt--50">
             <div className="container">
                 <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
                     <div className="col-12 d-flex justify-content-between mb--30 align-items-center">
