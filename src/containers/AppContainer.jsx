@@ -1,24 +1,32 @@
+import { login } from "@redux/slices/app";
+import { getCurrentUser, getLoginMethod } from "@utils/sessionManager";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
+const loginMethod = getLoginMethod();
+const user = getCurrentUser();
+
+console.log("loginMethod", loginMethod);
+
 const AppContainer = ({ children }) => {
     const dispatch = useDispatch();
-    const { provider } = useWalletConnector();
 
-    console.log("provider", provider);
-
+    const { isActive, connectedWalletName } = useWalletConnector();
     useEffect(() => {
-        // // Dispatch the login action
-        // dispatch(
-        //     login({
-        //         user: {
-        //             name: "Authenticated User",
-        //             email: "testauth@.mailinator.com",
-        //         },
-        //         token: "jWtTokEn",
-        //     })
-        // );
+        const initialSetup = () => {
+            if (isActive && loginMethod === connectedWalletName) {
+                dispatch(
+                    login({
+                        user: {
+                            name: "LoggedIn User",
+                            email: "email@gmail.com",
+                        },
+                    })
+                );
+            }
+        };
+        initialSetup();
     }, []);
     return <>{children}</>;
 };

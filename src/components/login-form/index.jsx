@@ -1,6 +1,7 @@
 import { loginWithCreds } from "@redux/slices/app";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
+import { setLoginMethod } from "@utils/sessionManager";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
 import { useRouter } from "next/router";
@@ -23,6 +24,7 @@ const LoginForm = ({ className }) => {
     const onSubmit = (data, e) => {
         e.preventDefault();
         dispatch(loginWithCreds(data.email));
+        setLoginMethod("NCW");
         // eslint-disable-next-line no-console
         // router.push({
         //     pathname: "/",

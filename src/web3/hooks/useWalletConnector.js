@@ -26,13 +26,12 @@ export const useWalletConnector = () => {
             const signedMessage = await signMessage(provider, account, message);
             return signedMessage;
         } catch (error) {
-            console.log("error", error);
             setError(error); // Set the error state if the promise is rejected
-            if (connector?.deactivate) {
-                void connector.deactivate();
-            } else {
-                void connector.resetState();
-            }
+            // if (connector?.deactivate) {
+            //     void connector.deactivate();
+            // } else {
+            //     void connector.resetState();
+            // }
         }
     };
 

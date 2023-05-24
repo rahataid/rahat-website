@@ -52,12 +52,8 @@ export const isValidToken = (accessToken) => {
     return decoded.exp > currentTime;
 };
 
-export const setWalletName = (name) => {
-    typeof window !== "undefined"
-        ? localStorage.setItem("walletName", name)
-        : null;
-};
+export const setLoginMethod = (name) =>
+    typeof window !== "undefined" ? localStorage.setItem("method", name) : null;
 
-export const getWalletName = () => {
-    typeof window !== "undefined" ? localStorage.getItem("walletName") : null;
-};
+export const getLoginMethod = () =>
+    typeof window !== "undefined" ? localStorage.getItem("method") : null;
