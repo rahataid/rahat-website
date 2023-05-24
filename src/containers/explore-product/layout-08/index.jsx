@@ -4,7 +4,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-const ExploreProductArea = ({ className, space, data, organizations }) => {
+const ExploreProductArea = ({ className, space, data, donations }) => {
     const [products, setProducts] = useState([]);
     const [hasMore, setHasMore] = useState(false);
 
@@ -37,13 +37,14 @@ const ExploreProductArea = ({ className, space, data, organizations }) => {
 
                 {products.length > 0 && (
                     <div className="row g-5">
-                        {organizations.map((organization) => (
+                        {donations.map((donation) => (
                             <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Product
                                     overlay
-                                    name={organization.name}
-                                    description={organization.description}
-                                    image={organization.images?.[0]}
+                                    name={donation.name}
+                                    description={donation.description}
+                                    amount={donation.amount}
+                                    image_url={donation.images_url}
                                 />
                             </div>
                         ))}
@@ -75,7 +76,7 @@ const ExploreProductArea = ({ className, space, data, organizations }) => {
 ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
-    organization: PropTypes.array
+    donation: PropTypes.array
 };
 
 ExploreProductArea.defaultProps = {

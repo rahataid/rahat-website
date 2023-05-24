@@ -5,15 +5,15 @@ import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
 // Demo data
-import { getOrganizations } from "@redux/slices/organizations";
+import { getDonations } from "@redux/slices/donations";
 import { wrapper } from "@redux/store";
 
-const Home02 = ({ organizations }) => (
+const Home02 = ({ donations }) => (
     <Wrapper>
         <SEO pageTitle="Donations" />
         <Header />
         <main id="main-content">
-            <ExploreProductArea organizations={organizations} />
+            <ExploreProductArea donations={donations} />
         </main>
         <Footer />
     </Wrapper>
@@ -22,13 +22,13 @@ const Home02 = ({ organizations }) => (
 export default Home02;
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
-        await store.dispatch(getOrganizations());
-        const serializedOrganizations = store.getState().organization.organizations;
-        console.log(serializedOrganizations);
-        const serializedError = store.getState().organization.error;
+        await store.dispatch(getDonations());
+        const serializedDonations = store.getState().donation.donations;
+        console.log(serializedDonations);
+        const serializedError = store.getState().donation.error;
         return {
             props: {
-                organizations: serializedOrganizations,
+                donations: serializedDonations,
                 error: serializedError,
             },
         };

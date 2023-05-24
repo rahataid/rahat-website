@@ -10,11 +10,8 @@ import { useState } from "react";
 
 const Product = ({
     overlay,
-    title,
+    name,
     description,
-    location,
-    establishedDate,
-    published_at,
     auction_date,
     placeBid,
     id,
@@ -34,9 +31,9 @@ const Product = ({
                 )}
             >
                 <div className="card-thumbnail">
-                    <Anchor path={`${path}/${id}`}>
+                    <Anchor path={`${path}/${donation.id}`}>
                         <Image
-                            src={"/images/portfolio/tayaba.png"}
+                            src={donation?.image_url}
                             alt={"NFT_portfolio"}
                             width={533}
                             height={533}
@@ -46,9 +43,9 @@ const Product = ({
                     {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
                 <Anchor path={`${path}/${id}`}>
-                    <span className="product-name mt-5">{title}</span>
+                    <span className="product-name mt-5">{donation?.name}</span>
                 </Anchor>
-                <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
+                <span className="latest-bid">{dontaion?.description}</span>
                 <div className="bid-react-area">
                     <Button
                         // path={path}
@@ -59,7 +56,7 @@ const Product = ({
                         More Details
                     </Button>
                 </div>
-                <span className="latest-bid">{description}</span>
+                <span className="latest-bid">{donation?.amount}</span>
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
@@ -68,7 +65,7 @@ const Product = ({
 
 Product.propTypes = {
     overlay: PropTypes.bool,
-    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     latestBid: PropTypes.string.isRequired,
     price: PropTypes.shape({
