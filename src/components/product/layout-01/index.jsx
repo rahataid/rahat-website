@@ -1,8 +1,6 @@
 import PlaceBidModal from "@components/modals/placebid-modal";
 import Anchor from "@ui/anchor";
 import Button from "@ui/button";
-import CountdownTimer from "@ui/countdown/layout-01";
-import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
@@ -10,15 +8,14 @@ import { useState } from "react";
 
 const Product = ({
     overlay,
-    title,
-    description,
-    location,
-    establishedDate,
-    published_at,
-    auction_date,
-    placeBid,
+    donorName,
+    donorImage,
+    cause,
+    amount,
+    doneeName,
+    doneeImage,
     id,
-    path = "/communities/details",
+    path,
 }) => {
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
@@ -30,28 +27,29 @@ const Product = ({
                 className={clsx(
                     "product-style-one",
                     !overlay && "no-overlay",
-                    placeBid && "with-placeBid"
+                    "with-placeBid"
                 )}
             >
                 <div className="card-thumbnail">
-                    <Anchor path={`${path}/${id}`}>
+                    <Anchor path={path}>
                         <Image
-                            src={"/images/portfolio/tayaba.png"}
+                            src={donorImage}
                             alt={"NFT_portfolio"}
                             width={533}
                             height={533}
                         />
                     </Anchor>
-
-                    {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
                 <Anchor path={`${path}/${id}`}>
-                    <span className="product-name mt-5">{title}</span>
+                    <span className="product-name mt-5">
+                        {donorName} to {doneeName}
+                    </span>
                 </Anchor>
-                <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
+                <span className="latest-bid">{cause}</span>
                 <div className="bid-react-area">
                     <Button
                         // path={path}
+
                         color="primary-alta"
                         className="sal-animate mt--5"
                         size="small"
@@ -59,7 +57,7 @@ const Product = ({
                         More Details
                     </Button>
                 </div>
-                <span className="latest-bid">{description}</span>
+                <span className="latest-bid">{amount}</span>
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
@@ -68,26 +66,7 @@ const Product = ({
 
 Product.propTypes = {
     overlay: PropTypes.bool,
-    title: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    latestBid: PropTypes.string.isRequired,
-    price: PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        currency: PropTypes.string.isRequired,
-    }).isRequired,
-    likeCount: PropTypes.number.isRequired,
-    auction_date: PropTypes.string,
-    image: ImageType.isRequired,
-    authors: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            slug: PropTypes.string.isRequired,
-            image: ImageType.isRequired,
-        })
-    ),
-    bitCount: PropTypes.number,
-    placeBid: PropTypes.bool,
-    disableShareDropdown: PropTypes.bool,
+
     id: PropTypes.number,
 };
 

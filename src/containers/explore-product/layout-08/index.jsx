@@ -2,23 +2,10 @@ import Product from "@components/product/layout-01";
 import Button from "@ui/button";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const ExploreProductArea = ({ className, space, data, organizations }) => {
-    const [products, setProducts] = useState([]);
+const ExploreProductArea = ({ className, space, donations }) => {
     const [hasMore, setHasMore] = useState(false);
-
-    useEffect(() => {
-        const currentProducts = data.products.slice(0, 10);
-        setProducts(currentProducts);
-        setHasMore(currentProducts.length < data.products.length);
-    }, [data.products]);
-
-    const loadMoreHandler = () => {
-        const currentProducts = data.products.slice(0, products.length + 4);
-        setProducts(currentProducts);
-        setHasMore(currentProducts.length < data.products.length);
-    };
 
     return (
         <div
@@ -35,15 +22,19 @@ const ExploreProductArea = ({ className, space, data, organizations }) => {
                     </div>
                 </div>
 
-                {products.length > 0 && (
+                {donations.length > 0 && (
                     <div className="row g-5">
-                        {organizations.map((organization) => (
+                        {donations.map((donation) => (
                             <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Product
                                     overlay
-                                    name={organization.name}
-                                    description={organization.description}
-                                    image={organization.images?.[0]}
+                                    donorName={donation.donor.name}
+                                    donorImage={"/images/portfolio/tayaba.png"}
+                                    cause={donation.cause}
+                                    amount={donation.amount}
+                                    doneeImage={"/images/portfolio/tayaba.png"}
+                                    doneeName={donation.donee.name}
+                                    path={`/donations/${donation.id}`}
                                 />
                             </div>
                         ))}
@@ -56,7 +47,7 @@ const ExploreProductArea = ({ className, space, data, organizations }) => {
                                 color="primary-alta"
                                 className={!hasMore ? "disabled" : ""}
                                 fullwidth
-                                onClick={loadMoreHandler}
+                                // onClick={loadMoreHandler}
                             >
                                 {hasMore ? (
                                     <>View More Items</>
@@ -75,7 +66,7 @@ const ExploreProductArea = ({ className, space, data, organizations }) => {
 ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
-    organization: PropTypes.array
+    donation: PropTypes.array,
 };
 
 ExploreProductArea.defaultProps = {
