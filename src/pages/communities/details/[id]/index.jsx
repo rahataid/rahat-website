@@ -4,10 +4,8 @@ import CommunityIntro from "@containers/community-details/communityIntro";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
-import { getCommunities } from "@redux/slices/communities";
 import { wrapper } from "@redux/store";
-
-// Demo data
+import { communityDetails } from "@redux/slices/communities";
 
 const Author = ({ community }) => (
     <Wrapper>
@@ -22,18 +20,18 @@ const Author = ({ community }) => (
 );
 
 export const getServerSideProps = wrapper.getServerSideProps(
-    (store) => async () => {
-        await store.dispatch(getCommunities());
-        const serializedCommunities = store.getState().community.communities;
-        console.log(serializedCommunities);
-        const serializedError = store.getState().community.error;
-        return {
-            props: {
-                communities: serializedCommunities,
-                error: serializedError,
-                className: "template-color-1"
-            },
-        };
-    }
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(communityDetails(query?.id));
+            const community = store.getState().communities.community;
+            console.log(community);
+            const serializedError = store.getState().communities.error;
+            return {
+                props: {
+                    community,
+                    error: serializedError,
+                },
+            };
+        }
 );
 export default Author;

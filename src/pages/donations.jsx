@@ -5,25 +5,33 @@ import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
 // Demo data
-import productData from "../data/donations.json";
+import { getOrganizations } from "@redux/slices/organizations";
+import { wrapper } from "@redux/store";
 
-export async function getStaticProps() {
-    return { props: { className: "template-color-1" } };
-}
-
-const Home02 = () => (
+const Home02 = ({ organizations }) => (
     <Wrapper>
         <SEO pageTitle="Donations" />
         <Header />
         <main id="main-content">
-            <ExploreProductArea
-                data={{
-                    products: productData,
-                }}
-            />
+            <ExploreProductArea organizations={organizations} />
         </main>
         <Footer />
     </Wrapper>
 );
 
 export default Home02;
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) => async () => {
+        await store.dispatch(getOrganizations());
+        const serializedOrganizations = store.getState().organization.organizations;
+        console.log(serializedOrganizations);
+        const serializedError = store.getState().organization.error;
+        return {
+            props: {
+                organizations: serializedOrganizations,
+                error: serializedError,
+            },
+        };
+    }
+);
+

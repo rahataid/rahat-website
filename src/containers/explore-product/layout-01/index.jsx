@@ -1,8 +1,6 @@
 import Product from "@components/product/layout-01";
-import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useReducer } from "react";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -17,20 +15,9 @@ function reducer(state, action) {
     }
 }
 
-const ExploreProductArea = ({ className, space, data }) => {
-    const [state, dispatch] = useReducer(reducer, {
-        filterToggle: false,
-        products: data.products || [],
-        inputs: { price: [0, 100] },
-    });
-
+const ExploreProductArea = ({ className, space, communities, data }) => {
     return (
-        <div
-            className={clsx(
-                "rn-product-area mt--50",
-                className
-            )}
-        >
+        <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-6 col-sm-6 col-12">
@@ -38,19 +25,22 @@ const ExploreProductArea = ({ className, space, data }) => {
                     </div>
                 </div>
                 <div className="row g-5">
-                    {state.products.length > 0 ? (
+                    {communities?.length > 0 ? (
                         <>
-                            {state.products.slice(0, 10).map((prod) => (
+                            {communities.map((community) => (
                                 <div
-                                    key={prod.id}
+                                    key={community.id}
                                     className="col-4 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Product
                                         overlay
-                                        title={prod.title}
-                                        price={prod.price}
-                                        slug={prod.slug}
-                                        image={prod.images?.[0]}
+                                        title={community.title}
+                                        location={community.location}
+                                        description={community.description}
+                                        establishedDate={
+                                            community.establishedDate
+                                        }
+                                        id={community.id}
                                     />
                                 </div>
                             ))}
@@ -67,11 +57,7 @@ const ExploreProductArea = ({ className, space, data }) => {
 ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
-    data: PropTypes.shape({
-        section_title: SectionTitleType,
-        products: PropTypes.arrayOf(ProductType),
-        placeBid: PropTypes.bool,
-    }),
+    communities: PropTypes.array,
 };
 
 ExploreProductArea.defaultProps = {

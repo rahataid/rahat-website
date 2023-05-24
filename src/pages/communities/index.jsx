@@ -7,7 +7,6 @@ import Wrapper from "@layout/wrapper";
 // Demo Data
 import { getCommunities } from "@redux/slices/communities";
 import { wrapper } from "@redux/store";
-import productData from "../data/products.json";
 
 export default function Product({ communities }) {
     console.log("communities", communities);
@@ -16,19 +15,17 @@ export default function Product({ communities }) {
             <SEO pageTitle="Communities" />
             <Header />
             <main id="main-content">
-                <ProductArea data={{ products: productData }} />
+                <ProductArea communities={communities} />
             </main>
             <Footer />
         </Wrapper>
     );
 }
-
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
         await store.dispatch(getCommunities());
-        const serializedCommunities = JSON.parse(
-            JSON.stringify(store.getState().communities.communities)
-        );
+        const serializedCommunities = store.getState().communities.communities;
+        console.log(serializedCommunities);
         const serializedError = store.getState().communities.error;
         return {
             props: {
