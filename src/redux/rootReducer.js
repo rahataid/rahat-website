@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import { appSlice } from "./slices/app";
 import commmunityReducer from "./slices/communities";
+import organizationReducer from "./slices/organizations";
 // slices
 
 // ----------------------------------------------------------------------
@@ -39,6 +40,7 @@ const rootPersistConfig = {
 
 const rootReducer = combineReducers({
     [commmunityReducer.name]: commmunityReducer.reducer,
+    [organizationReducer.name]: organizationReducer.reducer,
     [appSlice.name]: appSlice.reducer,
 });
 

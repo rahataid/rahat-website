@@ -38,7 +38,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                 <div className="author-inner">
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
-                                            {community.title}
+                                            {community?.title}
                                         </h4>
                                         <a
                                             href="https://twitter.com"
@@ -48,7 +48,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                         >
                                             <i className="feather-twitter" />
                                             <span className="user-name">
-                                                {community.title}
+                                                {community?.title}
                                             </span>
                                         </a>
                                     </div>

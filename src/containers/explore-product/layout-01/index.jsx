@@ -1,8 +1,6 @@
 import Product from "@components/product/layout-01";
-import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useReducer } from "react";
 
 function reducer(state, action) {
     switch (action.type) {

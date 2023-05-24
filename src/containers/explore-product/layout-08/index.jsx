@@ -1,11 +1,10 @@
 import Product from "@components/product/layout-01";
 import Button from "@ui/button";
-import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
-const ExploreProductArea = ({ className, space, data }) => {
+const ExploreProductArea = ({ className, space, data, organizations }) => {
     const [products, setProducts] = useState([]);
     const [hasMore, setHasMore] = useState(false);
 
@@ -38,20 +37,13 @@ const ExploreProductArea = ({ className, space, data }) => {
 
                 {products.length > 0 && (
                     <div className="row g-5">
-                        {products.map((prod) => (
+                        {organizations.map((organization) => (
                             <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Product
                                     overlay
-                                    placeBid={!!data.placeBid}
-                                    title={prod.title}
-                                    slug={prod.slug}
-                                    latestBid={prod.latestBid}
-                                    price={prod.price}
-                                    published_at={prod.published_at}
-                                    auction_date={prod.auction_date}
-                                    image={prod.images?.[0]}
-                                    authors={prod.authors}
-                                    bitCount={prod.bitCount}
+                                    name={organization.name}
+                                    description={organization.description}
+                                    image={organization.images?.[0]}
                                 />
                             </div>
                         ))}
@@ -83,11 +75,7 @@ const ExploreProductArea = ({ className, space, data }) => {
 ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
-    data: PropTypes.shape({
-        section_title: SectionTitleType,
-        products: PropTypes.arrayOf(ProductType),
-        placeBid: PropTypes.bool,
-    }),
+    organization: PropTypes.array
 };
 
 ExploreProductArea.defaultProps = {

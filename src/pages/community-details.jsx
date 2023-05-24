@@ -4,23 +4,18 @@ import CommunityIntro from "@containers/community-details/communityIntro";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { getCommunities } from "@redux/slices/communities";
 import { wrapper } from "@redux/store";
 
 // Demo data
-import authorData from "../data/community.json";
-import productData from "../data/products.json";
 
-export async function getStaticProps() {
-    return { props: { className: "template-color-1" } };
-}
-
-const Author = () => (
+const Author = ({ community }) => (
     <Wrapper>
         <SEO pageTitle="Author" />
         <Header />
         <main id="main-content">
-            <CommunityIntro data={authorData} />
-            <CommunityDetails data={{ products: productData }} />
+            <CommunityIntro community={community} />
+            <CommunityDetails community={community} />
         </main>
         <Footer />
     </Wrapper>
@@ -29,13 +24,14 @@ const Author = () => (
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
         await store.dispatch(getCommunities());
-        const serializedCommunities = store.getState().communities.communities;
+        const serializedCommunities = store.getState().community.communities;
         console.log(serializedCommunities);
-        const serializedError = store.getState().communities.error;
+        const serializedError = store.getState().community.error;
         return {
             props: {
                 communities: serializedCommunities,
                 error: serializedError,
+                className: "template-color-1"
             },
         };
     }
