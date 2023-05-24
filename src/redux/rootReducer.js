@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 import { appSlice } from "./slices/app";
-import commmunityReducer from "./slices/communities";
-import organizationReducer from "./slices/organizations";
+import commmunityReducer from "./slices/community";
+import organizationReducer from "./slices/organization";
 // slices
 
 // ----------------------------------------------------------------------

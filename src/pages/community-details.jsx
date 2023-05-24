@@ -4,7 +4,7 @@ import CommunityIntro from "@containers/community-details/communityIntro";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
-import { getCommunities } from "@redux/slices/communities";
+import { getCommunities } from "@redux/slices/community";
 import { wrapper } from "@redux/store";
 
 // Demo data
@@ -31,7 +31,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
             props: {
                 communities: serializedCommunities,
                 error: serializedError,
-                className: "template-color-1"
+                className: "template-color-1",
             },
         };
     }
