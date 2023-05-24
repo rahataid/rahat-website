@@ -11,12 +11,14 @@ import { useState } from "react";
 const Product = ({
     overlay,
     title,
-    slug,
-    price,
+    description,
+    location,
+    establishedDate,
     published_at,
     auction_date,
-    image,
     placeBid,
+    id,
+    path = "/communities/details",
 }) => {
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
@@ -32,19 +34,18 @@ const Product = ({
                 )}
             >
                 <div className="card-thumbnail">
-                    {image?.src && (
-                        <Anchor path={`/${slug}`}>
-                            <Image
-                                src={image.src}
-                                alt={image?.alt || "NFT_portfolio"}
-                                width={533}
-                                height={533}
-                            />
-                        </Anchor>
-                    )}
+                    <Anchor path={`${path}/${id}`}>
+                        <Image
+                            src={"/images/portfolio/tayaba.png"}
+                            alt={"NFT_portfolio"}
+                            width={533}
+                            height={533}
+                        />
+                    </Anchor>
+
                     {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
-                <Anchor path={`/${slug}`}>
+                <Anchor path={`${path}/${id}`}>
                     <span className="product-name mt-5">{title}</span>
                 </Anchor>
                 <span className="latest-bid">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae doloribus </span>
@@ -58,6 +59,7 @@ const Product = ({
                         More Details
                     </Button>
                 </div>
+                <span className="latest-bid">{description}</span>
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
@@ -86,6 +88,7 @@ Product.propTypes = {
     bitCount: PropTypes.number,
     placeBid: PropTypes.bool,
     disableShareDropdown: PropTypes.bool,
+    id: PropTypes.number,
 };
 
 Product.defaultProps = {

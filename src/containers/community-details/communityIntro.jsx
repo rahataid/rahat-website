@@ -5,7 +5,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const AuthorIntroArea = ({ className, space, data }) => {
+const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
     return (
@@ -37,7 +37,9 @@ const AuthorIntroArea = ({ className, space, data }) => {
                             <div className="author-wrapper">
                                 <div className="author-inner">
                                     <div className="rn-author-info-content">
-                                        <h4 className="title">{data.name}</h4>
+                                        <h4 className="title">
+                                            {community.title}
+                                        </h4>
                                         <a
                                             href="https://twitter.com"
                                             target="_blank"
@@ -46,7 +48,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                         >
                                             <i className="feather-twitter" />
                                             <span className="user-name">
-                                                {data.twitter}
+                                                {community.title}
                                             </span>
                                         </a>
                                     </div>

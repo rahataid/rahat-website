@@ -4,6 +4,7 @@ import CommunityIntro from "@containers/community-details/communityIntro";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { wrapper } from "@redux/store";
 
 // Demo data
 import authorData from "../data/community.json";
@@ -25,4 +26,18 @@ const Author = () => (
     </Wrapper>
 );
 
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) => async () => {
+        await store.dispatch(getCommunities());
+        const serializedCommunities = store.getState().communities.communities;
+        console.log(serializedCommunities);
+        const serializedError = store.getState().communities.error;
+        return {
+            props: {
+                communities: serializedCommunities,
+                error: serializedError,
+            },
+        };
+    }
+);
 export default Author;
