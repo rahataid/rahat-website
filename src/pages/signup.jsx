@@ -1,5 +1,5 @@
 import SEO from "@components/seo";
-import CreateNewArea from "@containers/create-new";
+import OrganizationForm from "@containers/signup-form";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
@@ -8,15 +8,16 @@ export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
 }
 
-const Home = () => (
+const SignUpForm = () => (
     <Wrapper>
-        <SEO pageTitle="Sign Up" />
+        <SEO pageTitle="Organization Form" />
         <Header />
         <main id="main-content">
-            <CreateNewArea />
+            <OrganizationForm />
         </main>
         <Footer />
     </Wrapper>
 );
 
-export default Home;
+export default SignUpForm;
+
