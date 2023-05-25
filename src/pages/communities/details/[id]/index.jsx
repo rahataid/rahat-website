@@ -23,9 +23,9 @@ export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
             await store.dispatch(communityDetails(query?.id));
-            const community = store.getState().communities.community;
+            const community = store.getState().community.community;
             console.log(community);
-            const serializedError = store.getState().communities.error;
+            const serializedError = store.getState().community.error;
             return {
                 props: {
                     community,
