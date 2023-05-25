@@ -1,10 +1,10 @@
-import { communityClient } from "@utils/client";
+import client from "@utils/communityClient";
 
 export const CommunitiesService = {
     getCommunitiesList: () => {
-        return communityClient.get(`/communities`);
+        return client.get(`/communities`);
     },
     getCommunitiyDetails: (id) => {
-        return communityClient.get(`communities/${id}`);
+        return client.get(`communities/${id}`);
     },
 };
