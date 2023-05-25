@@ -2,7 +2,6 @@
 import Image from "next/image";
 
 const EditProfileImage = ({ donations }) => {
-    console.log(donations)
     return (
         <>
             <div className="nuron-information">
