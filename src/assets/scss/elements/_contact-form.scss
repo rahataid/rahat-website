@@ -42,7 +42,7 @@
     input,
     textarea {
         background: var(--background-color-4);
-        height: 50px;
+        // height: 50px;
         border-radius: 5px;
         color: var(--color-white);
         font-size: 14px;
@@ -81,7 +81,6 @@
     /* Firefox 18- */
     color: var(--color-body);
 }
-
 .form-wrapper-one textarea::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: var(--color-body);
@@ -304,3 +303,4 @@ button {
         }
     }
 }
+
