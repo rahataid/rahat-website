@@ -8,11 +8,6 @@ const GuestGuard = ({ children }) => {
     const isInitialized = useSelector(selectIsInitialized);
     const router = useRouter();
 
-    console.log("first", {
-        isAuthenticated,
-        isInitialized,
-    });
-
     if (isAuthenticated) {
         router.push("/");
         return <LoadingScreen />;
