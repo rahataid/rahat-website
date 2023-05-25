@@ -3,12 +3,14 @@ import SEO from "@components/seo";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { donationDetails } from "@redux/slices/donation";
+import { wrapper } from "@redux/store";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
 import EditProfileImage from "../../../containers/edit-profile/edit-profile-image";
 
-const EditProfile = () => (
+const EditProfile = ({ donations }) => (
     <Wrapper>
         <SEO pageTitle="Donation Details" />
         <Header />
@@ -24,7 +26,7 @@ const EditProfile = () => (
                         <div className="col-lg-12 col-md-12 col-sm-12 mt_sm--30">
                             <TabContent className="tab-content-edit-wrapepr">
                                 <TabPane eventKey="nav-home">
-                                    <EditProfileImage />
+                                    <EditProfileImage donations={donations} />
                                 </TabPane>
                                 <Activity />
                             </TabContent>
@@ -38,3 +40,17 @@ const EditProfile = () => (
 );
 
 export default EditProfile;
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) => async ({ query }) => {
+        await store.dispatch(donationDetails(query?.id));
+        const serializedDonations = store.getState().donation.donation;
+        console.log(serializedDonations);
+        const serializedError = store.getState().donation.error;
+        return {
+            props: {
+                donations: serializedDonations,
+                error: serializedError,
+            },
+        };
+    }
+);
