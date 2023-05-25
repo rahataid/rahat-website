@@ -9,7 +9,7 @@ const initialState = {
 };
 
 const slice = createSlice({
-    name: "communities",
+    name: "community",
     initialState,
     reducers: {
         startLoading: (state) => {
@@ -34,14 +34,29 @@ export default slice;
 
 export const { hasError } = slice.actions;
 
-export const selectCommunities = (state) => state.communities.communities;
+export const selectCommunities = (state) => state.community.communities;
 
 // Thunk for fetching communities
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
             const { data: res } = await CommunitiesService.getCommunitiesList();
-            dispatch(slice.actions.getCommunitiesSuccess(res?.abilities));
+
+            dispatch(slice.actions.getCommunitiesSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
+
+export const communityDetails = (id) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } = await CommunitiesService.getCommunitiyDetails(
+                id
+            );
+
+            dispatch(slice.actions.getCommunitySuccess(res));
         } catch (error) {
             dispatch(hasError(error));
         }

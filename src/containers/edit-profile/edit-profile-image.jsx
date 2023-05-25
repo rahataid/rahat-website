@@ -1,16 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 
-const EditProfileImage = () => {
-
-
+const EditProfileImage = ({ donations }) => {
+    console.log(donations)
     return (
         <>
             <div className="nuron-information">
                 <div className="profile-change">
                     <div className="profile-left col-lg-4">
                         <div className="profile-image mb--30">
-                            <h6 className="title">Donor Information</h6>
+                            <h5 className="title">Donor</h5>
                             <div className="img-wrap">
                                 <Image
                                     id="rbtinput1"
@@ -19,25 +18,17 @@ const EditProfileImage = () => {
                                     layout="fill"
                                 />
                             </div>
-                            <h6 className="title">PepsiCo</h6>
+                            <h6 className="title">{donations.donor.name}</h6>
                             <span className="latest-bid">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas
+                                {donations.donor.description}
                             </span>
                         </div>
-                        <div className="button-area">
-                            <div className="brows-file-wrapper">
-                                <label htmlFor="fatima" title="No File Choosen">
-                                    <span className="text-center color-white">
-                                        More Info
-                                    </span>
-                                </label>
-                            </div>
-                        </div>
+
                     </div>
 
                     <div className="profile-left col-lg-4">
                         <div className="profile-image mb--30">
-                            <h6 className="title">Beneficiary Information</h6>
+                            <h5 className="title">Beneficiary</h5>
                             <div className="img-wrap">
                                 <Image
                                     id="rbtinput1"
@@ -46,19 +37,10 @@ const EditProfileImage = () => {
                                     layout="fill"
                                 />
                             </div>
-                            <h6 className="title">Oxfam</h6>
+                            <h6 className="title">{donations.donee.name}</h6>
                             <span className="latest-bid">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis suscipit quas
+                                {donations.donee.description}
                             </span>
-                        </div>
-                        <div className="button-area">
-                            <div className="brows-file-wrapper">
-                                <label htmlFor="fatima" title="No File Choosen">
-                                    <span className="text-center color-white">
-                                        More Info
-                                    </span>
-                                </label>
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,8 @@
             "@redux/*": ["src/redux/*"],
             "@slices/*": ["src/redux/slices/*"],
             "@web3/*": ["src/web3/*"],
-            "@guards/*": ["src/guards/*"]
+            "@guards/*": ["src/guards/*"],
+            "@config": ["src/config.js"]
         }
     }
 }

@@ -1,13 +1,12 @@
 import SEO from "@components/seo";
-import ProductArea from "@containers/explore-product/layout-01";
+import ProductArea from "@containers/explore-product/layout-01/community";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { getCommunities } from "@redux/slices/community";
 
 // Demo Data
-import { getCommunities } from "@redux/slices/communities";
 import { wrapper } from "@redux/store";
-import productData from "../data/products.json";
 
 export default function Product({ communities }) {
     console.log("communities", communities);
@@ -16,20 +15,18 @@ export default function Product({ communities }) {
             <SEO pageTitle="Communities" />
             <Header />
             <main id="main-content">
-                <ProductArea data={{ products: productData }} />
+                <ProductArea communities={communities} />
             </main>
             <Footer />
         </Wrapper>
     );
 }
-
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
         await store.dispatch(getCommunities());
-        const serializedCommunities = JSON.parse(
-            JSON.stringify(store.getState().communities.communities)
-        );
-        const serializedError = store.getState().communities.error;
+        const serializedCommunities = store.getState().community.communities;
+        console.log(serializedCommunities);
+        const serializedError = store.getState().community.error;
         return {
             props: {
                 communities: serializedCommunities,
