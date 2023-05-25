@@ -28,7 +28,7 @@ const EditProfile = ({ donations }) => (
                                 <TabPane eventKey="nav-home">
                                     <EditProfileImage donations={donations} />
                                 </TabPane>
-                                <Activity />
+                                <Activity donations={donations} />
                             </TabContent>
                         </div>
                     </div>
