@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 const Activity = ({
     className,
     status,
+    donations,
 }) => (
     <>
         <div className={clsx("single-activity-wrapper mt--50", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
@@ -19,8 +20,8 @@ const Activity = ({
                         />
                     </div>
                     <div className="content text-center">
-                        <h6 className="title">Donation offered</h6>
-                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda quasi quam vero temporibus deleniti iusto saepe veritatis qui porro ab deserunt illum in  </p>
+                        <h6 className="title">Donation offered by {donations.donor.name}</h6>
+                        <p> Donation amount of ${donations.amount} was offered to {donations.donee.name}.</p>
                         <div className="time-maintane">
                             <div className="time data">
                                 <i className="feather-clock" />
@@ -28,7 +29,7 @@ const Activity = ({
                                     10-04-2023
                                 </span>
                             </div>
-                            <div className="user-area data">
+                            <div className="user-area data text-center">
                                 <i className="feather-user" />
                                 <span>Pepsico</span>
                             </div>
@@ -42,12 +43,6 @@ const Activity = ({
                             height={500}
                         />
                     </div>
-                </div>
-                <div className="icone-area">
-                    {status === "follow" && <i className="feather-thumbs-up" />}
-                    {status === "sale" && <i className="feather-shopping-cart" />}
-                    {status === "like" && <i className="feather-heart" />}
-                    {status === "offer" && <i className="feather-user-plus" />}
                 </div>
             </div>
         </div>

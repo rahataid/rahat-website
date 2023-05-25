@@ -9,7 +9,7 @@ const EditProfileImage = ({ donations }) => {
                 <div className="profile-change">
                     <div className="profile-left col-lg-4">
                         <div className="profile-image mb--30">
-                            <h4 className="title">Donor Information</h4>
+                            <h5 className="title">Donor</h5>
                             <div className="img-wrap">
                                 <Image
                                     id="rbtinput1"
@@ -28,7 +28,7 @@ const EditProfileImage = ({ donations }) => {
 
                     <div className="profile-left col-lg-4">
                         <div className="profile-image mb--30">
-                            <h4 className="title">Beneficiary Information</h4>
+                            <h5 className="title">Beneficiary</h5>
                             <div className="img-wrap">
                                 <Image
                                     id="rbtinput1"

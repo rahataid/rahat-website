@@ -67,7 +67,7 @@ const CreateNewArea = ({ className, space }) => {
                             <div className="col-lg-12">
                                 <div className="form-wrapper-one">
                                     <div className="row">
-                                        <div className="col-md-12">
+                                        <div className="col-md-6">
                                             <div className="input-box pb--20">
                                                 <label
                                                     htmlFor="name"
@@ -86,6 +86,34 @@ const CreateNewArea = ({ className, space }) => {
                                                 {errors.name && (
                                                     <ErrorText>
                                                         {errors.name?.message}
+                                                    </ErrorText>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="input-box pb--20">
+                                                <label
+                                                    htmlFor="price"
+                                                    className="form-label"
+                                                >
+                                                    Donation amount
+                                                </label>
+                                                <input
+                                                    id="price"
+                                                    placeholder="$500"
+                                                    {...register("price", {
+                                                        pattern: {
+                                                            value: /^[0-9]+$/,
+                                                            message:
+                                                                "Please enter a number",
+                                                        },
+                                                        required:
+                                                            "Amount is required",
+                                                    })}
+                                                />
+                                                {errors.price && (
+                                                    <ErrorText>
+                                                        {errors.price?.message}
                                                     </ErrorText>
                                                 )}
                                             </div>
@@ -151,80 +179,9 @@ const CreateNewArea = ({ className, space }) => {
                                                 )}
                                             </div>
                                         </div>
-
-                                        <div className="col-md-6">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="price"
-                                                    className="form-label"
-                                                >
-                                                    Donation amount
-                                                </label>
-                                                <input
-                                                    id="price"
-                                                    placeholder="$500"
-                                                    {...register("price", {
-                                                        pattern: {
-                                                            value: /^[0-9]+$/,
-                                                            message:
-                                                                "Please enter a number",
-                                                        },
-                                                        required:
-                                                            "Amount is required",
-                                                    })}
-                                                />
-                                                {errors.price && (
-                                                    <ErrorText>
-                                                        {errors.price?.message}
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Propertie"
-                                                    className="form-label"
-                                                >
-                                                    Properties
-                                                </label>
-                                                <input
-                                                    id="propertiy"
-                                                    placeholder="e. g. `Propertie`"
-                                                    {...register("propertiy", {
-                                                        required:
-                                                            "Propertiy is required",
-                                                    })}
-                                                />
-                                                {errors.propertiy && (
-                                                    <ErrorText>
-                                                        {
-                                                            errors.propertiy
-                                                                ?.message
-                                                        }
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
-                                        <div className="col-md-12 col-xl-4">
-                                            <div className="input-box">
-                                                <Button
-                                                    color="primary-alta"
-                                                    fullwidth
-                                                    type="submit"
-                                                    data-btn="preview"
-                                                    onClick={handleSubmit(
-                                                        onSubmit
-                                                    )}
-                                                >
-                                                    Preview
-                                                </Button>
-                                            </div>
-                                        </div>
-
                                         <div className="col-md-12 col-xl-8 mt_lg--15 mt_md--15 mt_sm--15">
                                             <div className="input-box">
-                                                <Button type="submit" fullwidth>
+                                                <Button type="submit">
                                                     Submit Item
                                                 </Button>
                                             </div>
