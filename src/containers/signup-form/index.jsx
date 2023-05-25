@@ -156,7 +156,7 @@ const CreateNewArea = ({ className, space }) => {
                                                 />
                                                 {errors.name && (
                                                     <ErrorText>
-                                                        {errors.name?.message}
+                                                        {errors.email?.message}
                                                     </ErrorText>
                                                 )}
                                             </div>
@@ -178,7 +178,7 @@ const CreateNewArea = ({ className, space }) => {
                                                         "discription",
                                                         {
                                                             required:
-                                                                "Discription is required",
+                                                                "Description is required",
                                                         }
                                                     )}
                                                 />
@@ -190,6 +190,14 @@ const CreateNewArea = ({ className, space }) => {
                                                         }
                                                     </ErrorText>
                                                 )}
+                                            </div>
+                                        </div>
+
+                                        <div className="col-md-12 col-xl-4">
+                                            <div className="input-box">
+                                                <Button type="submit" fullwidth>
+                                                    Continue
+                                                </Button>
                                             </div>
                                         </div>
                                     </div>
