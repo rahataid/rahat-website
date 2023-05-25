@@ -3,7 +3,7 @@ import SEO from "@components/seo";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
-import { donationDetails } from "@redux/slices/donation";
+import { getDonationDetails } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
@@ -42,7 +42,7 @@ const EditProfile = ({ donations }) => (
 export default EditProfile;
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async ({ query }) => {
-        await store.dispatch(donationDetails(query?.id));
+        await store.dispatch(getDonationDetails(query?.id));
         const serializedDonations = store.getState().donation.donation;
         console.log(serializedDonations);
         const serializedError = store.getState().donation.error;

@@ -51,7 +51,7 @@ export const getDonations = (params) => {
     };
 };
 
-export const donationDetails = (id) => {
+export const getDonationDetails = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } = await DonationsService.getDonationDetails(id);
