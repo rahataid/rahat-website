@@ -43,7 +43,6 @@ export const getDonations = (params) => {
         try {
             const { data: res } = await DonationsService.getDonationsList();
             console.log("res", res);
-
             dispatch(slice.actions.getDonationsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -51,7 +50,7 @@ export const getDonations = (params) => {
     };
 };
 
-export const donationDetails = (id) => {
+export const getDonationDetails = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } = await DonationsService.getDonationDetails(id);

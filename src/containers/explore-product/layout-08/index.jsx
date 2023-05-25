@@ -22,7 +22,7 @@ const ExploreProductArea = ({ className, space, donations }) => {
                     </div>
                 </div>
 
-                {donations.length > 0 && (
+                {donations.length > 0 ? (
                     <div className="row g-5">
                         {donations.map((donation) => (
                             <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
@@ -39,6 +39,8 @@ const ExploreProductArea = ({ className, space, donations }) => {
                             </div>
                         ))}
                     </div>
+                ) : (
+                    <p>No donations to display.</p>
                 )}
                 <div className="row">
                     <div className="col-lg-12">
@@ -47,7 +49,7 @@ const ExploreProductArea = ({ className, space, donations }) => {
                                 color="primary-alta"
                                 className={!hasMore ? "disabled" : ""}
                                 fullwidth
-                                // onClick={loadMoreHandler}
+                            // onClick={loadMoreHandler}
                             >
                                 {hasMore ? (
                                     <>View More Items</>
