@@ -9,7 +9,6 @@ import { getDonations } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
 
 const Home02 = ({ donations }) => {
-    console.log("donations", donations);
     return (
         <Wrapper>
             <SEO pageTitle="Donations" />
