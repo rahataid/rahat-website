@@ -28,7 +28,6 @@ export const appSlice = createSlice({
     reducers: {
         login: (state, action) => {
             state.user = action.payload.user;
-            state.token = action.payload.token;
             state.isAuthenticated = true;
             state.isInitialized = true;
         },
@@ -59,7 +58,9 @@ export const selectApp = (state) => state.globalApp;
 
 export default appSlice.reducer;
 
-export const loginWithCreds = (data) => async (dispatch) => {};
+export const loginWithCreds = (data) => async (dispatch) => {
+    console.log("data", data);
+};
 
 export const loginWithWallet = (signMessage) => async (dispatch) => {
     if (!signMessage) return;

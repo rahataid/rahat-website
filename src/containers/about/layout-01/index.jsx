@@ -7,10 +7,10 @@ const AboutArea = ({ className, community }) => (
             <div className="row">
                 <div className="col-12">
                     <div className="about-wrapper">
-                        <h5>{community.title}</h5>
-                        <p className="discription">{community.title}</p>
+                        <h5>{community?.title}</h5>
+                        <p className="discription">{community?.title}</p>
                         <hr className="mt--30" />
-                        <p className="discription">{community.description}</p>
+                        <p className="discription">{community?.description}</p>
                     </div>
                 </div>
             </div>

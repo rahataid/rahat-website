@@ -4,13 +4,6 @@ import PropTypes from "prop-types";
 
 const Activity = ({
     className,
-    title,
-    path,
-    desc,
-    time,
-    date,
-    author,
-    image,
     status,
 }) => (
     <>
@@ -25,7 +18,7 @@ const Activity = ({
                             height={500}
                         />
                     </div>
-                    <div className="content">
+                    <div className="content text-center">
                         <h6 className="title">Donation offered</h6>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda quasi quam vero temporibus deleniti iusto saepe veritatis qui porro ab deserunt illum in  </p>
                         <div className="time-maintane">
@@ -40,6 +33,14 @@ const Activity = ({
                                 <span>Pepsico</span>
                             </div>
                         </div>
+                    </div>
+                    <div className="thumbnail">
+                        <Image
+                            src="/images/portfolio/oxfam.jpeg"
+                            alt={"Nft_Profile"}
+                            width={500}
+                            height={500}
+                        />
                     </div>
                 </div>
                 <div className="icone-area">
@@ -61,7 +62,7 @@ const Activity = ({
                             height={500}
                         />
                     </div>
-                    <div className="content">
+                    <div className="content text-center">
                         <h6 className="title">Pending Acceptance</h6>
                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda quasi quam vero temporibus deleniti iusto saepe veritatis qui porro ab deserunt illum in  </p>
                         <div className="time-maintane">
@@ -76,6 +77,14 @@ const Activity = ({
                                 <span>Oxfam</span>
                             </div>
                         </div>
+                    </div>
+                    <div className="thumbnail">
+                        <Image
+                            src="/images/profile/pepsico.png"
+                            alt={"Nft_Profile"}
+                            width={500}
+                            height={500}
+                        />
                     </div>
                 </div>
                 <div className="icone-area">

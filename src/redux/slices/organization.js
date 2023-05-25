@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CommunitiesService } from "@services/communities";
+import { OrganizationsService } from "@services/organization";
 
 const initialState = {
     isLoading: false,
     error: null,
-    communities: [],
-    community: null,
+    organizations: [],
+    organization: null,
 };
 
 const slice = createSlice({
-    name: "communities",
+    name: "organization",
     initialState,
     reducers: {
         startLoading: (state) => {
@@ -19,11 +19,11 @@ const slice = createSlice({
             state.isLoading = false;
             state.error = action.payload.message;
         },
-        getCommunitiesSuccess(state, action) {
+        getOrganizationsSuccess(state, action) {
             state.isLoading = false;
             state.communities = action.payload;
         },
-        getCommunitySuccess(state, action) {
+        getOrganizationSuccess(state, action) {
             state.isLoading = false;
             state.community = action.payload;
         },
@@ -34,29 +34,29 @@ export default slice;
 
 export const { hasError } = slice.actions;
 
-export const selectCommunities = (state) => state.communities.communities;
+export const selectOrganizations = (state) => state.organizaitons.organizaitons;
 
-// Thunk for fetching communities
-export const getCommunities = (params) => {
+// Thunk for fetching organizations
+export const getOrganizations = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await CommunitiesService.getCommunitiesList();
+            const { data: res } = await OrganizationsService.getOrganizationsList();
 
-            dispatch(slice.actions.getCommunitiesSuccess(res));
+            dispatch(slice.actions.getOrganizationsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
         }
     };
 };
 
-export const communityDetails = (id) => {
+export const organizationDetails = (id) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await CommunitiesService.getCommunitiyDetails(
+            const { data: res } = await OrganizationsService.getOrganizationDetails(
                 id
             );
 
-            dispatch(slice.actions.getCommunitySuccess(res));
+            dispatch(slice.actions.getOrganizationSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
         }

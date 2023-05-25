@@ -8,7 +8,7 @@ import WalletLoginButton from "./WalletLogin";
 
 const SocialAuth = ({ className }) => {
     const { error } = useWalletConnector();
-    console.log("error", error);
+    console.log("error", JSON.stringify(error, null, 2));
     return (
         <div className={clsx("social-share-media form-wrapper-one", className)}>
             <h6>Connect Wallet</h6>

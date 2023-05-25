@@ -6,14 +6,13 @@ import Wrapper from "@layout/wrapper";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
-import EditProfileImage from "../containers/edit-profile/edit-profile-image";
-
+import EditProfileImage from "../../../containers/edit-profile/edit-profile-image";
 
 const EditProfile = () => (
     <Wrapper>
         <SEO pageTitle="Donation Details" />
         <Header />
-        <div className="edit-profile-area rn-section-gapTop">
+        <div className="edit-profile-area mt--50">
             <div className="container">
                 <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
                     <div className="col-12 d-flex justify-content-between mb--30 align-items-center">
@@ -39,4 +38,3 @@ const EditProfile = () => (
 );
 
 export default EditProfile;
-

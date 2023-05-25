@@ -5,7 +5,7 @@ import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
 // Demo Data
-import { getCommunities } from "@redux/slices/communities";
+import { getCommunities } from "@redux/slices/community";
 import { wrapper } from "@redux/store";
 
 export default function Product({ communities }) {
@@ -24,9 +24,9 @@ export default function Product({ communities }) {
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
         await store.dispatch(getCommunities());
-        const serializedCommunities = store.getState().communities.communities;
+        const serializedCommunities = store.getState().community.communities;
         console.log(serializedCommunities);
-        const serializedError = store.getState().communities.error;
+        const serializedError = store.getState().community.error;
         return {
             props: {
                 communities: serializedCommunities,

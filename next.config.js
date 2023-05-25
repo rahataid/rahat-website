@@ -5,6 +5,9 @@ module.exports = {
     sassOptions: {
         includePaths: [path.join(__dirname, "./src/assets/scss")],
     },
+    image: {
+        domains: ["www.ifrc.org"],
+    },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         config.ignoreWarnings = [
             ...(config.ignoreWarnings || []),

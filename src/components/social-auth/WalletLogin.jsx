@@ -1,4 +1,5 @@
 import { loginWithWallet } from "@redux/slices/app";
+import { setLoginMethod } from "@utils/sessionManager";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import { getName } from "@web3/utils";
 import Image from "next/image";
@@ -13,7 +14,7 @@ const WalletLoginButton = ({
     ...restProps
 }) => {
     const dispatch = useDispatch();
-    const { signWallet } = useWalletConnector();
+    const { signWallet, connectedWalletName } = useWalletConnector();
     const walletName = getName(connector);
 
     const onClick = async () => {
@@ -25,6 +26,7 @@ const WalletLoginButton = ({
 
             // Dispatch the function with the signed message
             dispatch(loginWithWallet(signed));
+            setLoginMethod(connectedWalletName);
         } catch (error) {
             console.error("Error occurred:", error);
             // Handle the error, e.g., show an error message to the user

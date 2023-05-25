@@ -12,17 +12,16 @@ const EditProfile = ({ community }) => (
                     <div className="col-lg-3 col-md-3 col-sm-12">
                         <nav className="left-nav rbt-sticky-top-adjust-five">
                             <Nav className="nav nav-tabs">
-                                <Nav.Link eventKey="nav-home" as="button">
-                                    <i className="feather-edit" />
-                                    Edit Profile Image
-                                </Nav.Link>
                                 <Nav.Link eventKey="nav-homes" as="button">
                                     <i className="feather-user" />
-                                    Personal Information
+                                    Community Information
                                 </Nav.Link>
-                                <Nav.Link eventKey="nav-profile" as="button">
-                                    <i className="feather-unlock" />
-                                    Change Password
+                                <Nav.Link
+                                    eventKey="nav-profile"
+                                    as="button"
+                                >
+                                    <i className="feather-book" />
+                                    Projects
                                 </Nav.Link>
                                 <Nav.Link eventKey="nav-contact" as="button">
                                     <i className="feather-bell" />

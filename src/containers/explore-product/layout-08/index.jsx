@@ -1,25 +1,11 @@
 import Product from "@components/product/layout-01";
 import Button from "@ui/button";
-import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const ExploreProductArea = ({ className, space, data }) => {
-    const [products, setProducts] = useState([]);
+const ExploreProductArea = ({ className, space, donations }) => {
     const [hasMore, setHasMore] = useState(false);
-
-    useEffect(() => {
-        const currentProducts = data.products.slice(0, 10);
-        setProducts(currentProducts);
-        setHasMore(currentProducts.length < data.products.length);
-    }, [data.products]);
-
-    const loadMoreHandler = () => {
-        const currentProducts = data.products.slice(0, products.length + 4);
-        setProducts(currentProducts);
-        setHasMore(currentProducts.length < data.products.length);
-    };
 
     return (
         <div
@@ -36,22 +22,19 @@ const ExploreProductArea = ({ className, space, data }) => {
                     </div>
                 </div>
 
-                {products.length > 0 && (
+                {donations.length > 0 && (
                     <div className="row g-5">
-                        {products.map((prod) => (
+                        {donations.map((donation) => (
                             <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Product
                                     overlay
-                                    placeBid={!!data.placeBid}
-                                    title={prod.title}
-                                    slug={prod.slug}
-                                    latestBid={prod.latestBid}
-                                    price={prod.price}
-                                    published_at={prod.published_at}
-                                    auction_date={prod.auction_date}
-                                    image={prod.images?.[0]}
-                                    authors={prod.authors}
-                                    bitCount={prod.bitCount}
+                                    donorName={donation.donor.name}
+                                    donorImage={"/images/portfolio/tayaba.png"}
+                                    cause={donation.cause}
+                                    amount={donation.amount}
+                                    doneeImage={"/images/portfolio/tayaba.png"}
+                                    doneeName={donation.donee.name}
+                                    path={`/donations/${donation.id}`}
                                 />
                             </div>
                         ))}
@@ -64,7 +47,7 @@ const ExploreProductArea = ({ className, space, data }) => {
                                 color="primary-alta"
                                 className={!hasMore ? "disabled" : ""}
                                 fullwidth
-                                onClick={loadMoreHandler}
+                                // onClick={loadMoreHandler}
                             >
                                 {hasMore ? (
                                     <>View More Items</>
@@ -83,11 +66,7 @@ const ExploreProductArea = ({ className, space, data }) => {
 ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
-    data: PropTypes.shape({
-        section_title: SectionTitleType,
-        products: PropTypes.arrayOf(ProductType),
-        placeBid: PropTypes.bool,
-    }),
+    donation: PropTypes.array,
 };
 
 ExploreProductArea.defaultProps = {
