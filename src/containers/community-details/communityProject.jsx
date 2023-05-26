@@ -5,7 +5,7 @@ const Projects = ({ className, projects }) => {
     console.log(projects);
     return (
         <Fragment>
-            {projects?.map((project, index) => {
+            {projects?.map((project, index) => (
                 <div
                     className={clsx("rn-about-card mt--30", className)}
                     key={index}
@@ -24,8 +24,8 @@ const Projects = ({ className, projects }) => {
                             </div>
                         </div>
                     </div>
-                </div>;
-            })}
+                </div>
+            ))}
         </Fragment>
     );
 };
