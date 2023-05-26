@@ -4,8 +4,8 @@ import CommunityIntro from "@containers/community-details/communityIntro";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { getCommunityDetails } from "@redux/slices/community";
 import { wrapper } from "@redux/store";
-import { communityDetails } from "@redux/slices/communities";
 
 const Author = ({ community }) => (
     <Wrapper>
@@ -22,7 +22,7 @@ const Author = ({ community }) => (
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
-            await store.dispatch(communityDetails(query?.id));
+            await store.dispatch(getCommunityDetails(query?.id));
             const community = store.getState().community.community;
             console.log(community);
             const serializedError = store.getState().community.error;

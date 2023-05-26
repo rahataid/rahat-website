@@ -49,7 +49,7 @@ export const getCommunities = (params) => {
     };
 };
 
-export const communityDetails = (id) => {
+export const getCommunityDetails = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } = await CommunitiesService.getCommunitiyDetails(
