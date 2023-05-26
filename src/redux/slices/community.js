@@ -79,7 +79,6 @@ export const getCommunityProjects = (id) => {
         try {
             const { data: res } =
                 await CommunitiesService.getCommunitiyProjects(id);
-            console.log(res);
             dispatch(slice.actions.getCommunityProjectsSuccess(res));
         } catch (error) {
             console.log({ error });
