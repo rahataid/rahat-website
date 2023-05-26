@@ -6,6 +6,8 @@ const initialState = {
     error: null,
     communities: [],
     community: null,
+    projects: [],
+    transactions: [],
 };
 
 const slice = createSlice({
@@ -27,6 +29,14 @@ const slice = createSlice({
             state.isLoading = false;
             state.community = action.payload;
         },
+        getCommunityProjectsSuccess(state, action) {
+            state.isLoading = false;
+            state.projects = action.payload;
+        },
+        getCommunityTransactionsSuccess(state, action) {
+            state.isLoading = false;
+            state.transactions = action.payload;
+        },
     },
 });
 
@@ -35,6 +45,7 @@ export default slice;
 export const { hasError } = slice.actions;
 
 export const selectCommunities = (state) => state.community.communities;
+export const selectProjects = (state) => state.community.projects;
 
 // Thunk for fetching communities
 export const getCommunities = (params) => {
@@ -58,6 +69,20 @@ export const getCommunityDetails = (id) => {
 
             dispatch(slice.actions.getCommunitySuccess(res));
         } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
+
+export const getCommunityProjects = (id) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } =
+                await CommunitiesService.getCommunitiyProjects(id);
+            console.log(res);
+            dispatch(slice.actions.getCommunityProjectsSuccess(res));
+        } catch (error) {
+            console.log({ error });
             dispatch(hasError(error));
         }
     };
