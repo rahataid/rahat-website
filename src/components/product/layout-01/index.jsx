@@ -13,6 +13,7 @@ const Product = ({
     cause,
     amount,
     doneeName,
+    status,
     doneeImage,
     id,
     path,
@@ -40,16 +41,21 @@ const Product = ({
                         />
                     </Anchor>
                 </div>
-                <Anchor path={`${path}/${id}`}>
-                    <span className="product-name mt-5">
-                        {donorName} to {doneeName}
-                    </span>
-                </Anchor>
-                <span className="latest-bid">{cause}</span>
+                <div className="mt-5 d-flex justify-content-between">
+                    <Anchor path={`${path}/${id}`}>
+                        <span className="product-name ">
+                            {donorName} to {doneeName}
+                        </span>
+                    </Anchor>
+                    <div className="pill">Pending</div>
+                </div>
+                <div className="d-flex justify-content-between">
+                    <span className="latest-bid">{cause}</span>
+                    <span className="latest-bid">{amount}</span>
+                </div>
                 <div className="bid-react-area">
                     <Button
                         // path={path}
-
                         color="primary-alta"
                         className="sal-animate mt--5"
                         size="small"
@@ -57,7 +63,7 @@ const Product = ({
                         More Details
                     </Button>
                 </div>
-                <span className="latest-bid">{amount}</span>
+
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>

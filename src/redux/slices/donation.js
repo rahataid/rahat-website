@@ -6,6 +6,7 @@ const initialState = {
     error: null,
     donations: [],
     donation: null,
+    transactions: [],
 };
 
 const slice = createSlice({
@@ -28,6 +29,10 @@ const slice = createSlice({
             state.isLoading = false;
             state.donation = action.payload;
         },
+        getDonationTransactionSuccess(state, action) {
+            state.isLoading = false;
+            state.transactions = action.payload;
+        },
     },
 });
 
@@ -42,8 +47,6 @@ export const getDonations = (params) => {
     return async (dispatch) => {
         try {
             const { data: res } = await DonationsService.getDonationsList();
-            console.log("res", res);
-
             dispatch(slice.actions.getDonationsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -52,6 +55,18 @@ export const getDonations = (params) => {
 };
 
 export const getDonationDetails = (id) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } = await DonationsService.getDonationDetails(id);
+
+            dispatch(slice.actions.getDonationSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
+
+export const getDonationTransactions = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } = await DonationsService.getDonationDetails(id);
