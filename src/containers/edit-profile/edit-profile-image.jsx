@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 
-const EditProfileImage = ({ community }) => {
+const EditProfileImage = ({ community, id }) => {
     return (
         <>
-            <div className="login-area message-area">
+            <div id={id} className="login-area message-area">
                 <div className="container">
                     <div className="row d-flex align-items-center">
                         <div className="col-6">

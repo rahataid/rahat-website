@@ -1,8 +1,8 @@
 import Button from "@ui/button";
 import NiceSelect from "@ui/nice-select";
 
-const PersonalInformation = () => (
-    <div className="nuron-information">
+const PersonalInformation = ({ id }) => (
+    <div id={id} className="nuron-information">
         <div className="profile-form-wrapper">
             <div className="input-two-wrapper mb--15">
                 <div className="first-name half-wid">

@@ -1,9 +1,10 @@
 import EditProfileImage from "@containers/edit-profile/edit-profile-image";
+import NotificationSetting from "@containers/edit-profile/notification-setting";
+import PersonalInformation from "@containers/edit-profile/personal-information";
 import Sticky from "@ui/sticky";
 import { useState } from "react";
-import Nav from "react-bootstrap/Nav";
-import TabPane from "react-bootstrap/TabPane";
 import { useDispatch } from "react-redux";
+import { Link } from "react-scroll";
 import Projects from "./communityProject";
 
 const EditProfile = ({ community, id, projects }) => {
@@ -23,38 +24,56 @@ const EditProfile = ({ community, id, projects }) => {
                             <div className="tab-wrapper-one">
                                 <nav className="tab-button-one">
                                     <div className="nav nav-tabs ">
-                                        <Nav.Link
-                                            eventKey="nav-homes"
-                                            as="button"
-                                            onClick={() => changeTab("nav-homes")}
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#about`}
+                                            to={'about'}
+                                            spy
+                                            smooth
+                                            offset={-50}
+                                            duration={500}
                                         >
                                             About Us
-                                        </Nav.Link>
-                                        <Nav.Link
-                                            eventKey="nav-projects"
-                                            as="button"
-                                            onClick={() =>
-                                                changeTab("nav-projects")
-                                            }
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#impact`}
+                                            to={'impact'}
+                                            spy
+                                            smooth
+                                            offset={-50}
+                                            duration={500}
                                         >
                                             Impact Metrics
-                                        </Nav.Link>
-                                        <Nav.Link
-                                            eventKey="nav-contact"
-                                            as="button"
-                                            onClick={() => changeTab("nav-contact")}
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#photos`}
+                                            to={'photos'}
+                                            spy
+                                            smooth
+                                            offset={-50}
+                                            duration={500}
                                         >
 
                                             Photos
-                                        </Nav.Link>
-                                        <Nav.Link
-                                            eventKey="nav-contact"
-                                            as="button"
-                                            onClick={() => changeTab("nav-contact")}
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#contact`}
+                                            to={'contact'}
+                                            spy
+                                            smooth
+                                            offset={-50}
+                                            duration={500}
                                         >
 
                                             Contact Us
-                                        </Nav.Link>
+                                        </Link>
                                     </div>
                                 </nav>
                             </div>
@@ -63,43 +82,10 @@ const EditProfile = ({ community, id, projects }) => {
                 </Sticky>
                 <div className="row">
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
-                        <EditProfileImage community={community} />
-                        <TabPane eventKey="nav-homes">
-                            {/* <PersonalInformation /> */}
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                            <h3>cards</h3>
-                        </TabPane>
-                        <TabPane eventKey="nav-projects">
-                            {/* <ChangePassword /> */}
-                            <Projects projects={projects} />
-                        </TabPane>
-                        <TabPane eventKey="nav-contact">
-                            {/* <NotificationSetting /> */}
-                        </TabPane>
+                        <EditProfileImage id='about' community={community} />
+                        <PersonalInformation id='impact' />
+                        <Projects id='photos' projects={projects} />
+                        <NotificationSetting id='contact' />
                     </div>
                 </div>
             </div>
