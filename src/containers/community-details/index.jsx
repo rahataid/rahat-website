@@ -7,6 +7,7 @@ import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
 import { useDispatch, useSelector } from "react-redux";
 import Projects from "./communityProject";
+import CommunityChart from "./communitycharts";
 
 const EditProfile = ({ community, id, projects }) => {
     const dispatch = useDispatch();
@@ -72,6 +73,7 @@ const EditProfile = ({ community, id, projects }) => {
                                 </TabPane>
                                 <TabPane eventKey="nav-contact">
                                     {/* <NotificationSetting /> */}
+                                    <CommunityChart />
                                 </TabPane>
                             </TabContent>
                         </div>

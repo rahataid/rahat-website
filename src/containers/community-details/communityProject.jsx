@@ -4,13 +4,10 @@ import { Fragment } from "react";
 const Projects = ({ className, projects }) => {
     return (
         <Fragment>
-            {projects?.map(({ projects }, index) => (
-                <div
-                    className={clsx("rn-about-card mt--30", className)}
-                    key={`${projects?.id}-${index}`}
-                >
-                    <div className="container">
-                        <div className="row">
+            <div className={clsx("rn-about-card mt--30", className)}>
+                <div className="container">
+                    {projects?.map(({ projects }, index) => (
+                        <div className="row" key={`${projects?.id}-${index}`}>
                             <div className="col-12">
                                 <div className="about-wrapper">
                                     <h5>{projects?.name}</h5>
@@ -22,9 +19,9 @@ const Projects = ({ className, projects }) => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
-            ))}
+            </div>
         </Fragment>
     );
 };

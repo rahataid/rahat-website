@@ -6,6 +6,7 @@ const initialState = {
     error: null,
     communities: [],
     community: null,
+
     projects: [],
     transactions: [],
 };
@@ -46,13 +47,51 @@ export const { hasError } = slice.actions;
 
 export const selectCommunities = (state) => state.community.communities;
 export const selectProjects = (state) => state.community.projects;
+export const selectGenderDistributionReport = (state) =>
+    state.community?.summary.map((type) => {
+        return type?.summaryData?.map(([key, values]) => {
+            let splitedData = key.split(`_`);
+            if (splitedData[0] == "gender") {
+                return {
+                    label: splitedData[1],
+                    value: values,
+                };
+            }
+        });
+    });
+export const selectBankDistributionReport = (state) =>
+    state.community?.summary.map((type) => {
+        return type?.summaryData?.map(([key, values]) => {
+            let splitedData = key.split(`_`);
+            if (splitedData[0] == "bank") {
+                return {
+                    label: splitedData[1] == "yes" ? "hasBank" : "hasNotBank",
+                    value: values,
+                };
+            }
+        });
+    });
+export const selectInternetAccessDistributionReport = (state) =>
+    state.community?.summary.map((type) => {
+        return type?.summaryData?.map(([key, values]) => {
+            let splitedData = key.split(`_`);
+            if (splitedData[0] == "internet") {
+                return {
+                    label:
+                        splitedData[1] == "yes"
+                            ? "hasInternet"
+                            : "hasNotInternet",
+                    value: values,
+                };
+            }
+        });
+    });
 
 // Thunk for fetching communities
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
             const { data: res } = await CommunitiesService.getCommunitiesList();
-
             dispatch(slice.actions.getCommunitiesSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
