@@ -1,13 +1,13 @@
 import Anchor from "@ui/anchor";
 import Sticky from "@ui/sticky";
-import TabContent from "react-bootstrap/TabContent";
-import TabContainer from "react-bootstrap/TabContainer";
-import TabPane from "react-bootstrap/TabPane";
 import Nav from "react-bootstrap/Nav";
+import TabContainer from "react-bootstrap/TabContainer";
+import TabContent from "react-bootstrap/TabContent";
+import TabPane from "react-bootstrap/TabPane";
+import ChangePassword from "./change-password";
+import NotificationSetting from "./contact";
 import EditProfileImage from "./edit-profile-image";
 import PersonalInformation from "./personal-information";
-import ChangePassword from "./change-password";
-import NotificationSetting from "./notification-setting";
 
 const EditProfile = () => (
     <div className="edit-profile-area rn-section-gapTop">

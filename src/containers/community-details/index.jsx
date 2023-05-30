@@ -1,5 +1,5 @@
+import Contact from "@containers/edit-profile/contact";
 import EditProfileImage from "@containers/edit-profile/edit-profile-image";
-import NotificationSetting from "@containers/edit-profile/notification-setting";
 import PersonalInformation from "@containers/edit-profile/personal-information";
 import Sticky from "@ui/sticky";
 import { useState } from "react";
@@ -85,7 +85,7 @@ const EditProfile = ({ community, id, projects }) => {
                         <EditProfileImage id='about' community={community} />
                         <PersonalInformation id='impact' />
                         <Projects id='photos' projects={projects} />
-                        <NotificationSetting id='contact' />
+                        <Contact id='contact' />
                     </div>
                 </div>
             </div>
