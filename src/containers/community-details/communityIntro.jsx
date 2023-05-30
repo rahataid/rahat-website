@@ -47,17 +47,6 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                         <h4 className="title">
                                             {community?.title}
                                         </h4>
-                                        <a
-                                            href="https://twitter.com"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="social-follw"
-                                        >
-                                            <i className="feather-twitter" />
-                                            <span className="user-name">
-                                                {community?.title}
-                                            </span>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
