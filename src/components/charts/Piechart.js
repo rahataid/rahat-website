@@ -25,7 +25,7 @@ export default function Piechart({
     options,
     ...other
 }) {
-    const colors = ["#ff0000", "#00ff00", "#555555"];
+    const colors = ["#90EE90", "#63D1F4", "#26466D"];
 
     const chartSeries = chart?.map((i) => i.value);
 
@@ -77,7 +77,7 @@ export default function Piechart({
     };
 
     return (
-        <div>
+        <div style={{ padding: "10px" }}>
             <h4>{title}</h4>
             <Chart
                 type="pie"

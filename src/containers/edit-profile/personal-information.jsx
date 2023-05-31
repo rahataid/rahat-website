@@ -1,5 +1,6 @@
+import CommunityChart from "@containers/community-details/communitycharts";
 
-const PersonalInformation = ({ id }) => (
+const PersonalInformation = ({ id, community }) => (
     <div id={id} className="container">
         <div className="row g-5">
             <div className="col-lg-12">
@@ -12,6 +13,9 @@ const PersonalInformation = ({ id }) => (
                     </p>
                 </div>
             </div>
+        </div>
+        <div className="row">
+            <CommunityChart community={community} />
         </div>
     </div>
 );
