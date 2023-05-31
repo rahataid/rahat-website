@@ -2,6 +2,7 @@
 FROM node:18-alpine3.17 AS deps
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
+RUN yarn add sharp
 RUN yarn install 
 
 FROM node:18-alpine3.17 AS builder
