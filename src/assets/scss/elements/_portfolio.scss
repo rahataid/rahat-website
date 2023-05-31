@@ -113,7 +113,7 @@
 
     a {
         .product-name {
-            display: block;
+            display: flex;
             margin-top: 10px;
             font-weight: 500;
             font-size: 18px;
@@ -129,6 +129,10 @@
         font-weight: 400;
         font-size: 16px;
         margin-top: 10px;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
     }
 
     .bid-react-area {

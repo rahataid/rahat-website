@@ -83,7 +83,7 @@ const EditProfile = ({ community, id, projects }) => {
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
                         <EditProfileImage id='about' community={community} />
                         <Statistics community={community} />
-                        <PersonalInformation id='impact' />
+                        <PersonalInformation community={community} id='impact' />
                         <Projects id='photos' projects={projects} />
                         <Contact id='contact' />
                     </div>

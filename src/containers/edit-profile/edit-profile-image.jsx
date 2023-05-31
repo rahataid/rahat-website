@@ -11,10 +11,26 @@ const EditProfileImage = ({ community, id }) => {
                         <div className="col-6">
                             <div className="rn-address">
                                 <div className="inner">
-                                    <h4 className="title">{community.title}</h4>
+                                    <h4 className="title">{community?.name}</h4>
                                     <p>{community.description}</p>
                                 </div>
                             </div>
+                            <div className="filter-wrapper mt--25">
+                                <div className="inner">
+                                    <h6>Tags</h6>
+                                    <div className="sing-filter">
+                                        {community.tags?.map((tag) => (
+                                            <button
+                                                key={tag.id}
+                                                type="button"
+                                            >
+                                                {tag.name}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <div className="col-lg-6">
                             <div className="connect-thumbnail">

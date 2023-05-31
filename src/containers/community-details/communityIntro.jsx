@@ -45,7 +45,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                     </div>
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
-                                            {community?.name}
+                                            {community?.name ? community.name : "Community Name"}
                                         </h4>
                                     </div>
                                 </div>
