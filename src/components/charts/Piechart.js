@@ -22,7 +22,7 @@ export default function Piechart({
     subheader,
     chart,
     footer,
-    chartOptions,
+    options,
     ...other
 }) {
     const colors = ["#ff0000", "#00ff00", "#555555"];

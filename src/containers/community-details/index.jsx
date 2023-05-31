@@ -73,7 +73,7 @@ const EditProfile = ({ community, id, projects }) => {
                                 </TabPane>
                                 <TabPane eventKey="nav-contact">
                                     {/* <NotificationSetting /> */}
-                                    <CommunityChart />
+                                    <CommunityChart community={community} />
                                 </TabPane>
                             </TabContent>
                         </div>

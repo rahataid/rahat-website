@@ -48,8 +48,9 @@ export const { hasError } = slice.actions;
 export const selectCommunities = (state) => state.community.communities;
 export const selectProjects = (state) => state.community.projects;
 export const selectGenderDistributionReport = (state) =>
-    state.community?.summary.map((type) => {
-        return type?.summaryData?.map(([key, values]) => {
+    state.community.community.summary.map((type) => {
+        console.log(type);
+        let data = type?.summaryData.map(([key, values]) => {
             let splitedData = key.split(`_`);
             if (splitedData[0] == "gender") {
                 return {
@@ -58,9 +59,11 @@ export const selectGenderDistributionReport = (state) =>
                 };
             }
         });
+
+        return data;
     });
 export const selectBankDistributionReport = (state) =>
-    state.community?.summary.map((type) => {
+    state.community?.community?.summary?.map((type) => {
         return type?.summaryData?.map(([key, values]) => {
             let splitedData = key.split(`_`);
             if (splitedData[0] == "bank") {
@@ -72,7 +75,7 @@ export const selectBankDistributionReport = (state) =>
         });
     });
 export const selectInternetAccessDistributionReport = (state) =>
-    state.community?.summary.map((type) => {
+    state.community.community.summary?.map((type) => {
         return type?.summaryData?.map(([key, values]) => {
             let splitedData = key.split(`_`);
             if (splitedData[0] == "internet") {
