@@ -25,7 +25,7 @@ export default function Piechart({
     options,
     ...other
 }) {
-    const colors = ["#90EE90", "#63D1F4", "#26466D"];
+    const colors = ["#99A3AE", "#63D1F4", "#90EE90", "#26466D"];
 
     const chartSeries = chart?.map((i) => i.value);
 
