@@ -81,7 +81,7 @@ const EditProfile = ({ community, id, projects }) => {
                 </Sticky>
                 <div className="row">
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
-                        <EditProfileImage id='about' community={community} />
+                        <EditProfileImage id="about" community={community} />
                         <Statistics community={community} />
                         <PersonalInformation community={community} id='impact' />
                         <Projects id='photos' projects={projects} />
