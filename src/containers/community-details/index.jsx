@@ -29,7 +29,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             activeClass="active"
                                             className="nav-link smoth-animation"
                                             href={`#about`}
-                                            to={'about'}
+                                            to={"about"}
                                             spy
                                             smooth
                                             offset={-200}
@@ -41,7 +41,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             activeClass="active"
                                             className="nav-link smoth-animation"
                                             href={`#impact`}
-                                            to={'impact'}
+                                            to={"impact"}
                                             spy
                                             smooth
                                             offset={-80}
@@ -53,26 +53,24 @@ const EditProfile = ({ community, id, projects }) => {
                                             activeClass="active"
                                             className="nav-link smoth-animation"
                                             href={`#photos`}
-                                            to={'photos'}
+                                            to={"photos"}
                                             spy
                                             smooth
                                             offset={-100}
                                             duration={500}
                                         >
-
                                             Photos
                                         </Link>
                                         <Link
                                             activeClass="active"
                                             className="nav-link smoth-animation"
                                             href={`#contact`}
-                                            to={'contact'}
+                                            to={"contact"}
                                             spy
                                             smooth
                                             offset={-200}
                                             duration={500}
                                         >
-
                                             Contact Us
                                         </Link>
                                     </div>
