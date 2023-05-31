@@ -41,4 +41,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: esatya/community:stage
+          tags: esatya/impactflow-web:stage
