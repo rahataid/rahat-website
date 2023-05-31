@@ -31,7 +31,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             to={'about'}
                                             spy
                                             smooth
-                                            offset={-50}
+                                            offset={-200}
                                             duration={500}
                                         >
                                             About Us
@@ -43,7 +43,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             to={'impact'}
                                             spy
                                             smooth
-                                            offset={-50}
+                                            offset={-80}
                                             duration={500}
                                         >
                                             Impact Metrics
@@ -55,7 +55,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             to={'photos'}
                                             spy
                                             smooth
-                                            offset={-50}
+                                            offset={-100}
                                             duration={500}
                                         >
 
@@ -68,7 +68,7 @@ const EditProfile = ({ community, id, projects }) => {
                                             to={'contact'}
                                             spy
                                             smooth
-                                            offset={-50}
+                                            offset={-200}
                                             duration={500}
                                         >
 
