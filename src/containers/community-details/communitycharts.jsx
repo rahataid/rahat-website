@@ -29,7 +29,10 @@ const CommunityChart = ({ projectId, community }) => {
         <div>
             <div className="mt-5 row text-center">
                 <div className="col-6 ">
-                    <Piechart chart={GenderData} title="Gender Distrubition" />
+                    <Piechart
+                        chart={phoneData.series}
+                        title="Gender Distrubition"
+                    />
                 </div>
                 <div className="col-6">
                     <Piechart

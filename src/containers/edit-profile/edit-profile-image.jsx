@@ -1,50 +1,36 @@
 /* eslint-disable @next/next/no-img-element */
+
 import Image from "next/image";
 
-const EditProfileImage = ({ donations }) => {
+const EditProfileImage = ({ community, id }) => {
     return (
         <>
-            <div className="nuron-information">
-                <div className="profile-change">
-                    <div className="profile-left col-lg-4">
-                        <div className="profile-image mb--30">
-                            <h5 className="title">Donor</h5>
-                            <div className="img-wrap">
-                                <Image
-                                    id="rbtinput1"
-                                    src="/images/profile/pepsico.png"
-                                    alt="Profile-NFT"
-                                    layout="fill"
-                                />
+            <div id={id} className="login-area message-area">
+                <div className="container">
+                    <div className="row d-flex align-items-center">
+                        <div className="col-6">
+                            <div className="rn-address">
+                                <div className="inner">
+                                    <h4 className="title">{community.title}</h4>
+                                    <p>{community.description}</p>
+                                </div>
                             </div>
-                            <h6 className="title">{donations.donor.name}</h6>
-                            <span className="latest-bid">
-                                {donations.donor.description}
-                            </span>
                         </div>
-
-                    </div>
-
-                    <div className="profile-left col-lg-4">
-                        <div className="profile-image mb--30">
-                            <h5 className="title">Beneficiary</h5>
-                            <div className="img-wrap">
-                                <Image
-                                    id="rbtinput1"
-                                    src="/images/portfolio/oxfam.jpeg"
-                                    alt="Profile-NFT"
-                                    layout="fill"
-                                />
+                        <div className="col-lg-6">
+                            <div className="connect-thumbnail">
+                                <div className="left-image">
+                                    <Image
+                                        src="/images/portfolio/maps.jpg"
+                                        alt="Nft_Profile"
+                                        width={200}
+                                        height={200}
+                                    />
+                                </div>
                             </div>
-                            <h6 className="title">{donations.donee.name}</h6>
-                            <span className="latest-bid">
-                                {donations.donee.description}
-                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-
         </>
 
     );

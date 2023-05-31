@@ -1,11 +1,10 @@
-import AboutArea from "@containers/about/layout-01";
-import { getCommunityProjects, selectProjects } from "@redux/slices/community";
-import { useEffect, useState } from "react";
-import Nav from "react-bootstrap/Nav";
-import TabContainer from "react-bootstrap/TabContainer";
-import TabContent from "react-bootstrap/TabContent";
-import TabPane from "react-bootstrap/TabPane";
-import { useDispatch, useSelector } from "react-redux";
+import Contact from "@containers/edit-profile/contact";
+import EditProfileImage from "@containers/edit-profile/edit-profile-image";
+import PersonalInformation from "@containers/edit-profile/personal-information";
+import Sticky from "@ui/sticky";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-scroll";
 import Projects from "./communityProject";
 import CommunityChart from "./communitycharts";
 
@@ -18,67 +17,76 @@ const EditProfile = ({ community, id, projects }) => {
     };
 
     return (
-        <div className="edit-profile-area">
+        <div className="rn-authore-profile-area">
             <div className="container">
-                <TabContainer defaultActiveKey="nav-home">
-                    <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
-                        <div className="col-lg-3 col-md-3 col-sm-12">
-                            <nav className="left-nav rbt-sticky-top-adjust-five">
-                                <Nav className="nav nav-tabs">
-                                    <Nav.Link
-                                        eventKey="nav-homes"
-                                        as="button"
-                                        onClick={() => changeTab("nav-homes")}
-                                    >
-                                        <i className="feather-user" />
-                                        Community Information
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        eventKey="nav-projects"
-                                        as="button"
-                                        onClick={() =>
-                                            changeTab("nav-projects")
-                                        }
-                                    >
-                                        <i className="feather-book" />
-                                        Projects
-                                    </Nav.Link>
-                                    <Nav.Link
-                                        eventKey="nav-contact"
-                                        as="button"
-                                        onClick={() => changeTab("nav-contact")}
-                                    >
-                                        <i className="feather-bell" />
-                                        Notification Setting
-                                    </Nav.Link>
-                                </Nav>
-                            </nav>
-                            {/* About area Cards */}
-                            <AboutArea community={community} />
-                        </div>
-                        <div className="col-lg-9 col-md-9 col-sm-12 mt_sm--30">
-                            <TabContent className="tab-content-edit-wrapepr">
-                                <TabPane eventKey="nav-home">
-                                    {/* <EditProfileImage /> */}
-                                    <h3>{community?.title}</h3>
-                                    <h6>{community?.description}</h6>
-                                </TabPane>
-                                <TabPane eventKey="nav-homes">
-                                    {/* <PersonalInformation /> */}
-                                    <h3>cards</h3>
-                                </TabPane>
-                                <TabPane eventKey="nav-projects">
-                                    {/* <ChangePassword /> */}
-                                    <Projects projects={projects} />
-                                </TabPane>
-                                <TabPane eventKey="nav-contact">
-                                    {/* <NotificationSetting /> */}
-                                    <CommunityChart community={community} />
-                                </TabPane>
-                            </TabContent>
+                <Sticky>
+                    <div className="row rbt-sticky-top-adjust-five">
+                        <div className="col-12">
+                            <div className="tab-wrapper-one">
+                                <nav className="tab-button-one">
+                                    <div className="nav nav-tabs ">
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#about`}
+                                            to={"about"}
+                                            spy
+                                            smooth
+                                            offset={-200}
+                                            duration={500}
+                                        >
+                                            About Us
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#impact`}
+                                            to={"impact"}
+                                            spy
+                                            smooth
+                                            offset={-80}
+                                            duration={500}
+                                        >
+                                            Impact Metrics
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#photos`}
+                                            to={"photos"}
+                                            spy
+                                            smooth
+                                            offset={-100}
+                                            duration={500}
+                                        >
+                                            Photos
+                                        </Link>
+                                        <Link
+                                            activeClass="active"
+                                            className="nav-link smoth-animation"
+                                            href={`#contact`}
+                                            to={"contact"}
+                                            spy
+                                            smooth
+                                            offset={-200}
+                                            duration={500}
+                                        >
+                                            Contact Us
+                                        </Link>
+                                    </div>
+                                </nav>
+                            </div>
                         </div>
                     </div>
-                </TabContainer>
+                </Sticky>
+                <div className="row">
+                    <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
+                        <EditProfileImage id="about" community={community} />
+                        <PersonalInformation id="impact" />
+                        <Projects id="photos" projects={projects} />
+                        <Contact id="contact" />
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -38,41 +38,13 @@ html[data-theme="light"] body {
     .nice-select .option,
     .rn-collection-inner-one .collection-wrapper .collection-deg span.items,
     .footer-list-one .single-list a,
-    .rn-icon-list .icon-box > a,
+    .rn-icon-list .icon-box>a,
     .mainmenu-nav .mainmenu li a,
     .mainmenu-nav .mainmenu li .submenu li a,
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a,
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a
-        svg,
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a
-        i,
-    .rn-icon-list.user-account
-        .rn-dropdown
-        .rn-product-inner
-        ul.product-list
-        .single-product-list
-        span,
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a,
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a svg,
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a i,
+    .rn-icon-list.user-account .rn-dropdown .rn-product-inner ul.product-list .single-product-list span,
     .rn-icon-list.user-account .rn-dropdown .list-inner li a,
     .rn-icon-list.user-account .rn-dropdown .list-inner li button,
     .widget-content-wrapper .input-group input,
@@ -104,8 +76,8 @@ html[data-theme="light"] body {
     .footer-for-left-sticky-header .inner p a,
     .rn-check-box .rn-check-box-label,
     nav.pagination-wrapper .pagination,
-    input[type="checkbox"] ~ label,
-    input[type="radio"] ~ label,
+    input[type="checkbox"]~label,
+    input[type="radio"]~label,
     .single-activity-wrapper .inner .content .time-maintane .data a,
     .rbt-single-widget.widget_recent_entries .inner span,
     .comment-list .comment .comment-img .time-spent,
@@ -147,17 +119,8 @@ html[data-theme="light"] body {
     .left-header-style .authore-profile .au-content p.name,
     .page-title-area h3,
     .btn-transparent,
-    .author-wrapper
-        .author-inner
-        .rn-author-info-content
-        .social-follw
-        .user-name,
-    .author-wrapper
-        .author-inner
-        .rn-author-info-content
-        .follow-area
-        .follow
-        span,
+    .author-wrapper .author-inner .rn-author-info-content .social-follw .user-name,
+    .author-wrapper .author-inner .rn-author-info-content .follow-area .follow span,
     .wallet-wrapper .inner .content .title,
     .top-seller-inner-one .top-seller-wrapper .top-seller-content span a,
     .popup-mobile-menu .inner .header-top .close-menu .close-button,
@@ -177,11 +140,14 @@ html[data-theme="light"] body {
     .category-style-one i {
         color: var(--color-primary);
     }
+
     .category-style-one span.category-label {
         color: var(--color-dark);
     }
+
     .category-style-one:hover {
         background: var(--color-primary);
+
         i,
         span.category-label {
             color: var(--color-white);
@@ -203,6 +169,7 @@ html[data-theme="light"] body {
             color: var(--color-white) !important;
         }
     }
+
     .share-btn-activation {
         .btn-link {
             &:hover {
@@ -215,6 +182,7 @@ html[data-theme="light"] body {
         .rn-search-mobile.form-group {
             background: var(--color-gray-2);
         }
+
         .rn-search-mobile.form-group input {
             background: var(--color-white);
         }
@@ -224,35 +192,21 @@ html[data-theme="light"] body {
         .rn-search-mobile.form-group {
             background: var(--color-gray-2);
         }
+
         .rn-search-mobile.form-group input {
             background: var(--color-white);
         }
     }
 
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a:hover
-        svg,
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a:hover
-        i {
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover svg,
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover i {
         color: var(--color-white);
     }
 
     .nice-select,
     tbody .color-light {
         background: var(--color-gray-2);
+
         &::after {
             border-bottom: 2px solid var(--color-light-body);
             border-right: 2px solid var(--color-light-body);
@@ -291,6 +245,7 @@ html[data-theme="light"] body {
     .author-button-area .at-follw svg {
         color: var(--color-light-heading);
     }
+
     .rn-icon-list.user-account .rn-dropdown,
     .popup-mobile-menu .inner,
     .slider-style-6,
@@ -305,7 +260,8 @@ html[data-theme="light"] body {
     .banner-xii-wrapper .banner-content-wrapper .wallet-image-wrapper .avatar,
     .banner_xii .place-bet-area.into-banner,
     .banner_xii .left-thumbnail-image,
-    .expo-15-wrapper .thumb-wrapepr div.main, .joined-people-wrapper {
+    .expo-15-wrapper .thumb-wrapepr div.main,
+    .joined-people-wrapper {
         background: var(--color-white);
     }
 
@@ -328,9 +284,9 @@ html[data-theme="light"] body {
     }
 
     .search-form-wrapper .form-control,
-    .rn-icon-list .icon-box > a,
+    .rn-icon-list .icon-box>a,
     .my_switcher,
-    .footer-recent-post li + li.recent-post,
+    .footer-recent-post li+li.recent-post,
     .widget-content-wrapper .widget-bottom,
     .rn-icon-list.user-account .rn-dropdown .add-fund-button,
     .single-notice .thumbnail a img,
@@ -341,45 +297,34 @@ html[data-theme="light"] body {
     .widge-post ul li,
     .widge-tag .tag-wrapper a.badge,
     .popup-mobile-menu .inner .header-top,
-    .popup-mobile-menu .mainmenu li + li,
+    .popup-mobile-menu .mainmenu li+li,
     .popup-mobile-menu .mainmenu .mega-menu-item li:last-child,
     .default-exp-wrapper,
     .rn-breadcrumb-inner,
-    .share-btn-activation
-        .share-btn-setting
-        .btn-setting-text
-        + .btn-setting-text,
+    .share-btn-activation .share-btn-setting .btn-setting-text+.btn-setting-text,
     .top-seller-inner-one .top-seller-wrapper .thumbnail a,
     .title-badge,
     .tagcloud a,
-    .rn-icon-list .icon-box > a,
-    .rn-icon-list .icon-box > button,
+    .rn-icon-list .icon-box>a,
+    .rn-icon-list .icon-box>button,
     input,
     button,
     select,
     textarea,
     .social-share-default li a .icon,
     .copy-right-one,
-    .nice-select .option + .option,
+    .nice-select .option+.option,
     .product-share-wrapper .profile-share a img,
     .upload-area label,
     nav.pagination-wrapper .pagination,
-    .product-tab-wrapper
-        .rn-pd-rt-content
-        button.nav-link.active
-        .rn-pd-sm-thumbnail,
+    .product-tab-wrapper .rn-pd-rt-content button.nav-link.active .rn-pd-sm-thumbnail,
     .rn-comment-form .inner .rnform-group textarea,
     .box-table,
     .left-header-style .authore-profile .thumbnail img,
     .hamberger button.hamberger-button,
     .tab-content-edit-wrapepr .nuron-information .profile-form-wrapper input,
     .tab-content-edit-wrapepr .nuron-information .edit-bio-area textarea,
-    .tab-content-edit-wrapepr
-        .nuron-information
-        .profile-change
-        .profile-left
-        .profile-image
-        img,
+    .tab-content-edit-wrapepr .nuron-information .profile-change .profile-left .profile-image img,
     .odometer-area-slide,
     .odometer-area-slide .single-odometer,
     .nuron-expo-filter-widget .widget-title,
@@ -387,7 +332,8 @@ html[data-theme="light"] body {
     .footer-top .nu-brand-area li,
     .banner_xii .left-thumbnail-image,
     .banner_xii .place-bet-area.into-banner,
-    .expo-15-wrapper .thumb-wrapepr div.main, .joined-people-wrapper {
+    .expo-15-wrapper .thumb-wrapepr div.main,
+    .joined-people-wrapper {
         border-color: var(--color-border-white);
     }
 
@@ -399,10 +345,11 @@ html[data-theme="light"] body {
         background: var(--color-border-white);
     }
 
-    .rbt-single-widget.widget_categories ul li + li,
-    .rbt-single-widget.widget_recent_entries ul li + li {
+    .rbt-single-widget.widget_categories ul li+li,
+    .rbt-single-widget.widget_recent_entries ul li+li {
         border-top: 1px solid var(--color-border-white);
     }
+
     .filter-wrapper .sing-filter button,
     button.another-login,
     tbody.ranking tr td .thumbnail img,
@@ -410,10 +357,7 @@ html[data-theme="light"] body {
     .lg-product_tab-pane,
     .product-tab-nav .nav,
     .tab-content-edit-wrapepr .tab-pane,
-    .tab-content-edit-wrapepr
-        .personal-info-wrapper
-        .profile-form-wrapper
-        input,
+    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .input-two-wrapper .profile-edit-select,
     .input-two-wrapper .phone-number input,
@@ -421,6 +365,7 @@ html[data-theme="light"] body {
     .change-pass-wrapper input {
         border-color: var(--color-border-white) !important;
     }
+
     .slider-style-3 .wrapper,
     .banner-style-4 .slider,
     .rbt-single-widget,
@@ -435,9 +380,11 @@ html[data-theme="light"] body {
         background: var(--color-gray-2);
         color: var(--color-light-heading);
     }
+
     .author-button-area .at-follw {
         &:hover {
             background: var(--color-primary);
+
             svg {
                 color: var(--color-white);
             }
@@ -461,6 +408,7 @@ html[data-theme="light"] body {
     .left-nav .nav.nav-tabs button:hover {
         background: var(--color-primary);
         color: var(--color-white);
+
         i {
             color: var(--color-white);
         }
@@ -476,20 +424,14 @@ html[data-theme="light"] body {
     .form-wrapper-one textarea,
     .rn-footer-one .input-group input,
     .rn-top-bar-area .input-group input,
-    .tab-content-edit-wrapepr
-        .personal-info-wrapper
-        .profile-form-wrapper
-        input,
+    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .role-area input,
     .input-two-wrapper .phone-number input {
         background: var(--color-gray-2);
     }
 
-    .tab-content-edit-wrapepr
-        .personal-info-wrapper
-        .profile-form-wrapper
-        input,
+    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .role-area input,
     .input-two-wrapper .phone-number input,
@@ -543,18 +485,23 @@ html[data-theme="light"] body {
     .place-bet-area {
         &.into-banner {
             background: var(--background-color-1);
+
             .winning-bid h6 {
                 color: var(--color-white);
             }
+
             .left-bid h6 {
                 color: var(--color-white);
             }
+
             .winning-bid .top-seller-content .heighest-bid {
                 color: #adadad;
+
                 a {
                     color: var(--color-white);
                 }
             }
+
             .bid-list {
                 .top-seller-inner-one {
                     .top-seller-wrapper {
@@ -574,32 +521,39 @@ html[data-theme="light"] body {
             .catagory-wrapper .pd-property-inner span.type {
                 color: var(--color-body) !important;
             }
+
             .catagory-wrapper .pd-property-inner span.value {
                 color: var(--color-white) !important;
             }
+
             .catagory-wrapper {
                 .pd-property-inner {
                     background: var(--background-color-1) !important;
                 }
             }
+
             .property-wrapper {
                 .pd-property-inner {
                     background: var(--background-color-1) !important;
+
                     span {
                         &.type {
                             color: var(--color-body) !important;
                         }
+
                         &.value {
                             color: var(--color-white) !important;
                         }
                     }
                 }
             }
+
             .pd-property-title {
                 color: var(--color-body);
             }
         }
     }
+
     .padding-controler-slide-product {
         .top-bid-price {
             span {
@@ -619,6 +573,7 @@ html[data-theme="light"] body {
         /* Firefox 19+ */
         color: var(--color-light-body);
     }
+
     .form-wrapper-one input:-ms-input-placeholder {
         /* IE 10+ */
         color: var(--color-light-body);
@@ -682,12 +637,15 @@ html[data-theme="light"] body .tab-button-one .nav-tabs,
 html[data-theme="light"] body nav.pagination-wrapper .pagination,
 html[data-theme="light"] body .product-tab-nav .nav {
     background: var(--color-white);
+    font-size: 24px;
+
 }
 
 html[data-theme="light"] body .nice-select::after {
     border-bottom: 2px solid var(--color-light-heading);
     border-right: 2px solid var(--color-light-heading);
 }
+
 .slider-style-6 .slide .banner-read-thumb-lg h4,
 .slider-style-7 .rn-banner-wrapper h2.title,
 .rn-top-bar-area .contact-area .setting-option .icon-box a,
@@ -696,6 +654,7 @@ html[data-theme="light"] body .nice-select::after {
 }
 
 html[data-theme="light"] body {
+
     //product area
     .product-share-wrapper {
         .share-btn {
@@ -773,9 +732,11 @@ html[data-theme="light"] body {
     .nice-selector-transparent {
         .nice-select {
             background: transparent !important;
+
             .current {
                 color: var(--color-primary);
             }
+
             &.open {
                 .list {
                     li {
@@ -787,6 +748,7 @@ html[data-theme="light"] body {
                     }
                 }
             }
+
             &::after {
                 border-bottom: 2px solid var(--color-primary);
                 border-right: 2px solid var(--color-primary);
@@ -798,13 +760,14 @@ html[data-theme="light"] body {
     .rn-footer-one .input-group input {
         background: var(--color-gray-2);
         border: 2px solid transparent;
+
         &:focus {
             border: 2px solid var(--color-primary);
         }
     }
 
     // back to top
-    .backto-top > div {
+    .backto-top>div {
         background-color: var(--color-primary);
 
         &:hover {
@@ -814,24 +777,30 @@ html[data-theme="light"] body {
 
     // authore page
     .author-wrapper .author-inner .user-thumbnail img {
-        border: 15px solid var(--color-white);
+        border: 5px solid var(--color-white);
+        border-radius: 50%;
     }
 
     nav.pagination-wrapper {
+
         .pagination li a,
         .pagination li button {
             background: var(--color-gray-2);
             color: var(--color-dark);
+
             &.active {
                 background: var(--color-primary);
             }
+
             &:hover {
                 background: var(--color-primary);
             }
         }
     }
+
     .form-wrapper-one {
         background: var(--color-white);
+
         input,
         textarea {
             &.form-control {
@@ -885,6 +854,7 @@ html[data-theme="light"] body {
             .pd-react-area {
                 .count {
                     background: var(--color-gray-2);
+
                     svg {
                         color: var(--color-light-body);
                     }
@@ -892,9 +862,11 @@ html[data-theme="light"] body {
 
                 .heart-count {
                     background: var(--color-gray-2);
+
                     svg {
                         color: var(--color-light-body);
                     }
+
                     span {
                         color: var(--color-light-body);
                     }
@@ -1146,8 +1118,8 @@ html[data-theme="light"] body {
     }
 
     // check box
-    input[type="checkbox"] ~ label::before,
-    input[type="radio"] ~ label::before {
+    input[type="checkbox"]~label::before,
+    input[type="radio"]~label::before {
         background-color: var(--color-border-white);
     }
 
@@ -1295,9 +1267,7 @@ html[data-theme="light"] body {
                                         color: var(--color-white) !important;
 
                                         svg {
-                                            color: var(
-                                                --color-white
-                                            ) !important;
+                                            color: var(--color-white) !important;
                                         }
                                     }
 
@@ -1321,20 +1291,12 @@ html[data-theme="light"] body {
                                         li {
                                             a {
                                                 &:hover {
-                                                    color: var(
-                                                        --color-white
-                                                    ) !important;
-                                                    background: var(
-                                                        --color-primary
-                                                    );
+                                                    color: var(--color-white) !important;
+                                                    background: var(--color-primary);
 
                                                     svg {
-                                                        color: var(
-                                                            --color-primary
-                                                        );
-                                                        background: var(
-                                                            --color-white
-                                                        );
+                                                        color: var(--color-primary);
+                                                        background: var(--color-white);
                                                     }
                                                 }
                                             }
@@ -1350,14 +1312,7 @@ html[data-theme="light"] body {
 
         &.header--fixed {
             &.position-absolute {
-                .mainmenu-nav
-                    .mainmenu
-                    li.with-megamenu
-                    .rn-megamenu
-                    .wrapper
-                    .mega-menu-item
-                    li
-                    a {
+                .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
                     color: var(--color-body);
 
                     i,
@@ -1395,14 +1350,7 @@ html[data-theme="light"] body {
 
         &.sticky {
             &.position-absolute {
-                .mainmenu-nav
-                    .mainmenu
-                    li.with-megamenu
-                    .rn-megamenu
-                    .wrapper
-                    .mega-menu-item
-                    li
-                    a {
+                .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
                     color: var(--color-body);
 
                     i,
@@ -1449,15 +1397,11 @@ html[data-theme="light"] body {
                                                     }
 
                                                     &:hover {
-                                                        color: var(
-                                                            --color-white
-                                                        ) !important;
+                                                        color: var(--color-white) !important;
 
                                                         i,
                                                         svg {
-                                                            color: var(
-                                                                --color-primary
-                                                            ) !important;
+                                                            color: var(--color-primary) !important;
                                                         }
                                                     }
                                                 }
@@ -1473,15 +1417,7 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.position-absolute
-        .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a {
+    .rn-header.header--fixed.position-absolute .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
         color: #bbb9b9;
 
         i,
@@ -1490,14 +1426,7 @@ html[data-theme="light"] body {
         }
     }
 
-    .mainmenu-nav
-        .mainmenu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper
-        .mega-menu-item
-        li
-        a:hover {
+    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover {
         color: var(--color-white) !important;
         background: var(--color-primary);
 
@@ -1554,9 +1483,7 @@ html[data-theme="light"] body {
 
                                         &:hover {
                                             background: var(--color-primary);
-                                            color: var(
-                                                --color-white
-                                            ) !important;
+                                            color: var(--color-white) !important;
 
                                             svg {
                                                 background: var(--color-white);
@@ -1601,9 +1528,7 @@ html[data-theme="light"] body {
                             .with-megamenu {
                                 .rn-megamenu {
                                     .wrapper {
-                                        background: var(
-                                            --color-white
-                                        ) !important;
+                                        background: var(--color-white) !important;
                                     }
                                 }
                             }
@@ -1614,21 +1539,11 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.position-absolute
-        .mainmenu-nav
-        .primary-menu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper {
+    .rn-header.header--fixed.position-absolute .mainmenu-nav .primary-menu li.with-megamenu .rn-megamenu .wrapper {
         background: #00000042 !important;
     }
 
-    .rn-header.header--fixed.position-absolute.sticky
-        .mainmenu-nav
-        .primary-menu
-        li.with-megamenu
-        .rn-megamenu
-        .wrapper {
+    .rn-header.header--fixed.position-absolute.sticky .mainmenu-nav .primary-menu li.with-megamenu .rn-megamenu .wrapper {
         background: #fff !important;
 
         .mega-menu-item {
@@ -1644,11 +1559,7 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.position-absolute.header--fixed.sticky
-        .mainmenu-nav
-        .primary-menu
-        li.nav-item
-        .submenu {
+    .rn-header.position-absolute.header--fixed.sticky .mainmenu-nav .primary-menu li.nav-item .submenu {
         background: var(--color-white) !important;
 
         li {
@@ -1662,11 +1573,7 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.sticky
-        .mainmenu-nav
-        .primary-menu
-        li.nav-item
-        .submenu {
+    .rn-header.header--fixed.sticky .mainmenu-nav .primary-menu li.nav-item .submenu {
         background: var(--color-white) !important;
     }
 
@@ -1822,6 +1729,7 @@ html[data-theme="light"] body {
     .logo-custom-css::after {
         background: var(--color-border-white);
     }
+
     .right-fix-notice {
         &::-webkit-scrollbar {
             width: 5px;
@@ -1833,36 +1741,29 @@ html[data-theme="light"] body {
             border-radius: 0;
         }
     }
-    .slider-style-7
-        .rn-banner-wrapper
-        .item-description
-        .product-share-wrapper
-        .profile-share
-        a.more-author-text,
-    .game-banner-slick-wrapper
-        .product-share-wrapper
-        .profile-share
-        a.more-author-text {
+
+    .slider-style-7 .rn-banner-wrapper .item-description .product-share-wrapper .profile-share a.more-author-text,
+    .game-banner-slick-wrapper .product-share-wrapper .profile-share a.more-author-text {
         color: rgb(185, 184, 184);
     }
 
-    .game-banner-short-slick-wrapper
-        .slider-style-7
-        .rn-banner-wrapper
-        .item-description {
+    .game-banner-short-slick-wrapper .slider-style-7 .rn-banner-wrapper .item-description {
         background: #504b7852;
     }
+
     .footer-for-left-sticky-header .inner {
         border-top-color: var(--color-border-white);
     }
 
     .subscribe-wrapper_1 {
         border-color: var(--color-white);
+
         .subscribe-input-wrapper .input-group {
             input {
                 background: var(--color-gray-2);
                 color: var(--color-dark);
             }
+
             button {
                 background: var(--color-primary);
             }
@@ -1873,45 +1774,51 @@ html[data-theme="light"] body {
     .banner-gallery-wrapper::before {
         background-image: linear-gradient(to bottom, #0c0c2100 0%, #f1f3f5 95%);
     }
+
     .banner-gallery-wrapper::after {
         background-image: linear-gradient(to top, #0c0c2100 0%, #f1f3f5 95%);
     }
+
     .banner-right-feature-product {
         background: linear-gradient(0deg, #f1f3f5, #0397edb5);
+
         .badge-inner {
             background: #ffffff38;
         }
     }
+
     .with-down-shadow {
         &:before {
-            background-image: linear-gradient(
-                to bottom,
-                #0c0c2100 0%,
-                #edf0f2 87%
-            );
+            background-image: linear-gradient(to bottom,
+                    #0c0c2100 0%,
+                    #edf0f2 87%);
         }
+
         &:after {
-            background-image: linear-gradient(
-                to top,
-                #0c0c2100 0%,
-                #edf0f2 87%
-            );
+            background-image: linear-gradient(to top,
+                    #0c0c2100 0%,
+                    #edf0f2 87%);
         }
     }
+
     .avatar {
         &:before {
             background: var(--color-primary);
         }
+
         &:after {
             border-top-color: var(--color-primary);
         }
     }
+
     .banner_xii {
         .place-bet-area {
+
             .winning-bid h6,
             .left-bid h6 {
                 color: var(--color-light-heading);
             }
+
             .winning-bid {
                 .top-seller-content {
                     .heighest-bid {
@@ -1919,30 +1826,31 @@ html[data-theme="light"] body {
                     }
                 }
             }
-            &.into-banner
-                .bid-list
-                .top-seller-inner-one
-                .top-seller-wrapper
-                .top-seller-content
-                .count-number {
+
+            &.into-banner .bid-list .top-seller-inner-one .top-seller-wrapper .top-seller-content .count-number {
                 color: var(--color-body);
             }
         }
+
         .top-seller-inner-one .top-seller-wrapper .top-seller-content span a {
             color: var(--color-dark) !important;
         }
+
         .rn-pd-sm-property-wrapper {
             h6.pd-property-title {
                 color: var(--color-body-white) !important;
             }
+
             .property-wrapper .pd-property-inner,
             .catagory-wrapper .pd-property-inner {
                 background: var(--color-white) !important;
                 border-color: var(--color-border-white) !important;
+
                 span {
                     &.type {
                         color: var(--color-body) !important;
                     }
+
                     &.value {
                         color: var(--color-dark) !important;
                     }
@@ -1950,42 +1858,52 @@ html[data-theme="light"] body {
             }
         }
     }
+
     .slide-style-14 .banner-xii-wrapper .banner-content-wrapper {
         .title {
             color: var(--color-white);
         }
+
         .post-title {
             color: #b7b7b7;
         }
     }
+
     .banner-15 h1.title span {
         color: var(--color-white);
     }
-    .product-share-wrapper .profile-share a.more-author-text{
+
+    .product-share-wrapper .profile-share a.more-author-text {
         color: var(--color-light-body) !important;
     }
 }
 
 html[data-theme="light"] body {
     .padding-controler-slide-product-2 {
+
         a h1.title,
         .top-bid-price span.latest-bid {
             color: var(--color-white);
         }
     }
+
     .slider-style-5 .banner-left-content p.banner-disc-one {
         color: var(--color-light-body);
     }
+
     .author-wrapper .author-inner .user-thumbnail {
         border-color: var(--color-white);
     }
+
     .maintanance-inner .wrapper p {
         color: var(--color-light-body);
     }
+
     .accordion .accordion-item .accordion-header button {
         i {
             color: var(--color-light-heading);
         }
+
         &[aria-expanded="true"] i {
             color: var(--color-primary);
         }

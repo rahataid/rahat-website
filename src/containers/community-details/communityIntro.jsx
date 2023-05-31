@@ -36,21 +36,17 @@ const AuthorIntroArea = ({ className, space, community }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper">
                                 <div className="author-inner">
+                                    <div className="user-thumbnail">
+                                        <Image
+                                            src={"/images/portfolio/rahat.jpeg"}
+                                            width={140}
+                                            height={140}
+                                        />
+                                    </div>
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
                                             {community?.title}
                                         </h4>
-                                        <a
-                                            href="https://twitter.com"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="social-follw"
-                                        >
-                                            <i className="feather-twitter" />
-                                            <span className="user-name">
-                                                {community?.title}
-                                            </span>
-                                        </a>
                                     </div>
                                 </div>
                             </div>

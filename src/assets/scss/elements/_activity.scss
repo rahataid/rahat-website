@@ -208,6 +208,10 @@
 .widge-wrapper {
     position: sticky;
     z-index: 10;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .inner {
         margin-bottom: 30px;
