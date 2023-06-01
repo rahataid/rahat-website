@@ -19,7 +19,7 @@ const FunFact = ({ className, counter, community }) => {
         <div className="container">
             <div className="row g-5">
                 <div className="col-lg-12">
-                    <div className="section-title mt--50 mb--30 text-center">
+                    <div className="section-title mt--50 mb--30 text-left">
                         <h2 className="title">Community Metrics</h2>
                         <p className="description">
                             There are many variations of passages of Lorem Ipsum

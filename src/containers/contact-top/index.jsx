@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
 import AddressBox from "@components/address-box";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const ContactTopArea = ({ space, className }) => (
     <div
@@ -18,7 +18,7 @@ const ContactTopArea = ({ space, className }) => (
                     data-sal-delay="150"
                     data-sal-duration="800"
                 >
-                    <div className="section-title mb--30 text-center">
+                    <div className="section-title mb--30 text-left">
                         <h2 className="title">Quick Contact Address</h2>
                         <p className="description">
                             There are many variations of passages of Lorem Ipsum

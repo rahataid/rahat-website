@@ -4,7 +4,7 @@ const Contact = ({ id }) => (
     <div id={id} className="nuron-information mt--200">
         <div className="row g-5">
             <div className="col-lg-12">
-                <div className="section-title mb--30 text-center">
+                <div className="section-title mb--30 text-left">
                     <h2 className="title">Quick Contact Address</h2>
                     <p className="description">
                         There are many variations of passages of Lorem Ipsum
