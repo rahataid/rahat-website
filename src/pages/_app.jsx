@@ -16,7 +16,6 @@ import { wrapper } from "../redux/store";
 
 const MyApp = ({ Component, ...pageProps }) => {
     const { store, props } = wrapper.useWrappedStore(pageProps);
-    console.log("props", props);
 
     const router = useRouter();
     useEffect(() => {
