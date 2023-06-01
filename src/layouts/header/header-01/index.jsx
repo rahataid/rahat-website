@@ -1,4 +1,3 @@
-import ColorSwitcher from "@components/color-switcher";
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
@@ -6,7 +5,6 @@ import UserDropdown from "@components/user-dropdown";
 import { useOffcanvas, useSticky } from "@hooks";
 import { selectIsAuthenticated, selectUser } from "@redux/slices/app";
 import BurgerButton from "@ui/burger-button";
-import Button from "@ui/button";
 import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
 import { useRouter } from "next/router";
@@ -46,7 +44,7 @@ const Header = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {!isAuthenticated && (
+                            {/* {!isAuthenticated && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
                                         <Button
@@ -61,7 +59,7 @@ const Header = ({ className }) => {
                                         </Button>
                                     </div>
                                 </div>
-                            )}
+                            )} */}
                             {isAuthenticated && (
                                 <div className="setting-option rn-icon-list user-account">
                                     <UserDropdown
@@ -77,12 +75,12 @@ const Header = ({ className }) => {
                                     <BurgerButton onClick={offcanvasHandler} />
                                 </div>
                             </div>
-                            <div
+                            {/* <div
                                 id="my_switcher"
                                 className="setting-option my_switcher"
                             >
                                 <ColorSwitcher />
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

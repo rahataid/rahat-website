@@ -2,15 +2,10 @@
     {
         "id": 1,
         "text": "Home",
-        "path": "/"
+        "path": "https://rahat.io/"
     },
     {
         "id": 2,
-        "text": "Donations",
-        "path": "/donations"
-    },
-    {
-        "id": 3,
         "text": "Communities",
         "path": "/communities"
     }
