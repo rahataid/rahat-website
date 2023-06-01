@@ -1,7 +1,5 @@
 import PlaceBidModal from "@components/modals/placebid-modal";
-import ProductBid from "@components/product-bid";
 import Anchor from "@ui/anchor";
-import CountdownTimer from "@ui/countdown/layout-01";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
@@ -10,7 +8,8 @@ import { useState } from "react";
 
 const Product = ({
     overlay,
-    title,
+    name,
+    budget,
     description,
     location,
     establishedDate,
@@ -42,12 +41,13 @@ const Product = ({
                             height={533}
                         />
                     </Anchor>
-
-                    {auction_date && <CountdownTimer date={auction_date} />}
                 </div>
-                <Anchor path={`${path}/${id}`}>
-                    <span className="product-name mt-5">{title}</span>
-                </Anchor>
+                <div className="d-flex justify-content-between align-items-center">
+                    <Anchor path={`${path}/${id}`}>
+                        <span className="product-name mt-5">{name}</span>
+                    </Anchor>
+                    <p className="product-name mt-5">{budget != 'undefined' ? budget : 'N/A'}</p>
+                </div>
                 <span className="latest-bid">{description}</span>
             </div>
             <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />

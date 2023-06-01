@@ -5,7 +5,7 @@ const PersonalInformation = ({ id, community }) => (
         <div className="row g-5">
             <div className="col-lg-12">
                 <div className="section-title mt--100 mb--30 text-center">
-                    <h2 className="title">Impact Reports</h2>
+                    <h2 className="title">Impact Metrics</h2>
                     <p className="description">
                         There are many variations of passages of Lorem Ipsum
                         available, <br /> but the majority have suffered

@@ -1,8 +1,6 @@
 import Product from "@components/product/layout-01/community";
-import { ProductType, SectionTitleType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useReducer } from "react";
 
 function reducer(state, action) {
     switch (action.type) {
@@ -36,7 +34,8 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                 >
                                     <Product
                                         overlay
-                                        title={community.title}
+                                        name={community.name}
+                                        budget={community.budget}
                                         location={community.location}
                                         description={community.description}
                                         establishedDate={
