@@ -6,17 +6,12 @@
     },
     {
         "id": 2,
-        "text": "About",
-        "path": "/ranking"
-    },
-    {
-        "id": 3,
-        "text": "Projects",
-        "path": "/product"
+        "text": "Donations",
+        "path": "/donations"
     },
     {
         "id": 3,
         "text": "Communities",
-        "path": "/product"
+        "path": "/communities"
     }
 ]

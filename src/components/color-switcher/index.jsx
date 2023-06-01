@@ -1,6 +1,6 @@
-import Image from "next/image";
 import clsx from "clsx";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const ColorSwitcher = () => {
     const { setTheme } = useTheme();
@@ -14,7 +14,6 @@ const ColorSwitcher = () => {
                 <Image
                     src="/images/icons/sun-01.svg"
                     alt="Sun images"
-                    layout="fixed"
                     width={16}
                     height={16}
                 />
@@ -27,7 +26,6 @@ const ColorSwitcher = () => {
                 <Image
                     src="/images/icons/vector.svg"
                     alt="Vector Images"
-                    layout="fixed"
                     width={16}
                     height={16}
                 />

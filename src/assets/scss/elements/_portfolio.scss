@@ -397,6 +397,26 @@
     }
 }
 
+.pill {
+    align-items: center;
+    font-weight: bold;
+    font-size: 11px;
+    display: inline-block;
+    height: 100%;
+    white-space: nowrap;
+    width: auto;
+    position: relative;
+    border-radius: 100px;
+    line-height: 1;
+    overflow: hidden;
+    padding: 5px 12px 5px 12px;
+    text-overflow: ellipsis;
+    line-height: 1.25rem;
+    color: #595959;
+    background: #ffebb6;
+    word-break: break-word;
+}
+
 /*---------------------------
     Filter Exanded  
 -----------------------------*/

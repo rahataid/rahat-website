@@ -1,12 +1,11 @@
-import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
 import Image from "next/image";
+import PropTypes from "prop-types";
 
 const Collection = ({
     title,
     total_item,
     image,
-    thumbnails,
     profile_image,
     path,
 }) => (
@@ -22,19 +21,6 @@ const Collection = ({
                     />
                 </div>
             )}
-            <div className="collenction-small-thumbnail">
-                {thumbnails?.map((thumb, i) => (
-                    // eslint-disable-next-line react/no-array-index-key
-                    <div key={i}>
-                        <Image
-                            src={thumb?.src}
-                            alt={thumb?.alt || "Nft_Profile"}
-                            width={164}
-                            height={110}
-                        />
-                    </div>
-                ))}
-            </div>
             {profile_image?.src && (
                 <div className="collection-profile">
                     <Image

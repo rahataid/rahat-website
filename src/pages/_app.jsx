@@ -1,19 +1,22 @@
-import { useEffect } from "react";
-import PropTypes from "prop-types";
-import { useRouter } from "next/router";
-import { MoralisProvider } from "react-moralis";
-import sal from "sal.js";
+import AppContainer from "@containers/AppContainer";
+import ProviderExample from "@web3/Provider";
 import { ThemeProvider } from "next-themes";
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
+import { useEffect } from "react";
+import { Provider as ReduxProvider } from "react-redux";
+import "react-toastify/dist/ReactToastify.css";
+import { PersistGate } from "redux-persist/integration/react";
+import sal from "sal.js";
 import "../assets/css/bootstrap.min.css";
 import "../assets/css/feather.css";
 import "../assets/css/modal-video.css";
-import "react-toastify/dist/ReactToastify.css";
 import "../assets/scss/style.scss";
+import { wrapper } from "../redux/store";
 
-const moralisAppId = "Zgi9h3xvYrvXHJZmYjgzbfxlTPnDq6H3RytmW0qt";
-const moralisServerURL = "https://mrnuat16od8z.usemoralis.com:2053/server";
+const MyApp = ({ Component, ...pageProps }) => {
+    const { store, props } = wrapper.useWrappedStore(pageProps);
 
-const MyApp = ({ Component, pageProps }) => {
     const router = useRouter();
     useEffect(() => {
         sal({ threshold: 0.1, once: true });
@@ -22,17 +25,38 @@ const MyApp = ({ Component, pageProps }) => {
     useEffect(() => {
         sal();
     }, []);
+
     useEffect(() => {
-        document.body.className = `${pageProps.className}`;
+        document.body.className = `${props.className}`;
     });
+
     return (
-        <MoralisProvider appId={moralisAppId} serverUrl={moralisServerURL}>
-            <ThemeProvider defaultTheme="dark">
-                <Component {...pageProps} />
-            </ThemeProvider>
-        </MoralisProvider>
+        <ReduxProvider store={store}>
+            <PersistGate loading={null} persistor={store.__persistor}>
+                <ProviderExample>
+                    <ThemeProvider defaultTheme="dark">
+                        <AppContainer>
+                            <Component {...props.pageProps} />
+                        </AppContainer>
+                    </ThemeProvider>
+                </ProviderExample>
+            </PersistGate>
+        </ReduxProvider>
     );
 };
+
+// MyApp.getInitialProps = wrapper.getInitialAppProps(
+//     (store) => async (appCtx) => {
+//         const childrenGip = await App.getInitialProps(appCtx);
+
+//         return {
+//             pageProps: {
+//                 ...childrenGip.pageProps,
+//                 appName: "Rahat",
+//             },
+//         };
+//     }
+// );
 
 MyApp.propTypes = {
     Component: PropTypes.elementType,

@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
+import PropTypes from "prop-types";
 
 const GoogleMapArea = ({ space, className }) => (
     <div

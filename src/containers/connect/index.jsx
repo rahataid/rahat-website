@@ -1,8 +1,9 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import Image from "next/image";
 import Wallet from "@components/wallet";
 import Anchor from "@ui/anchor";
+import MetaMaskCard from "@web3/components/Metamask";
+import clsx from "clsx";
+import Image from "next/image";
+import PropTypes from "prop-types";
 
 const ConnectArea = ({ className, space }) => (
     <div
@@ -65,11 +66,12 @@ const ConnectArea = ({ className, space }) => (
                             data-sal-delay="150"
                             data-sal-duration="800"
                         >
-                            <Wallet
-                                title="Bitcollet"
-                                description="I throw myself down among the tall."
-                                path="/collection"
-                                icon="feather-cast"
+                            <MetaMaskCard
+                                title="Metamask"
+                                description="This is metamask"
+                                icon="feather-box"
+                                color="orange"
+                                component={Wallet}
                             />
                         </div>
                         <div

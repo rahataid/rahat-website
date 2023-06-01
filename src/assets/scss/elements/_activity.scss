@@ -9,33 +9,36 @@
         overflow: hidden;
         width: 100%;
         height: auto;
+
         @media screen and (min-width: 576px) {
             width: 91px;
             height: 91px;
         }
+
         @media screen and (min-width: 768px) {
             width: 108px;
             height: 108px;
         }
+
         a {
             display: block;
             overflow: hidden;
+
             img {
                 transition: 0.4s;
             }
         }
+
         img {
             border-radius: 5px !important;
         }
     }
-    .inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
+    .inner {
         .read-content {
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             @media #{$large-mobile} {
                 display: block;
@@ -49,6 +52,7 @@
         }
 
         .icone-area {
+
             svg,
             i {
                 width: 30px;
@@ -68,10 +72,12 @@
 
         .content {
             margin-left: 20px;
+
             @media #{$large-mobile} {
                 margin-left: 0;
                 margin-top: 20px;
             }
+
             h6 {
                 &.title {
                     margin-bottom: 10px;
@@ -138,6 +144,7 @@
             }
         }
     }
+
     &:hover {
         .thumbnail {
             a {
@@ -201,6 +208,10 @@
 .widge-wrapper {
     position: sticky;
     z-index: 10;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .inner {
         margin-bottom: 30px;

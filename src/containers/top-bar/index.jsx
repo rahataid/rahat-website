@@ -1,13 +1,13 @@
-import { useMoralis } from "react-moralis";
-import SearchForm from "@components/search-form/layout-03";
-import Anchor from "@ui/anchor";
-import Button from "@ui/button";
 import ColorSwitcher from "@components/color-switcher";
-import BurgerButton from "@ui/burger-button";
-import FlyoutSearchForm from "@components/search-form/layout-02";
 import MobileMenu from "@components/menu/mobile-menu-02";
+import FlyoutSearchForm from "@components/search-form/layout-02";
+import SearchForm from "@components/search-form/layout-03";
 import UserDropdown from "@components/user-dropdown";
-import { useOffcanvas, useFlyoutSearch } from "@hooks";
+import { useFlyoutSearch, useOffcanvas } from "@hooks";
+import Anchor from "@ui/anchor";
+import BurgerButton from "@ui/burger-button";
+import Button from "@ui/button";
+import { useMoralis } from "react-moralis";
 
 // Demo Data
 import sideMenuData from "../../data/general/menu-02.json";
@@ -78,7 +78,7 @@ const TopBarArea = () => {
                                     color="primary-alta"
                                     onClick={() => authenticate()}
                                 >
-                                    Wallet connect
+                                    Login
                                 </Button>
                             </div>
                         </div>

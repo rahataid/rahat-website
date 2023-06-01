@@ -1,11 +1,10 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import Image from "next/image";
-import { ImageType } from "@utils/types";
-import ShareDropdown from "@components/share-dropdown";
 import ShareModal from "@components/modals/share-modal";
 import Anchor from "@ui/anchor";
+import { ImageType } from "@utils/types";
+import clsx from "clsx";
+import Image from "next/image";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 const AuthorIntroArea = ({ className, space, data }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
@@ -18,7 +17,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src="/images/bg/bg-image-9.jpg"
+                    src="/images/bg/bg-img.jpg"
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"
@@ -65,39 +64,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                                 {data.twitter}
                                             </span>
                                         </a>
-                                        <div className="follow-area">
-                                            <div className="follow followers">
-                                                <span>
-                                                    {data.followers}{" "}
-                                                    <a
-                                                        href="https://twitter.com"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="color-body"
-                                                    >
-                                                        followers
-                                                    </a>
-                                                </span>
-                                            </div>
-                                            <div className="follow following">
-                                                <span>
-                                                    {data.following}{" "}
-                                                    <a
-                                                        href="https://twitter.com"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="color-body"
-                                                    >
-                                                        following
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
                                         <div className="author-button-area">
-                                            <span className="btn at-follw follow-button">
-                                                <i className="feather-user-plus" />
-                                                Follow
-                                            </span>
                                             <button
                                                 type="button"
                                                 className="btn at-follw share-button"
@@ -105,10 +72,6 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                             >
                                                 <i className="feather-share-2" />
                                             </button>
-
-                                            <div className="count at-follw">
-                                                <ShareDropdown />
-                                            </div>
                                             <Anchor
                                                 path="/edit-profile"
                                                 className="btn at-follw follow-button edit-btn"
@@ -133,8 +96,6 @@ AuthorIntroArea.propTypes = {
     data: PropTypes.shape({
         name: PropTypes.string,
         twitter: PropTypes.string,
-        followers: PropTypes.string,
-        following: PropTypes.string,
         image: ImageType,
     }),
 };

@@ -1,9 +1,8 @@
-import Image from "next/image";
 import Anchor from "@ui/anchor";
-import { useMoralis } from "react-moralis";
+import truncateEthAddress from "@utils/trucateEthAddress";
+import Image from "next/image";
 
-const UserDropdown = () => {
-    const { logout } = useMoralis();
+const UserDropdown = ({ accounts = [], balances = [], details }) => {
     return (
         <div className="icon-box">
             <Anchor path="/author">
@@ -17,55 +16,37 @@ const UserDropdown = () => {
             </Anchor>
             <div className="rn-dropdown">
                 <div className="rn-inner-top">
-                    <h4 className="title">
-                        <Anchor path="/product">Christopher William</Anchor>
-                    </h4>
-                    <span>
-                        <Anchor path="/product">Set Display Name</Anchor>
-                    </span>
+                    <h4 className="title">{details?.name}</h4>
+                    <span>{details?.email}</span>
                 </div>
                 <div className="rn-product-inner">
                     <ul className="product-list">
-                        <li className="single-product-list">
-                            <div className="thumbnail">
-                                <Anchor path="/product">
-                                    <Image
-                                        src="/images/portfolio/portfolio-07.jpg"
-                                        alt="Nft Product Images"
-                                        layout="fixed"
-                                        width={50}
-                                        height={50}
-                                    />
-                                </Anchor>
-                            </div>
-                            <div className="content">
-                                <h6 className="title">
-                                    <Anchor path="/product">Balance</Anchor>
-                                </h6>
-                                <span className="price">25 ETH</span>
-                            </div>
-                            <div className="button" />
-                        </li>
-                        <li className="single-product-list">
-                            <div className="thumbnail">
-                                <Anchor path="/product">
-                                    <Image
-                                        src="/images/portfolio/portfolio-01.jpg"
-                                        alt="Nft Product Images"
-                                        layout="fixed"
-                                        width={50}
-                                        height={50}
-                                    />
-                                </Anchor>
-                            </div>
-                            <div className="content">
-                                <h6 className="title">
-                                    <Anchor path="/product">Balance</Anchor>
-                                </h6>
-                                <span className="price">25 ETH</span>
-                            </div>
-                            <div className="button" />
-                        </li>
+                        {accounts.map((account, i) => {
+                            return (
+                                <li className="single-product-list">
+                                    <div className="thumbnail">
+                                        <Anchor path="/product">
+                                            <Image
+                                                src="/images/portfolio/portfolio-07.jpg"
+                                                alt="Nft Product Images"
+                                                layout="fixed"
+                                                width={50}
+                                                height={50}
+                                            />
+                                        </Anchor>
+                                    </div>
+                                    <div className="content">
+                                        <h6 className="title">
+                                            {truncateEthAddress(account, 6)}
+                                        </h6>
+                                        <span className="price">
+                                            {balances[i]} ETH
+                                        </span>
+                                    </div>
+                                    <div className="button" />
+                                </li>
+                            );
+                        })}
                     </ul>
                 </div>
                 <div className="add-fund-button mt--20 pb--20">
@@ -87,7 +68,7 @@ const UserDropdown = () => {
                         <Anchor path="/connect">Manage funds</Anchor>
                     </li>
                     <li>
-                        <button type="button" onClick={logout}>
+                        <button type="button" onClick={() => {}}>
                             Sign Out
                         </button>
                     </li>
