@@ -43,8 +43,8 @@ const Product = ({
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${id}`}>
-                        <span className="product-name mt-5">{name || 'Community Name'}</span>
                         <div className="pill">Category name</div>
+                        <span className="product-name mt-2">{name || 'Community Name'}</span>
                     </Anchor>
                 </div>
                 <div className="latest-bid">
