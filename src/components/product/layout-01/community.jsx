@@ -48,8 +48,24 @@ const Product = ({
                     </Anchor>
                 </div>
                 <div className="latest-bid">
-                    <span>Country: Nepal</span>
-                    <span>Total Budget: $50,000</span>
+                    <span>
+                        <Image
+                            style={{ marginRight: '6px' }}
+                            src={'/images/map.png'}
+                            width={24}
+                            height={24}
+                        />
+                        Nepal
+                    </span>
+                    <span>
+                        <Image
+                            src={'/images/budget.png'}
+                            width={24}
+                            height={24}
+                            style={{ marginRight: '6px' }}
+                        />
+                        $50,000
+                    </span>
                 </div>
             </div>
         </>
