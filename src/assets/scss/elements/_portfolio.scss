@@ -127,13 +127,12 @@
     }
 
     .latest-bid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         font-weight: 400;
         font-size: 16px;
         margin-top: 10px;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
     }
 
     .bid-react-area {
@@ -402,23 +401,15 @@
 }
 
 .pill {
-    align-items: center;
+    display: inline;
+    z-index: 5000;
     font-weight: bold;
     font-size: 11px;
-    display: inline-block;
-    height: 100%;
-    white-space: nowrap;
-    width: auto;
     position: relative;
     border-radius: 100px;
-    line-height: 1;
-    overflow: hidden;
     padding: 5px 12px 5px 12px;
-    text-overflow: ellipsis;
-    line-height: 1.25rem;
-    color: #595959;
-    background: #ffebb6;
-    word-break: break-word;
+    color: #ffff;
+    background: #0ac9e7;
 }
 
 /*---------------------------

@@ -1,4 +1,3 @@
-import PlaceBidModal from "@components/modals/placebid-modal";
 import Anchor from "@ui/anchor";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
@@ -44,13 +43,15 @@ const Product = ({
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${id}`}>
-                        <span className="product-name mt-5">{name}</span>
+                        <span className="product-name mt-5">{name || 'Community Name'}</span>
+                        <div className="pill">Category name</div>
                     </Anchor>
-                    <p className="product-name mt-5">{budget != 'undefined' ? budget : 'N/A'}</p>
                 </div>
-                <span className="latest-bid">{description}</span>
+                <div className="latest-bid">
+                    <span>Country: Nepal</span>
+                    <span>Total Budget: $50,000</span>
+                </div>
             </div>
-            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
     );
 };
