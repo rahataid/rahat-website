@@ -18,7 +18,7 @@ export default function Product({ communities }) {
             <Header />
             <main id="main-content">
                 <div className="rn-author-bg-area position-relative pb--50">
-                    <MapView />
+                    <MapView communities={communities} />
                 </div>
                 <ProductArea communities={communities} />
             </main>

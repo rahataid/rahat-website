@@ -41,6 +41,8 @@ const MapView = () => {
   );
 };
 
-MapView.propTypes = {};
+MapView.propTypes = {
+
+};
 
 export default MapView;
