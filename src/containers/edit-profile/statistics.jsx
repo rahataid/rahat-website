@@ -18,8 +18,8 @@ const FunFact = ({ className, counter, community }) => {
     };
     return (
         <div className="container">
-            <div className="row g-5">
-                <div className="col-lg-12">
+            <div className="row">
+                <div className="col-12 col-lg-12">
                     <div className="section-title mt--50 mb--30 text-left">
                         <h2 className="title">Community Metrics</h2>
                         <p className="description">
@@ -31,14 +31,14 @@ const FunFact = ({ className, counter, community }) => {
                 </div>
             </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col-12 col-md-6">
                     <div className="connect-thumbnail">
                         <div className="left-image">
                             <MapView />
                         </div>
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-12 col-md-6 ml--4">
                     {community.summary.map((summary, key) => (
                         <div className={clsx("single-counter-up text-center mt--5", className)}>
                             <div className="number counter-odomitter-active">
