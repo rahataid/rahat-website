@@ -39,7 +39,9 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                     <Product
                                         overlay
                                         name={community.name}
-                                        budget={community.budget}
+                                        country={community.country}
+                                        totalDonationsUsd={community.totalDonationsUsd}
+                                        // category={community.category.name}
                                         location={community.location}
                                         description={community.description}
                                         establishedDate={

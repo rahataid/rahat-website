@@ -7,6 +7,7 @@ import { getCommunities } from "@redux/slices/community";
 
 // Demo Data
 import { wrapper } from "@redux/store";
+import Image from "next/image";
 
 export default function Product({ communities }) {
     console.log("communities", communities);
@@ -15,6 +16,16 @@ export default function Product({ communities }) {
             <SEO pageTitle="Communities" />
             <Header />
             <main id="main-content">
+                <div className="rn-author-bg-area position-relative ptb--150">
+                    <Image
+                        src="/images/bg/bg-img.jpg"
+                        alt="Slider BG"
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        priority
+                    />
+                </div>
                 <ProductArea communities={communities} />
             </main>
             <Footer />

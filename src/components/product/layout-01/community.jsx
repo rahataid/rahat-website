@@ -8,8 +8,9 @@ import { useState } from "react";
 const Product = ({
     overlay,
     name,
-    budget,
-    description,
+    country,
+    totalDonationsUsd,
+    category,
     location,
     establishedDate,
     published_at,
@@ -43,7 +44,7 @@ const Product = ({
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${id}`}>
-                        <div className="pill">Category name</div>
+                        <div className="pill">Category</div>
                         <span className="product-name mt-2">{name || 'Community Name'}</span>
                     </Anchor>
                 </div>
@@ -55,7 +56,7 @@ const Product = ({
                             width={24}
                             height={24}
                         />
-                        Nepal
+                        {country}
                     </span>
                     <span>
                         <Image
@@ -64,7 +65,7 @@ const Product = ({
                             height={24}
                             style={{ marginRight: '6px' }}
                         />
-                        $50,000
+                        {totalDonationsUsd}
                     </span>
                 </div>
             </div>
