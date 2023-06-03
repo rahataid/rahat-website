@@ -1,13 +1,14 @@
 import SEO from "@components/seo";
 import ProductArea from "@containers/explore-product/layout-01/community";
+import { MapView } from '@containers/maps';
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 import { getCommunities } from "@redux/slices/community";
 
+
 // Demo Data
 import { wrapper } from "@redux/store";
-import Image from "next/image";
 
 export default function Product({ communities }) {
     console.log("communities", communities);
@@ -16,15 +17,8 @@ export default function Product({ communities }) {
             <SEO pageTitle="Communities" />
             <Header />
             <main id="main-content">
-                <div className="rn-author-bg-area position-relative ptb--150">
-                    <Image
-                        src="/images/bg/bg-img.jpg"
-                        alt="Slider BG"
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        priority
-                    />
+                <div className="rn-author-bg-area position-relative pb--50">
+                    <MapView />
                 </div>
                 <ProductArea communities={communities} />
             </main>
