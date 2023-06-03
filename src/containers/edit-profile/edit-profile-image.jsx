@@ -12,7 +12,7 @@ const EditProfileImage = ({ community, id }) => {
                                         <h4 className="title" style={{ marginBottom: '5px' }}>{community?.name}</h4>
                                         {community.tags?.map((tag) => (
                                             <div
-                                                className="pill mb--15"
+                                                className="pill mb--15 mr--5"
                                                 key={tag.id}
                                                 type="button"
                                             >
