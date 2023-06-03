@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-
-
 const EditProfileImage = ({ community, id }) => {
     return (
         <>

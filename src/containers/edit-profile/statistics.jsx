@@ -1,9 +1,10 @@
+import { MapView } from "@containers/maps";
 import clsx from "clsx";
-import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
+
 
 const FunFact = ({ className, counter, community }) => {
     console.log(community);
@@ -33,12 +34,7 @@ const FunFact = ({ className, counter, community }) => {
                 <div className="col-6">
                     <div className="connect-thumbnail">
                         <div className="left-image">
-                            <Image
-                                src="/images/portfolio/maps.jpg"
-                                alt="Nft_Profile"
-                                width={200}
-                                height={200}
-                            />
+                            <MapView />
                         </div>
                     </div>
                 </div>
