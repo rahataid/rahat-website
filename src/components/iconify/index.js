@@ -1,14 +1,13 @@
 import PropTypes from "prop-types";
-import { forwardRef } from "react";
 // icons
 import { Icon } from "@iconify/react";
 // @mui
 
 // ----------------------------------------------------------------------
 
-const Iconify = forwardRef(({ icon, width = 20, sx, ...other }) => (
-    <Icon style={sx} />
-));
+const Iconify = ({ icon, width = 20, sx, ...other }) => (
+    <Icon style={sx} icon={icon} {...other} />
+);
 
 Iconify.propTypes = {
     sx: PropTypes.object,

@@ -76,6 +76,7 @@ export default function Upload({
     });
 
     const hasFile = !!file && !multiple;
+    console.log("hasFile,file", hasFile, file);
 
     const hasFiles = files && multiple && files.length > 0;
 
@@ -119,26 +120,38 @@ export default function Upload({
             <RejectionFiles fileRejections={fileRejections} />
 
             {hasFile && onDelete && (
-                <IconButton
-                    size="small"
-                    onClick={onDelete}
-                    sx={{
-                        top: 16,
-                        right: 16,
-                        zIndex: 9,
-                        position: "absolute",
-                        color: (theme) =>
-                            alpha(theme.palette.common.white, 0.8),
-                        bgcolor: (theme) =>
-                            alpha(theme.palette.grey[900], 0.72),
-                        "&:hover": {
+                <>
+                    <IconButton
+                        size="small"
+                        onClick={onDelete}
+                        sx={{
+                            top: 16,
+                            right: 16,
+                            zIndex: 9,
+                            position: "absolute",
+                            color: (theme) =>
+                                alpha(theme.palette.common.white, 0.8),
                             bgcolor: (theme) =>
-                                alpha(theme.palette.grey[900], 0.48),
-                        },
-                    }}
-                >
-                    <Iconify icon="eva:close-fill" width={18} />
-                </IconButton>
+                                alpha(theme.palette.grey[900], 0.72),
+                            "&:hover": {
+                                bgcolor: (theme) =>
+                                    alpha(theme.palette.grey[900], 0.48),
+                            },
+                        }}
+                    >
+                        <Iconify icon="eva:close-fill" width={18} />
+                    </IconButton>
+                    {onUpload && (
+                        <Button
+                            size="small"
+                            variant="contained"
+                            onClick={onUpload}
+                            disabled={other?.disabled}
+                        >
+                            Upload file
+                        </Button>
+                    )}
+                </>
             )}
 
             {hasFiles && (

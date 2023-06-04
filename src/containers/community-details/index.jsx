@@ -2,10 +2,8 @@ import Contact from "@containers/edit-profile/contact";
 import EditProfileImage from "@containers/edit-profile/edit-profile-image";
 import PersonalInformation from "@containers/edit-profile/personal-information";
 import Statistics from "@containers/edit-profile/statistics";
-import Projects from "./communityProject";
 
 const EditProfile = ({ community, id, projects }) => {
-
     return (
         <div className="rn-authore-profile-area">
             <div className="container">
@@ -14,7 +12,7 @@ const EditProfile = ({ community, id, projects }) => {
                         <EditProfileImage community={community} />
                         <Statistics community={community} />
                         <PersonalInformation community={community} />
-                        <Projects projects={projects} />
+                        <Photos community={community} />
                         <Contact />
                     </div>
                 </div>

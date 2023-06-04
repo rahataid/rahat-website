@@ -17,8 +17,8 @@ const Image = forwardRef(
                 effect={disabledEffect ? undefined : effect}
                 placeholderSrc={
                     disabledEffect
-                        ? "/imaages/transparent.png"
-                        : "/imaages/placeholder.svg"
+                        ? "/images/transparent.png"
+                        : "/images/placeholder.svg"
                 }
                 sx={{ width: 1, height: 1, objectFit: "cover" }}
                 {...other}

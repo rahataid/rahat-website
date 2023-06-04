@@ -3,20 +3,8 @@ import SearchForm from "@components/search-form/layout-01";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-function reducer(state, action) {
-    switch (action.type) {
-        case "FILTER_TOGGLE":
-            return { ...state, filterToggle: !state.filterToggle };
-        case "SET_INPUTS":
-            return { ...state, inputs: { ...state.inputs, ...action.payload } };
-        case "SET_PRODUCTS":
-            return { ...state, products: action.payload };
-        default:
-            return state;
-    }
-}
-
 const ExploreProductArea = ({ className, space, communities, data }) => {
+    console.log("communities", communities);
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
@@ -34,21 +22,21 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                             {communities.map((community) => (
                                 <div
                                     key={community.id}
-                                    className="col-4 col-lg-4 col-md-6 col-sm-6 col-12"
+                                    className="col-3 col-lg-3 col-md-6 col-sm-6 col-12"
                                 >
                                     <Product
                                         overlay
                                         name={community.name}
                                         country={community.country}
-                                        totalDonationsUsd={community.totalDonationsUsd}
-                                        // category={community.category.name}
+                                        totalDonationsUsd={
+                                            community.totalDonations_usd
+                                        }
+                                        category={community?.category?.name}
                                         location={community.location}
                                         logo={community?.logo}
                                         description={community.description}
-                                        establishedDate={
-                                            community.establishedDate
-                                        }
                                         id={community.id}
+                                        walletAddress={community?.walletAddress}
                                     />
                                 </div>
                             ))}

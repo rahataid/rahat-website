@@ -1,4 +1,5 @@
 import ShareModal from "@components/modals/share-modal";
+import { ASSET_VIEW } from "@config";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
@@ -8,6 +9,12 @@ import { useState } from "react";
 const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
+
+    const coverImage = community.cover
+        ? `${ASSET_VIEW}/${community?.walletAddress}/${community?.cover}`
+        : "/images/bg/bg-img.jpg";
+
+    console.log("community", coverImage);
     return (
         <>
             <ShareModal
@@ -16,7 +23,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src={community?.cover || "/images/bg/bg-img.jpg"}
+                    src={coverImage}
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"

@@ -73,6 +73,7 @@ export default function UploadImage() {
             );
         }
 
+        console.log("value", value);
         if (value?.photos.length > 0) {
             const photos = value?.photos.map((photo) => {
                 return Object.assign(photo, {

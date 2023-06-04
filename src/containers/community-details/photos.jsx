@@ -1,31 +1,9 @@
+import { ASSET_VIEW } from "@config";
 import Image from "next/image";
 
-const Projects = ({ className, projects, id }) => {
+const CommunityPhotos = ({ className, community, id }) => {
     return (
         <div id={id}>
-            {/* <Fragment>
-                {projects?.map(({ projects }, index) => (
-                    <div
-                        className={clsx("rn-about-card mt--30", className)}
-                        key={`${projects?.id}-${index}`}
-                    >
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-12">
-                                    <div className="about-wrapper">
-                                        <h5>{projects?.name}</h5>
-
-                                        <hr className="mt--30" />
-                                        <p className="discription">
-                                            {projects?.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </Fragment> */}
             <div className="container">
                 <div className="row g-5">
                     <div className="col-lg-12">
@@ -40,6 +18,16 @@ const Projects = ({ className, projects, id }) => {
                     </div>
                 </div>
                 <div className="row">
+                    {community?.photos.length &&
+                        community?.photos?.map((photo) => (
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                                <Image
+                                    src={`
+                                            ${ASSET_VIEW}/${community?.walletAddress}/${photo}
+                                        `}
+                                />
+                            </div>
+                        ))}
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <Image
                             src={"/images/portfolio/tayaba.png"}
@@ -94,7 +82,7 @@ const Projects = ({ className, projects, id }) => {
     );
 };
 
-Projects.defaultProps = {
+CommunityPhotos.defaultProps = {
     space: 1,
 };
 
