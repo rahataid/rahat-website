@@ -1,38 +1,37 @@
+import Iconify from "@components/iconify";
 import Image from "@components/image/Image";
-import PlaceBidModal from "@components/modals/placebid-modal";
+import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
-import { ImageType } from "@utils/types";
 import clsx from "clsx";
-import PropTypes from "prop-types";
-import { useState } from "react";
 
 const Product = ({
     overlay,
     name,
-    budget,
-    description,
     logo,
-    placeBid,
+    country,
+    totalDonationsUsd = 0,
+    category,
+    walletAddress,
     id,
     path = "/communities",
 }) => {
-    const [showBidModal, setShowBidModal] = useState(false);
-    const handleBidModal = () => {
-        setShowBidModal((prev) => !prev);
-    };
     return (
         <>
             <div
                 className={clsx(
                     "product-style-one",
                     !overlay && "no-overlay",
-                    placeBid && "with-placeBid"
+                    "with-placeBid"
                 )}
             >
                 <div>
                     <Anchor path={`${path}/${id}`}>
                         <Image
-                            src={logo || "/images/portfolio/tayaba.png"}
+                            src={
+                                logo
+                                    ? `${ASSET_VIEW}/${walletAddress}/${logo}`
+                                    : "/images/portfolio/tayaba.png"
+                            }
                             alt={name}
                             ratio="6/4"
                             // height={533}
@@ -42,42 +41,31 @@ const Product = ({
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${id}`}>
-                        <span className="product-name mt-5">{name}</span>
+                        <div className="pill">{category}</div>
+                        <span className="product-name mt-2">
+                            {name || "Community Name"}
+                        </span>
                     </Anchor>
-                    <p className="product-name mt-5">
-                        {budget != "undefined" ? budget : "N/A"}
-                    </p>
                 </div>
-                <span className="latest-bid">{description}</span>
+                <div className="latest-bid">
+                    <span>
+                        <Iconify
+                            // style={{ marginRight: "6px" }}
+                            icon="carbon:location"
+                        />
+                        {country}
+                    </span>
+                    <span>
+                        <Iconify
+                            icon={"arcticons:budgetmylife"}
+                            // style={{ marginRight: "6px" }}
+                        />
+                        $ {Number(totalDonationsUsd)?.toFixed(2)}
+                    </span>
+                </div>
             </div>
-            <PlaceBidModal show={showBidModal} handleModal={handleBidModal} />
         </>
     );
-};
-
-Product.propTypes = {
-    overlay: PropTypes.bool,
-    title: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    latestBid: PropTypes.string.isRequired,
-    price: PropTypes.shape({
-        amount: PropTypes.number.isRequired,
-        currency: PropTypes.string.isRequired,
-    }).isRequired,
-    likeCount: PropTypes.number.isRequired,
-    auction_date: PropTypes.string,
-    image: ImageType.isRequired,
-    authors: PropTypes.arrayOf(
-        PropTypes.shape({
-            name: PropTypes.string.isRequired,
-            slug: PropTypes.string.isRequired,
-            image: ImageType.isRequired,
-        })
-    ),
-    bitCount: PropTypes.number,
-    placeBid: PropTypes.bool,
-    disableShareDropdown: PropTypes.bool,
-    id: PropTypes.number,
 };
 
 Product.defaultProps = {

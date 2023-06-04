@@ -1,4 +1,5 @@
 import Product from "@components/product/layout-01/community";
+import SearchForm from "@components/search-form/layout-01";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
@@ -19,9 +20,12 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
-                <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                        <h3>Communities</h3>
+                <div className="row">
+                    <div className="d-flex align-items-center justify-content-between">
+                        <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                            <h3>Communities</h3>
+                        </div>
+                        <SearchForm />
                     </div>
                 </div>
                 <div className="row g-5">
@@ -35,7 +39,9 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                     <Product
                                         overlay
                                         name={community.name}
-                                        budget={community.budget}
+                                        country={community.country}
+                                        totalDonationsUsd={community.totalDonationsUsd}
+                                        // category={community.category.name}
                                         location={community.location}
                                         logo={community?.logo}
                                         description={community.description}
