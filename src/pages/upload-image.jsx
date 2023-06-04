@@ -21,12 +21,13 @@ import { fData } from "@utils/formatNumber";
 // layouts
 // components
 import { Upload, UploadAvatar } from "@components/upload";
+import { ASSET_VIEW } from "@config";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 import { getCommunities, selectCommunities } from "@redux/slices/community";
-import { ImageUploadService } from "@services/imageUpload";
-import axios from "axios";
-import PropTypes from "prop-types";
+import { AssetUploadService } from "@services/assetUpload";
+import { CommunitiesService } from "@services/communities";
+import { extractAssetUploadData } from "@utils/string";
 import { useDispatch, useSelector } from "react-redux";
 
 // ----------------------------------------------------------------------
@@ -38,6 +39,7 @@ UploadImage.getLayout = (page) => <Wrapper>{page}</Wrapper>;
 export default function UploadImage() {
     const dispatch = useDispatch();
     const communities = useSelector(selectCommunities);
+    const [uploadingImage, setUploadingImage] = useState(false);
 
     const [selectedCommunity, setSelectedCommunity] = useState(null);
     const [files, setFiles] = useState([]);
@@ -52,19 +54,21 @@ export default function UploadImage() {
         setLogoImage(value?.logo);
 
         if (value?.logo) {
-            const res = await axios.get(value?.logo);
-            console.log("res", res);
+            // const res = await axios.get(value?.logo);
+            // console.log("res", res);
             setLogoImage(
                 Object.assign(value?.logo, {
-                    preview: URL.createObjectURL(value?.logo),
+                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${value?.logo}`,
+                    // preview: value?.logo,
                 })
             );
         }
         if (value?.cover) {
-            const res = await axios.get(value?.cover);
+            // const res = await axios.get(value?.cover);
             setFile(
                 Object.assign(value?.cover, {
-                    preview: URL.createObjectURL(value?.cover),
+                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${value?.cover}`,
+                    // preview: value?.cover,
                 })
             );
         }
@@ -72,7 +76,8 @@ export default function UploadImage() {
         if (value?.photos.length > 0) {
             const photos = value?.photos.map((photo) => {
                 return Object.assign(photo, {
-                    preview: URL.createObjectURL(photo),
+                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${photo}`,
+                    // preview: photo,
                 });
             });
             setFiles(photos);
@@ -126,24 +131,34 @@ export default function UploadImage() {
 
     const handleUploadFiles = (imageType, file) => async () => {
         try {
-            const imageUploaded = await ImageUploadService(file);
-            console.log("imageUpload", imageUploaded);
-            if (imageUploaded) {
-                const updatedCommunity = {
-                    ...selectedCommunity,
-                    [imageType]: imageUploaded,
-                };
-                console.log("updatedCommunity", updatedCommunity);
-                setSelectedCommunity(updatedCommunity);
-            }
+            setUploadingImage(true);
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append(
+                "path",
+                // "communities/" + "test"
+                "communities/" + selectedCommunity?.walletAddress
+            );
+            formData.append("meta-type", imageType);
+            formData.append("meta-community-name", selectedCommunity?.name);
+
+            AssetUploadService.uploadImage(formData).then(async (res) => {
+                const responseData = extractAssetUploadData(res.data);
+                if (responseData?.cid) {
+                    const update = await CommunitiesService.uploadAsset(
+                        selectedCommunity?.id,
+                        {
+                            [imageType]: responseData.cid,
+                        }
+                    );
+                    console.log("update", update);
+                }
+            });
         } catch (err) {
             console.log("err", err);
-            alert("There was error uploading asset.");
+            alert("There was an error uploading the asset.");
         }
-    };
-    handleUploadFiles.propTypes = {
-        imageType: PropTypes.oneOf(["cover", "logo", "photos"]).isRequired,
-        file: PropTypes.object.isRequired,
+        setUploadingImage(false);
     };
 
     useEffect(() => {
@@ -196,6 +211,7 @@ export default function UploadImage() {
                                             "logo",
                                             logoImage
                                         )}
+                                        disabled={uploadingImage}
                                         helperText={
                                             <Typography
                                                 variant="caption"
@@ -226,6 +242,7 @@ export default function UploadImage() {
                                             "cover",
                                             file
                                         )}
+                                        disabled={uploadingImage}
                                         onDelete={() => setFile(null)}
                                     />
                                 </CardContent>
@@ -236,6 +253,7 @@ export default function UploadImage() {
                                     <Upload
                                         multiple
                                         thumbnail={true}
+                                        disabled={uploadingImage}
                                         files={files}
                                         onDrop={handleDropPhotos}
                                         onRemove={handleRemoveFile}

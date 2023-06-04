@@ -37,6 +37,7 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                         name={community.name}
                                         budget={community.budget}
                                         location={community.location}
+                                        logo={community?.logo}
                                         description={community.description}
                                         establishedDate={
                                             community.establishedDate

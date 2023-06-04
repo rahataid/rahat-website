@@ -172,6 +172,7 @@ export default function Upload({
                                 size="small"
                                 variant="contained"
                                 onClick={onUpload}
+                                disabled={other?.disabled}
                             >
                                 Upload files
                             </Button>

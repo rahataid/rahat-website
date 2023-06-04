@@ -62,7 +62,6 @@ export default function UploadAvatar({
     onUpload,
     ...other
 }) {
-    console.log("file", file);
     const {
         getRootProps,
         getInputProps,

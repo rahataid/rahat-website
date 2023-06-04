@@ -1,8 +1,8 @@
+import Image from "@components/image/Image";
 import PlaceBidModal from "@components/modals/placebid-modal";
 import Anchor from "@ui/anchor";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
-import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
@@ -11,13 +11,10 @@ const Product = ({
     name,
     budget,
     description,
-    location,
-    establishedDate,
-    published_at,
-    auction_date,
+    logo,
     placeBid,
     id,
-    path = "/communities/details",
+    path = "/communities",
 }) => {
     const [showBidModal, setShowBidModal] = useState(false);
     const handleBidModal = () => {
@@ -32,13 +29,14 @@ const Product = ({
                     placeBid && "with-placeBid"
                 )}
             >
-                <div className="card-thumbnail">
+                <div>
                     <Anchor path={`${path}/${id}`}>
                         <Image
-                            src={"/images/portfolio/tayaba.png"}
-                            alt={"NFT_portfolio"}
-                            width={533}
-                            height={533}
+                            src={logo || "/images/portfolio/tayaba.png"}
+                            alt={name}
+                            ratio="6/4"
+                            // height={533}
+                            // width={533}
                         />
                     </Anchor>
                 </div>
@@ -46,7 +44,9 @@ const Product = ({
                     <Anchor path={`${path}/${id}`}>
                         <span className="product-name mt-5">{name}</span>
                     </Anchor>
-                    <p className="product-name mt-5">{budget != 'undefined' ? budget : 'N/A'}</p>
+                    <p className="product-name mt-5">
+                        {budget != "undefined" ? budget : "N/A"}
+                    </p>
                 </div>
                 <span className="latest-bid">{description}</span>
             </div>

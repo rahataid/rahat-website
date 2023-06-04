@@ -16,7 +16,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src="/images/bg/bg-img.jpg"
+                    src={community?.cover || "/images/bg/bg-img.jpg"}
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"
@@ -38,14 +38,19 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                 <div className="author-inner">
                                     <div className="user-thumbnail">
                                         <Image
-                                            src={"/images/portfolio/rahat.jpeg"}
+                                            src={
+                                                community?.logo ||
+                                                "/images/portfolio/rahat.jpeg"
+                                            }
                                             width={140}
                                             height={140}
                                         />
                                     </div>
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
-                                            {community?.name ? community.name : "Community Name"}
+                                            {community?.name
+                                                ? community.name
+                                                : "Community Name"}
                                         </h4>
                                     </div>
                                 </div>
