@@ -15,4 +15,7 @@ export const CommunitiesService = {
             ...assetData,
         });
     },
+    searchCommunity: (searchKey) => {
+        return client.get(`/communities/search/${searchKey}`);
+    },
 };

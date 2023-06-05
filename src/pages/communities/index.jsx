@@ -10,6 +10,7 @@ import { getCommunities } from "@redux/slices/community";
 import { wrapper } from "@redux/store";
 
 export default function Product({ communities = [] }) {
+    // communities = useSelector(selectCommunities);
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
