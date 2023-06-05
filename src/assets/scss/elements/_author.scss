@@ -24,6 +24,12 @@
             position: relative;
             max-width: 170px;
             margin: auto;
+
+            .user-img {
+                height: 140px;
+                width: 140px;
+                object-fit: cover;
+            }
         }
 
         .rn-author-info-content {

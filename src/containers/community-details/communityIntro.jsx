@@ -16,7 +16,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
 
     const logoImage = community?.images?.logo
         ? `${ASSET_VIEW}/${community?.address}/${community?.images?.logo}`
-        : "/images/bg/bg-img.jpg";
+        : "/images/portfolio/rahat.jpeg";
 
     return (
         <>
@@ -48,6 +48,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                 <div className="author-inner">
                                     <div className="user-thumbnail">
                                         <Image
+                                            className="user-img"
                                             src={logoImage}
                                             width={140}
                                             height={140}
