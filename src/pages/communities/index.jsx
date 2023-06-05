@@ -4,12 +4,14 @@ import { MapView } from "@containers/maps";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
-import { getCommunities } from "@redux/slices/community";
+import { getCommunities, selectCommunities } from "@redux/slices/community";
 
 // Demo Data
 import { wrapper } from "@redux/store";
+import { useSelector } from "react-redux";
 
 export default function Product({ communities = [] }) {
+    communities = useSelector(selectCommunities);
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
