@@ -61,7 +61,8 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                                 ? community.name
                                                 : "Community Name"}
                                         </h4>
-                                        {/* {community?.walletAddress} */}
+                                        <p className="address mb--15">{community?.address}</p>
+
                                     </div>
                                 </div>
                             </div>
