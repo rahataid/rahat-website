@@ -86,8 +86,6 @@ export default function UploadImage() {
         }
     };
 
-    console.log("files", files);
-
     const handleDropCoverImage = useCallback((acceptedFiles) => {
         const file = acceptedFiles[0];
         if (file) {
@@ -182,22 +180,30 @@ export default function UploadImage() {
     };
 
     const uploadFile = (file, imageType) => {
-        // Add imageType parameter here
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("path", "communities/" + selectedCommunity?.address);
-        formData.append("meta-type", imageType);
-        formData.append("meta-community-name", selectedCommunity?.name);
+        return new Promise((resolve, reject) => {
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append(
+                "path",
+                "communities/" + selectedCommunity?.address
+            );
+            formData.append("meta-type", imageType);
+            formData.append("meta-community-name", selectedCommunity?.name);
 
-        return AssetUploadService.uploadImage(formData)
-            .then((res) => {
-                console.log("res", res);
-                return extractAssetUploadData(res.data);
-            })
-            .catch((err) => {
-                console.log("Error uploading file:", err);
-                return null;
-            });
+            return AssetUploadService.uploadImage(formData)
+                .then((response) => {
+                    // Extract the required values from the response
+                    console.log("resp", response);
+                    const uploadData = extractAssetUploadData(response.data);
+                    console.log("Upload data:", uploadData);
+
+                    resolve(uploadData);
+                })
+                .catch((error) => {
+                    console.log("Error uploading file:", error);
+                    reject(error);
+                });
+        });
     };
 
     const getUpdatedAssets = (uploadResults, imageType) => {
