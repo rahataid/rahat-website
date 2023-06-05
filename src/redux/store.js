@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { createWrapper } from "next-redux-wrapper";
-import logger from "redux-logger";
+// import logger from "redux-logger";
 import {
     FLUSH,
     PAUSE,
@@ -36,7 +36,7 @@ const makeStore = ({ reduxWrapperMiddleware, isServer }) => {
                             ],
                         },
                     }),
-                    process.browser ? logger : null,
+                    // process.browser ? "" : null,
                     // communityApi.middleware,
                     reduxWrapperMiddleware,
                 ].filter(Boolean),

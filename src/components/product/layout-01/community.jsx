@@ -11,7 +11,7 @@ const Product = ({
     country,
     totalDonationsUsd = 0,
     category,
-    walletAddress,
+    address,
     id,
     path = "/communities",
 }) => {
@@ -29,7 +29,7 @@ const Product = ({
                         <Image
                             src={
                                 logo
-                                    ? `${ASSET_VIEW}/${walletAddress}/${logo}`
+                                    ? `${ASSET_VIEW}/${address}/${logo}`
                                     : "/images/portfolio/tayaba.png"
                             }
                             alt={name}

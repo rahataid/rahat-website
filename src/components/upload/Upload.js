@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import { useDropzone } from "react-dropzone";
 // @mui
-import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
+import {
+    Box,
+    Button,
+    CircularProgress,
+    IconButton,
+    Stack,
+    Typography,
+} from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 // assets
 //
@@ -76,7 +83,6 @@ export default function Upload({
     });
 
     const hasFile = !!file && !multiple;
-    console.log("hasFile,file", hasFile, file);
 
     const hasFiles = files && multiple && files.length > 0;
 
@@ -146,7 +152,7 @@ export default function Upload({
                             size="small"
                             variant="contained"
                             onClick={onUpload}
-                            disabled={other?.disabled}
+                            disabled={disabled}
                         >
                             Upload file
                         </Button>
@@ -185,9 +191,10 @@ export default function Upload({
                                 size="small"
                                 variant="contained"
                                 onClick={onUpload}
-                                disabled={other?.disabled}
+                                disabled={disabled}
                             >
-                                Upload files
+                                {disabled && <CircularProgress size={24} />}
+                                {!disabled && "Upload"}
                             </Button>
                         )}
                     </Stack>

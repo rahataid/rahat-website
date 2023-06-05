@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useDropzone } from "react-dropzone";
 // @mui
-import { Button, Typography } from "@mui/material";
+import { Button, CircularProgress, Typography } from "@mui/material";
 import { alpha, styled } from "@mui/material/styles";
 //
 import Iconify from "../iconify";
@@ -144,8 +144,15 @@ export default function UploadAvatar({
             {helperText && helperText}
 
             {onUpload && (
-                <Button size="small" variant="contained" onClick={onUpload}>
-                    Upload Image
+                <Button
+                    size="small"
+                    variant="contained"
+                    loading={disabled}
+                    disabled={disabled}
+                    onClick={onUpload}
+                >
+                    {disabled && <CircularProgress size={24} />}
+                    {!disabled && "Upload"}
                 </Button>
             )}
             <RejectionFiles fileRejections={fileRejections} />

@@ -10,8 +10,12 @@ const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
 
-    const coverImage = community.cover
-        ? `${ASSET_VIEW}/${community?.walletAddress}/${community?.cover}`
+    const coverImage = community?.images?.cover
+        ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
+        : "/images/bg/bg-img.jpg";
+
+    const logoImage = community?.images?.logo
+        ? `${ASSET_VIEW}/${community?.address}/${community?.images?.logo}`
         : "/images/bg/bg-img.jpg";
 
     return (
@@ -44,10 +48,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                 <div className="author-inner">
                                     <div className="user-thumbnail">
                                         <Image
-                                            src={
-                                                community?.logo ||
-                                                "/images/portfolio/rahat.jpeg"
-                                            }
+                                            src={logoImage}
                                             width={140}
                                             height={140}
                                         />

@@ -17,11 +17,9 @@ const EditProfileImage = ({ community, id }) => {
                                         </h4>
                                         <p style={{ padding: "1rem 0" }}>
                                             Managed By:{" "}
-                                            {community?.managers.map(
-                                                ({ manager }) => manager.name
-                                            )}
+                                            {community.managers.join(",")}
                                         </p>
-                                        {community.tags?.map((tag) => (
+                                        {/* {community.tags?.map((tag) => (
                                             <div
                                                 className="pill mb--15 mr--5"
                                                 key={tag.id}
@@ -29,7 +27,7 @@ const EditProfileImage = ({ community, id }) => {
                                             >
                                                 {tag.name}
                                             </div>
-                                        ))}
+                                        ))} */}
                                     </div>
                                     <p>{community.description}</p>
                                 </div>

@@ -51,39 +51,42 @@ export default function UploadImage() {
     const handleCommunitySelect = async (e) => {
         const { value } = e.target;
         setSelectedCommunity(value);
-        setLogoImage(value?.logo);
+        const selectedLogo = value?.images?.logo || "";
+        const selectedCover = value?.images?.cover || "";
+        const selectedGallery = value?.images?.gallery || [];
 
-        if (value?.logo) {
-            // const res = await axios.get(value?.logo);
+        if (selectedLogo) {
+            // const res = await axios.get(selectedLogo);
             // console.log("res", res);
             setLogoImage(
-                Object.assign(value?.logo, {
-                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${value?.logo}`,
+                Object.assign(selectedLogo, {
+                    preview: `${ASSET_VIEW}/${value?.address}/${selectedLogo}`,
                     // preview: value?.logo,
                 })
             );
         }
-        if (value?.cover) {
-            // const res = await axios.get(value?.cover);
+        if (selectedCover) {
+            // const res = await axios.get(selectedCover);
             setFile(
-                Object.assign(value?.cover, {
-                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${value?.cover}`,
+                Object.assign(selectedCover, {
+                    preview: `${ASSET_VIEW}/${value?.address}/${selectedCover}`,
                     // preview: value?.cover,
                 })
             );
         }
 
-        console.log("value", value);
-        if (value?.photos.length > 0) {
-            const photos = value?.photos.map((photo) => {
+        if (selectedGallery.length > 0) {
+            const gallery = selectedGallery.map((photo) => {
                 return Object.assign(photo, {
-                    preview: `${ASSET_VIEW}/${value?.walletAddress}/${photo}`,
+                    preview: `${ASSET_VIEW}/${value?.address}/${photo}`,
                     // preview: photo,
                 });
             });
-            setFiles(photos);
+            setFiles(gallery);
         }
     };
+
+    console.log("files", files);
 
     const handleDropCoverImage = useCallback((acceptedFiles) => {
         const file = acceptedFiles[0];
@@ -130,36 +133,84 @@ export default function UploadImage() {
         setFiles([]);
     };
 
-    const handleUploadFiles = (imageType, file) => async () => {
+    const handleUploadFiles = (imageType, files) => async () => {
         try {
             setUploadingImage(true);
-            const formData = new FormData();
-            formData.append("file", file);
-            formData.append(
-                "path",
-                // "communities/" + "test"
-                "communities/" + selectedCommunity?.walletAddress
-            );
-            formData.append("meta-type", imageType);
-            formData.append("meta-community-name", selectedCommunity?.name);
 
-            AssetUploadService.uploadImage(formData).then(async (res) => {
-                const responseData = extractAssetUploadData(res.data);
-                if (responseData?.cid) {
+            if (Array.isArray(files)) {
+                const uploadPromises = files.map((file) => {
+                    return uploadFile(file, imageType); // Pass imageType to uploadFile
+                });
+
+                const uploadResults = await Promise.all(uploadPromises);
+                console.log("Upload results:", uploadResults);
+
+                const updatedAssets = getUpdatedAssets(
+                    uploadResults,
+                    imageType
+                );
+
+                if (Object.keys(updatedAssets).length > 0) {
                     const update = await CommunitiesService.uploadAsset(
                         selectedCommunity?.id,
-                        {
-                            [imageType]: responseData.cid,
-                        }
+                        updatedAssets
                     );
-                    console.log("update", update);
+                    console.log("Update response:", update);
                 }
-            });
+            } else {
+                const uploadResult = await uploadFile(files, imageType); // Pass imageType to uploadFile
+                console.log("Upload result:", uploadResult);
+
+                if (uploadResult.cid) {
+                    const updatedAssets = {
+                        [imageType]: uploadResult.cid,
+                    };
+
+                    const update = await CommunitiesService.uploadAsset(
+                        selectedCommunity?.id,
+                        updatedAssets
+                    );
+                    console.log("Update response:", update);
+                }
+            }
         } catch (err) {
-            console.log("err", err);
-            alert("There was an error uploading the asset.");
+            console.log("Error:", err);
+            alert("There was an error uploading the asset(s).");
+        } finally {
+            setUploadingImage(false);
         }
-        setUploadingImage(false);
+    };
+
+    const uploadFile = (file, imageType) => {
+        // Add imageType parameter here
+        const formData = new FormData();
+        formData.append("file", file);
+        formData.append("path", "communities/" + selectedCommunity?.address);
+        formData.append("meta-type", imageType);
+        formData.append("meta-community-name", selectedCommunity?.name);
+
+        return AssetUploadService.uploadImage(formData)
+            .then((res) => {
+                console.log("res", res);
+                return extractAssetUploadData(res.data);
+            })
+            .catch((err) => {
+                console.log("Error uploading file:", err);
+                return null;
+            });
+    };
+
+    const getUpdatedAssets = (uploadResults, imageType) => {
+        const updatedAssets = {};
+
+        uploadResults.forEach((result) => {
+            if (result && result.cid) {
+                updatedAssets[imageType] = updatedAssets[imageType] || [];
+                updatedAssets[imageType].push(result.cid);
+            }
+        });
+
+        return updatedAssets;
     };
 
     useEffect(() => {
@@ -174,6 +225,11 @@ export default function UploadImage() {
             <Header />
 
             <Container sx={{ my: 10 }}>
+                <Stack>
+                    <Typography variant="h2" sx={{ mb: 1 }}>
+                        {selectedCommunity?.name}
+                    </Typography>
+                </Stack>
                 <Stack spacing={5}>
                     <Card>
                         <CardHeader title="Communities" />
@@ -260,7 +316,7 @@ export default function UploadImage() {
                                         onRemove={handleRemoveFile}
                                         onRemoveAll={handleRemoveAllFiles}
                                         onUpload={handleUploadFiles(
-                                            "photos",
+                                            "gallery",
                                             files
                                         )}
                                     />

@@ -33,10 +33,10 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                         }
                                         category={community?.category?.name}
                                         location={community.location}
-                                        logo={community?.logo}
+                                        logo={community?.images?.logo}
                                         description={community.description}
                                         id={community.id}
-                                        walletAddress={community?.walletAddress}
+                                        address={community?.address}
                                     />
                                 </div>
                             ))}

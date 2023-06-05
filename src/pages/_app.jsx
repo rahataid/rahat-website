@@ -34,7 +34,7 @@ const MyApp = ({ Component, ...pageProps }) => {
         <ReduxProvider store={store}>
             <PersistGate loading={null} persistor={store.__persistor}>
                 <ProviderExample>
-                    <ThemeProvider defaultTheme="dark">
+                    <ThemeProvider defaultTheme="light">
                         <AppContainer>
                             <Component {...props.pageProps} />
                         </AppContainer>
