@@ -86,4 +86,4 @@ CommunityPhotos.defaultProps = {
     space: 1,
 };
 
-export default Projects;
+export default CommunityPhotos;

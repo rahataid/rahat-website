@@ -15,6 +15,12 @@ const EditProfileImage = ({ community, id }) => {
                                         >
                                             {community?.name}
                                         </h4>
+                                        <p style={{ padding: "1rem 0" }}>
+                                            Managed By:{" "}
+                                            {community?.managers.map(
+                                                ({ manager }) => manager.name
+                                            )}
+                                        </p>
                                         {community.tags?.map((tag) => (
                                             <div
                                                 className="pill mb--15 mr--5"

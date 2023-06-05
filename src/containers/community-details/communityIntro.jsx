@@ -14,7 +14,6 @@ const AuthorIntroArea = ({ className, space, community }) => {
         ? `${ASSET_VIEW}/${community?.walletAddress}/${community?.cover}`
         : "/images/bg/bg-img.jpg";
 
-    console.log("community", coverImage);
     return (
         <>
             <ShareModal
@@ -59,6 +58,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                                                 ? community.name
                                                 : "Community Name"}
                                         </h4>
+                                        {/* {community?.walletAddress} */}
                                     </div>
                                 </div>
                             </div>

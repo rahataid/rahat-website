@@ -2,6 +2,7 @@ import Contact from "@containers/edit-profile/contact";
 import EditProfileImage from "@containers/edit-profile/edit-profile-image";
 import PersonalInformation from "@containers/edit-profile/personal-information";
 import Statistics from "@containers/edit-profile/statistics";
+import CommunityPhotos from "./photos";
 
 const EditProfile = ({ community, id, projects }) => {
     return (
@@ -12,7 +13,7 @@ const EditProfile = ({ community, id, projects }) => {
                         <EditProfileImage community={community} />
                         <Statistics community={community} />
                         <PersonalInformation community={community} />
-                        <Photos community={community} />
+                        <CommunityPhotos community={community} />
                         <Contact />
                     </div>
                 </div>
