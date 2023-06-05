@@ -1,8 +1,12 @@
 import client from "@utils/communityClient";
 
 export const CommunitiesService = {
-    getCommunitiesList: () => {
-        return client.get(`/communities`);
+    getCommunitiesList: (query) => {
+        return client.get(
+            `/communities?${Object.entries(query)
+                .map(([key, value]) => `${key}=${value}`)
+                .join("&")}`
+        );
     },
     getCommunitiyDetails: (id) => {
         return client.get(`/communities/${id}`);

@@ -94,7 +94,9 @@ export const selectInternetAccessDistributionReport = (state) =>
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await CommunitiesService.getCommunitiesList();
+            const { data: res } = await CommunitiesService.getCommunitiesList(
+                params
+            );
             dispatch(slice.actions.getCommunitiesSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -122,21 +124,6 @@ export const getCommunityProjects = (id) => {
             const { data: res } =
                 await CommunitiesService.getCommunitiyProjects(id);
             dispatch(slice.actions.getCommunityProjectsSuccess(res));
-        } catch (error) {
-            console.log({ error });
-            dispatch(hasError(error));
-        }
-    };
-};
-
-export const searchCommunity = (text) => {
-    console.log({ text });
-    return async (dispatch) => {
-        try {
-            const { data: res } = await CommunitiesService.searchCommunity(
-                text
-            );
-            dispatch(slice.actions.getCommunitiesSuccess(res));
         } catch (error) {
             console.log({ error });
             dispatch(hasError(error));
