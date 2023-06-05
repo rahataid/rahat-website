@@ -45,17 +45,13 @@ const MapView = () => {
     return (
         <div>
             {" "}
-            <Card>
-                <CardContent>
-                    <StyledMapContainer>
-                        <MapClusters
-                            {...baseSettings}
-                            mapData={mapData}
-                            mapStyle={THEMES[theme.palette.mode]}
-                        />
-                    </StyledMapContainer>
-                </CardContent>
-            </Card>
+            <StyledMapContainer>
+                <MapClusters
+                    {...baseSettings}
+                    mapData={mapData}
+                    mapStyle={{}}
+                />
+            </StyledMapContainer>
         </div>
     );
 };
