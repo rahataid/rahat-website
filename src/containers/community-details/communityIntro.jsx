@@ -33,6 +33,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                     quality={100}
                     priority
                 />
+                <div className="overlay"></div>
             </div>
             <div
                 className={clsx(
