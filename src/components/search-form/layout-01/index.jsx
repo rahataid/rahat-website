@@ -2,21 +2,24 @@ import { searchCommunity } from "@redux/slices/community";
 import { CommunitiesService } from "@services/communities";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { useStateWithHistory } from "react-use";
+import { redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 const SearchForm = () => {
     const [search, setSearch] = useState("");
-    const dispatch = useDispatch();
-
+    const { push } = useRouter();
     const handleSearchChange = (e) => {
         setSearch(e.target.value);
     };
 
-    const handleSearch = async () => {
-        dispatch(searchCommunity(search));
+    const handleSearch = () => {
+        console.log(search);
+        push(`?search=${search}`);
     };
 
-    useEffect(() => {
-        dispatch(searchCommunity(search));
-    }, [dispatch, search]);
+    // useEffect(() => {
+    //     dispatch(searchCommunity(search));
+    // }, [dispatch, search]);
 
     return (
         <form className="search-form-wrapper" action="#">

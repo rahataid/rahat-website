@@ -33,15 +33,18 @@ export default function Product({ communities }) {
     );
 }
 export const getServerSideProps = wrapper.getServerSideProps(
-    (store) => async () => {
-        await store.dispatch(getCommunities());
-        const serializedCommunities = store.getState().community.communities;
-        const serializedError = store.getState().community.error;
-        return {
-            props: {
-                communities: serializedCommunities,
-                error: serializedError,
-            },
-        };
-    }
+    (store) =>
+        async ({ query }) => {
+            console.log(query);
+            await store.dispatch(getCommunities(query));
+            const serializedCommunities =
+                store.getState().community.communities;
+            const serializedError = store.getState().community.error;
+            return {
+                props: {
+                    communities: serializedCommunities,
+                    error: serializedError,
+                },
+            };
+        }
 );

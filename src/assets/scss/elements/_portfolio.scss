@@ -400,17 +400,24 @@
     }
 }
 
-.pill {
-    display: inline;
+.thumbnail {
+    .thumbnail-image {
+        position: relative;
+    }
 
-    font-weight: bold;
-    font-size: 11px;
-    position: relative;
-    border-radius: 100px;
-    padding: 5px 12px 5px 12px;
-    color: #ffff;
-    background: #0ac9e7;
+    .pill {
+        font-weight: bold;
+        font-size: 11px;
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        border-radius: 100px;
+        padding: 5px 12px 5px 12px;
+        color: #ffff;
+        background: #0ac9e7;
+    }
 }
+
 
 /*---------------------------
     Filter Exanded  

@@ -24,7 +24,7 @@ const Product = ({
                     "with-placeBid"
                 )}
             >
-                <div>
+                <div className="thumbnail">
                     <Anchor path={`${path}/${id}`}>
                         <Image
                             src={
@@ -34,14 +34,16 @@ const Product = ({
                             }
                             alt={name}
                             ratio="6/4"
-                            // height={533}
-                            // width={533}
+                            className='thumbnail-img'
+                        // height={533}
+                        // width={533}
                         />
                     </Anchor>
+                    <div className="pill">{category}</div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${id}`}>
-                        <div className="pill">{category}</div>
+
                         <span className="product-name mt-2">
                             {name || "Community Name"}
                         </span>
@@ -58,7 +60,7 @@ const Product = ({
                     <span>
                         <Iconify
                             icon={"arcticons:budgetmylife"}
-                            // style={{ marginRight: "6px" }}
+                        // style={{ marginRight: "6px" }}
                         />
                         $ {Number(totalDonationsUsd)?.toFixed(2)}
                     </span>
