@@ -22,7 +22,7 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                             {communities.map((community) => (
                                 <div
                                     key={community.id}
-                                    className="col-3 col-lg-3 col-md-6 col-sm-6 col-12"
+                                    className="col-4 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Product
                                         overlay
