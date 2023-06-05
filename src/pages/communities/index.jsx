@@ -15,13 +15,11 @@ export default function Product({ communities }) {
             <SEO pageTitle="Communities" />
             <Header />
             <main id="main-content">
-                <div
-                    style={{
-                        height: "40vh",
-                        position: "relative",
-                    }}
-                >
+                <div>
                     <MapView
+                        sx={{
+                            height: 400,
+                        }}
                         mapData={communities.map((r) => ({
                             latitude: r?.latitude,
                             longitude: r?.longitude,

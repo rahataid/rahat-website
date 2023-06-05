@@ -22,19 +22,22 @@ const baseSettings = {
     minZoom: 1,
 };
 
-const StyledMapContainer = styled("div")(({ theme }) => ({
-    zIndex: 0,
-    height: 560,
-    overflow: "hidden",
-    position: "relative",
-}));
+const StyledMapContainer = styled("div")(({ theme, sx }) => {
+    return {
+        zIndex: 0,
+        height: 400,
+        overflow: "hidden",
+        position: "relative",
+        ...sx,
+    };
+});
 
-const MapView = ({ mapData }) => {
+const MapView = ({ mapData, sx }) => {
     const theme = useTheme();
 
     return (
         <div>
-            <StyledMapContainer>
+            <StyledMapContainer sx={sx}>
                 <MapClusters
                     {...baseSettings}
                     mapData={mapData}
