@@ -169,7 +169,7 @@ export default function UploadImage() {
     return (
         <>
             <Head>
-                <title>Upload Community Assets</title>
+                <title>Upload Community Asset</title>
             </Head>
             <Header />
 
