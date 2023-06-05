@@ -7,9 +7,7 @@ export const CommunitiesService = {
     getCommunitiyDetails: (id) => {
         return client.get(`/communities/${id}`);
     },
-    getCommunitiyProjects: (id) => {
-        return client.get(`/communities/${id}/projects`);
-    },
+
     uploadAsset: (id, assetData) => {
         return client.patch(`/communities/${id}/asset`, {
             ...assetData,
