@@ -25,7 +25,7 @@ const Product = ({
                 )}
             >
                 <div className="thumbnail">
-                    <Anchor path={`${path}/${id}`}>
+                    <Anchor path={`${path}/${address}`}>
                         <Image
                             src={
                                 logo
@@ -42,7 +42,7 @@ const Product = ({
                     <div className="pill">{category}</div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
-                    <Anchor path={`${path}/${id}`}>
+                    <Anchor path={`${path}/${address}`}>
 
                         <span className="product-name mt-2">
                             {name || "Community Name"}

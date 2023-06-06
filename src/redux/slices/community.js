@@ -104,11 +104,11 @@ export const getCommunities = (params) => {
     };
 };
 
-export const getCommunityDetails = (id) => {
+export const getCommunityDetails = (address) => {
     return async (dispatch) => {
         try {
             const { data: res } = await CommunitiesService.getCommunitiyDetails(
-                id
+                address
             );
 
             dispatch(slice.actions.getCommunitySuccess(res));

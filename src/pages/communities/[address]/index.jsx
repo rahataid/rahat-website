@@ -10,7 +10,7 @@ import {
 } from "@redux/slices/community";
 import { wrapper } from "@redux/store";
 
-const Author = ({ community, id, projects }) => (
+const Author = ({ community, projects }) => (
     <Wrapper>
         <SEO pageTitle="Author" />
         <Header />
@@ -18,7 +18,6 @@ const Author = ({ community, id, projects }) => (
             <CommunityIntro community={community} />
             <CommunityDetails
                 community={community}
-                id={id}
                 projects={projects}
             />
         </main>
@@ -29,15 +28,14 @@ const Author = ({ community, id, projects }) => (
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
-            await store.dispatch(getCommunityDetails(query?.id));
-            await store.dispatch(getCommunityProjects(query?.id));
+            await store.dispatch(getCommunityDetails(query?.address));
+            await store.dispatch(getCommunityProjects(query?.address));
             const community = store.getState().community.community;
             const projects = store.getState().community.projects;
             const serializedError = store.getState().community.error;
             return {
                 props: {
                     community,
-                    id: query.id,
                     projects,
                     error: serializedError,
                 },

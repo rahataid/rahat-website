@@ -3,13 +3,11 @@ import client from "@utils/communityClient";
 export const CommunitiesService = {
     getCommunitiesList: (query) => {
         return client.get(
-            `/communities?${Object.entries(query)
-                .map(([key, value]) => `${key}=${value}`)
-                .join("&")}`
+            `/communities`
         );
     },
-    getCommunitiyDetails: (id) => {
-        return client.get(`/communities/${id}`);
+    getCommunitiyDetails: (address) => {
+        return client.get(`/communities/${address}`);
     },
 
     uploadAsset: (id, assetData) => {

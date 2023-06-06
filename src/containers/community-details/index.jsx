@@ -4,7 +4,7 @@ import PersonalInformation from "@containers/edit-profile/personal-information";
 import Statistics from "@containers/edit-profile/statistics";
 import CommunityPhotos from "./photos";
 
-const EditProfile = ({ community, id, projects }) => {
+const EditProfile = ({ community }) => {
     return (
         <div className="rn-authore-profile-area">
             <div className="container">
