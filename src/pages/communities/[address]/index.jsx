@@ -9,7 +9,11 @@ import { wrapper } from "@redux/store";
 
 const Author = ({ community, id }) => (
     <Wrapper>
-        <SEO pageTitle="Author" />
+        <SEO
+            pageTitle={community?.name}
+            description={community?.description}
+            imageUrl={community?.images?.logo}
+        />
         <Header />
         <main id="main-content">
             <CommunityIntro community={community} />
