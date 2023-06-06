@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CommunityPhotos = ({ className, community, id }) => {
     console.log("community?.images?.gallery", community?.images?.gallery);
-    if (community?.images.gallery?.length)
+    if (community?.images?.gallery?.length)
         return (
             <div id={id}>
                 <div className="container">

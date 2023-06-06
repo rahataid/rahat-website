@@ -6,8 +6,8 @@ import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 
-
-const FunFact = ({ className, counter, community }) => {
+const FunFact = ({ community }) => {
+    console.log("community", community);
     console.log(community);
     const [focus, setFocus] = useState(false);
     const visibleChangeHandler = (isVisible) => {
@@ -42,233 +42,322 @@ const FunFact = ({ className, counter, community }) => {
                 <div className="col-12 col-md-6 ml--4">
                     <div className="row">
                         <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                            {community?.summary?.map((summary, key) => (
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
                         <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                            {community?.summary?.map((summary, key) => (
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                            {community?.summary?.map((summary, key) => (
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
                         <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                            {community?.summary?.map((summary, key) => (
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className="row">
+                    {/* <div className="row">
                         <div className="col-6">
                             {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
                         <div className="col-6">
                             {community.summary.map((summary, key) => (
-                                <div className={clsx("single-counter-up  mt--5")}>
-                                    <div className="botton-title">Total Beneficiaries</div>
+                                <div
+                                    className={clsx("single-counter-up  mt--5")}
+                                >
+                                    <div className="botton-title">
+                                        Total Beneficiaries
+                                    </div>
                                     <div className="row">
                                         <div className="d-flex align-items-center justify-content-between">
                                             <div className="number counter-odomitter-active">
-                                                <CountUp start={focus ? 0 : null} end={summary.total_beneficiaries} duration={1}>
+                                                <CountUp
+                                                    start={focus ? 0 : null}
+                                                    end={
+                                                        summary.total_beneficiaries
+                                                    }
+                                                    duration={1}
+                                                >
                                                     {({ countUpRef }) => (
                                                         <div>
-                                                            <span ref={countUpRef} />
+                                                            <span
+                                                                ref={countUpRef}
+                                                            />
                                                             <InView
                                                                 as="span"
-                                                                onChange={(inView) =>
-                                                                    visibleChangeHandler(inView)
+                                                                onChange={(
+                                                                    inView
+                                                                ) =>
+                                                                    visibleChangeHandler(
+                                                                        inView
+                                                                    )
                                                                 }
-                                                            >
-                                                            </InView>
+                                                            ></InView>
                                                         </div>
                                                     )}
                                                 </CountUp>
-
                                             </div>
                                             <div>
                                                 <Image
-                                                    style={{ marginRight: '6px' }}
-                                                    src={'/images/map.png'}
+                                                    style={{
+                                                        marginRight: "6px",
+                                                    }}
+                                                    src={"/images/map.png"}
                                                     width={34}
                                                     height={34}
                                                 />
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             ))}
                         </div>
-                    </div>
-
+                    </div> */}
                 </div>
             </div>
         </div>
@@ -283,4 +372,3 @@ FunFact.propTypes = {
 };
 
 export default FunFact;
-

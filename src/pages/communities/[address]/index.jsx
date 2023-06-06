@@ -22,13 +22,12 @@ const Author = ({ community, id }) => (
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
-            await store.dispatch(getCommunityDetails(query?.id));
+            await store.dispatch(getCommunityDetails(query?.address));
             const community = store.getState().community.community;
             const serializedError = store.getState().community.error;
             return {
                 props: {
                     community,
-                    projects,
                     error: serializedError,
                 },
             };
