@@ -58,7 +58,7 @@ const Product = ({
                         {country}
                     </span>
                     <span>
-                        NPR {Number(totalDonationsUsd)?.toFixed(2)}
+                        NPR {Number(totalDonationsUsd)?.toFixed(0)}
                     </span>
                 </div>
             </div>
