@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+
 const SearchForm = () => {
     const [search, setSearch] = useState("");
     const { push } = useRouter();
