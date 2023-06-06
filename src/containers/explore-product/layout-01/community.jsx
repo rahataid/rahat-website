@@ -29,7 +29,7 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                         name={community.name}
                                         country={community.country}
                                         totalDonationsUsd={
-                                            community.totalDonations_usd
+                                            community.totalDonations_usd * 130
                                         }
                                         category={community?.category?.name}
                                         location={community.location}

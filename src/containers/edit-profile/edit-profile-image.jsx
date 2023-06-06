@@ -9,12 +9,6 @@ const EditProfileImage = ({ community, id }) => {
                             <div className="rn-address">
                                 <div className="inner">
                                     <div>
-                                        <h4
-                                            className="title"
-                                            style={{ marginBottom: "5px" }}
-                                        >
-                                            {community?.name}
-                                        </h4>
                                         {/* <p style={{ padding: "1rem 0" }}>
                                             Managed By:{" "}
                                             {community.managers.join(",")}
