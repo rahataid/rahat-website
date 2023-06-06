@@ -11,8 +11,8 @@ export const CommunitiesService = {
             //     .join("&")}`
         );
     },
-    getCommunitiyDetails: (id) => {
-        return client.get(`/communities/${id}`);
+    getCommunitiyDetails: (address) => {
+        return client.get(`/communities/${address}`);
     },
 
     uploadAsset: (id, assetData) => {

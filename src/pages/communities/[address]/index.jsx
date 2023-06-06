@@ -28,7 +28,6 @@ export const getServerSideProps = wrapper.getServerSideProps(
             return {
                 props: {
                     community,
-                    id: query.id,
                     projects,
                     error: serializedError,
                 },
