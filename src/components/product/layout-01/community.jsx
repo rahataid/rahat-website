@@ -7,7 +7,7 @@ import clsx from "clsx";
 const Product = ({
     overlay,
     name,
-    logo,
+    cover,
     country,
     totalDonationsUsd = 0,
     category,
@@ -28,22 +28,21 @@ const Product = ({
                     <Anchor path={`${path}/${address}`}>
                         <Image
                             src={
-                                logo
-                                    ? `${ASSET_VIEW}/${address}/${logo}`
+                                cover
+                                    ? `${ASSET_VIEW}/${address}/${cover}`
                                     : "/images/portfolio/tayaba.png"
                             }
                             alt={name}
                             ratio="6/4"
-                            className='thumbnail-img'
-                        // height={533}
-                        // width={533}
+                            className="thumbnail-img"
+                            // height={533}
+                            // width={533}
                         />
                     </Anchor>
                     <div className="pill">{category}</div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${address}`}>
-
                         <span className="product-name mt-2">
                             {name || "Community Name"}
                         </span>
@@ -60,7 +59,7 @@ const Product = ({
                     <span>
                         <Iconify
                             icon={"arcticons:budgetmylife"}
-                        // style={{ marginRight: "6px" }}
+                            // style={{ marginRight: "6px" }}
                         />
                         $ {Number(totalDonationsUsd)?.toFixed(2)}
                     </span>

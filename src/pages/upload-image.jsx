@@ -27,7 +27,6 @@ import Wrapper from "@layout/wrapper";
 import { getCommunities, selectCommunities } from "@redux/slices/community";
 import { AssetUploadService } from "@services/assetUpload";
 import { CommunitiesService } from "@services/communities";
-import { extractAssetUploadData } from "@utils/string";
 import { useDispatch, useSelector } from "react-redux";
 
 // ----------------------------------------------------------------------
@@ -193,11 +192,10 @@ export default function UploadImage() {
             return AssetUploadService.uploadImage(formData)
                 .then((response) => {
                     // Extract the required values from the response
-                    console.log("resp", response);
-                    const uploadData = extractAssetUploadData(response.data);
-                    console.log("Upload data:", uploadData);
 
-                    resolve(uploadData);
+                    console.log("Upload data:", response?.data);
+
+                    resolve(response?.data);
                 })
                 .catch((error) => {
                     console.log("Error uploading file:", error);

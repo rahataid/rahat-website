@@ -26,7 +26,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body style={{ fontFamily: "Raleway, sans-serif" }}>
+                <body>
                     <Main />
                     <NextScript />
                 </body>
