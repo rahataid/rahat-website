@@ -22,15 +22,19 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
+
     @media #{$lg-layout} {
         overflow: hidden;
     }
+
     @media #{$md-layout} {
         overflow: hidden;
     }
+
     @media #{$sm-layout} {
         overflow: hidden;
     }
+
     &::before {
         content: "";
         width: 100%;
@@ -143,6 +147,7 @@ h6,
 }
 
 .bg-color-tertiary {
+
     h1,
     h2,
     h3,
@@ -168,6 +173,7 @@ h6,
 }
 
 @media #{$md-layout} {
+
     h1,
     .h1 {
         font-size: 38px;
@@ -195,6 +201,7 @@ h6,
 }
 
 @media #{$sm-layout} {
+
     h1,
     .h1 {
         font-size: 34px;
@@ -254,6 +261,7 @@ p {
         font-size: 16px;
         line-height: 28px;
     }
+
     &.b1 {
         font-size: var(--font-size-b1);
         line-height: var(--line-height-b1);
@@ -387,7 +395,7 @@ ul {
                     top: 10px;
                 }
 
-                & + li {
+                &+li {
                     margin-top: 8px;
                 }
             }

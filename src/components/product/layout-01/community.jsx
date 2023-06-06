@@ -44,8 +44,8 @@ const Product = ({
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${address}`}>
 
-                        <span className="product-name mt-2">
-                            {name || "Community Name"}
+                        <span className="product-name">
+                            <h6 className="mb--5">{name || "Community Name"}</h6>
                         </span>
                     </Anchor>
                 </div>
@@ -58,11 +58,7 @@ const Product = ({
                         {country}
                     </span>
                     <span>
-                        <Iconify
-                            icon={"arcticons:budgetmylife"}
-                        // style={{ marginRight: "6px" }}
-                        />
-                        $ {Number(totalDonationsUsd)?.toFixed(2)}
+                        NPR {Number(totalDonationsUsd)?.toFixed(2)}
                     </span>
                 </div>
             </div>
