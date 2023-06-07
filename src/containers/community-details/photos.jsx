@@ -11,11 +11,6 @@ const CommunityPhotos = ({ className, community, id }) => {
                         <div className="col-lg-12">
                             <div className="section-title mt--100 mb--30 text-left">
                                 <h2 className="title">Photos</h2>
-                                <p className="description">
-                                    There are many variations of passages of
-                                    Lorem Ipsum available, <br /> but the
-                                    majority have suffered alteration.
-                                </p>
                             </div>
                         </div>
                     </div>
