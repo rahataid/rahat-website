@@ -1,11 +1,11 @@
-import SEO from "@components/seo";
-import Wrapper from "@layout/wrapper";
-import Header from "@layout/header/header-01";
 import AboutUs from "@components/about-us";
-import WeAre from "@components/we-are";
 import Milestones from "@components/milestones";
-import Footer from "@layout/footer/footer-01";
+import SEO from "@components/seo";
+import WeAre from "@components/we-are";
 import HeroArea from "@containers/hero/layout-09";
+import Footer from "@layout/footer/footer-01";
+import Header from "@layout/header/header-01";
+import Wrapper from "@layout/wrapper";
 import { normalizedData } from "@utils/methods";
 
 // Demo data
@@ -20,7 +20,7 @@ const Home09 = () => {
 
     return (
         <Wrapper>
-            <SEO pageTitle="Home Nine" />
+            <SEO pageTitle="Home" />
             <Header />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />
@@ -34,4 +34,3 @@ const Home09 = () => {
 };
 
 export default Home09;
-
