@@ -509,7 +509,7 @@ nav {
     flex: 1;
 }
 .container {
-    padding: 2px 16px;
+    padding: 2px 50px;
 }
 .max-fit-content {
     max-width: fit-content;
@@ -517,3 +517,10 @@ nav {
 .theme-color {
     color: var(--color-primary);
 }
+
+.section-title-weare {
+    text-align: center;
+    margin: -5px auto 60px;
+    max-width: 700px;
+}
+

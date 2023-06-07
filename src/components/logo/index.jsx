@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 const Logo = ({ className, logo }) => (
     <div className={clsx("logo-thumbnail logo-custom-css", className)}>
         {logo?.[0]?.src && (
-            <Anchor className="logo-light" path="https://rahat.io/">
+            <Anchor className="logo-light" path="/">
                 <Image
                     src={logo[0].src}
                     alt={logo[0]?.alt || "nft-logo"}
@@ -16,7 +16,7 @@ const Logo = ({ className, logo }) => (
             </Anchor>
         )}
         {logo?.[1]?.src && (
-            <Anchor className="logo-dark" path="https://rahat.io/">
+            <Anchor className="logo-dark" path="/">
                 <Image
                     src={logo[1].src}
                     alt={logo[1]?.alt || "nft-logo"}
