@@ -19,7 +19,7 @@ const FunFact = ({ community }) => {
     };
     return (
         <div className="container">
-            <div className="row mt--50">
+            <div className="row mt--15">
                 <div className="col-12 col-md-6">
                     <div className="connect-thumbnail">
                         <div className="left-image">
