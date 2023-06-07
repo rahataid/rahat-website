@@ -14,47 +14,27 @@
         "note": "Email is safe. We don't spam."
     },
     "quicklink-widget": {
-        "title": "Nuron",
+        "title": "Technology",
         "menu": [
             {
                 "id": 1,
-                "text": "Protocol Explore",
-                "path": "/explore-01"
+                "text": "For Developers",
+                "path": "https://docs.rahat.io/docs/intro/"
             },
             {
                 "id": 2,
-                "text": "System Token",
-                "path": "/about"
+                "text": "GitHUb",
+                "path": "https://github.com/esatya"
             },
             {
                 "id": 3,
-                "text": "Otimize Time",
-                "path": "/about"
-            },
-            {
-                "id": 4,
-                "text": "Visual Checking",
-                "path": "/about"
-            },
-            {
-                "id": 5,
-                "text": "Fadeup System",
-                "path": "/blog"
-            },
-            {
-                "id": 6,
-                "text": "Activity Log",
-                "path": "/activity"
-            },
-            {
-                "id": 7,
-                "text": "System Auto Since",
-                "path": "/blog"
+                "text": "Media Kit",
+                "path": "https://drive.google.com/drive/folders/15pe-Stv9iDwV0sm6-ohHJWLHFnuV-wDG"
             }
         ]
     },
     "information-widget": {
-        "title": "Information",
+        "title": "Get in Touch",
         "menu": [
             {
                 "id": 1,
@@ -144,3 +124,4 @@
     },
     "copyright_text": "©2022 Nuron, Inc. All rights reserved"
 }
+

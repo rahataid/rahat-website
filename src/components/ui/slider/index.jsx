@@ -56,8 +56,8 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-    prevIcon: "feather-arrow-left",
-    nextIcon: "feather-arrow-right",
+    prevIcon: "feather-chevron-left",
+    nextIcon: "feather-chevron-right",
 };
 
 export default Slider;
@@ -72,3 +72,4 @@ SliderItem.propTypes = {
     children: PropTypes.node.isRequired,
     className: PropTypes.string,
 };
+
