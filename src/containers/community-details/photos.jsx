@@ -23,6 +23,7 @@ const CommunityPhotos = ({ className, community, id }) => {
                         {community?.images?.gallery?.map((photo, index) => (
                             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                                 <Image
+                                    className="grid-img"
                                     src={`
                                             ${ASSET_VIEW}/${community?.address}/${photo}
                                         `}
