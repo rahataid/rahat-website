@@ -1,0 +1,25 @@
+{
+    "title": "home-09",
+    "content": [
+        {
+            "section": "hero-section",
+            "banners": [
+                {
+                    "id": 1,
+                    "title": "Digital Daddy Glitter Worlds",
+                    "image": {
+                        "src": "/images/bg/main-banner-01.jpg"
+                    }
+                },
+                {
+                    "id": 2,
+                    "title": "sssssDigital Daddy Glitter Worlds",
+                    "image": {
+                        "src": "/images/bg/main-banner-02.jpg"
+                    }
+                }
+            ]
+        }
+    ]
+}
+

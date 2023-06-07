@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Anchor from "@ui/anchor";
 
 const QuicklinkWidget = ({ data }) => (
-    <div className="footer-widget widget-quicklink">
+    <div className="">
         <h6 className="widget-title">{data.title}</h6>
         {data?.menu && (
             <ul className="footer-list-one">
@@ -31,3 +31,4 @@ QuicklinkWidget.propTypes = {
 };
 
 export default QuicklinkWidget;
+

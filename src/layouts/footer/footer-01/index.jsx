@@ -25,57 +25,140 @@ const Footer = ({ space, className, data }) => (
                 className
             )}
         >
-            {data?.items && (
-                <div className="footer-top">
-                    <div className="container">
-                        <div className="row">
-                            <ul className="nu-brand-area">
-                                {data.items.map(({ id, image }) => (
-                                    <li key={id}>
-                                        {image?.src && (
-                                            <Image
-                                                src={image.src}
-                                                alt={
-                                                    image?.alt ||
-                                                    "nuron-brand_nft"
-                                                }
-                                                layout="fill"
-                                                objectFit="contain"
-                                            />
-                                        )}
-                                    </li>
-                                ))}
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                        <div className="widget-content-wrapper">
+                            <img
+                                src="https://assets.rumsan.com/rumsan-group/rumsan-logo-raha-footer.png"
+                                alt=""
+                                style={{
+                                    width: "245px",
+                                    marginBottom: "9px",
+                                    marginTop: "-30px",
+                                }}
+                            />
+                            <p>
+                                Rumsan provides blockchain consulting for your
+                                business and engineering requirements. We
+                                envision creating societal impact.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="col-lg-2 col-md-6 col-sm-6 col-12 mt_mobile--40">
+                        <div className="">
+                            <h6 className="widget-title">Techonolgy</h6>
+
+                            <ul className="footer-list-one">
+                                <li className="single-list">
+                                    <a
+                                        target="_blank"
+                                        href="https://docs.rahat.io/docs/intro/"
+                                    >
+                                        For Developers
+                                    </a>
+                                </li>
+                                <li className="single-list">
+                                    <a
+                                        target="_blank"
+                                        href="https://github.com/esatya"
+                                    >
+                                        GitHub
+                                    </a>
+                                </li>
+                                <li className="single-list">
+                                    <a
+                                        target="_blank"
+                                        href="https://drive.google.com/drive/folders/15pe-Stv9iDwV0sm6-ohHJWLHFnuV-wDG"
+                                    >
+                                        Media Kit
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                </div>
-            )}
 
-            <div className="container">
-                <div className="row gx-5">
-                    <div className="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div className="widget-content-wrapper">
-                            <LogoWidget data={footerData["logo-widget"]} />
-                            <NewsletterWidget
-                                data={footerData["newsletter-widget"]}
-                            />
+                    <div className="col-lg-2 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                        <div className="">
+                            <h6 className="widget-title">Get in Touch</h6>
+                            <ul className="footer-list-one">
+                                <li className="single-list">
+                                    <i className="feather-mail"></i>
+                                    <a
+                                        style={{ marginLeft: "3px" }}
+                                        href="mailto:team@rahat.io"
+                                    >
+                                        team@rahat.io
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul className="social-share-custom">
+                                <li>
+                                    <a href="#!">
+                                        <span className="icon">
+                                            <i className="feather-twitter" />
+                                        </span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#!">
+                                        <span className="icon">
+                                            <i className="feather-linkedin" />
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#!">
+                                        <span className="icon">
+                                            <i className="feather-book-open" />
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_mobile--40">
-                        <QuicklinkWidget
-                            data={footerData["quicklink-widget"]}
-                        />
-                    </div>
-
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
-                        <InformationWidget
-                            data={footerData["information-widget"]}
-                        />
-                    </div>
-
-                    <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
-                        <SoldOutWidget data={footerData["soldout-widget"]} />
+                        <div className="">
+                            <h6 className="widget-title">SDG Compliances</h6>
+                            <div className="sdg-compliances">
+                                <div
+                                    className="row"
+                                    style={{ marginTop: "-1rem" }}
+                                >
+                                    <div className="col-6">
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-01.jpg"
+                                            alt=""
+                                            style={{ marginTop: "1rem" }}
+                                        />
+                                    </div>
+                                    <div className="col-6">
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-02.jpg"
+                                            alt=""
+                                            style={{ marginTop: "1rem" }}
+                                        />
+                                    </div>
+                                    <div className="col-6">
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-05.jpg"
+                                            alt=""
+                                            style={{ marginTop: "1rem" }}
+                                        />
+                                    </div>
+                                    <div className="col-6">
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-11.jpg"
+                                            alt=""
+                                            style={{ marginTop: "1rem" }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,19 +166,29 @@ const Footer = ({ space, className, data }) => (
         <div className="copy-right-one ptb--20 bg-color--1">
             <div className="container">
                 <div className="row align-items-center">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-lg-12 col-md-12 col-sm-12">
                         <div className="copyright-left">
-                            <span>{footerData.copyright_text}</span>
+                            <span>
+                                Copyright © 2023 Rahat. A{" "}
+                                <a
+                                    target="_blank"
+                                    href="https://rumsan.com/"
+                                    style={{ color: "#2b7ec1" }}
+                                >
+                                    Rumsan
+                                </a>{" "}
+                                Company.
+                            </span>
                             <FooterLinkWidget
                                 data={footerData["footer-link-widget"]}
                             />
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    {/* <div className="col-lg-6 col-md-12 col-sm-12">
                         <div className="copyright-right">
                             <SocialWidget socials={contactData.socials} />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
@@ -115,3 +208,4 @@ Footer.defaultProps = {
 };
 
 export default Footer;
+

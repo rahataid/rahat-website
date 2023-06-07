@@ -5,13 +5,33 @@ import SingleSlide from "./slide";
 
 const sliderOptions = {
     dots: false,
-    arrows: false,
+    arrows: true,
     adaptiveHeight: true,
-    autoplaySpeed: 2000,
+    speed: 500,
+    autoplay: true,
+    infinite: true,
     responsive: [
         {
-            breakpoint: 1599,
+            breakpoint: 1124,
             settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 868,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false,
+                arrows: true,
+            },
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 dots: true,
                 arrows: false,
             },
@@ -23,7 +43,7 @@ const HeroArea = ({ data }) => (
         {data?.banners && (
             <Slider
                 options={sliderOptions}
-                className="slider-activation-banner-3 game-banner-slick-wrapper slick-arrow-style-one rn-slick-dot-style"
+                className="slider-activation-banner-3 game-banner-slick-wrapper  slick-activation-06 slick-arrow-between rn-slick-dot-style"
             >
                 {data?.banners.map((banner) => (
                     <SliderItem
@@ -32,17 +52,7 @@ const HeroArea = ({ data }) => (
                     >
                         <SingleSlide
                             title={banner.title}
-                            path={banner.path}
-                            latestBid={banner.latestBid}
-                            price={banner.price}
-                            likeCount={banner.likeCount}
                             image={banner.image}
-                            auction_date={banner.auction_date}
-                            authors={banner.authors}
-                            bitCount={banner.bitCount}
-                            highest_bid={banner.highest_bid}
-                            categories={banner.categories}
-                            properties={banner.properties}
                         />
                     </SliderItem>
                 ))}
@@ -99,3 +109,4 @@ HeroArea.propTypes = {
 };
 
 export default HeroArea;
+
