@@ -20,6 +20,7 @@ const THEMES = {
 const baseSettings = {
     mapboxAccessToken: MAPBOX_API,
     minZoom: 1,
+    scrollZoom: false,
 };
 
 const StyledMapContainer = styled("div")(({ theme, sx }) => {

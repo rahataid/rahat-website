@@ -1,7 +1,6 @@
-import PropTypes from "prop-types";
+import { SectionTitleType, TextType } from "@utils/types";
 import clsx from "clsx";
-import SectionTitle from "@components/section-title/layout-02";
-import { TextType, SectionTitleType } from "@utils/types";
+import PropTypes from "prop-types";
 
 const AboutUs = ({ space, className, data }) => (
     <div
@@ -57,4 +56,3 @@ AboutUs.defaultProps = {
 };
 
 export default AboutUs;
-
