@@ -1,4 +1,5 @@
 import { MapView } from "@containers/maps";
+import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useState } from "react";
@@ -34,7 +35,7 @@ const FunFact = ({ community }) => {
                                     className={clsx("single-counter-up  mt--5")}
                                 >
                                     <div className="botton-title">
-                                        Total Beneficiaries
+                                        Beneficiaries
                                     </div>
                                     <div className="row">
                                         <div className="number counter-odomitter-active">
@@ -74,14 +75,14 @@ const FunFact = ({ community }) => {
                                     className={clsx("single-counter-up  mt--5")}
                                 >
                                     <div className="botton-title">
-                                        Total Beneficiaries
+                                        Amount Raised
                                     </div>
                                     <div className="row">
                                         <div className="number counter-odomitter-active">
                                             <CountUp
                                                 start={focus ? 0 : null}
                                                 end={
-                                                    summary.total_beneficiaries
+                                                    fCurrency(community.totalDonations_usd)
                                                 }
                                                 duration={1}
                                             >
@@ -110,47 +111,7 @@ const FunFact = ({ community }) => {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-6">
-                            {community?.summary?.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up  mt--5")}
-                                >
-                                    <div className="botton-title">
-                                        Total Beneficiaries
-                                    </div>
-                                    <div className="row">
-                                        <div className="number counter-odomitter-active">
-                                            <CountUp
-                                                start={focus ? 0 : null}
-                                                end={
-                                                    summary.total_beneficiaries
-                                                }
-                                                duration={1}
-                                            >
-                                                {({ countUpRef }) => (
-                                                    <div>
-                                                        <span
-                                                            ref={countUpRef}
-                                                        />
-                                                        <InView
-                                                            as="span"
-                                                            onChange={(
-                                                                inView
-                                                            ) =>
-                                                                visibleChangeHandler(
-                                                                    inView
-                                                                )
-                                                            }
-                                                        ></InView>
-                                                    </div>
-                                                )}
-                                            </CountUp>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="col-6">
+                        <div className="col-12">
                             {community?.summary?.map((summary, key) => (
                                 <div
                                     className={clsx("single-counter-up  mt--5")}
