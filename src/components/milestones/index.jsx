@@ -43,7 +43,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -57,7 +57,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={16000}
-                                    duration={2}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div>
@@ -72,7 +72,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -101,7 +101,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -130,7 +130,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -195,7 +195,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -224,7 +224,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -253,7 +253,7 @@ const FunFact = ({ className }) => {
                                     )}
                                 </CountUp>
                             </div>
-                            <div className="botton-title">Raghav</div>
+                            <div className="botton-title">Rahat Donations</div>
                         </div>
                     </div>
                 </div>

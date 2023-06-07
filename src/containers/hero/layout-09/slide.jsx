@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { IDType, ImageType } from "@utils/types";
 
-const SingleSlide = ({ title, image }) => {
+const SingleSlide = ({ title, image, subtitle }) => {
     return (
         <>
             {image?.src && (
@@ -22,7 +22,18 @@ const SingleSlide = ({ title, image }) => {
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-12">
                         <div className="inner text-center">
-                            <h1 className="title theme-gradient">{title}</h1>
+                            <h2
+                                style={{ color: "#fff" }}
+                                className="title theme-gradient"
+                            >
+                                {title}
+                            </h2>
+                            <h5
+                                style={{ color: "#fff" }}
+                                className="banner-disc-one"
+                            >
+                                {subtitle}
+                            </h5>
                         </div>
                     </div>
                 </div>

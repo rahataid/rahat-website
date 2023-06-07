@@ -52,6 +52,7 @@ const HeroArea = ({ data }) => (
                     >
                         <SingleSlide
                             title={banner.title}
+                            subtitle={banner.subtitle}
                             image={banner.image}
                         />
                     </SliderItem>
