@@ -2,8 +2,8 @@ import Iconify from "@components/iconify";
 import Image from "@components/image/Image";
 import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
+import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
-
 const Product = ({
     overlay,
     name,
@@ -35,8 +35,8 @@ const Product = ({
                             alt={name}
                             ratio="6/4"
                             className="thumbnail-img"
-                            // height={533}
-                            // width={533}
+                        // height={533}
+                        // width={533}
                         />
                     </Anchor>
                     <div className="pill">{category}</div>
@@ -58,7 +58,7 @@ const Product = ({
                         />
                         {country}
                     </span>
-                    <span>NPR {Number(totalDonationsUsd)?.toFixed(0)}</span>
+                    <span>NPR {fCurrency(Number(totalDonationsUsd)?.toFixed(0))}</span>
                 </div>
             </div>
         </>
