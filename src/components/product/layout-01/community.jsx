@@ -4,6 +4,7 @@ import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
 import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
+import codes from "../../../data/countrycodes.json";
 const Product = ({
     overlay,
     name,
@@ -15,6 +16,7 @@ const Product = ({
     id,
     path = "/communities",
 }) => {
+    const countrycode = codes[country].toLowerCase();
     return (
         <>
             <div
@@ -35,8 +37,8 @@ const Product = ({
                             alt={name}
                             ratio="6/4"
                             className="thumbnail-img"
-                        // height={533}
-                        // width={533}
+                            // height={533}
+                            // width={533}
                         />
                     </Anchor>
                     <div className="pill">{category}</div>
@@ -52,13 +54,15 @@ const Product = ({
                 </div>
                 <div className="latest-bid">
                     <span>
-                        <Iconify
-                            // style={{ marginRight: "6px" }}
-                            icon="carbon:location"
+                        <img
+                            src={`https://hatscripts.github.io/circle-flags/flags/${countrycode}.svg`}
+                            width="20"
                         />
-                        {country}
+                        <span style={{ padding: 5 }}>{country}</span>
                     </span>
-                    <span>NPR {fCurrency(Number(totalDonationsUsd)?.toFixed(0))}</span>
+                    <span>
+                        NPR {fCurrency(Number(totalDonationsUsd)?.toFixed(0))}
+                    </span>
                 </div>
             </div>
         </>
