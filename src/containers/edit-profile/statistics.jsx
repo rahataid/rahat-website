@@ -28,11 +28,11 @@ const FunFact = ({ community }) => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 ml--4">
-                    <div className="row">
+                    <div className="row mb--10">
                         <div className="col-6">
                             {community?.summary?.map((summary, key) => (
                                 <div
-                                    className={clsx("single-counter-up  mt--5")}
+                                    className={clsx("single-counter-up")}
                                 >
                                     <div className="botton-title">
                                         Beneficiaries
@@ -72,7 +72,7 @@ const FunFact = ({ community }) => {
                         <div className="col-6">
                             {community?.summary?.map((summary, key) => (
                                 <div
-                                    className={clsx("single-counter-up  mt--5")}
+                                    className={clsx("single-counter-up")}
                                 >
                                     <div className="botton-title">
                                         Amount Raised
@@ -114,7 +114,7 @@ const FunFact = ({ community }) => {
                         <div className="col-12">
                             {community?.summary?.map((summary, key) => (
                                 <div
-                                    className={clsx("single-counter-up  mt--5")}
+                                    className={clsx("single-counter-up mt--5")}
                                 >
                                     <div className="botton-title">
                                         Total Beneficiaries
