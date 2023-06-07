@@ -8,10 +8,12 @@ const CommunityChart = ({ projectId, community }) => {
             ?.map(([key, values]) => {
                 let splitedData = key.split(`_`);
                 if (splitedData[0] == "gender") {
-                    return {
-                        label: splitedData[1],
-                        value: Number(values),
-                    };
+                    if (values > 0) {
+                        return {
+                            label: splitedData[1],
+                            value: Number(values),
+                        };
+                    }
                 }
             })
             .filter((data) => data);
@@ -21,11 +23,15 @@ const CommunityChart = ({ projectId, community }) => {
             ?.map(([key, values]) => {
                 let splitedData = key.split(`_`);
                 if (splitedData[0] == "bank") {
-                    return {
-                        label:
-                            splitedData[1] == "yes" ? "hasBank" : "hasNotBank",
-                        value: Number(values),
-                    };
+                    if (values > 0) {
+                        return {
+                            label:
+                                splitedData[1] == "yes"
+                                    ? "hasBank"
+                                    : "hasNotBank",
+                            value: Number(values),
+                        };
+                    }
                 }
             })
             .filter((data) => data);
@@ -35,33 +41,49 @@ const CommunityChart = ({ projectId, community }) => {
             ?.map(([key, values]) => {
                 let splitedData = key.split(`_`);
                 if (splitedData[0] == "internet") {
-                    return {
-                        label:
-                            splitedData[1] == "yes"
-                                ? "hasInternet"
-                                : "hasNotInternet",
-                        value: Number(values),
-                    };
+                    if (values > 0) {
+                        return {
+                            label:
+                                splitedData[1] == "yes"
+                                    ? "hasInternet"
+                                    : "hasNotInternet",
+                            value: Number(values),
+                        };
+                    }
                 }
             })
             .filter((data) => data);
     })[0];
+    console.log({ InternetData: InternetData[0] });
 
     return (
         <div>
             <div className="mt-5 row text-center">
-                <div className="col-4">
-                    <Piechart chart={GenderData} title="Gender Distrubition" />
-                </div>
-                <div className="col-4">
-                    <Piechart chart={BankData} title={"Bank Distribution"} />
-                </div>
-                <div className="col-4">
-                    <Piechart
-                        chart={InternetData}
-                        title={"Internet Distribution"}
-                    />
-                </div>
+                {GenderData[0] && (
+                    <div className="col-4">
+                        <Piechart
+                            chart={GenderData}
+                            title="Gender Distrubition"
+                        />
+                    </div>
+                )}
+
+                {BankData[0] && (
+                    <div className="col-4">
+                        <Piechart
+                            chart={BankData}
+                            title={"Bank Distribution"}
+                        />
+                    </div>
+                )}
+                {InternetData[0] && (
+                    <div className="col-4">
+                        <Piechart
+                            chart={InternetData}
+                            title={"Internet Distribution"}
+                        />
+                    </div>
+                )}
             </div>
         </div>
     );

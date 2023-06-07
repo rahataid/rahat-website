@@ -1,5 +1,5 @@
 import Anchor from "@ui/anchor";
-import truncateEthAddress from "@utils/trucateEthAddress";
+import truncateEthAddress from "@utils/string";
 import Image from "next/image";
 
 const UserDropdown = ({ accounts = [], balances = [], details }) => {
