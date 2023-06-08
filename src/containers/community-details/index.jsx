@@ -1,6 +1,7 @@
 import EditProfileImage from "@containers/edit-profile/edit-profile-image";
 import PersonalInformation from "@containers/edit-profile/personal-information";
 import Statistics from "@containers/edit-profile/statistics";
+import Transactions from "@containers/edit-profile/transactions";
 import CommunityPhotos from "./photos";
 
 const EditProfile = ({ community }) => {
@@ -13,6 +14,7 @@ const EditProfile = ({ community }) => {
                         <Statistics community={community} />
                         <PersonalInformation community={community} />
                         <CommunityPhotos community={community} />
+                        <Transactions />
                         {/* <Contact /> */}
                     </div>
                 </div>
