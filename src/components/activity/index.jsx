@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const Activity = ({
     className,
     status,
-    donations,
+    data,
 }) => (
     <>
         <div className={clsx("single-activity-wrapper mt--50", className,)} style={{ border: '1px solid #cccaca', borderRadius: '15px' }}>
@@ -20,8 +20,8 @@ const Activity = ({
                         />
                     </div>
                     <div className="content text-center">
-                        <h6 className="title">Donation offered by {donations.donor.name}</h6>
-                        <p> Donation amount of ${donations.amount} was offered to {donations.donee.name}.</p>
+                        <h6 className="title">Donation offered by name</h6>
+                        <p> Donation amount of ${data.amount} was offered to name.</p>
                         <div className="time-maintane">
                             <div className="time data">
                                 <i className="feather-clock" />
