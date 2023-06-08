@@ -4,7 +4,6 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 
 const ExploreProductArea = ({ className, space, communities, data }) => {
-    console.log("communities", communities);
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
@@ -28,9 +27,10 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                                         overlay
                                         name={community.name}
                                         country={community.country}
-                                        totalDonationsUsd={
-                                            community.totalDonations_usd * 130
+                                        fundRaisedLocal={
+                                            community.fundRaisedLocal
                                         }
+                                        currency={community.localCurrency}
                                         category={community?.category?.name}
                                         location={community.location}
                                         cover={community?.images?.cover}

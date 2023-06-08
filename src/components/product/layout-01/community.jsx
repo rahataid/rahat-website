@@ -1,4 +1,3 @@
-import Iconify from "@components/iconify";
 import Image from "@components/image/Image";
 import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
@@ -10,10 +9,10 @@ const Product = ({
     name,
     cover,
     country,
-    totalDonationsUsd = 0,
+    fundRaisedLocal = 0,
     category,
     address,
-    id,
+    currency,
     path = "/communities",
 }) => {
     const countrycode = codes[country].toLowerCase();
@@ -61,7 +60,8 @@ const Product = ({
                         <span style={{ padding: 5 }}>{country}</span>
                     </span>
                     <span>
-                        NPR {fCurrency(Number(totalDonationsUsd)?.toFixed(0))}
+                        {currency}{" "}
+                        {fCurrency(Number(fundRaisedLocal)?.toFixed(0))}
                     </span>
                 </div>
             </div>
