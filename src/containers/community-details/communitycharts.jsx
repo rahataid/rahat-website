@@ -1,5 +1,4 @@
 import Piechart from "@components/charts/Piechart";
-import { object } from "prop-types";
 
 const CommunityChart = ({ projectId, community }) => {
     console.log(community);
@@ -60,7 +59,7 @@ const CommunityChart = ({ projectId, community }) => {
         <div>
             <div className="mt-5 row text-center">
                 {GenderData[0] && (
-                    <div className="col-4">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
                             chart={GenderData}
                             title="Gender Distrubition"
@@ -69,7 +68,7 @@ const CommunityChart = ({ projectId, community }) => {
                 )}
 
                 {BankData[0] && (
-                    <div className="col-4">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
                             chart={BankData}
                             title={"Bank Distribution"}
@@ -77,7 +76,7 @@ const CommunityChart = ({ projectId, community }) => {
                     </div>
                 )}
                 {InternetData[0] && (
-                    <div className="col-4">
+                    <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
                             chart={InternetData}
                             title={"Internet Distribution"}

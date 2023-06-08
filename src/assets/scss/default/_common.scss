@@ -1,6 +1,7 @@
 body {
     scroll-behavior: auto;
 }
+
 // header sticky
 .rn-header.header--sticky {
     position: fixed;
@@ -145,6 +146,7 @@ p {
 
 a {
     transition: var(--transition);
+
     &:hover {
         color: var(--color-primary);
     }
@@ -203,6 +205,7 @@ a {
     white-space: nowrap;
     width: auto;
     min-width: fit-content;
+
     &:after {
         content: "";
         display: block;
@@ -217,9 +220,11 @@ a {
         height: 5px;
         right: 15px;
     }
+
     @media #{$small-mobile} {
         margin-bottom: 0;
     }
+
     .option {
         margin: 0;
         color: var(--color-white);
@@ -250,10 +255,11 @@ a {
             background: transparent;
         }
 
-        & + .option {
+        &+.option {
             border-top: 1px solid var(--color-border);
         }
     }
+
     &.open {
         .list {
             background: var(--color-primary-alta);
@@ -261,18 +267,22 @@ a {
             pointer-events: auto;
             transform: scale(1) translateY(0);
         }
+
         &:after {
             transform: rotate(-135deg);
         }
     }
+
     .current {
         color: var(--color-white);
     }
+
     &::after {
         border-bottom: 2px solid #fff;
         border-right: 2px solid #fff;
         margin-top: -6px;
     }
+
     .list {
         background: transparent;
         min-width: 200px;
@@ -339,6 +349,7 @@ nav {
         justify-content: center;
         margin-top: 60px;
         margin-bottom: 0;
+
         &.single-column-blog {
             margin-top: 20px;
         }
@@ -349,8 +360,10 @@ nav {
             border: 1px solid var(--color-border);
             border-radius: 6px;
             flex-wrap: wrap;
+
             li {
                 margin: 0;
+
                 a,
                 button {
                     background: var(--background-color-1);
@@ -361,19 +374,23 @@ nav {
                     border-radius: 6px !important;
                     display: block;
                     width: auto;
+
                     @media #{$sm-layout} {
                         padding: 12px 14px;
                     }
+
                     &:hover,
                     &.active {
                         background: var(--color-primary);
                         color: var(--color-white) !important;
                     }
+
                     &:focus {
                         background: var(--color-primary);
                         border: none;
                         box-shadow: none;
                     }
+
                     &.disabled {
                         pointer-events: none;
                         cursor: not-allowed;
@@ -411,13 +428,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     @media #{$large-mobile} {
         justify-content: flex-start;
     }
+
     .filter-leble {
         padding-right: 20px;
         display: inline-block;
     }
+
     .nice-select {
         width: auto;
         padding-left: 20px;
@@ -425,24 +445,29 @@ nav {
         min-width: 150px;
         display: flex;
         align-items: center;
+
         &::after {
             right: 22px;
             height: 8px;
             width: 8px;
             opacity: 0.5;
         }
+
         .list {
             min-width: 100%;
             max-height: 300px;
             overflow-y: auto;
+
             @media #{$lg-layout} {
                 left: auto;
                 right: 0;
             }
+
             @media #{$md-layout} {
                 left: auto;
                 right: 0;
             }
+
             @media #{$sm-layout} {
                 left: auto;
                 right: 0;
@@ -450,21 +475,27 @@ nav {
         }
     }
 }
+
 .inline-flex {
     display: inline-flex;
 }
+
 .hidden {
     display: none;
 }
+
 .isotope-list {
     display: grid;
     gap: 30px;
 }
+
 .item-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+
     @media #{$lg-layout} {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
     @media #{$md-layout} {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -477,14 +508,18 @@ nav {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
+
 .item-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+
     @media #{$laptop-device2} {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
     @media #{$lg-layout} {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
     @media #{$md-layout} {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -508,12 +543,15 @@ nav {
 .Toastify__close-button {
     flex: 1;
 }
+
 .container {
-    padding: 2px 50px;
+    padding: 2px 10px;
 }
+
 .max-fit-content {
     max-width: fit-content;
 }
+
 .theme-color {
     color: var(--color-primary);
 }
@@ -523,4 +561,3 @@ nav {
     margin: -5px auto 60px;
     max-width: 700px;
 }
-
