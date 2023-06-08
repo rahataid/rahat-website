@@ -2,16 +2,19 @@ import NiceSelect from "@ui/nice-select";
 import { usePathname, useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-const SearchForm = ({ categories, countries }) => {
+const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
-    const countryQuery = countries.reduce((country) => {
-        if (country?.value === searchParams.get("country")) return country;
+    let countryQuery;
+    if (countries[0]) {
+        countryQuery = countries?.reduce((country) => {
+            if (country?.value === searchParams.get("country")) return country;
+        });
+    }
+    const categoryQuery = categories?.reduce((category) => {
+        if (category?.value == searchParams.get("category")) return category;
     });
-    const categoryQuery = categories.reduce((category) => {
-        if (category?.value === searchParams.get("category")) return category;
-    });
-    console.log({ countryQuery });
+    console.log({ categoryQuery });
     const [search, setSearch] = useState(searchParams.get("search"));
     const [country, setCountry] = useState(countryQuery);
     const [category, setCategory] = useState(categoryQuery);
