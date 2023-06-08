@@ -3,8 +3,24 @@ import SearchForm from "@components/search-form/layout-01";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 
-const ExploreProductArea = ({ className, space, communities, data }) => {
-    console.log("communities", communities);
+const ExploreProductArea = ({
+    className,
+    space,
+    communities,
+    data,
+    categories,
+    countries,
+}) => {
+    const sanitizedCountries = countries.map((name) => ({
+        value: name,
+        text: name,
+    }));
+
+    const sanitizedCategories = categories.map((cat) => ({
+        value: cat.id,
+        text: cat.name,
+    }));
+
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
@@ -13,7 +29,10 @@ const ExploreProductArea = ({ className, space, communities, data }) => {
                         <div className="col-lg-6 col-md-6 col-sm-6 col-12">
                             <h3>Communities</h3>
                         </div>
-                        <SearchForm />
+                        <SearchForm
+                            categories={sanitizedCategories}
+                            countries={sanitizedCountries}
+                        />
                     </div>
                 </div>
                 <div className="row g-5">
@@ -54,6 +73,8 @@ ExploreProductArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1, 2]),
     communities: PropTypes.array,
+    categories: PropTypes.array,
+    countries: PropTypes.array,
 };
 
 ExploreProductArea.defaultProps = {
