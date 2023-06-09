@@ -1,7 +1,11 @@
 import Activity from "@components/activity";
 import clsx from "clsx";
+import { useState } from "react";
+import transactions from "../../data/transactions.json";
 
-const ActivityArea = ({ space, className, data }) => {
+const Transactions = ({ space, className, data }) => {
+    const [activities, setActivities] = useState(data?.activities || []);
+
     return (
         <div
             className={clsx(
@@ -15,21 +19,16 @@ const ActivityArea = ({ space, className, data }) => {
                     <h3 className="title">Transactions</h3>
                 </div>
                 <div className="row g-6 activity-direction">
-                    {data.map((transaction, index) => (
-                        <div key={index} className="col-lg-12 mb_dec--15">
-                            <Activity
-                                data={transaction}
-                                status="offer" // Provide the appropriate status prop
-                            />
-                        </div>
-                    ))}
+                    <div className="col-lg-12 mb_dec--15">
+                        <Activity data={{ transactions: transactions }} />
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
-ActivityArea.defaultProps = {
+Transactions.defaultProps = {
     space: 1,
 };
 
