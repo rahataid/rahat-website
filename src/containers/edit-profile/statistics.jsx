@@ -7,8 +7,6 @@ import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 
 const FunFact = ({ community }) => {
-    console.log("community", community);
-    console.log(community);
     const [focus, setFocus] = useState(false);
     const visibleChangeHandler = (isVisible) => {
         if (isVisible) {
@@ -31,9 +29,7 @@ const FunFact = ({ community }) => {
                     <div className="row mb--10">
                         <div className="col-6">
                             {community?.summary?.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up")}
-                                >
+                                <div className={clsx("single-counter-up")}>
                                     <div className="botton-title">
                                         Beneficiaries
                                     </div>
@@ -71,9 +67,7 @@ const FunFact = ({ community }) => {
                         </div>
                         <div className="col-6">
                             {community?.summary?.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up")}
-                                >
+                                <div className={clsx("single-counter-up")}>
                                     <div className="botton-title">
                                         Amount Raised
                                     </div>
@@ -81,9 +75,9 @@ const FunFact = ({ community }) => {
                                         <div className="number counter-odomitter-active">
                                             <CountUp
                                                 start={focus ? 0 : null}
-                                                end={
-                                                    fCurrency(community.totalDonations_usd)
-                                                }
+                                                end={fCurrency(
+                                                    community.totalDonations_usd
+                                                )}
                                                 duration={1}
                                             >
                                                 {({ countUpRef }) => (
@@ -116,36 +110,12 @@ const FunFact = ({ community }) => {
                                 <div
                                     className={clsx("single-counter-up mt--5")}
                                 >
-                                    <div className="botton-title">
-                                        Total Beneficiaries
+                                    <div className="botton-title mb--50">
+                                        Community Manager
                                     </div>
                                     <div className="row">
-                                        <div className="number counter-odomitter-active">
-                                            <CountUp
-                                                start={focus ? 0 : null}
-                                                end={
-                                                    summary.total_beneficiaries
-                                                }
-                                                duration={1}
-                                            >
-                                                {({ countUpRef }) => (
-                                                    <div>
-                                                        <span
-                                                            ref={countUpRef}
-                                                        />
-                                                        <InView
-                                                            as="span"
-                                                            onChange={(
-                                                                inView
-                                                            ) =>
-                                                                visibleChangeHandler(
-                                                                    inView
-                                                                )
-                                                            }
-                                                        ></InView>
-                                                    </div>
-                                                )}
-                                            </CountUp>
+                                        <div>
+                                            <h6>{community.managers}</h6>
                                         </div>
                                     </div>
                                 </div>
