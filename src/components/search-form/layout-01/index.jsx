@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
+    // Dont add this directly in useState it causes issue on empty data
     let countryQuery;
     if (countries[0]) {
         countryQuery = countries?.reduce((country) => {
