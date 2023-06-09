@@ -6,7 +6,6 @@ const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     let countryQuery;
-    // Dont add this code to usestate it causes issue on empty Data
     if (countries[0]) {
         countryQuery = countries?.reduce((country) => {
             if (country?.value === searchParams.get("country")) return country;
@@ -37,16 +36,27 @@ const SearchForm = ({ categories, countries = [] }) => {
 
     // const handleSearch = () => {};
 
-    const handleKeyDown = (event) => {
-        if (event.key === "Enter") {
-            handleSearch();
+    const handleOptionChange = (name, data) => {
+        if (!name || !data) return;
+
+        const updatedParams = {
+            ...Object.fromEntries(searchParams.entries()),
+            [name]: data.value,
+        };
+        const queryString = createQueryString(updatedParams);
+        push(pathname + "?" + queryString);
+
+        if (name === "category") {
+            setCategory(data);
+        } else if (name === "country") {
+            setCountry(data);
         }
     };
 
     const clearFilter = () => {
         setSearch("");
-        setCategory(null);
-        setCountry(null);
+        setCategory("");
+        setCountry("");
         push(pathname);
     };
 
