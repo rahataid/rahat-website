@@ -47,9 +47,10 @@ const ExploreProductArea = ({
                                         overlay
                                         name={community.name}
                                         country={community.country}
-                                        totalDonationsUsd={
-                                            community.totalDonations_usd * 130
+                                        fundRaisedLocal={
+                                            community.fundRaisedLocal
                                         }
+                                        currency={community.localCurrency}
                                         category={community?.category?.name}
                                         location={community.location}
                                         cover={community?.images?.cover}
