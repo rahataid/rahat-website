@@ -5,7 +5,7 @@ import { useCallback, useState } from "react";
 const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
-    const [search, setSearch] = useState(searchParams.get("name"));
+    const [name, setName] = useState(searchParams.get("name"));
     const [country, setCountry] = useState(
         countries.find(
             (country) => country.value === searchParams.get("country")
@@ -18,11 +18,14 @@ const SearchForm = ({ categories, countries = [] }) => {
         )
     );
 
+    console.log("category", category);
+
     const { push } = useRouter();
 
     const handleSearchChange = (e) => {
         const { value, name } = e.target;
-        setSearch(value);
+        setName(value);
+
         push(
             pathname +
                 "?" +
@@ -60,7 +63,7 @@ const SearchForm = ({ categories, countries = [] }) => {
     };
 
     const clearFilter = () => {
-        setSearch("");
+        setName("");
         setCategory(null);
         setCountry(null);
         push(pathname);
@@ -112,15 +115,20 @@ const SearchForm = ({ categories, countries = [] }) => {
                     placeholder="Search Here"
                     aria-label="Search"
                     name="name"
-                    value={search}
+                    value={name}
                     onChange={handleSearchChange}
                     // onKeyDown={handleKeyDown}
                 />
-                {/* <div className="search-icon">
-                    <button type="button" onClick={handleSearch}>
-                        <i className="feather-search" />
-                    </button>
-                </div> */}
+                {/* {name && (
+                    <div className="search-icon">
+                        <button
+                            type="button"
+                            onClick={() => searchParams.delete("name")}
+                        >
+                            <i className="feather-x" />
+                        </button>
+                    </div>
+                )} */}
             </form>
             <div className="reset-icon">
                 <button

@@ -1,13 +1,13 @@
 import { MapView } from "@containers/maps";
-import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 
-const FunFact = ({ community }) => {
+const CounterComp = ({ total, inview }) => {
     const [focus, setFocus] = useState(false);
+
     const visibleChangeHandler = (isVisible) => {
         if (isVisible) {
             if (!focus) {
@@ -15,6 +15,33 @@ const FunFact = ({ community }) => {
             }
         }
     };
+    return (
+        <CountUp
+            start={focus ? 0 : null}
+            end={total}
+            duration={1}
+            separator=","
+        >
+            {({ countUpRef }) => {
+                return (
+                    <div>
+                        <span ref={countUpRef} />
+                        <InView
+                            as="span"
+                            onChange={(inView) => visibleChangeHandler(inView)}
+                        >
+                            {inview}
+                        </InView>
+                    </div>
+                );
+            }}
+        </CountUp>
+    );
+};
+
+const FunFact = ({ community }) => {
+    const summary = community?.summary[0] || {};
+
     return (
         <div className="container">
             <div className="row mt--15">
@@ -28,188 +55,65 @@ const FunFact = ({ community }) => {
                 <div className="col-12 col-md-6 ml--4">
                     <div className="row mb--10">
                         <div className="col-6">
-                            {community?.summary?.map((summary, key) => (
-                                <div className={clsx("single-counter-up")}>
-                                    <div className="botton-title">
-                                        Beneficiaries
-                                    </div>
-                                    <div className="row">
-                                        <div className="number counter-odomitter-active">
-                                            <CountUp
-                                                start={focus ? 0 : null}
-                                                end={
-                                                    summary.total_beneficiaries
-                                                }
-                                                duration={1}
-                                            >
-                                                {({ countUpRef }) => (
-                                                    <div>
-                                                        <span
-                                                            ref={countUpRef}
-                                                        />
-                                                        <InView
-                                                            as="span"
-                                                            onChange={(
-                                                                inView
-                                                            ) =>
-                                                                visibleChangeHandler(
-                                                                    inView
-                                                                )
-                                                            }
-                                                        ></InView>
-                                                    </div>
-                                                )}
-                                            </CountUp>
-                                        </div>
+                            <div className={clsx("single-counter-up")}>
+                                <div className="botton-title">
+                                    Total Raised ($)
+                                </div>
+                                <div className="row">
+                                    <div className="number counter-odomitter-active">
+                                        <CounterComp
+                                            total={community?.fundRaisedUsd}
+                                        />
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
                         <div className="col-6">
-                            {community?.summary?.map((summary, key) => (
-                                <div className={clsx("single-counter-up")}>
-                                    <div className="botton-title">
-                                        Amount Raised
-                                    </div>
-                                    <div className="row">
-                                        <div className="number counter-odomitter-active">
-                                            <CountUp
-                                                start={focus ? 0 : null}
-                                                end={fCurrency(
-                                                    community.totalDonations_usd
-                                                )}
-                                                duration={1}
-                                            >
-                                                {({ countUpRef }) => (
-                                                    <div>
-                                                        <span
-                                                            ref={countUpRef}
-                                                        />
-                                                        <InView
-                                                            as="span"
-                                                            onChange={(
-                                                                inView
-                                                            ) =>
-                                                                visibleChangeHandler(
-                                                                    inView
-                                                                )
-                                                            }
-                                                        ></InView>
-                                                    </div>
-                                                )}
-                                            </CountUp>
-                                        </div>
+                            <div className={clsx("single-counter-up")}>
+                                <div className="botton-title">
+                                    Total Raised ({community?.localCurrency})
+                                </div>
+                                <div className="row">
+                                    <div className="number counter-odomitter-active">
+                                        <CounterComp
+                                            total={community?.fundRaisedLocal}
+                                        />
                                     </div>
                                 </div>
-                            ))}
+                            </div>
+                            {/* ))} */}
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-12">
-                            {community?.summary?.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up mt--5")}
-                                >
-                                    <div className="botton-title mb--50">
-                                        Community Manager
-                                    </div>
-                                    <div className="row">
-                                        <div>
-                                            <h6>{community.managers}</h6>
-                                        </div>
+                    <div className="row mb--10">
+                        <div className="col-6">
+                            <div className={clsx("single-counter-up mt--5")}>
+                                <div className="botton-title mb--50">
+                                    Community Manager
+                                </div>
+                                <div className="row">
+                                    <div>
+                                        <h6>{community.managers}</h6>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            {/* {community?.summary?.map((summary, key) => ( */}
+                            <div className={clsx("single-counter-up")}>
+                                <div className="botton-title">
+                                    Beneficiaries
+                                </div>
+                                <div className="row">
+                                    <div className="number counter-odomitter-active">
+                                        <CounterComp
+                                            total={summary?.total_beneficiaries}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            {/* ))} */}
                         </div>
                     </div>
-                    {/* <div className="row">
-                        <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up  mt--5")}
-                                >
-                                    <div className="botton-title">
-                                        Total Beneficiaries
-                                    </div>
-                                    <div className="row">
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <div className="number counter-odomitter-active">
-                                                <CountUp
-                                                    start={focus ? 0 : null}
-                                                    end={
-                                                        summary.total_beneficiaries
-                                                    }
-                                                    duration={1}
-                                                >
-                                                    {({ countUpRef }) => (
-                                                        <div>
-                                                            <span
-                                                                ref={countUpRef}
-                                                            />
-                                                            <InView
-                                                                as="span"
-                                                                onChange={(
-                                                                    inView
-                                                                ) =>
-                                                                    visibleChangeHandler(
-                                                                        inView
-                                                                    )
-                                                                }
-                                                            ></InView>
-                                                        </div>
-                                                    )}
-                                                </CountUp>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="col-6">
-                            {community.summary.map((summary, key) => (
-                                <div
-                                    className={clsx("single-counter-up  mt--5")}
-                                >
-                                    <div className="botton-title">
-                                        Total Beneficiaries
-                                    </div>
-                                    <div className="row">
-                                        <div className="d-flex align-items-center justify-content-between">
-                                            <div className="number counter-odomitter-active">
-                                                <CountUp
-                                                    start={focus ? 0 : null}
-                                                    end={
-                                                        summary.total_beneficiaries
-                                                    }
-                                                    duration={1}
-                                                >
-                                                    {({ countUpRef }) => (
-                                                        <div>
-                                                            <span
-                                                                ref={countUpRef}
-                                                            />
-                                                            <InView
-                                                                as="span"
-                                                                onChange={(
-                                                                    inView
-                                                                ) =>
-                                                                    visibleChangeHandler(
-                                                                        inView
-                                                                    )
-                                                                }
-                                                            ></InView>
-                                                        </div>
-                                                    )}
-                                                </CountUp>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </div>
