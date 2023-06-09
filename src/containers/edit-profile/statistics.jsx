@@ -53,7 +53,7 @@ const FunFact = ({ community }) => {
                     </div>
                 </div>
                 <div className="col-12 col-md-6 ml--4">
-                    <div className="row mb--10">
+                    <div className="row mb--15">
                         <div className="col-6">
                             <div className={clsx("single-counter-up")}>
                                 <div className="botton-title">
@@ -84,9 +84,9 @@ const FunFact = ({ community }) => {
                             {/* ))} */}
                         </div>
                     </div>
-                    <div className="row mb--10">
+                    <div className="row mb--15">
                         <div className="col-6">
-                            <div className={clsx("single-counter-up mt--5")}>
+                            <div className={clsx("single-counter-up")}>
                                 <div className="botton-title mb--50">
                                     Community Manager
                                 </div>
