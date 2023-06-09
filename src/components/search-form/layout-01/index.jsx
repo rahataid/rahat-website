@@ -1,6 +1,6 @@
 import NiceSelect from "@ui/nice-select";
 import { usePathname, useRouter } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
@@ -14,7 +14,6 @@ const SearchForm = ({ categories, countries = [] }) => {
     const categoryQuery = categories?.reduce((category) => {
         if (category?.value == searchParams.get("category")) return category;
     });
-    console.log({ categoryQuery });
     const [search, setSearch] = useState(searchParams.get("search"));
     const [country, setCountry] = useState(countryQuery);
     const [category, setCategory] = useState(categoryQuery);
@@ -30,7 +29,6 @@ const SearchForm = ({ categories, countries = [] }) => {
 
     const handleKeyDown = (event) => {
         if (event.key === "Enter") {
-            // 👇 Get input value
             handleSearch();
         }
     };
@@ -44,7 +42,12 @@ const SearchForm = ({ categories, countries = [] }) => {
         setCountry(data);
     };
 
-    const clearFilter = () => {};
+    const clearFilter = () => {
+        setSearch("");
+        setCategory("");
+        setCountry("");
+        push(pathname);
+    };
 
     const createQueryString = useCallback(
         (name, value) => {
@@ -92,6 +95,17 @@ const SearchForm = ({ categories, countries = [] }) => {
                     </button>
                 </div>
             </form>
+            {""}
+            <div>
+                <button
+                    type="button"
+                    onClick={clearFilter}
+                    style={{ padding: 10 }}
+                >
+                    {" "}
+                    Reset
+                </button>
+            </div>
         </>
     );
 };

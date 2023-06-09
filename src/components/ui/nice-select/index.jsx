@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import { useClickAway } from "react-use";
@@ -12,7 +12,7 @@ const NiceSelect = ({
     name,
 }) => {
     const [open, setOpen] = useState(false);
-    const [current, setCurrent] = useState(defaultCurrent);
+    const [current, setCurrent] = useState("");
     const onClose = useCallback(() => {
         setOpen(false);
     }, []);
@@ -25,6 +25,10 @@ const NiceSelect = ({
         onChange(item, name);
         onClose();
     };
+
+    useEffect(() => {
+        setCurrent(defaultCurrent);
+    }, [defaultCurrent]);
 
     return (
         <div
@@ -70,7 +74,7 @@ NiceSelect.propTypes = {
             text: PropTypes.string,
         }).isRequired
     ).isRequired,
-    defaultCurrent: PropTypes.number,
+    defaultCurrent: PropTypes.object,
     placeholder: PropTypes.string,
     className: PropTypes.string,
     onChange: PropTypes.func.isRequired,
