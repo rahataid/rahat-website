@@ -12,7 +12,7 @@ const NiceSelect = ({
     name,
 }) => {
     const [open, setOpen] = useState(false);
-    const [current, setCurrent] = useState(options[defaultCurrent]);
+    const [current, setCurrent] = useState(defaultCurrent);
     const onClose = useCallback(() => {
         setOpen(false);
     }, []);
@@ -44,6 +44,7 @@ const NiceSelect = ({
             >
                 {options?.map((item) => (
                     <li
+                        style={{ fontSize: 14 }}
                         key={item.value}
                         data-value={item.value}
                         className={clsx(

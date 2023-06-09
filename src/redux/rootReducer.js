@@ -4,6 +4,7 @@ import { appSlice } from "./slices/app";
 import commmunityReducer from "./slices/community";
 import donationReducer from "./slices/donation";
 import organizationReducer from "./slices/organization";
+import categoryReducer from "./slices/category";
 // slices
 
 // ----------------------------------------------------------------------
@@ -43,6 +44,7 @@ const rootReducer = combineReducers({
     [commmunityReducer.name]: commmunityReducer.reducer,
     [organizationReducer.name]: organizationReducer.reducer,
     [donationReducer.name]: donationReducer.reducer,
+    [categoryReducer.name]: categoryReducer.reducer,
     [appSlice.name]: appSlice.reducer,
 });
 

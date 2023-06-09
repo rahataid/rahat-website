@@ -40,7 +40,8 @@ export const selectOrganizations = (state) => state.organizaitons.organizaitons;
 export const getOrganizations = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await OrganizationsService.getOrganizationsList();
+            const { data: res } =
+                await OrganizationsService.getOrganizationsList();
 
             dispatch(slice.actions.getOrganizationsSuccess(res));
         } catch (error) {
@@ -52,9 +53,8 @@ export const getOrganizations = (params) => {
 export const organizationDetails = (id) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await OrganizationsService.getOrganizationDetails(
-                id
-            );
+            const { data: res } =
+                await OrganizationsService.getOrganizationDetails(id);
 
             dispatch(slice.actions.getOrganizationSuccess(res));
         } catch (error) {
