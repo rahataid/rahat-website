@@ -6,6 +6,7 @@ const SearchForm = ({ categories, countries = [] }) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     let countryQuery;
+    // Dont add this code to usestate it causes issue on empty Data
     if (countries[0]) {
         countryQuery = countries?.reduce((country) => {
             if (country?.value === searchParams.get("country")) return country;
