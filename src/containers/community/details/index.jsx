@@ -13,9 +13,9 @@ const CommunityDetails = ({ community }) => {
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
                         <CommunityDescription community={community} />
                         <Statistics community={community} />
+                        <Transactions data={transaction} />
                         <PersonalInformation community={community} />
                         <CommunityPhotos community={community} />
-                        <Transactions data={transaction} />
                         {/* <Contact /> */}
                     </div>
                 </div>

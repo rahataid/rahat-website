@@ -13,7 +13,7 @@ const CommunityTransactions = ({ space, className, data }) => {
         >
             <div className="container">
                 <div className="row">
-                    <h3 className="title">Transactions</h3>
+                    <h3 className="title">Funds Distributed</h3>
                 </div>
                 <div className="row g-6 activity-direction">
                     {data.map((transaction, index) => (

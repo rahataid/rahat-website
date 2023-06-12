@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const Activity = ({ className, data }) => (
     <div
-        className={clsx("single-activity-wrapper mt--50", className)}
+        className={clsx("single-activity-wrapper mt--30", className)}
         style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
     >
         <div className="inner">
