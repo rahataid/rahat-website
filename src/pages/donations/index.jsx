@@ -1,5 +1,5 @@
 import SEO from "@components/seo";
-import ExploreProductArea from "@containers/explore-product/layout-08";
+import { DonationsList } from "@containers/donations/list";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
@@ -8,20 +8,20 @@ import Wrapper from "@layout/wrapper";
 import { getDonations } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
 
-const Home02 = ({ donations }) => {
+const Donations = ({ donations }) => {
     return (
         <Wrapper>
             <SEO pageTitle="Donations" />
             <Header />
             <main id="main-content">
-                <ExploreProductArea donations={donations} />
+                <DonationsList donations={donations} />
             </main>
             <Footer />
         </Wrapper>
     );
 };
 
-export default Home02;
+export default Donations;
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) => async () => {
         await store.dispatch(getDonations());
