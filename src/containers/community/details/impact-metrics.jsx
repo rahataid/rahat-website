@@ -1,4 +1,4 @@
-import CommunityChart from "@containers/community-details/communitycharts";
+import CommunityChart from "./community-charts";
 
 const PersonalInformation = ({ id, community }) => (
     <div id={id} className="container">

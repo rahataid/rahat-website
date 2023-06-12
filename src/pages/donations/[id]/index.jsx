@@ -8,7 +8,7 @@ import { wrapper } from "@redux/store";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
-import EditProfileImage from "../../../containers/edit-profile/edit-profile-image";
+import EditProfileImage from "../../../containers/community/details/description";
 
 const EditProfile = ({ donations }) => (
     <Wrapper>

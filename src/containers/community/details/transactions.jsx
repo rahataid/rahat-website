@@ -1,7 +1,8 @@
 import Activity from "@components/activity";
 import clsx from "clsx";
 
-const ActivityArea = ({ space, className, data }) => {
+const CommunityTransactions = ({ space, className, data }) => {
+
     return (
         <div
             className={clsx(
@@ -23,14 +24,14 @@ const ActivityArea = ({ space, className, data }) => {
                             />
                         </div>
                     ))}
-                </div>
-            </div>
-        </div>
+                </div >
+            </div >
+        </div >
     );
 };
 
-ActivityArea.defaultProps = {
+CommunityTransactions.defaultProps = {
     space: 1,
 };
 
-export default ActivityArea;
+export default CommunityTransactions;
