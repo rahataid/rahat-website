@@ -47,14 +47,6 @@ const AuthorIntroArea = ({ className, space, community }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper">
                                 <div className="author-inner">
-                                    <div className="user-thumbnail">
-                                        <Image
-                                            className="user-img"
-                                            src={logoImage}
-                                            width={140}
-                                            height={140}
-                                        />
-                                    </div>
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
                                             {community?.name
