@@ -13,7 +13,7 @@ const ActivityArea = ({ space, className, data }) => {
         >
             <div className="container">
                 <div className="row mb--30">
-                    <h3 className="title">Impact Flow</h3>
+                    <h3 className="title mt--30">Impact Flow</h3>
                 </div>
                 <div className="row g-6 activity-direction">
                     <div className="col-lg-12 mb_dec--15">
