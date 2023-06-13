@@ -6,7 +6,8 @@
         "doneeName": "Red Cross",
         "date": "12th June 2023",
         "description": "Donation for wounded soldiers of Ukraine.",
-        "donorImg": "/images/profile/pepsico.png"
+        "donorImg": "/images/profile/pepsico.png",
+        "status": "Approved"
     },
     {
         "id": 2,
@@ -15,6 +16,7 @@
         "doneeName": "Nepal Abiskar Kendra",
         "date": "12th June 2023",
         "description": "Donation to setup research facility for airplane manufacturing in Nepal.",
-        "donorImg": "/images/portfolio/oxfam.jpeg"
+        "donorImg": "/images/portfolio/oxfam.jpeg",
+        "status": "Approved"
     }
 ]

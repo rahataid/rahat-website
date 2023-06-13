@@ -7,6 +7,7 @@ const Activity = ({ data, className }) => (
         style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
     >
         <div className="inner">
+            <div className="status">{data.status}</div>
             <div className="read-content">
                 <div className="thumbnail">
                     <Image
@@ -18,10 +19,7 @@ const Activity = ({ data, className }) => (
                 </div>
                 <div className="content">
                     <h6>{data.donorName ?? 'haha'}</h6>
-                    <div className="row">
-                        <p>{data.description}</p>
-                        <span>{data.amount}</span>
-                    </div>
+                    <p>{data.description}</p>
                     <div className="time-maintane">
                         <div className="time data">
                             <i className="feather-clock" />
@@ -35,6 +33,9 @@ const Activity = ({ data, className }) => (
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="icone-area">
+                <span>${data.amount}</span>
             </div>
         </div>
     </div>

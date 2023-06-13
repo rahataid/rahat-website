@@ -200,11 +200,24 @@
 
     .inner {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+
+        .status {
+            font-weight: bold;
+            font-size: 14px;
+            position: absolute;
+            top: 15px;
+            right: -1px;
+            border-radius: 100px 5px 5px 100px;
+            padding: 5px 30px 5px 30px;
+            color: #ffff;
+            background: #1be382;
+        }
 
         .read-content {
             display: flex;
+            justify-content: space-between;
             align-items: center;
 
             @media #{$large-mobile} {
@@ -220,20 +233,10 @@
 
         .icone-area {
 
-            svg,
-            i {
-                width: 30px;
-                height: auto;
-                color: var(--color-primary);
-                margin-right: 10px;
-                stroke-width: 1.5px;
-                font-size: 30px;
-            }
-
-            @media #{$large-mobile} {
-                position: absolute;
-                top: 50px;
-                left: 50px;
+            span {
+                font-size: 22px;
+                color: #007bb6;
+                font-weight: 400;
             }
         }
 
