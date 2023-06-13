@@ -8,5 +8,10 @@
         "id": 2,
         "text": "Communities",
         "path": "/communities"
+    },
+    {
+        "id": 3,
+        "text": "Donations",
+        "path": "/donations"
     }
 ]
