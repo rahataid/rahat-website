@@ -62,7 +62,7 @@ const CreateNewArea = ({ className, space }) => {
             >
                 <form action="#" onSubmit={handleSubmit(onSubmit)}>
                     <div className="container">
-                        <h3>Donation Form</h3>
+                        <h3 className="mb--25">Donation Form</h3>
                         <div className="row g-5">
                             <div className="col-lg-12">
                                 <div className="form-wrapper-one">
@@ -149,40 +149,10 @@ const CreateNewArea = ({ className, space }) => {
                                                 )}
                                             </div>
                                         </div>
-                                        <div className="col-md-12">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Discription"
-                                                    className="form-label"
-                                                >
-                                                    Terms and Conditions
-                                                </label>
-                                                <textarea
-                                                    id="conditions"
-                                                    rows="3"
-                                                    placeholder=""
-                                                    {...register(
-                                                        "discription",
-                                                        {
-                                                            required:
-                                                                "Discription is required",
-                                                        }
-                                                    )}
-                                                />
-                                                {errors.discription && (
-                                                    <ErrorText>
-                                                        {
-                                                            errors.discription
-                                                                ?.message
-                                                        }
-                                                    </ErrorText>
-                                                )}
-                                            </div>
-                                        </div>
                                         <div className="col-md-12 col-xl-8 mt_lg--15 mt_md--15 mt_sm--15">
                                             <div className="input-box">
-                                                <Button type="submit">
-                                                    Submit Item
+                                                <Button type="submit btn-small">
+                                                    Donate
                                                 </Button>
                                             </div>
                                         </div>
