@@ -3,9 +3,10 @@ import DonationsList from "@containers/donations/list";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
+import { getDonations } from "@redux/slices/donation";
+import { wrapper } from "@redux/store";
 
 // Demo data
-import donation from "../../data/donations.json";
 
 export default function Donations({ donations }) {
     return (
@@ -13,24 +14,23 @@ export default function Donations({ donations }) {
             <SEO pageTitle="Donations" />
             <Header />
             <main id="main-content">
-                <DonationsList data={donation} />
+                <DonationsList data={donations} />
             </main>
             <Footer />
         </Wrapper>
     );
-};
+}
 
-// export const getServerSideProps = wrapper.getServerSideProps(
-//     (store) => async () => {
-//         await store.dispatch(getDonations());
-//         const serializedDonations = store.getState().donation.donations;
-//         console.log(serializedDonations);
-//         const serializedError = store.getState().donation.error;
-//         return {
-//             props: {
-//                 donations: serializedDonations,
-//                 error: serializedError,
-//             },
-//         };
-//     }
-// );
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) => async () => {
+        await store.dispatch(getDonations());
+        const serializedDonations = store.getState().donation.donations;
+        const serializedError = store.getState().donation.error;
+        return {
+            props: {
+                donations: serializedDonations,
+                error: serializedError,
+            },
+        };
+    }
+);

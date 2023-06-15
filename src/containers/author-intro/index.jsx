@@ -4,6 +4,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 
 const AuthorIntroArea = ({ className, space, data }) => {
+    console.log({ data });
     return (
         <>
             <div className="rn-author-bg-area-donation position-relative ptb--150">
@@ -30,17 +31,19 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                 <div className="author-inner">
                                     <div className="user-thumbnail">
                                         <Image
-                                            src={data[1].donorImg}
-                                            alt={data[0].donorName}
+                                            src={data.donorImg?.profileImage}
+                                            alt={data.donor?.name}
                                             width={140}
                                             height={140}
                                             layout="fixed"
                                         />
                                     </div>
                                     <div className="rn-author-info-content">
-                                        <h4 className="title">{data[0].donorName}</h4>
-                                        <h6 style={{ fontWeight: '500' }}>{data[0].address}</h6>
-                                        <p>{data[0].description}</p>
+                                        <h4 className="title">
+                                            {data.donor?.name}
+                                        </h4>
+
+                                        <p>{data.description}</p>
                                         {/* <div className="author-button-area">
                                             <button
                                                 type="button"

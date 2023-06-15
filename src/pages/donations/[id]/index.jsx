@@ -6,9 +6,10 @@ import Wrapper from "@layout/wrapper";
 
 // Demo data
 import AuthorProfileArea from "@containers/author-profile";
-import donation from "../../../data/donations.json";
+import { wrapper } from "@redux/store";
+import { getDonationDetails } from "@redux/slices/donation";
 
-const Author = () => (
+const Author = ({ donation }) => (
     <Wrapper>
         <SEO pageTitle="Author" />
         <Header />
@@ -18,6 +19,21 @@ const Author = () => (
         </main>
         <Footer />
     </Wrapper>
+);
+
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(getDonationDetails(query.id));
+            const donation = store.getState().donation.donation;
+            const serializedError = store.getState().donation.error;
+            return {
+                props: {
+                    donation,
+                    error: serializedError,
+                },
+            };
+        }
 );
 
 export default Author;
