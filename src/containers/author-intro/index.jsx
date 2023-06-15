@@ -1,19 +1,11 @@
-import ShareModal from "@components/modals/share-modal";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
-import { useState } from "react";
 
 const AuthorIntroArea = ({ className, space, data }) => {
-    const [isShareModalOpen, setIsShareModalOpen] = useState(false);
-    const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
     return (
         <>
-            <ShareModal
-                show={isShareModalOpen}
-                handleModal={shareModalHandler}
-            />
             <div className="rn-author-bg-area-donation position-relative ptb--150">
                 <Image
                     src="/images/bg/bg-img.jpg"
@@ -36,23 +28,19 @@ const AuthorIntroArea = ({ className, space, data }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper-donation">
                                 <div className="author-inner">
-                                    {data?.image?.src && (
-                                        <div className="user-thumbnail">
-                                            <Image
-                                                src={data.image.src}
-                                                alt={
-                                                    data.image?.alt || data.name
-                                                }
-                                                width={140}
-                                                height={140}
-                                                layout="fixed"
-                                            />
-                                        </div>
-                                    )}
-
+                                    <div className="user-thumbnail">
+                                        <Image
+                                            src={data[1].donorImg}
+                                            alt={data[0].donorName}
+                                            width={140}
+                                            height={140}
+                                            layout="fixed"
+                                        />
+                                    </div>
                                     <div className="rn-author-info-content">
-                                        <h4 className="title">{data.name}</h4>
-                                        <p>0xbsdk09sdjsldk9sdnlsdkflkdfs9sdkfj-af-df</p>
+                                        <h4 className="title">{data[0].donorName}</h4>
+                                        <h6 style={{ fontWeight: '500' }}>{data[0].address}</h6>
+                                        <p>{data[0].description}</p>
                                         {/* <div className="author-button-area">
                                             <button
                                                 type="button"

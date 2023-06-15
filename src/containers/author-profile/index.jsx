@@ -1,5 +1,4 @@
-import Product from "@components/product/layout-01";
-import { shuffleArray } from "@utils/methods";
+import Donations from "@components/donations-list";
 import { ProductType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -7,12 +6,9 @@ import Nav from "react-bootstrap/Nav";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
+import donations from "../../data/donations.json";
 
-const AuthorProfileArea = ({ className, data }) => {
-    const onSaleProducts = shuffleArray(data.products).slice(0, 10);
-    const ownedProducts = shuffleArray(data.products).slice(0, 10);
-    const createdProducts = shuffleArray(data.products).slice(0, 10);
-    const likedProducts = shuffleArray(data.products).slice(0, 10);
+const AuthorProfileArea = ({ className }) => {
 
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
@@ -31,19 +27,13 @@ const AuthorProfileArea = ({ className, data }) => {
                                             as="button"
                                             eventKey="nav-home"
                                         >
-                                            Report
+                                            Funds Donated
                                         </Nav.Link>
                                         <Nav.Link
                                             as="button"
                                             eventKey="nav-profile"
                                         >
-                                            Transaction
-                                        </Nav.Link>
-                                        <Nav.Link
-                                            as="button"
-                                            eventKey="nav-contact"
-                                        >
-                                            Images
+                                            Photos
                                         </Nav.Link>
                                     </Nav>
                                 </nav>
@@ -53,101 +43,13 @@ const AuthorProfileArea = ({ className, data }) => {
 
                     <TabContent className="tab-content rn-bid-content">
                         <TabPane className="row d-flex g-5" eventKey="nav-home">
-                            {onSaleProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Product
-                                        overlay
-                                        placeBid
-                                        title={prod.title}
-                                        slug={prod.slug}
-                                        latestBid={prod.latestBid}
-                                        price={prod.price}
-                                        likeCount={prod.likeCount}
-                                        auction_date={prod.auction_date}
-                                        image={prod.images?.[0]}
-                                        authors={prod.authors}
-                                        bitCount={prod.bitCount}
-                                    />
-                                </div>
-                            ))}
+                            <Donations data={donations} />
                         </TabPane>
                         <TabPane
                             className="row g-5 d-flex"
                             eventKey="nav-profile"
                         >
-                            {ownedProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Product
-                                        overlay
-                                        placeBid
-                                        title={prod.title}
-                                        slug={prod.slug}
-                                        latestBid={prod.latestBid}
-                                        price={prod.price}
-                                        likeCount={prod.likeCount}
-                                        auction_date={prod.auction_date}
-                                        image={prod.images?.[0]}
-                                        authors={prod.authors}
-                                        bitCount={prod.bitCount}
-                                    />
-                                </div>
-                            ))}
-                        </TabPane>
-                        <TabPane
-                            className="row g-5 d-flex"
-                            eventKey="nav-contact"
-                        >
-                            {createdProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Product
-                                        overlay
-                                        placeBid
-                                        title={prod.title}
-                                        slug={prod.slug}
-                                        latestBid={prod.latestBid}
-                                        price={prod.price}
-                                        likeCount={prod.likeCount}
-                                        auction_date={prod.auction_date}
-                                        image={prod.images?.[0]}
-                                        authors={prod.authors}
-                                        bitCount={prod.bitCount}
-                                    />
-                                </div>
-                            ))}
-                        </TabPane>
-                        <TabPane
-                            className="row g-5 d-flex"
-                            eventKey="nav-liked"
-                        >
-                            {likedProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Product
-                                        overlay
-                                        placeBid
-                                        title={prod.title}
-                                        slug={prod.slug}
-                                        latestBid={prod.latestBid}
-                                        price={prod.price}
-                                        likeCount={prod.likeCount}
-                                        auction_date={prod.auction_date}
-                                        image={prod.images?.[0]}
-                                        authors={prod.authors}
-                                        bitCount={prod.bitCount}
-                                    />
-                                </div>
-                            ))}
+
                         </TabPane>
                     </TabContent>
                 </div>

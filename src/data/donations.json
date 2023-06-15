@@ -5,9 +5,11 @@
         "amount": "50,000",
         "doneeName": "Red Cross",
         "date": "12th June 2023",
-        "description": "Donation for wounded soldiers of Ukraine.",
+        "description": "Donation for wounded soldiers of Ukraine.Donation for wounded soldiers of Ukraine.",
         "donorImg": "/images/profile/pepsico.png",
-        "status": "Approved"
+        "status": "Approved",
+        "address": "Kathmandu, Nepal",
+        "donatedAmount": "NRS. 50,000"
     },
     {
         "id": 2,

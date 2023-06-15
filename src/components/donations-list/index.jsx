@@ -7,35 +7,36 @@ const Activity = ({ data, className }) => (
         style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
     >
         <div className="inner">
-            <div className="status">{data.status}</div>
+            <div className="status">{data.status ?? "Approved"}</div>
             <div className="read-content">
                 <div className="thumbnail">
                     <Image
-                        src={data.donorImg}
+                        src={data.donorImg ?? '/images/portfolio/rahat.jpeg'}
                         alt={data?.donorName || "Nft_Profile"}
                         width={500}
                         height={500}
                     />
                 </div>
                 <div className="content">
-                    <h6>{data.donorName ?? 'haha'}</h6>
-                    <p>{data.description}</p>
+                    <h6>{data.donorName ?? 'Rahat --> Red Cross'}</h6>
+                    <p>
+                        {
+                            data.description ||
+                            "Donation for wounded soldiers of Ukraine.Donation for wounded soldiers of Ukraine."
+                        }
+                    </p>
                     <div className="time-maintane">
                         <div className="time data">
                             <i className="feather-clock" />
                             <span>
-                                {data.date}
+                                {data.date ?? '12 June 2023'}
                             </span>
-                        </div>
-                        <div className="user-area data">
-                            <i className="feather-user" />
-                            {data?.doneeName}
                         </div>
                     </div>
                 </div>
             </div>
             <div className="icone-area">
-                <span>${data.amount}</span>
+                <span>${data.amount ?? "50,000"}</span>
             </div>
         </div>
     </div>

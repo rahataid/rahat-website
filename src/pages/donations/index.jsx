@@ -3,9 +3,9 @@ import DonationsList from "@containers/donations/list";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
-import donation from "../../data/donations.json";
 
 // Demo data
+import donation from "../../data/donations.json";
 
 export default function Donations({ donations }) {
     return (
