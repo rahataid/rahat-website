@@ -6,8 +6,12 @@ import Header from "@layout/header/header-01";
 import Wrapper from "@layout/wrapper";
 
 // Demo data
-import authorData from "../../../data/author.json";
-import productData from "../../../data/products.json";
+import authorData from "../data/author.json";
+import productData from "../data/products.json";
+
+export async function getStaticProps() {
+    return { props: { className: "template-color-1" } };
+}
 
 const Author = () => (
     <Wrapper>

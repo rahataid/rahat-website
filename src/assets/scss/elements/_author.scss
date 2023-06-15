@@ -112,6 +112,84 @@
     }
 }
 
+.author-wrapper-donation {
+    display: flex;
+    justify-content: center;
+
+    .author-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .user-thumbnail {
+            display: flex;
+            justify-content: center;
+            border: 15px solid #fff;
+            border-radius: 5px;
+            position: relative;
+            max-width: 170px;
+            margin: auto;
+        }
+
+        .rn-author-info-content {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 10px;
+
+            h4 {
+                &.title {
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .social-follw {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 7px;
+
+                svg,
+                i {
+                    margin-right: 10px;
+                    width: 14px;
+                    font-size: 14px;
+                    line-height: 1.8;
+                    color: var(--color-primary);
+                }
+
+                .user-name {
+                    position: relative;
+                    margin-top: 2px;
+                }
+            }
+
+            .follow-area {
+                display: flex;
+                justify-content: center;
+
+                .follow {
+                    &.followers {
+                        margin-right: 15px;
+                    }
+
+                    span {
+                        color: var(--color-white);
+                        font-size: 16px;
+                        font-weight: 500;
+
+                        a {
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .author-button-area {
     margin-right: -8px;
     margin-top: 20px;

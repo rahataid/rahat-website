@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import TabContent from "react-bootstrap/TabContent";
-import TabContainer from "react-bootstrap/TabContainer";
-import TabPane from "react-bootstrap/TabPane";
-import Nav from "react-bootstrap/Nav";
 import Product from "@components/product/layout-01";
-import { ProductType } from "@utils/types";
 import { shuffleArray } from "@utils/methods";
+import { ProductType } from "@utils/types";
+import clsx from "clsx";
+import PropTypes from "prop-types";
+import Nav from "react-bootstrap/Nav";
+import TabContainer from "react-bootstrap/TabContainer";
+import TabContent from "react-bootstrap/TabContent";
+import TabPane from "react-bootstrap/TabPane";
 
 const AuthorProfileArea = ({ className, data }) => {
     const onSaleProducts = shuffleArray(data.products).slice(0, 10);
@@ -31,25 +31,19 @@ const AuthorProfileArea = ({ className, data }) => {
                                             as="button"
                                             eventKey="nav-home"
                                         >
-                                            On Sale
+                                            Report
                                         </Nav.Link>
                                         <Nav.Link
                                             as="button"
                                             eventKey="nav-profile"
                                         >
-                                            Owned
+                                            Transaction
                                         </Nav.Link>
                                         <Nav.Link
                                             as="button"
                                             eventKey="nav-contact"
                                         >
-                                            Created
-                                        </Nav.Link>
-                                        <Nav.Link
-                                            as="button"
-                                            eventKey="nav-liked"
-                                        >
-                                            Liked
+                                            Images
                                         </Nav.Link>
                                     </Nav>
                                 </nav>
