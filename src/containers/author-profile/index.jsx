@@ -1,3 +1,4 @@
+import DonationPhotos from '@components/donation-photos';
 import Donations from "@components/donations-list";
 import { ProductType } from "@utils/types";
 import clsx from "clsx";
@@ -49,7 +50,7 @@ const AuthorProfileArea = ({ className }) => {
                             className="row g-5 d-flex"
                             eventKey="nav-profile"
                         >
-
+                            <DonationPhotos />
                         </TabPane>
                     </TabContent>
                 </div>
