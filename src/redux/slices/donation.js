@@ -77,3 +77,15 @@ export const getDonationTransactions = (id) => {
         }
     };
 };
+
+export const addDonationTransaction = (payload) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } = await DonationsService.addDonation(payload);
+
+            dispatch(slice.actions.getDonationSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};

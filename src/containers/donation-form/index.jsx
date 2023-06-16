@@ -1,19 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 import ProductModal from "@components/modals/product-modal";
+import { selectCommunities } from "@redux/slices/community";
+import { addDonationTransaction } from "@redux/slices/donation";
+import {
+    getOrganizations,
+    selectOrganizations,
+} from "@redux/slices/organization";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
-
+import AsyncSelect from "react-select/async";
 const CreateNewArea = ({ className, space }) => {
+    const dispatch = useDispatch();
+    const organizations = useSelector(selectOrganizations);
     const [showProductModal, setShowProductModal] = useState(false);
     const [selectedImage, setSelectedImage] = useState();
     const [hasImageError, setHasImageError] = useState(false);
     const [previewData, setPreviewData] = useState({});
-
+    const [organizationName, setOrganizationName] = useState("");
+    const [organizationId, setOrganizationId] = useState(null);
     const {
         register,
         handleSubmit,
@@ -27,12 +37,31 @@ const CreateNewArea = ({ className, space }) => {
     const handleProductModal = () => {
         setShowProductModal(false);
     };
+    const options = (inputValue, cb) => {
+        setTimeout(async () => {
+            await dispatch(getOrganizations({ name: inputValue }));
+            cb(
+                null,
+                organizations.filter((data) => {
+                    return { label: data.name, value: data.id };
+                })
+            );
+        }, 1000);
+    };
 
     // This function will be triggered when the file field change
     const imageChange = (e) => {
         if (e.target.files && e.target.files.length > 0) {
             setSelectedImage(e.target.files[0]);
         }
+    };
+
+    console.log({ organizations });
+    const handleOrganizationChange = (e) => {
+        setOrganizationName(e.target.value);
+        setTimeout(() => {
+            dispatch(getOrganizations({ name: organizationName }));
+        }, 2000);
     };
 
     const onSubmit = (data, e) => {
@@ -50,16 +79,13 @@ const CreateNewArea = ({ className, space }) => {
             reset();
             setSelectedImage();
         }
+        console.log(data);
+        dispatch(addDonationTransaction(data));
     };
 
     return (
         <>
-            <div
-                className={clsx(
-                    "create-area mt--50",
-                    className
-                )}
-            >
+            <div className={clsx("create-area mt--50", className)}>
                 <form action="#" onSubmit={handleSubmit(onSubmit)}>
                     <div className="container">
                         <h3 className="mb--25">Donation Form</h3>
@@ -75,14 +101,33 @@ const CreateNewArea = ({ className, space }) => {
                                                 >
                                                     Organization Name
                                                 </label>
-                                                <input
-                                                    id="name"
-                                                    placeholder="Red Cross"
-                                                    {...register("name", {
-                                                        required:
-                                                            "Name is required",
-                                                    })}
+                                                <AsyncSelect
+                                                    loadOptions={options}
                                                 />
+
+                                                {/* {organizations.map((result) => (
+                                                    <div
+                                                        key={result.id}
+                                                        style={{
+                                                            cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                            handleOptionChange(
+                                                                result
+                                                            )
+                                                        }
+                                                    >
+                                                        {result.name}
+                                                    </div>
+                                                ))} */}
+
+                                                {organizationName &&
+                                                    !organizations[0] && (
+                                                        <ErrorText>
+                                                            No organization
+                                                            Found
+                                                        </ErrorText>
+                                                    )}
                                                 {errors.name && (
                                                     <ErrorText>
                                                         {errors.name?.message}
@@ -125,24 +170,24 @@ const CreateNewArea = ({ className, space }) => {
                                                     htmlFor="Discription"
                                                     className="form-label"
                                                 >
-                                                    Discription
+                                                    Description
                                                 </label>
                                                 <textarea
-                                                    id="discription"
+                                                    id="description"
                                                     rows="3"
                                                     placeholder="e. g. “After purchasing the product you can get item...”"
                                                     {...register(
-                                                        "discription",
+                                                        "description",
                                                         {
                                                             required:
-                                                                "Discription is required",
+                                                                "Description is required",
                                                         }
                                                     )}
                                                 />
                                                 {errors.discription && (
                                                     <ErrorText>
                                                         {
-                                                            errors.discription
+                                                            errors.description
                                                                 ?.message
                                                         }
                                                     </ErrorText>

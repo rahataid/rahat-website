@@ -7,4 +7,7 @@ export const DonationsService = {
     getDonationDetails: (id) => {
         return client.get(`/transactions/${id}`);
     },
+    getDonationsList: (payload) => {
+        return client.post(`/transactions`, { payload });
+    },
 };
