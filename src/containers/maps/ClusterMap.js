@@ -16,7 +16,7 @@ function MapClusters({ mapData = [], ...other }) {
         type: "Feature",
         geometry: {
             type: "Point",
-            coordinates: [+item?.longitude, +item?.latitude],
+            coordinates: [+item?.latitude, +item?.longitude],
         },
         properties: {
             // cluster: true,
