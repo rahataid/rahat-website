@@ -3,7 +3,7 @@ import AuthorIntroArea from "@containers/author-intro";
 import AuthorProfileArea from "@containers/author-profile";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
+import Wrapper from "src/layout/wrapper";
 
 // Demo data
 import authorData from "../data/author.json";

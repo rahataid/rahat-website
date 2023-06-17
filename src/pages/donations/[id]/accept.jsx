@@ -2,9 +2,9 @@ import SEO from "@components/seo";
 import AcceptDonation from "@containers/accept-donation";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
 import { getDonationDetails } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
+import Wrapper from "src/layout/wrapper";
 
 const PrivacyPolicy = ({ donations }) => (
     <Wrapper>

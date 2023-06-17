@@ -2,20 +2,48 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@assets/*": ["src/assets/*"],
-            "@ui/*": ["src/components/ui/*"],
-            "@components/*": ["src/components/*"],
-            "@widgets/*": ["src/components/widgets/*"],
-            "@containers/*": ["src/containers/*"],
-            "@layout/*": ["src/layouts/*"],
-            "@utils/*": ["src/utils/*"],
-            "@hooks": ["src/hooks"],
-            "@services/*": ["src/services/*"],
-            "@redux/*": ["src/redux/*"],
-            "@slices/*": ["src/redux/slices/*"],
-            "@web3/*": ["src/web3/*"],
-            "@guards/*": ["src/guards/*"],
-            "@config": ["src/config.js"]
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@ui/*": [
+                "src/components/ui/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@widgets/*": [
+                "src/components/widgets/*"
+            ],
+            "@containers/*": [
+                "src/containers/*"
+            ],
+            "@layout/*": [
+                "src/layout/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+            "@hooks": [
+                "src/hooks"
+            ],
+            "@services/*": [
+                "src/services/*"
+            ],
+            "@redux/*": [
+                "src/redux/*"
+            ],
+            "@slices/*": [
+                "src/redux/slices/*"
+            ],
+            "@web3/*": [
+                "src/web3/*"
+            ],
+            "@guards/*": [
+                "src/guards/*"
+            ],
+            "@config": [
+                "src/config.js"
+            ]
         }
     }
 }

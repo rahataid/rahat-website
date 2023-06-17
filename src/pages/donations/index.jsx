@@ -2,7 +2,7 @@ import SEO from "@components/seo";
 import ExploreProductArea from "@containers/explore-product/layout-08";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
+import Wrapper from "src/layout/wrapper";
 
 // Demo data
 import { getDonations } from "@redux/slices/donation";

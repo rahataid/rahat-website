@@ -23,11 +23,11 @@ import { fData } from "@utils/formatNumber";
 import { Upload, UploadAvatar } from "@components/upload";
 import { ASSET_VIEW } from "@config";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
 import { getCommunities, selectCommunities } from "@redux/slices/community";
 import { AssetUploadService } from "@services/assetUpload";
 import { CommunitiesService } from "@services/communities";
 import { useDispatch, useSelector } from "react-redux";
+import Wrapper from "src/layout/wrapper";
 
 // ----------------------------------------------------------------------
 

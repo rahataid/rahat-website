@@ -3,9 +3,9 @@ import ProductDetailsArea from "@containers/product-details";
 import ProductArea from "@containers/product/layout-03";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
 import { shuffleArray } from "@utils/methods";
 import PropTypes from "prop-types";
+import Wrapper from "src/layout/wrapper";
 
 // demo data
 import productData from "../../data/products.json";

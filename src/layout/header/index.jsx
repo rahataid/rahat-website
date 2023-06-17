@@ -10,8 +10,8 @@ import clsx from "clsx";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
-import headerData from "../../../data/general/header-01.json";
-import menuData from "../../../data/general/menu-01.json";
+import headerData from "../../data/header.json";
+import menuData from "../../data/menu.json";
 
 const Header = ({ className }) => {
     const sticky = useSticky();

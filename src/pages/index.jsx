@@ -5,8 +5,8 @@ import WeAre from "@components/we-are";
 import HeroArea from "@containers/hero/layout-09";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
 import { normalizedData } from "@utils/methods";
+import Wrapper from "src/layout/wrapper";
 
 // Demo data
 import homepageData from "../data/homepages/home-09.json";

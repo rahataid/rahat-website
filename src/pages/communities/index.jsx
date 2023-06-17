@@ -1,11 +1,11 @@
 import SEO from "@components/seo";
-import ProductArea from "@containers/explore-product/layout-01/community";
+import CommunityArea from "@containers/community";
 import { MapView } from "@containers/maps";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import { getCategories } from "@redux/slices/category";
 import { getCommunities } from "@redux/slices/community";
+import Wrapper from "src/layout/wrapper";
 
 // Demo Data
 import { wrapper } from "@redux/store";
@@ -27,7 +27,7 @@ export default function Product({ communities, categories, countries }) {
                         }))}
                     />
                 </div>
-                <ProductArea
+                <CommunityArea
                     communities={communities}
                     countries={countries}
                     categories={categories}

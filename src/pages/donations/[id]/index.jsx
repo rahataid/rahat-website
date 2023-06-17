@@ -2,12 +2,12 @@ import Activity from "@components/activity";
 import SEO from "@components/seo";
 import Footer from "@layout/footer/footer-01";
 import Header from "@layout/header/header-01";
-import Wrapper from "@layout/wrapper";
 import { getDonationDetails } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
+import Wrapper from "src/layout/wrapper";
 import EditProfileImage from "../../../containers/community/details/description";
 
 const EditProfile = ({ donations }) => (
