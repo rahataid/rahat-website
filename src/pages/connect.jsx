@@ -1,4 +1,3 @@
-import Breadcrumb from "@components/breadcrumb";
 import SEO from "@components/seo";
 import ConnectArea from "@containers/connect";
 import Footer from "@layout/footer/footer-01";
@@ -14,10 +13,6 @@ const Connect = () => (
         <SEO pageTitle="Connect" />
         <Header />
         <main id="main-content">
-            <Breadcrumb
-                pageTitle="Make your payment easier"
-                currentPage="Make your payment easier"
-            />
             <ConnectArea />
         </main>
         <Footer />
