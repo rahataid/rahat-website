@@ -1,18 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import ProductModal from "@components/modals/product-modal";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { toast } from "react-toastify";
 
-const CreateNewArea = ({ className, space }) => {
-    const [showProductModal, setShowProductModal] = useState(false);
-    const [selectedImage, setSelectedImage] = useState();
-    const [hasImageError, setHasImageError] = useState(false);
-    const [previewData, setPreviewData] = useState({});
+const DonateForm = ({ className, space }) => {
 
     const {
         register,
@@ -23,18 +16,8 @@ const CreateNewArea = ({ className, space }) => {
         mode: "onChange",
     });
 
-    const notify = () => toast("Your product has submitted");
-    const handleProductModal = () => {
-        setShowProductModal(false);
-    };
 
     // This function will be triggered when the file field change
-    const imageChange = (e) => {
-        if (e.target.files && e.target.files.length > 0) {
-            setSelectedImage(e.target.files[0]);
-        }
-    };
-
     const onSubmit = (data, e) => {
         const { target } = e;
         const submitBtn =
@@ -163,24 +146,17 @@ const CreateNewArea = ({ className, space }) => {
                     </div>
                 </form>
             </div>
-            {showProductModal && (
-                <ProductModal
-                    show={showProductModal}
-                    handleModal={handleProductModal}
-                    data={previewData}
-                />
-            )}
         </>
     );
 };
 
-CreateNewArea.propTypes = {
+DonateForm.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1]),
 };
 
-CreateNewArea.defaultProps = {
+DonateForm.defaultProps = {
     space: 1,
 };
 
-export default CreateNewArea;
+export default DonateForm;

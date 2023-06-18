@@ -1,7 +1,7 @@
 import SEO from "@components/seo";
 import DonationForm from "@containers/donation-form";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import Wrapper from "src/layout/wrapper";
 
 export async function getStaticProps() {
