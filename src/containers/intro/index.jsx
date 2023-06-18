@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
 
-const AuthorIntroArea = ({ className, space, data }) => {
+const IntroArea = ({ className, space, data }) => {
     return (
         <>
             <div className="rn-author-bg-area-donation position-relative ptb--150">
@@ -67,7 +67,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
     );
 };
 
-AuthorIntroArea.propTypes = {
+IntroArea.propTypes = {
     className: PropTypes.string,
     space: PropTypes.oneOf([1]),
     data: PropTypes.shape({
@@ -76,8 +76,8 @@ AuthorIntroArea.propTypes = {
         image: ImageType,
     }),
 };
-AuthorIntroArea.defaultProps = {
+IntroArea.defaultProps = {
     space: 1,
 };
 
-export default AuthorIntroArea;
+export default IntroArea;

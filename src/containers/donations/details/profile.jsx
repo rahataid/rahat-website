@@ -7,9 +7,9 @@ import Nav from "react-bootstrap/Nav";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
-import donations from "../../data/donations.json";
+import donations from "../../../data/donations.json";
 
-const AuthorProfileArea = ({ className }) => {
+const ProfileArea = ({ className }) => {
 
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
@@ -59,10 +59,10 @@ const AuthorProfileArea = ({ className }) => {
     );
 };
 
-AuthorProfileArea.propTypes = {
+ProfileArea.propTypes = {
     className: PropTypes.string,
     data: PropTypes.shape({
         products: PropTypes.arrayOf(ProductType),
     }),
 };
-export default AuthorProfileArea;
+export default ProfileArea;

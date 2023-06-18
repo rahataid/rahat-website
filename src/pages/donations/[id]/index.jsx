@@ -1,18 +1,11 @@
 import SEO from "@components/seo";
-import AuthorIntroArea from "@containers/author-intro";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
-import { getDonationDetails } from "@redux/slices/donation";
-import { wrapper } from "@redux/store";
-import TabContainer from "react-bootstrap/TabContainer";
-import TabContent from "react-bootstrap/TabContent";
-import TabPane from "react-bootstrap/TabPane";
-import Wrapper from "src/layout/wrapper";
-import EditProfileImage from "../../../containers/community/details/description";
+import IntroArea from "@containers/intro";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
+import ProfileArea from "@containers/donations/details/profile";
 
 // Demo data
-import AuthorProfileArea from "@containers/author-profile";
 import donation from "../../../data/donations.json";
 
 const Author = () => (
@@ -20,8 +13,8 @@ const Author = () => (
         <SEO pageTitle="Author" />
         <Header />
         <main id="main-content">
-            <AuthorIntroArea data={donation} />
-            <AuthorProfileArea />
+            <IntroArea data={donation} />
+            <ProfileArea />
         </main>
         <Footer />
     </Wrapper>
