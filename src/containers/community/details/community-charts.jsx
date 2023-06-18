@@ -1,7 +1,6 @@
 import Piechart from "@components/charts/Piechart";
 
 const CommunityChart = ({ projectId, community }) => {
-    console.log(community);
     const GenderData = community?.summary?.map((type) => {
         return Object.entries(type)
             ?.map(([key, values]) => {
