@@ -162,6 +162,170 @@
     }
 }
 
+.single-donation-wrapper {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+
+    .thumbnail {
+        overflow: hidden;
+        width: 20%;
+        height: auto;
+
+        @media screen and (min-width: 576px) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 108px;
+            height: 108px;
+        }
+
+        a {
+            display: block;
+            overflow: hidden;
+
+            img {
+                transition: 0.4s;
+            }
+        }
+
+        img {
+            border-radius: 5px !important;
+        }
+    }
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .status {
+            font-weight: bold;
+            font-size: 14px;
+            position: absolute;
+            top: 15px;
+            right: -1px;
+            border-radius: 100px 5px 5px 100px;
+            padding: 5px 30px 5px 30px;
+            color: #ffff;
+            background: #11a35d;
+        }
+
+        .read-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @media #{$large-mobile} {
+                display: block;
+            }
+
+            img {
+                @media #{$large-mobile} {
+                    width: 100%;
+                }
+            }
+        }
+
+        .icone-area {
+
+            span {
+                font-size: 20px;
+                color: #878787;
+                font-weight: 400;
+            }
+        }
+
+        .content {
+            margin-left: 20px;
+
+            @media #{$large-mobile} {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+
+            h6 {
+                &.title {
+                    margin-bottom: 5px;
+                }
+            }
+
+            p {
+                margin-bottom: 5px;
+                font-size: 20px;
+                color: #7f859d;
+
+                @media #{$large-mobile} {
+                    margin-bottom: 20px;
+                    padding-right: 15px;
+                }
+
+                @media #{$small-mobile} {
+                    margin-bottom: 10px;
+                    padding-right: 7px;
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+
+                span {
+                    color: var(--color-primary);
+                }
+            }
+
+            .time-maintane {
+                display: flex;
+
+                @media #{$large-mobile} {
+                    flex-direction: column;
+                }
+
+                .time {
+                    margin-right: 10px;
+                }
+
+                .data {
+                    display: flex;
+                    align-items: center;
+
+                    @media #{$large-mobile} {
+                        margin-bottom: 7px;
+                    }
+
+                    svg,
+                    i {
+                        width: 18px;
+                        font-size: 18px;
+                        height: auto;
+                        margin-right: 7px;
+                    }
+
+                    a {
+                        color: var(--color-body);
+
+                        &:hover {
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .thumbnail {
+            a {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
 .mb_dec--15 {
     margin-bottom: -15px;
 }

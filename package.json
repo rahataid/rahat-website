@@ -54,6 +54,7 @@
         "react": "^18.2.0",
         "react-apexcharts": "^1.4.0",
         "react-bootstrap": "^2.1.1",
+        "react-chrono": "^2.2.0",
         "react-countdown": "^2.3.2",
         "react-countup": "^6.1.1",
         "react-dom": "^18.2.0",
