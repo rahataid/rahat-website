@@ -9,6 +9,7 @@ import { wrapper } from "@redux/store";
 // Demo data
 
 export default function Donations({ donations }) {
+    console.log(donations);
     return (
         <Wrapper>
             <SEO pageTitle="Donations" />

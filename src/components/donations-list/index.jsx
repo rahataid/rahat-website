@@ -1,8 +1,10 @@
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 
 const Activity = ({ data, className }) => {
     return (
+        // <Link to={`donations/${data?.id}`}>
         <div
             className={clsx("single-donation-wrapper", className)}
             style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
@@ -43,6 +45,7 @@ const Activity = ({ data, className }) => {
                 </div>
             </div>
         </div>
+        // </Link>
     );
 };
 
