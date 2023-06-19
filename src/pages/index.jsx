@@ -4,15 +4,15 @@ import Milestones from "@components/milestones";
 import OurPlatform from "@components/our-platform";
 import SEO from "@components/seo";
 import WeAre from "@components/we-are";
-import VideoArea from "@components/youtube-video";
-import HeroArea from "@containers/hero/layout-09";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
+import HeroArea from "@containers/hero";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import { normalizedData } from "@utils/methods";
 import Wrapper from "src/layout/wrapper";
 
 // Demo data
-import homepageData from "../data/homepages/home-09.json";
+import homepageData from "../data/home.json";
+import VideoArea from "@components/youtube-video";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
@@ -40,3 +40,4 @@ const Home = () => {
 };
 
 export default Home;
+
