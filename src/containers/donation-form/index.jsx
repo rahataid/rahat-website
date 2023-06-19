@@ -37,15 +37,19 @@ const CreateNewArea = ({ className, space }) => {
     const handleProductModal = () => {
         setShowProductModal(false);
     };
-    const options = (inputValue, cb) => {
-        setTimeout(async () => {
-            await dispatch(getOrganizations({ name: inputValue }));
+
+    const options = async (inputValue, cb) => {
+        await dispatch(getOrganizations({ name: inputValue }));
+
+        setTimeout(() => {
             cb(
-                null,
-                organizations.filter((data) => {
+                organizations.map((data) => {
                     return { label: data.name, value: data.id };
                 })
             );
+            if (!organizations[0]) {
+                setShowProductModal(true);
+            }
         }, 1000);
     };
 
@@ -56,14 +60,9 @@ const CreateNewArea = ({ className, space }) => {
         }
     };
 
-    console.log({ organizations });
     const handleOrganizationChange = (e) => {
-        setOrganizationName(e.target.value);
-        setTimeout(() => {
-            dispatch(getOrganizations({ name: organizationName }));
-        }, 2000);
+        setOrganizationId(e.value);
     };
-
     const onSubmit = (data, e) => {
         const { target } = e;
         const submitBtn =
@@ -79,7 +78,7 @@ const CreateNewArea = ({ className, space }) => {
             reset();
             setSelectedImage();
         }
-        console.log(data);
+        data.donorId = organizationId;
         dispatch(addDonationTransaction(data));
     };
 
@@ -102,7 +101,11 @@ const CreateNewArea = ({ className, space }) => {
                                                     Organization Name
                                                 </label>
                                                 <AsyncSelect
+                                                    id="donorId"
                                                     loadOptions={options}
+                                                    onChange={
+                                                        handleOrganizationChange
+                                                    }
                                                 />
 
                                                 {/* {organizations.map((result) => (
