@@ -2,9 +2,9 @@ import AboutUs from "@components/about-us";
 import Milestones from "@components/milestones";
 import SEO from "@components/seo";
 import WeAre from "@components/we-are";
-import HeroArea from "@containers/hero/layout-09";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
+import HeroArea from "@containers/hero";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import { normalizedData } from "@utils/methods";
 import Wrapper from "src/layout/wrapper";
 
