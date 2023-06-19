@@ -10,7 +10,7 @@ import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
@@ -38,18 +38,21 @@ const CreateNewArea = ({ className, space }) => {
         setShowProductModal(false);
     };
 
-    const options = async (inputValue, cb) => {
-        await dispatch(getOrganizations({ name: inputValue }));
+    console.log(organizations);
+    const options = (inputValue, cb) => {
+        setTimeout(async () => {
+            await dispatch(getOrganizations({ name: inputValue }));
 
-        setTimeout(() => {
-            cb(
-                organizations.map((data) => {
-                    return { label: data.name, value: data.id };
-                })
-            );
-            if (!organizations[0]) {
-                setShowProductModal(true);
-            }
+            setTimeout(() => {
+                cb(
+                    organizations.map((data) => {
+                        return { label: data.name, value: data.id };
+                    })
+                );
+                if (!organizations[0]) {
+                    setShowProductModal(true);
+                }
+            }, 2000);
         }, 1000);
     };
 
@@ -81,6 +84,7 @@ const CreateNewArea = ({ className, space }) => {
         data.donorId = organizationId;
         dispatch(addDonationTransaction(data));
     };
+    useEffect(() => {}, [organizations]);
 
     return (
         <>
