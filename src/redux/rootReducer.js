@@ -4,6 +4,7 @@ import { appSlice } from "./slices/app";
 import commmunityReducer from "./slices/community";
 import donationReducer from "./slices/donation";
 import organizationReducer from "./slices/organization";
+import blogsSlice from "./slices/blogs";
 // slices
 
 // ----------------------------------------------------------------------
@@ -44,6 +45,8 @@ const rootReducer = combineReducers({
     [organizationReducer.name]: organizationReducer.reducer,
     [donationReducer.name]: donationReducer.reducer,
     [appSlice.name]: appSlice.reducer,
+    [blogsSlice.name]: blogsSlice.reducer,
 });
 
 export { rootPersistConfig, rootReducer };
+

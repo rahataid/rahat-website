@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const SocialWidget = ({ socials }) => (
     <ul className="social-copyright">
         {socials?.map((social) => (
-            <li key={social.id}>
+            <li>
                 <a
                     href={social.link}
                     target="_blank"
@@ -30,3 +30,4 @@ SocialWidget.propTypes = {
 };
 
 export default SocialWidget;
+

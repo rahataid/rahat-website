@@ -66,7 +66,7 @@ Blog style
                         color: var(--color-lightn);
                         font-weight: 500;
                         font-family: var(--font-primary);
-                        font-size: 13px;
+                        font-size: 14px;
                         i {
                             margin-right: 2px;
                             font-size: 13px;
@@ -75,8 +75,16 @@ Blog style
                     }
                 }
             }
+
             .title {
                 margin: 0;
+                font-weight: 400;
+                font-size: 36px;
+
+                @media screen and (max-width: 767px) {
+                    font-size: 20px;
+                }
+
                 a {
                     transition: var(--transition);
                     color: var(--color-lightn);
@@ -128,3 +136,4 @@ Blog style
 .single-column-blog .pagination {
     margin-top: 10px !important;
 }
+

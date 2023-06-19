@@ -16,7 +16,7 @@ const WeAre = () => (
                 </h5>
             </div>
             <div className="rn-weAre-one color-shape-7">
-                <div className="row d-flex justify-content-center">
+                <div className="row g-5 d-flex justify-content-center">
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <img

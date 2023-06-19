@@ -1,13 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import Image from "next/image";
-import LogoWidget from "@widgets/logo-widget";
-import NewsletterWidget from "@widgets/newsletter-widget";
-import QuicklinkWidget from "@widgets/quicklink-widget";
-import InformationWidget from "@widgets/information-widget";
-import SoldOutWidget from "@widgets/sold-out-widget";
 import FooterLinkWidget from "@widgets/footer-link-widget";
-import SocialWidget from "@widgets/social-widget";
 import { ItemType } from "@utils/types";
 
 // Demo data
@@ -24,6 +17,7 @@ const Footer = ({ space, className, data }) => (
                 space === 3 && "mt--100 mt_md--80 mt_sm--80",
                 className
             )}
+            id="footer"
         >
             <div className="container">
                 <div className="row justify-content-center">

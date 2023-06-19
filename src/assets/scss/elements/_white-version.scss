@@ -38,13 +38,41 @@ html[data-theme="light"] body {
     .nice-select .option,
     .rn-collection-inner-one .collection-wrapper .collection-deg span.items,
     .footer-list-one .single-list a,
-    .rn-icon-list .icon-box>a,
+    .rn-icon-list .icon-box > a,
     .mainmenu-nav .mainmenu li a,
     .mainmenu-nav .mainmenu li .submenu li a,
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a,
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a svg,
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a i,
-    .rn-icon-list.user-account .rn-dropdown .rn-product-inner ul.product-list .single-product-list span,
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a,
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a
+        svg,
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a
+        i,
+    .rn-icon-list.user-account
+        .rn-dropdown
+        .rn-product-inner
+        ul.product-list
+        .single-product-list
+        span,
     .rn-icon-list.user-account .rn-dropdown .list-inner li a,
     .rn-icon-list.user-account .rn-dropdown .list-inner li button,
     .widget-content-wrapper .input-group input,
@@ -76,8 +104,8 @@ html[data-theme="light"] body {
     .footer-for-left-sticky-header .inner p a,
     .rn-check-box .rn-check-box-label,
     nav.pagination-wrapper .pagination,
-    input[type="checkbox"]~label,
-    input[type="radio"]~label,
+    input[type="checkbox"] ~ label,
+    input[type="radio"] ~ label,
     .single-activity-wrapper .inner .content .time-maintane .data a,
     .rbt-single-widget.widget_recent_entries .inner span,
     .comment-list .comment .comment-img .time-spent,
@@ -119,8 +147,17 @@ html[data-theme="light"] body {
     .left-header-style .authore-profile .au-content p.name,
     .page-title-area h3,
     .btn-transparent,
-    .author-wrapper .author-inner .rn-author-info-content .social-follw .user-name,
-    .author-wrapper .author-inner .rn-author-info-content .follow-area .follow span,
+    .author-wrapper
+        .author-inner
+        .rn-author-info-content
+        .social-follw
+        .user-name,
+    .author-wrapper
+        .author-inner
+        .rn-author-info-content
+        .follow-area
+        .follow
+        span,
     .wallet-wrapper .inner .content .title,
     .top-seller-inner-one .top-seller-wrapper .top-seller-content span a,
     .popup-mobile-menu .inner .header-top .close-menu .close-button,
@@ -146,6 +183,19 @@ html[data-theme="light"] body {
     }
 
     .category-style-one:hover {
+        background: var(--color-primary);
+
+        i,
+        span.category-label {
+            color: var(--color-white);
+        }
+    }
+
+    .category-style-one-custom span.category-label {
+        color: var(--color-dark);
+    }
+
+    .category-style-one-custom:hover {
         background: var(--color-primary);
 
         i,
@@ -198,8 +248,24 @@ html[data-theme="light"] body {
         }
     }
 
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover svg,
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover i {
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a:hover
+        svg,
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a:hover
+        i {
         color: var(--color-white);
     }
 
@@ -265,7 +331,6 @@ html[data-theme="light"] body {
         background: var(--color-white);
     }
 
-
     .slick-dots li button,
     .left-header-style,
     .accordion .accordion-item .accordion-body {
@@ -284,9 +349,9 @@ html[data-theme="light"] body {
     }
 
     .search-form-wrapper .form-control,
-    .rn-icon-list .icon-box>a,
+    .rn-icon-list .icon-box > a,
     .my_switcher,
-    .footer-recent-post li+li.recent-post,
+    .footer-recent-post li + li.recent-post,
     .widget-content-wrapper .widget-bottom,
     .rn-icon-list.user-account .rn-dropdown .add-fund-button,
     .single-notice .thumbnail a img,
@@ -297,34 +362,45 @@ html[data-theme="light"] body {
     .widge-post ul li,
     .widge-tag .tag-wrapper a.badge,
     .popup-mobile-menu .inner .header-top,
-    .popup-mobile-menu .mainmenu li+li,
+    .popup-mobile-menu .mainmenu li + li,
     .popup-mobile-menu .mainmenu .mega-menu-item li:last-child,
     .default-exp-wrapper,
     .rn-breadcrumb-inner,
-    .share-btn-activation .share-btn-setting .btn-setting-text+.btn-setting-text,
+    .share-btn-activation
+        .share-btn-setting
+        .btn-setting-text
+        + .btn-setting-text,
     .top-seller-inner-one .top-seller-wrapper .thumbnail a,
     .title-badge,
     .tagcloud a,
-    .rn-icon-list .icon-box>a,
-    .rn-icon-list .icon-box>button,
+    .rn-icon-list .icon-box > a,
+    .rn-icon-list .icon-box > button,
     input,
     button,
     select,
     textarea,
     .social-share-default li a .icon,
     .copy-right-one,
-    .nice-select .option+.option,
+    .nice-select .option + .option,
     .product-share-wrapper .profile-share a img,
     .upload-area label,
     nav.pagination-wrapper .pagination,
-    .product-tab-wrapper .rn-pd-rt-content button.nav-link.active .rn-pd-sm-thumbnail,
+    .product-tab-wrapper
+        .rn-pd-rt-content
+        button.nav-link.active
+        .rn-pd-sm-thumbnail,
     .rn-comment-form .inner .rnform-group textarea,
     .box-table,
     .left-header-style .authore-profile .thumbnail img,
     .hamberger button.hamberger-button,
     .tab-content-edit-wrapepr .nuron-information .profile-form-wrapper input,
     .tab-content-edit-wrapepr .nuron-information .edit-bio-area textarea,
-    .tab-content-edit-wrapepr .nuron-information .profile-change .profile-left .profile-image img,
+    .tab-content-edit-wrapepr
+        .nuron-information
+        .profile-change
+        .profile-left
+        .profile-image
+        img,
     .odometer-area-slide,
     .odometer-area-slide .single-odometer,
     .nuron-expo-filter-widget .widget-title,
@@ -345,8 +421,8 @@ html[data-theme="light"] body {
         background: var(--color-border-white);
     }
 
-    .rbt-single-widget.widget_categories ul li+li,
-    .rbt-single-widget.widget_recent_entries ul li+li {
+    .rbt-single-widget.widget_categories ul li + li,
+    .rbt-single-widget.widget_recent_entries ul li + li {
         border-top: 1px solid var(--color-border-white);
     }
 
@@ -357,7 +433,10 @@ html[data-theme="light"] body {
     .lg-product_tab-pane,
     .product-tab-nav .nav,
     .tab-content-edit-wrapepr .tab-pane,
-    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
+    .tab-content-edit-wrapepr
+        .personal-info-wrapper
+        .profile-form-wrapper
+        input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .input-two-wrapper .profile-edit-select,
     .input-two-wrapper .phone-number input,
@@ -371,6 +450,14 @@ html[data-theme="light"] body {
     .rbt-single-widget,
     .left-nav .nav.nav-tabs,
     .category-style-one {
+        background: var(--color-white);
+    }
+
+    .slider-style-3 .wrapper,
+    .banner-style-4 .slider,
+    .rbt-single-widget,
+    .left-nav .nav.nav-tabs,
+    .category-style-one-custom {
         background: var(--color-white);
     }
 
@@ -424,14 +511,20 @@ html[data-theme="light"] body {
     .form-wrapper-one textarea,
     .rn-footer-one .input-group input,
     .rn-top-bar-area .input-group input,
-    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
+    .tab-content-edit-wrapepr
+        .personal-info-wrapper
+        .profile-form-wrapper
+        input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .role-area input,
     .input-two-wrapper .phone-number input {
         background: var(--color-gray-2);
     }
 
-    .tab-content-edit-wrapepr .personal-info-wrapper .profile-form-wrapper input,
+    .tab-content-edit-wrapepr
+        .personal-info-wrapper
+        .profile-form-wrapper
+        input,
     .tab-content-edit-wrapepr .personal-info-wrapper .edit-bio-area textarea,
     .role-area input,
     .input-two-wrapper .phone-number input,
@@ -638,7 +731,6 @@ html[data-theme="light"] body nav.pagination-wrapper .pagination,
 html[data-theme="light"] body .product-tab-nav .nav {
     background: var(--color-white);
     font-size: 24px;
-
 }
 
 html[data-theme="light"] body .nice-select::after {
@@ -654,7 +746,6 @@ html[data-theme="light"] body .nice-select::after {
 }
 
 html[data-theme="light"] body {
-
     //product area
     .product-share-wrapper {
         .share-btn {
@@ -767,7 +858,7 @@ html[data-theme="light"] body {
     }
 
     // back to top
-    .backto-top>div {
+    .backto-top > div {
         background-color: var(--color-primary);
 
         &:hover {
@@ -782,7 +873,6 @@ html[data-theme="light"] body {
     }
 
     nav.pagination-wrapper {
-
         .pagination li a,
         .pagination li button {
             background: var(--color-gray-2);
@@ -1118,8 +1208,8 @@ html[data-theme="light"] body {
     }
 
     // check box
-    input[type="checkbox"]~label::before,
-    input[type="radio"]~label::before {
+    input[type="checkbox"] ~ label::before,
+    input[type="radio"] ~ label::before {
         background-color: var(--color-border-white);
     }
 
@@ -1179,6 +1269,15 @@ html[data-theme="light"] body {
     }
 
     .single-counter-up {
+        background: var(--color-white);
+        border: none;
+
+        .botton-title {
+            color: var(--color-light-heading);
+        }
+    }
+
+    .single-counter-up-custom {
         background: var(--color-white);
         border: none;
 
@@ -1267,7 +1366,9 @@ html[data-theme="light"] body {
                                         color: var(--color-white) !important;
 
                                         svg {
-                                            color: var(--color-white) !important;
+                                            color: var(
+                                                --color-white
+                                            ) !important;
                                         }
                                     }
 
@@ -1291,12 +1392,20 @@ html[data-theme="light"] body {
                                         li {
                                             a {
                                                 &:hover {
-                                                    color: var(--color-white) !important;
-                                                    background: var(--color-primary);
+                                                    color: var(
+                                                        --color-white
+                                                    ) !important;
+                                                    background: var(
+                                                        --color-primary
+                                                    );
 
                                                     svg {
-                                                        color: var(--color-primary);
-                                                        background: var(--color-white);
+                                                        color: var(
+                                                            --color-primary
+                                                        );
+                                                        background: var(
+                                                            --color-white
+                                                        );
                                                     }
                                                 }
                                             }
@@ -1312,7 +1421,14 @@ html[data-theme="light"] body {
 
         &.header--fixed {
             &.position-absolute {
-                .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
+                .mainmenu-nav
+                    .mainmenu
+                    li.with-megamenu
+                    .rn-megamenu
+                    .wrapper
+                    .mega-menu-item
+                    li
+                    a {
                     color: var(--color-body);
 
                     i,
@@ -1350,7 +1466,14 @@ html[data-theme="light"] body {
 
         &.sticky {
             &.position-absolute {
-                .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
+                .mainmenu-nav
+                    .mainmenu
+                    li.with-megamenu
+                    .rn-megamenu
+                    .wrapper
+                    .mega-menu-item
+                    li
+                    a {
                     color: var(--color-body);
 
                     i,
@@ -1397,11 +1520,15 @@ html[data-theme="light"] body {
                                                     }
 
                                                     &:hover {
-                                                        color: var(--color-white) !important;
+                                                        color: var(
+                                                            --color-white
+                                                        ) !important;
 
                                                         i,
                                                         svg {
-                                                            color: var(--color-primary) !important;
+                                                            color: var(
+                                                                --color-primary
+                                                            ) !important;
                                                         }
                                                     }
                                                 }
@@ -1417,7 +1544,15 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.position-absolute .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a {
+    .rn-header.header--fixed.position-absolute
+        .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a {
         color: #bbb9b9;
 
         i,
@@ -1426,7 +1561,14 @@ html[data-theme="light"] body {
         }
     }
 
-    .mainmenu-nav .mainmenu li.with-megamenu .rn-megamenu .wrapper .mega-menu-item li a:hover {
+    .mainmenu-nav
+        .mainmenu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper
+        .mega-menu-item
+        li
+        a:hover {
         color: var(--color-white) !important;
         background: var(--color-primary);
 
@@ -1483,7 +1625,9 @@ html[data-theme="light"] body {
 
                                         &:hover {
                                             background: var(--color-primary);
-                                            color: var(--color-white) !important;
+                                            color: var(
+                                                --color-white
+                                            ) !important;
 
                                             svg {
                                                 background: var(--color-white);
@@ -1528,7 +1672,9 @@ html[data-theme="light"] body {
                             .with-megamenu {
                                 .rn-megamenu {
                                     .wrapper {
-                                        background: var(--color-white) !important;
+                                        background: var(
+                                            --color-white
+                                        ) !important;
                                     }
                                 }
                             }
@@ -1539,11 +1685,21 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.position-absolute .mainmenu-nav .primary-menu li.with-megamenu .rn-megamenu .wrapper {
+    .rn-header.header--fixed.position-absolute
+        .mainmenu-nav
+        .primary-menu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper {
         background: #00000042 !important;
     }
 
-    .rn-header.header--fixed.position-absolute.sticky .mainmenu-nav .primary-menu li.with-megamenu .rn-megamenu .wrapper {
+    .rn-header.header--fixed.position-absolute.sticky
+        .mainmenu-nav
+        .primary-menu
+        li.with-megamenu
+        .rn-megamenu
+        .wrapper {
         background: #fff !important;
 
         .mega-menu-item {
@@ -1559,7 +1715,11 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.position-absolute.header--fixed.sticky .mainmenu-nav .primary-menu li.nav-item .submenu {
+    .rn-header.position-absolute.header--fixed.sticky
+        .mainmenu-nav
+        .primary-menu
+        li.nav-item
+        .submenu {
         background: var(--color-white) !important;
 
         li {
@@ -1573,7 +1733,11 @@ html[data-theme="light"] body {
         }
     }
 
-    .rn-header.header--fixed.sticky .mainmenu-nav .primary-menu li.nav-item .submenu {
+    .rn-header.header--fixed.sticky
+        .mainmenu-nav
+        .primary-menu
+        li.nav-item
+        .submenu {
         background: var(--color-white) !important;
     }
 
@@ -1742,12 +1906,23 @@ html[data-theme="light"] body {
         }
     }
 
-    .slider-style-7 .rn-banner-wrapper .item-description .product-share-wrapper .profile-share a.more-author-text,
-    .game-banner-slick-wrapper .product-share-wrapper .profile-share a.more-author-text {
+    .slider-style-7
+        .rn-banner-wrapper
+        .item-description
+        .product-share-wrapper
+        .profile-share
+        a.more-author-text,
+    .game-banner-slick-wrapper
+        .product-share-wrapper
+        .profile-share
+        a.more-author-text {
         color: rgb(185, 184, 184);
     }
 
-    .game-banner-short-slick-wrapper .slider-style-7 .rn-banner-wrapper .item-description {
+    .game-banner-short-slick-wrapper
+        .slider-style-7
+        .rn-banner-wrapper
+        .item-description {
         background: #504b7852;
     }
 
@@ -1789,15 +1964,19 @@ html[data-theme="light"] body {
 
     .with-down-shadow {
         &:before {
-            background-image: linear-gradient(to bottom,
-                    #0c0c2100 0%,
-                    #edf0f2 87%);
+            background-image: linear-gradient(
+                to bottom,
+                #0c0c2100 0%,
+                #edf0f2 87%
+            );
         }
 
         &:after {
-            background-image: linear-gradient(to top,
-                    #0c0c2100 0%,
-                    #edf0f2 87%);
+            background-image: linear-gradient(
+                to top,
+                #0c0c2100 0%,
+                #edf0f2 87%
+            );
         }
     }
 
@@ -1813,7 +1992,6 @@ html[data-theme="light"] body {
 
     .banner_xii {
         .place-bet-area {
-
             .winning-bid h6,
             .left-bid h6 {
                 color: var(--color-light-heading);
@@ -1827,7 +2005,12 @@ html[data-theme="light"] body {
                 }
             }
 
-            &.into-banner .bid-list .top-seller-inner-one .top-seller-wrapper .top-seller-content .count-number {
+            &.into-banner
+                .bid-list
+                .top-seller-inner-one
+                .top-seller-wrapper
+                .top-seller-content
+                .count-number {
                 color: var(--color-body);
             }
         }
@@ -1880,7 +2063,6 @@ html[data-theme="light"] body {
 
 html[data-theme="light"] body {
     .padding-controler-slide-product-2 {
-
         a h1.title,
         .top-bid-price span.latest-bid {
             color: var(--color-white);
@@ -1909,3 +2091,4 @@ html[data-theme="light"] body {
         }
     }
 }
+

@@ -1,9 +1,8 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
-import SectionTitle from "@components/section-title/layout-02";
 import { TextType, SectionTitleType } from "@utils/types";
 
-const AboutUs = ({ space, className, data }) => (
+const AboutUs = ({ space, className }) => (
     <div
         className={clsx(
             "rn-about-Quote-area",

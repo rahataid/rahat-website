@@ -21,6 +21,19 @@
                     }
                 }
             ]
+        },
+        {
+            "section": "video-section",
+            "title": "Simplifying Access To Cash Relief",
+            "subtitle": "In Jaleshwor Municipality in Mahottari District, through the collaborative efforts of UNICEF and Rumsan - powered by support from UNICEF Innovation - blockchain technology is now being utilized to provide timely cash transfers to those in need.",
+            "images": [
+                {
+                    "src": "/images/bg/unicef-rahat-youtube-banner.jpg"
+                }
+            ],
+            "video": {
+                "videoId": "lsuPk_9fcHk"
+            }
         }
     ]
 }

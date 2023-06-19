@@ -3,18 +3,32 @@ const path = require("path");
 module.exports = {
     reactStrictMode: true,
     sassOptions: {
-        includePaths: [path.join(__dirname, "./src/assets/scss")],
+        includePaths: [path.join(__dirname, "src/assets/scss")],
     },
-    image: {
-        domains: ["www.ifrc.org"],
+    images: {
+        domains: [
+            "drive.google.com",
+            "assets.rumsan.com",
+            "rahat-rumsan.s3.amazonaws.com",
+            "esatya.s3.amazonaws.com",
+        ],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+        // Ignore specific modules to avoid unnecessary warnings
         config.ignoreWarnings = [
             ...(config.ignoreWarnings || []),
-            {
-                module: /magic-sdk|@walletconnect\/web3-provider|@web3auth\/web3auth/,
-            },
+            /magic-sdk/,
+            /@walletconnect[\\/]web3-provider/,
+            /@web3auth[\\/]web3auth/,
+            /@walletconnect[\\/]universal-provider/,
         ];
+
+        // Exclude 'react-native' from resolving for @walletconnect/universal-provider
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            reactNative: "react-native-web",
+        };
+
         return config;
     },
     eslint: {
@@ -23,3 +37,4 @@ module.exports = {
         ignoreDuringBuilds: true,
     },
 };
+

@@ -4,6 +4,9 @@ import Header from "@layout/header/header-01";
 import AboutUs from "@components/about-us";
 import WeAre from "@components/we-are";
 import Milestones from "@components/milestones";
+import VideoArea from "@components/youtube-video";
+import Benefits from "@components/benefits";
+import OurPlatform from "@components/our-platform";
 import Footer from "@layout/footer/footer-01";
 import HeroArea from "@containers/hero/layout-09";
 import { normalizedData } from "@utils/methods";
@@ -15,7 +18,7 @@ export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
 }
 
-const Home09 = () => {
+const Home = () => {
     const content = normalizedData(homepageData?.content || []);
 
     return (
@@ -28,10 +31,13 @@ const Home09 = () => {
             <AboutUs />
             <WeAre />
             <Milestones />
+            <VideoArea data={content["video-section"]} />
+            <Benefits />
+            <OurPlatform />
             <Footer />
         </Wrapper>
     );
 };
 
-export default Home09;
+export default Home;
 

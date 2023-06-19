@@ -36,6 +36,28 @@
     }
 }
 
+.single-counter-up-custom {
+    padding: 25px 0 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background: var(--background-color-1);
+
+    .number {
+        font-size: 65px;
+        color: var(--color-primary);
+    }
+
+    .botton-title {
+        font-size: 18px;
+        color: var(--color-light);
+        margin-top: -10px;
+
+        @media #{$small-mobile} {
+            font-size: 14px;
+        }
+    }
+}
+
 .wETH {
     position: relative;
     display: inline-block;
@@ -57,7 +79,7 @@
         isolation: isolate;
         inset: 0;
 
-        &>span {
+        & > span {
             z-index: -1;
         }
 
@@ -256,3 +278,10 @@
         }
     }
 }
+
+.custom-text-about-us {
+    text-align: center;
+    margin: -5px auto 60px;
+    max-width: 720px;
+}
+
