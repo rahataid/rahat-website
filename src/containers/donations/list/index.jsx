@@ -1,4 +1,4 @@
-import TransactionCard from "@components/donations-list";
+import TransactionCard from "@components/cards/transaction";
 import clsx from "clsx";
 
 const ActivityArea = ({ space, className, data }) => {
