@@ -1,90 +1,53 @@
-import { loginWithCreds } from "@redux/slices/app";
-import Button from "@ui/button";
+import {
+    requestOtp,
+    selectError,
+    selectOtp,
+    verifyOtp,
+} from "@redux/slices/app";
 import ErrorText from "@ui/error-text";
-import { setLoginMethod } from "@utils/sessionManager";
-import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
-import { useRouter } from "next/router";
 import PropTypes from "prop-types";
-import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { EmailForm } from "./EmailForm";
+import { OtpForm } from "./OtpForm";
 
 const LoginForm = ({ className }) => {
     const dispatch = useDispatch();
-    const { provider } = useWalletConnector();
-    const router = useRouter();
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm({
-        mode: "onChange",
-    });
+    const errorSer = useSelector(selectError);
+    const otp = useSelector(selectOtp);
+    const [email, setEmail] = useState(null);
+    // const { provider } = useWalletConnector();
 
-    const onSubmit = (data, e) => {
+    const [hasOtp, setHasOtp] = useState(false);
+
+    const onEmailSubmit = async (data, e) => {
         e.preventDefault();
-        dispatch(loginWithCreds(data.email));
-        setLoginMethod("NCW");
-        // eslint-disable-next-line no-console
-        // router.push({
-        //     pathname: "/",
-        // });
+        await dispatch(requestOtp(data));
+        if (otp) {
+            setHasOtp(true);
+            setEmail(data.email);
+        }
     };
 
-    const EmailForm = () => (
-        <div className="mb-5">
-            <label htmlFor="email" className="form-label">
-                Email address
-            </label>
-            <input
-                type="email"
-                id="email"
-                {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                        message: "invalid email address",
-                    },
-                })}
-            />
-            {errors.exampleInputEmail1 && (
-                <ErrorText>{errors.email?.message}</ErrorText>
-            )}
-        </div>
-    );
-
-    // const OTPForm = (
-    //     <div className="mb-5">
-    //         <label htmlFor="exampleInputEmail1" className="form-label">
-    //             OTP
-    //         </label>
-    //         <input
-    //             type="text"
-    //             id="exampleInputEmail1"
-    //             {...register("exampleInputEmail1", {
-    //                 required: "OTP is required",
-    //             })}
-    //         />
-    //         {errors.exampleInputEmail1 && (
-    //             <ErrorText>{errors.exampleInputEmail1?.message}</ErrorText>
-    //         )}
-    //     </div>
-    // );
+    const onOtpSubmit = async (data, e) => {
+        e.preventDefault();
+        const sendData = {
+            email,
+            otp: data.otp,
+        };
+        await dispatch(verifyOtp(sendData));
+    };
 
     return (
         <div className={clsx("form-wrapper-one", className)}>
             <h4>Login</h4>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <EmailForm />
-                {/* <OTPForm /> */}
+            {errorSer?.message && <ErrorText>{errorSer?.message}</ErrorText>}
 
-                <Button type="submit" size="medium" className="mr--15">
-                    Log In
-                </Button>
-                <Button path="/sign-up" color="primary-alta" size="medium">
-                    Sign Up
-                </Button>
-            </form>
+            {!hasOtp && (
+                <EmailForm errors={errorSer} onSubmit={onEmailSubmit} />
+            )}
+            {hasOtp && <OtpForm errors={errorSer} onSubmit={onOtpSubmit} />}
         </div>
     );
 };

@@ -9,6 +9,7 @@ import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
+import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import headerData from "../../../data/general/header-01.json";
 import menuData from "../../../data/general/menu-01.json";
@@ -44,7 +45,7 @@ const Header = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {/* {!isAuthenticated && (
+                            {!isAuthenticated && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
                                         <Button
@@ -59,7 +60,7 @@ const Header = ({ className }) => {
                                         </Button>
                                     </div>
                                 </div>
-                            )} */}
+                            )}
                             {isAuthenticated && (
                                 <div className="setting-option rn-icon-list user-account">
                                     <UserDropdown
