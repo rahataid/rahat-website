@@ -25,7 +25,7 @@ const ExploreProductArea = ({
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
                 <div className="row">
-                    <div className="d-flex align-items-center justify-content-between">
+                    <div className="d-flex align-items-center justify-content-between mb--25">
                         <div className="col-lg-6 col-md-6 col-sm-6 col-12">
                             <h3>Communities</h3>
                         </div>
