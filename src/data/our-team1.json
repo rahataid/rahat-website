@@ -1,0 +1,53 @@
+[
+    {
+        "id": "14",
+        "fname": "Rumee Singh",
+        "designation": "CEO",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:",
+        "link_linkedin": "",
+        "team_image": "https://assets.rumsan.com/rumsan-group/rumi-rahat-team.jpg"
+    },
+    {
+        "id": "15",
+        "fname": "Ashmita Manandhar",
+        "designation": "Project Manager",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:",
+        "link_linkedin": "",
+        "team_image": "https://assets.rumsan.com/rumsan-group/ashmita-rahat-team.jpg"
+    },
+    {
+        "id": "16",
+        "fname": "Subhana Shrestha",
+        "designation": "Stakeholder Manager",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:",
+        "link_linkedin": "",
+        "team_image": "https://assets.rumsan.com/rumsan-group/subhana-rahat-team.jpg"
+    },
+    {
+        "id": "17",
+        "fname": "Ruchin Singh",
+        "designation": "COO",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:",
+        "link_linkedin": "",
+        "team_image": "https://assets.rumsan.com/rumsan-group/ruchin-rahat-team.jpg"
+    },
+    {
+        "id": "18",
+        "fname": "Hima Tamang",
+        "designation": "Project Officer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:",
+        "link_linkedin": "",
+        "team_image": "https://assets.rumsan.com/rumsan-group/our-team-rahat-hima-tamang.jpg"
+    }
+]
+

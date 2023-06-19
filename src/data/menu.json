@@ -13,5 +13,57 @@
         "id": 3,
         "text": "Donations",
         "path": "/donations"
+    },
+    {
+        "id": 3,
+        "text": "About Us",
+        "path": "/about-us"
+    },
+    {
+        "id": 4,
+        "text": "Our Plartform",
+        "path": "/#our-platform"
+    },
+    {
+        "id": 5,
+        "text": "Contact Us",
+        "path": "/#footer"
+    },
+    {
+        "id": 5,
+        "text": "Blog",
+        "path": "/blog",
+        "submenu": [
+            {
+                "id": 51,
+                "text": "Blog Single Column",
+                "path": "/blog-single-column",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 52,
+                "text": "Blog Two Column",
+                "path": "/blog-col-two",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 53,
+                "text": "Blog Three Column",
+                "path": "/blog-col-three",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 54,
+                "text": "Blog Four Column",
+                "path": "/blog",
+                "icon": "feather-fast-forward"
+            },
+            {
+                "id": 55,
+                "text": "Blog Details",
+                "path": "/blog/blog-9",
+                "icon": "feather-fast-forward"
+            }
+        ]
     }
 ]

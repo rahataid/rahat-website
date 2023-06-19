@@ -12,3 +12,7 @@ const ASSET_VIEW_HOST = process.env.NEXT_PUBLIC_ASSET_VIEW_HOST || "";
 const ASSET_VIEW_FOLDER = process.env.NEXT_PUBLIC_ASSET_VIEW_FOLDER || "";
 
 export const ASSET_VIEW = ASSET_VIEW_HOST + "/" + ASSET_VIEW_FOLDER;
+export const BLOG_CMS_HOST = process.env.NEXT_PUBLIC_CMS_API || "";
+
+export const SMTP_USER = process.env.NEXT_PUBLIC_SMTP_USER || "";
+export const SMTP_PASS = process.env.NEXT_PUBLIC_SMTP_PASS || "";

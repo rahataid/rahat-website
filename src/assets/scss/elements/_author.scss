@@ -24,7 +24,6 @@
     display: flex;
     justify-content: flex-start;
 
-
     .author-inner {
         z-index: 100;
         position: relative;
@@ -198,7 +197,6 @@
     margin-right: -8px;
 
     .follow-button {
-
         svg,
         i {
             position: relative;
@@ -248,11 +246,11 @@
 }
 
 .rn-authore-profile-area {
-    .tab-content>.tab-pane {
+    .tab-content > .tab-pane {
         display: none !important;
     }
 
-    .tab-content>.active {
+    .tab-content > .active {
         display: flex !important;
     }
 }
@@ -278,7 +276,8 @@
         position: absolute;
         top: -5px;
         left: 50%;
-        transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+        transform: translateX(-50%) translateY(var(--translate-y, 0))
+            scale(var(--scale));
         transition: 150ms transform;
         transform-origin: bottom center;
     }
@@ -302,7 +301,6 @@
     }
 
     &:hover {
-
         &::before,
         &::after {
             --scale: 1;
@@ -398,3 +396,14 @@
         }
     }
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1;
+}
+

@@ -6,7 +6,12 @@ module.exports = {
         includePaths: [path.join(__dirname, "src/assets/scss")],
     },
     images: {
-        domains: ["drive.google.com", "assets.rumsan.com"],
+        domains: [
+            "drive.google.com",
+            "assets.rumsan.com",
+            "rahat-rumsan.s3.amazonaws.com",
+            "esatya.s3.amazonaws.com",
+        ],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
         // Ignore specific modules to avoid unnecessary warnings

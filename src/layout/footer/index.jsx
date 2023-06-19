@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import FooterLinkWidget from "@widgets/footer-link";
 import { ItemType } from "@utils/types";
+import FooterLinkWidget from "@widgets/footer-link";
+import clsx from "clsx";
+import PropTypes from "prop-types";
 
 // Demo data
 import footerData from "../../data/footer.json";
@@ -16,6 +16,7 @@ const Footer = ({ space, className, data }) => (
                 space === 3 && "mt--100 mt_md--80 mt_sm--80",
                 className
             )}
+            id="footer"
         >
             <div className="container">
                 <div className="row justify-content-center">
@@ -200,4 +201,3 @@ Footer.defaultProps = {
 };
 
 export default Footer;
-
