@@ -1,4 +1,4 @@
-import Transaction from "@components/cards/transaction";
+import TransactionCard from "@components/donations-list";
 import clsx from "clsx";
 
 const CommunityTransactions = ({ space, className, data }) => {
@@ -16,11 +16,15 @@ const CommunityTransactions = ({ space, className, data }) => {
                     <h3 className="title">Funds Distributed</h3>
                 </div>
                 <div className="row g-6 activity-direction">
-                    {data.map((transaction, index) => (
+                    {data.map((index) => (
                         <div key={index} className="col-lg-12 mb_dec--15">
-                            <Transaction
-                                data={transaction}
-                                status="offer" // Provide the appropriate status prop
+                            <TransactionCard
+                                donorImg={data.donorImg}
+                                donorName={data.donorName}
+                                description={data.description}
+                                date={data.date}
+                                status={data.status}
+                                amount={data.amount}
                             />
                         </div>
                     ))}
