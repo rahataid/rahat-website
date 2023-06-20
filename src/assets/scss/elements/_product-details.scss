@@ -399,7 +399,6 @@
 
         button {
             width: 150px;
-            height: 50px;
             border: none;
             color: var(--color-white);
             position: relative;
@@ -407,6 +406,7 @@
             border-radius: 6px;
             border: 1px dashed var(--color-border);
             transition: 0.3s;
+            font-size: 20px;
 
             @media #{$small-mobile} {
                 width: 100%;
