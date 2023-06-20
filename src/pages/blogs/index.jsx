@@ -1,8 +1,8 @@
 import React from "react";
 import Wrapper from "@layout/wrapper";
-import Header from "@layout/header/header-01";
+import Header from "@layout/header";
 import SEO from "@components/seo";
-import Footer from "@layout/footer/footer-01";
+import Footer from "@layout/footer";
 import BlogPage from "@components/blog-page";
 import { wrapper } from "@redux/store";
 import { getBlogs } from "@redux/slices/blogs";

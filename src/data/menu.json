@@ -26,6 +26,11 @@
     },
     {
         "id": 5,
+        "text": "Projects",
+        "path": "/project-showcase"
+    },
+    {
+        "id": 5,
         "text": "Contact Us",
         "path": "/#footer"
     },
@@ -67,3 +72,4 @@
         ]
     }
 ]
+

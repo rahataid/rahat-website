@@ -3,8 +3,8 @@ import clsx from "clsx";
 import Wrapper from "@layout/wrapper";
 import SEO from "@components/seo";
 import Image from "next/image";
-import Header from "@layout/header/header-01";
-import Footer from "@layout/footer/footer-01";
+import Header from "@layout/header";
+import Footer from "@layout/footer";
 import { getMonth } from "@utils/methods";
 import { ImageType } from "@utils/types";
 
