@@ -1,5 +1,5 @@
-import DonationPhotos from '@components/donation-photos';
-import Donations from "@components/donations-list";
+import DonationPhotos from "@components/donation-photos";
+// import Donations from "@components/donations-list";
 import { ProductType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -7,10 +7,8 @@ import Nav from "react-bootstrap/Nav";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
-import donations from "../../../data/donations.json";
 
 const ProfileArea = ({ className }) => {
-
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
             <TabContainer defaultActiveKey="nav-profile">
@@ -44,7 +42,7 @@ const ProfileArea = ({ className }) => {
 
                     <TabContent className="tab-content rn-bid-content">
                         <TabPane className="row d-flex g-5" eventKey="nav-home">
-                            <Donations data={donations} />
+                            {/* <Donations data={donations} /> */}
                         </TabPane>
                         <TabPane
                             className="row g-5 d-flex"

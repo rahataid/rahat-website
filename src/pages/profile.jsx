@@ -1,8 +1,8 @@
 import SEO from "@components/seo";
-import AuthorIntroArea from "@containers/intro";
 import AuthorProfileArea from "@containers/donations/details/profile";
-import Footer from "@layout/footer/footer-01";
-import Header from "@layout/header/header-01";
+import AuthorIntroArea from "@containers/intro";
+import Footer from "@layout/footer";
+import Header from "@layout/header";
 import Wrapper from "src/layout/wrapper";
 
 // Demo data
