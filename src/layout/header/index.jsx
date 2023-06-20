@@ -1,7 +1,6 @@
 import Logo from "@components/logo";
 import MainMenu from "@components/menu/main-menu";
 import MobileMenu from "@components/menu/mobile-menu";
-import UserDropdown from "@components/user-dropdown";
 import { useOffcanvas, useSticky } from "@hooks";
 import { selectIsAuthenticated, selectUser } from "@redux/slices/app";
 import BurgerButton from "@ui/burger-button";
@@ -9,7 +8,6 @@ import { useWalletConnector } from "@web3/hooks/useWalletConnector";
 import clsx from "clsx";
 import { useRouter } from "next/router";
 import PropTypes from "prop-types";
-import { Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import headerData from "../../data/header.json";
 import menuData from "../../data/menu.json";
@@ -45,7 +43,7 @@ const Header = ({ className }) => {
                             </div>
                         </div>
                         <div className="header-right">
-                            {!isAuthenticated && (
+                            {/* {!isAuthenticated && (
                                 <div className="setting-option header-btn">
                                     <div className="icon-box">
                                         <Button
@@ -60,8 +58,8 @@ const Header = ({ className }) => {
                                         </Button>
                                     </div>
                                 </div>
-                            )}
-                            {isAuthenticated && (
+                            )} */}
+                            {/* {isAuthenticated && (
                                 <div className="setting-option rn-icon-list user-account">
                                     <UserDropdown
                                         accounts={accounts}
@@ -69,7 +67,7 @@ const Header = ({ className }) => {
                                         details={user}
                                     />
                                 </div>
-                            )}
+                            )} */}
 
                             <div className="setting-option mobile-menu-bar d-block d-xl-none">
                                 <div className="hamberger">
@@ -101,4 +99,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
