@@ -1,10 +1,10 @@
-import PropTypes from "prop-types";
+import { SectionTitleType, TextType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
-import { TextType, SectionTitleType } from "@utils/types";
+import PropTypes from "prop-types";
+import MobileTeam from "../../data/mobile-our-team.json";
 import OurTeam from "../../data/our-team1.json";
 import Team from "../../data/our-team2.json";
-import MobileTeam from "../../data/mobile-our-team.json";
 
 const AboutUsDetails = ({ space, className }) => (
     <>
