@@ -360,7 +360,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        flex-basis: 55%;
+        flex-basis: 100%;
 
         @media #{$lg-layout} {
             flex-basis: 35%;
