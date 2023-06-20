@@ -111,17 +111,17 @@
     }
 }
 
-.author-wrapper-donation {
+.user-wrapper {
     display: flex;
     justify-content: center;
 
-    .author-inner {
+    .user-inner {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
-        .user-thumbnail {
+        .thumbnail {
             display: flex;
             justify-content: center;
             border: 15px solid #fff;
@@ -131,7 +131,7 @@
             margin: auto;
         }
 
-        .rn-author-info-content {
+        .rn-user-info-content {
             justify-content: center;
             display: flex;
             flex-direction: column;
@@ -143,6 +143,10 @@
                     font-weight: 600;
                     margin-bottom: 10px;
                 }
+            }
+
+            p {
+                margin-bottom: 5px;
             }
 
             .social-follw {
@@ -197,6 +201,7 @@
     margin-right: -8px;
 
     .follow-button {
+
         svg,
         i {
             position: relative;
@@ -246,11 +251,11 @@
 }
 
 .rn-authore-profile-area {
-    .tab-content > .tab-pane {
+    .tab-content>.tab-pane {
         display: none !important;
     }
 
-    .tab-content > .active {
+    .tab-content>.active {
         display: flex !important;
     }
 }
@@ -276,8 +281,7 @@
         position: absolute;
         top: -5px;
         left: 50%;
-        transform: translateX(-50%) translateY(var(--translate-y, 0))
-            scale(var(--scale));
+        transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
         transition: 150ms transform;
         transform-origin: bottom center;
     }
@@ -301,6 +305,7 @@
     }
 
     &:hover {
+
         &::before,
         &::after {
             --scale: 1;
@@ -406,4 +411,3 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     z-index: 1;
 }
-

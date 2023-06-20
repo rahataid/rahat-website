@@ -36,10 +36,10 @@ const AuthorIntroArea = ({ className, space, data }) => {
                 <div className="container">
                     <div className="row padding-tb-50 align-items-center d-flex">
                         <div className="col-lg-12">
-                            <div className="author-wrapper">
-                                <div className="author-inner">
+                            <div className="user-wrapper">
+                                <div className="user-inner">
                                     {data?.image?.src && (
-                                        <div className="user-thumbnail">
+                                        <div className="thumbnail">
                                             <Image
                                                 src={data.image.src}
                                                 alt={
@@ -52,52 +52,10 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                         </div>
                                     )}
 
-                                    <div className="rn-author-info-content">
+                                    <div className="rn-user-info-content">
                                         <h4 className="title">{data.name}</h4>
-                                        <a
-                                            href="https://twitter.com"
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="social-follw"
-                                        >
-                                            <i className="feather-twitter" />
-                                            <span className="user-name">
-                                                {data.twitter}
-                                            </span>
-                                        </a>
-                                        <div className="follow-area">
-                                            <div className="follow followers">
-                                                <span>
-                                                    {data.followers}{" "}
-                                                    <a
-                                                        href="https://twitter.com"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="color-body"
-                                                    >
-                                                        followers
-                                                    </a>
-                                                </span>
-                                            </div>
-                                            <div className="follow following">
-                                                <span>
-                                                    {data.following}{" "}
-                                                    <a
-                                                        href="https://twitter.com"
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                        className="color-body"
-                                                    >
-                                                        following
-                                                    </a>
-                                                </span>
-                                            </div>
-                                        </div>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis expedita, recusandae est dolorum consequatur voluptas, ab beatae deserunt voluptatem omnis ullam officia exercitationem dolores non sed eum dignissimos hic laboriosam.</p>
                                         <div className="author-button-area">
-                                            <span className="btn at-follw follow-button">
-                                                <i className="feather-user-plus" />
-                                                Follow
-                                            </span>
                                             <button
                                                 type="button"
                                                 className="btn at-follw share-button"
