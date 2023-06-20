@@ -1,3 +1,4 @@
+import Pagination from "@components/pagination";
 import Product from "@components/product/layout-01/community";
 import SearchForm from "@components/search-form/layout-01";
 import clsx from "clsx";
@@ -36,9 +37,9 @@ const ExploreProductArea = ({
                     </div>
                 </div>
                 <div className="row g-5">
-                    {communities?.length > 0 ? (
+                    {communities?.rows?.length > 0 ? (
                         <>
-                            {communities.map((community) => (
+                            {communities?.rows?.map((community) => (
                                 <div
                                     key={community.id}
                                     className="col-4 col-lg-4 col-md-6 col-sm-6 col-12"
@@ -64,6 +65,12 @@ const ExploreProductArea = ({
                     ) : (
                         <p>No item to show</p>
                     )}
+
+                    <Pagination
+                        pagination={communities?.meta}
+                        currentPage={communities?.meta?.currentPage}
+                        rootPage="/communities"
+                    />
                 </div>
             </div>
         </div>

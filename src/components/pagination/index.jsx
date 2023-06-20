@@ -3,14 +3,17 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import Anchor from "@ui/anchor";
 
-const Pagination = ({ className, currentPage, numberOfPages, rootPage }) => {
+const Pagination = ({ pagination, className, currentPage, rootPage }) => {
     const isFirst = currentPage === 1;
-    const isLast = currentPage === numberOfPages;
-    const previousPage =
-        currentPage - 1 === 1
-            ? rootPage
-            : `${rootPage}/page/${(currentPage - 1).toString()}`;
-    const nextPage = `${rootPage}/page/${(currentPage + 1).toString()}`;
+    const isLast = pagination?.lastPage === currentPage;
+    const numberOfPages = Math.ceil(pagination?.total / pagination?.perPage);
+    const previousPage = pagination?.prev
+        ? `${rootPage}?page=${(currentPage - 1).toString()}`
+        : rootPage;
+
+    const nextPage = pagination?.nextPage
+        ? `${rootPage}?page=${(currentPage + 1).toString()}`
+        : rootPage;
     return (
         <nav
             className={clsx("pagination-wrapper", className)}
