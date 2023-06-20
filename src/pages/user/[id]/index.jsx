@@ -6,8 +6,8 @@ import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 
 // Demo data, delete when data is fetched from API
-import authorData from "../../../data/author.json";
 import productData from "../../../data/products.json";
+import authorData from "../../../data/user.json";
 
 const UserProfile = () => (
     <Wrapper>
