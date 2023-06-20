@@ -1,4 +1,4 @@
-import Donations from "@components/donations-list";
+import TransactionCard from "@components/cards/transaction";
 import clsx from "clsx";
 
 const ActivityArea = ({ space, className, data }) => {
@@ -17,8 +17,16 @@ const ActivityArea = ({ space, className, data }) => {
                 </div>
                 <div className="row g-6 activity-direction">
                     <div className="col-lg-12 mb_dec--15">
-                        {data?.map((donation, index) => (
-                            <Donations key={index} data={donation} />
+                        {data?.map((index) => (
+                            <TransactionCard
+                                key={index}
+                                donorImg={data.donorImg}
+                                donorName={data.donorName}
+                                description={data.description}
+                                date={data.date}
+                                amount={data.amount}
+                                status={data.status}
+                            />
                         ))}
                     </div>
                 </div>

@@ -1,6 +1,4 @@
-import PropTypes from "prop-types";
 import clsx from "clsx";
-import { TextType, SectionTitleType } from "@utils/types";
 
 const AboutUs = ({ space, className }) => (
     <div
@@ -42,18 +40,10 @@ const AboutUs = ({ space, className }) => (
     </div>
 );
 
-AboutUs.propTypes = {
-    space: PropTypes.oneOf([1, 2]),
-    className: PropTypes.string,
-    data: PropTypes.shape({
-        section_title: SectionTitleType,
-        texts: PropTypes.arrayOf(TextType),
-    }),
-};
+AboutUs.propTypes = {};
 
 AboutUs.defaultProps = {
     space: 1,
 };
 
 export default AboutUs;
-

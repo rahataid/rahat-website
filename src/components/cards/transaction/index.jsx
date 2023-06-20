@@ -1,74 +1,45 @@
 import clsx from "clsx";
-import moment from "moment";
 import Image from "next/image";
-import PropTypes from "prop-types";
 
-const Transaction = ({ className, data }) => (
+const TransactionCard = ({ donorImg, donorName, description, date, amount, status, className }) => (
     <div
-        className={clsx("single-activity-wrapper mt--30", className)}
+        className={clsx("single-donation-wrapper", className)}
         style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
     >
         <div className="inner">
+            <div className="status">{status ?? "Approved"}</div>
             <div className="read-content">
                 <div className="thumbnail">
                     <Image
-                        src={data.donor.profile_image}
-                        alt={data.donor.name}
+                        src={donorImg ?? '/images/portfolio/rahat.jpeg'}
+                        alt={donorName || "Nft_Profile"}
                         width={500}
                         height={500}
                     />
                 </div>
-                <div className="content text-center">
-                    <h6 className="title">
-                        Donation offered by {data.donor.name}
-                    </h6>
+                <div className="content">
+                    <h6>{donorName ?? 'Rahat --> Red Cross'}</h6>
                     <p>
-                        Donation amount of {"NPR "}
-                        {data.amount} was offered to {data.donee.name}.
+                        {
+                            description ||
+                            "Donation for wounded soldiers of Ukraine.Donation for wounded soldiers of Ukraine."
+                        }
                     </p>
                     <div className="time-maintane">
                         <div className="time data">
                             <i className="feather-clock" />
                             <span>
-                                {moment
-                                    .unix(data.timestamp)
-                                    .format("DD/MM/YYYY")}
-                            </span>{" "}
-                        </div>
-                        <div className="user-area data text-center">
-                            <i className="feather-user" />
-                            <span>{data.donor.name}</span>
+                                {date ?? '12 June 2023'}
+                            </span>
                         </div>
                     </div>
                 </div>
-                <div className="thumbnail">
-                    <Image
-                        src={data.donee.profile_image}
-                        alt={data.donee.name}
-                        width={500}
-                        height={500}
-                    />
-                </div>
+            </div>
+            <div className="icone-area">
+                <span>${amount ?? "50,000"}</span>
             </div>
         </div>
     </div>
 );
 
-Transaction.propTypes = {
-    className: PropTypes.string,
-    data: PropTypes.shape({
-        donor: PropTypes.shape({
-            profile_image: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-        }).isRequired,
-        donee: PropTypes.shape({
-            profile_image: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-        }).isRequired,
-        amount: PropTypes.number.isRequired,
-        timestamp: PropTypes.number.isRequired,
-    }).isRequired,
-    status: PropTypes.oneOf(["follow", "sale", "like", "offer"]),
-};
-
-export default Transaction;
+export default TransactionCard;
