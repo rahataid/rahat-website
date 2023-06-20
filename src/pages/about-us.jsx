@@ -1,9 +1,8 @@
-import React from "react";
-import Wrapper from "@layout/wrapper";
+import AboutUsDetails from "@components/about-us-page";
 import SEO from "@components/seo";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
-import AboutUsDetails from "@components/about-us-page";
+import Wrapper from "@layout/wrapper";
 
 const AboutUsPage = () => {
     return (
