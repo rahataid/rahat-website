@@ -6,7 +6,6 @@ import Header from "@layout/header";
 import Wrapper from "src/layout/wrapper";
 
 // Demo data
-import authorData from "../data/author.json";
 import productData from "../data/products.json";
 
 export async function getStaticProps() {
@@ -18,7 +17,7 @@ const Author = () => (
         <SEO pageTitle="Author" />
         <Header />
         <main id="main-content">
-            <AuthorIntroArea data={authorData} />
+            <AuthorIntroArea data={[]} />
             <AuthorProfileArea data={{ products: productData }} />
         </main>
         <Footer />
