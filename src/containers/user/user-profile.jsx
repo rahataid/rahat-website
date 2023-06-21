@@ -1,3 +1,4 @@
+import Card from "@components/cards/community";
 import { shuffleArray } from "@utils/methods";
 import { ProductType } from "@utils/types";
 import clsx from "clsx";
@@ -11,7 +12,6 @@ const AuthorProfileArea = ({ className, data }) => {
     const onSaleProducts = shuffleArray(data.products).slice(0, 10);
     const ownedProducts = shuffleArray(data.products).slice(0, 10);
     const createdProducts = shuffleArray(data.products).slice(0, 10);
-    const likedProducts = shuffleArray(data.products).slice(0, 10);
 
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
@@ -57,7 +57,14 @@ const AuthorProfileArea = ({ className, data }) => {
                                     key={prod.id}
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
-                                    Donated
+                                    <Card
+                                        cover={''}
+                                        name={'Rahat'}
+                                        category={'Senior Citizen'}
+                                        country={'Nepal'}
+                                        currency={'$'}
+                                        fundRaisedLocal={'5000'}
+                                    />
                                 </div>
                             ))}
                         </TabPane>
@@ -70,7 +77,14 @@ const AuthorProfileArea = ({ className, data }) => {
                                     key={prod.id}
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
-                                    Received
+                                    <Card
+                                        cover={''}
+                                        name={'Rahat'}
+                                        category={'Senior Citizen'}
+                                        country={'Nepal'}
+                                        currency={'$'}
+                                        fundRaisedLocal={'5000'}
+                                    />
                                 </div>
                             ))}
                         </TabPane>
@@ -83,7 +97,14 @@ const AuthorProfileArea = ({ className, data }) => {
                                     key={prod.id}
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
-                                    Pending
+                                    <Card
+                                        cover={''}
+                                        name={'Rahat'}
+                                        category={'Senior Citizen'}
+                                        country={'Nepal'}
+                                        currency={'$'}
+                                        fundRaisedLocal={'5000'}
+                                    />
                                 </div>
                             ))}
                         </TabPane>
