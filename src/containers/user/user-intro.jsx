@@ -7,6 +7,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
+
 const AuthorIntroArea = ({ className, space, data }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
@@ -68,7 +69,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
                                                 <ShareDropdown />
                                             </div>
                                             <Anchor
-                                                path="/edit-profile"
+                                                path="/user/1/edit-profile"
                                                 className="btn at-follw follow-button edit-btn"
                                             >
                                                 <i className="feather feather-edit" />
