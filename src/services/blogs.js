@@ -9,5 +9,8 @@ export const BlogService = {
     getBlogs: async () => {
         return api.get("/blogs/projects/rahat?category=Blog");
     },
+    getBlogDetails: async (slug) => {
+        return api.get(`/blogs/findbyslug/${slug}`);
+    },
 };
 

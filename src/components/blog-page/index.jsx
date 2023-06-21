@@ -4,6 +4,7 @@ import { TextType, SectionTitleType } from "@utils/types";
 import Image from "next/image";
 import Button from "@ui/button";
 import Link from "next/link";
+import moment from "moment";
 
 const BLogPage = ({ space, className, blogs }) => (
     <>
@@ -20,10 +21,10 @@ const BLogPage = ({ space, className, blogs }) => (
             <div className="overlay"></div>
         </div>
         <div className="row padding-tb-50 align-items-center d-flex">
-            <div className="col-lg-12">
+            <div className="col-lg-12 custom-page-banner">
                 <div className="author-wrapper">
                     <div className="author-inner">
-                        <div className="rn-author-info-content">
+                        <div className="rn-author-info-content-custom">
                             <h4 className="title">Blogs </h4>
                         </div>
                     </div>
@@ -39,57 +40,75 @@ const BLogPage = ({ space, className, blogs }) => (
         >
             <div className="container">
                 <div className="row g-5">
-                    {blogs.map((blog) => (
-                        <>
-                            <div
-                                className="col-lg-4 col-md-6 col-12 sal-animate"
-                                data-sal="slide-up"
-                                data-sal-duration="800"
-                                data-sal-delay="150"
-                            >
-                                <div className={clsx("rn-blog", className)}>
-                                    <div className="inner">
-                                        <div className="thumbnail">
-                                            <Image
-                                                src={blog.image_url}
-                                                alt=""
-                                                width={489}
-                                                height={366}
-                                            />
-                                        </div>
-
-                                        <div className="content">
-                                            <div className="category-info">
-                                                <div className="meta">
-                                                    <span>
-                                                        <i className="feather-calendar" />
-                                                        29th May , 2023
-                                                    </span>
-                                                </div>
+                    {blogs.map((blog) => {
+                        return (
+                            <>
+                                <div
+                                    className="col-lg-4 col-md-6 col-12 sal-animate"
+                                    data-sal="slide-up"
+                                    data-sal-duration="800"
+                                    data-sal-delay="150"
+                                >
+                                    <div className={clsx("rn-blog", className)}>
+                                        <div className="inner">
+                                            <div className="thumbnail">
+                                                <Image
+                                                    src={blog.image_url}
+                                                    alt=""
+                                                    width={489}
+                                                    height={366}
+                                                />
                                             </div>
-                                            <h4 className="title">
-                                                <Link target="_blank" href="#">
-                                                    {blog.title}
-                                                </Link>
-                                            </h4>
 
-                                            <Link
-                                                target="_blank"
-                                                href={`/blogs/${blog.slug}`}
-                                            >
-                                                <Button
-                                                    className="mt-5"
-                                                    size="medium"
+                                            <div className="content">
+                                                <div className="category-info">
+                                                    <div className="meta">
+                                                        <span>
+                                                            <i className="feather-calendar" />
+                                                            {blog.created_at
+                                                                ? moment(
+                                                                      blog.created_at
+                                                                  ).format("LL")
+                                                                : "-"}
+                                                        </span>
+                                                    </div>
+                                                    <div className="meta">
+                                                        <span>
+                                                            <i className="feather-user" />
+                                                            {blog.author
+                                                                ? blog.author
+                                                                : "-"}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <h4 className="title">
+                                                    <Link
+                                                        className="short-title"
+                                                        target="_blank"
+                                                        href="#"
+                                                    >
+                                                        {blog?.title}
+                                                    </Link>
+                                                </h4>
+
+                                                <Link
+                                                    target="_blank"
+                                                    href={`/blogs/${blog?.slug}`}
                                                 >
-                                                    Read More
-                                                </Button>
-                                            </Link>
+                                                    <Button
+                                                        className="mt-5"
+                                                        size="medium"
+                                                    >
+                                                        Read More
+                                                    </Button>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </>
-                    ))}
+                            </>
+                        );
+                    })}
                 </div>
             </div>
         </div>

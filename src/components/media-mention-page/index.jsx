@@ -3,10 +3,10 @@ import clsx from "clsx";
 import { TextType, SectionTitleType } from "@utils/types";
 import Image from "next/image";
 import Button from "@ui/button";
-import CaseStudy from "../../data/case-study.json";
 import Link from "next/link";
+import MediaMention from "../../data/media-mention.json";
 
-const CaseStudyPage = ({ space, className }) => (
+const MediaMentionPage = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
@@ -25,7 +25,7 @@ const CaseStudyPage = ({ space, className }) => (
                 <div className="author-wrapper">
                     <div className="author-inner">
                         <div className="rn-author-info-content-custom">
-                            <h4 className="title">Case Study</h4>
+                            <h4 className="title">Media Mention</h4>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@ const CaseStudyPage = ({ space, className }) => (
         >
             <div className="container">
                 <div className="row g-5">
-                    {CaseStudy.map((d) => (
+                    {MediaMention.map((d) => (
                         <>
                             <div
                                 key={d.id}
@@ -61,6 +61,14 @@ const CaseStudyPage = ({ space, className }) => (
                                         </div>
 
                                         <div className="content">
+                                            <div className="category-info">
+                                                <div className="meta">
+                                                    <span>
+                                                        <i className="feather-calendar" />
+                                                        {d.date ? d.date : "-"}
+                                                    </span>
+                                                </div>
+                                            </div>
                                             <h4 className="title">
                                                 <Link
                                                     target="_blank"
@@ -93,7 +101,7 @@ const CaseStudyPage = ({ space, className }) => (
     </>
 );
 
-CaseStudyPage.propTypes = {
+MediaMentionPage.propTypes = {
     space: PropTypes.oneOf([1, 2]),
     className: PropTypes.string,
     data: PropTypes.shape({
@@ -102,9 +110,9 @@ CaseStudyPage.propTypes = {
     }),
 };
 
-CaseStudyPage.defaultProps = {
+MediaMentionPage.defaultProps = {
     space: 1,
 };
 
-export default CaseStudyPage;
+export default MediaMentionPage;
 
