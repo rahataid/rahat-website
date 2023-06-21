@@ -33,7 +33,7 @@ audio:not([controls]) {
 }
 
 a {
-    color: var(--color-heading);
+    // color: var(--color-heading);
     text-decoration: none;
     outline: none;
 }
@@ -353,3 +353,4 @@ blockquote strong,
 blockquote b {
     font-weight: 700;
 }
+

@@ -30,8 +30,37 @@
         "path": "/project-showcase"
     },
     {
-        "id": 5,
+        "id": 6,
         "text": "Contact Us",
         "path": "/#footer"
+    },
+    {
+        "id": 5,
+        "text": "Resources",
+        "path": "#",
+        "submenu": [
+            {
+                "id": 51,
+                "text": "Blogs",
+                "path": "/blogs"
+            },
+            {
+                "id": 52,
+                "text": "Media Mentions",
+                "path": "/media-mention"
+            },
+            {
+                "id": 53,
+                "text": "Case Study",
+                "path": "/case-study"
+            },
+            {
+                "id": 54,
+                "text": "Whitepaper",
+                "path": "https://assets.rumsan.com/rumsan-group/rahat-whitepaper.pdf",
+                "target": "_blank"
+            }
+        ]
     }
 ]
+

@@ -7,8 +7,12 @@ import Header from "@layout/header";
 import Footer from "@layout/footer";
 import { getMonth } from "@utils/methods";
 import { ImageType } from "@utils/types";
+import { getBlogDetails } from "@redux/slices/blogs";
+import { wrapper } from "@redux/store";
+import moment from "moment";
 
-const BlogDetailPage = ({ space, className, post }) => {
+const BlogDetailPage = ({ space, className, singleBlog }) => {
+    console.log("singleBlog", singleBlog);
     // const date = new Date(post.date);
     return (
         <>
@@ -29,11 +33,13 @@ const BlogDetailPage = ({ space, className, post }) => {
                     <div className="overlay"></div>
                 </div>
                 <div className="row padding-tb-50 align-items-center d-flex">
-                    <div className="col-lg-12">
+                    <div className="col-lg-12 custom-page-banner">
                         <div className="author-wrapper">
                             <div className="author-inner">
-                                <div className="rn-author-info-content">
-                                    <h4 className="title">Blogs Details</h4>
+                                <div className="rn-author-info-content-custom">
+                                    <h4 className="title">
+                                        {singleBlog?.title}
+                                    </h4>
                                 </div>
                             </div>
                         </div>
@@ -48,36 +54,63 @@ const BlogDetailPage = ({ space, className, post }) => {
                 >
                     <div className="container">
                         <div className="row g-5 d-flex justify-content-center align-items-center">
-                            <div className="col-lg-10 ol-12">
+                            <div className="col-lg-8 col-12">
                                 <div
                                     className={clsx(
                                         "blog-details-area",
                                         className
                                     )}
                                 >
-                                    <div className="blog-content-top">
-                                        <h2 className="title">ff</h2>
-                                        {/* <span className="date">
-                    {date.getDate().toString().padStart(2, "0")}{" "}
-                    {getMonth(date)}, {date.getFullYear()}
-                </span> */}
-                                    </div>
                                     <div className="bd-thumbnail">
                                         <div className="large-img mb--30">
                                             <Image
                                                 className="w-100"
-                                                src="https://assets.rumsan.com/rumsan-group/graduation-banner.jpg"
-                                                alt="Blog Images"
+                                                src={
+                                                    singleBlog.image_url
+                                                        ? singleBlog.image_url
+                                                        : ""
+                                                }
+                                                alt={
+                                                    singleBlog.title
+                                                        ? singleBlog.title
+                                                        : "-"
+                                                }
                                                 width={919}
                                                 height={517}
+                                                objectFit="cover"
+                                                objectPosition="center"
                                                 layout="responsive"
                                             />
                                         </div>
                                     </div>
-                                    {/* <div
-                className="news-details"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-            /> */}
+                                    <div className="content">
+                                        <div className="category-info">
+                                            <div className="meta">
+                                                <span>
+                                                    <i className="feather-calendar" />
+                                                    {singleBlog.created_at
+                                                        ? moment(
+                                                              singleBlog.created_at
+                                                          ).format("LL")
+                                                        : "-"}
+                                                </span>
+                                            </div>
+                                            <div className="meta">
+                                                <span>
+                                                    <i className="feather-user" />
+                                                    {singleBlog.author
+                                                        ? singleBlog.author
+                                                        : "-"}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        className="news-details ptb--20"
+                                        dangerouslySetInnerHTML={{
+                                            __html: singleBlog?.content,
+                                        }}
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -89,6 +122,22 @@ const BlogDetailPage = ({ space, className, post }) => {
         </>
     );
 };
+
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(getBlogDetails(query.slug));
+            const serializedBlogs = store.getState().blogs.singleBlog;
+            const serializedError = store.getState().blogs.error;
+            console.log("serializedBlogs", serializedBlogs);
+            return {
+                props: {
+                    singleBlog: serializedBlogs,
+                    error: serializedError,
+                },
+            };
+        }
+);
 
 BlogDetailPage.propTypes = {
     space: PropTypes.oneOf([1, 2]),

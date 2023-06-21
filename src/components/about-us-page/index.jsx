@@ -21,10 +21,10 @@ const AboutUsDetails = ({ space, className }) => (
             <div className="overlay"></div>
         </div>
         <div className="row g-5 padding-tb-50 align-items-center d-flex">
-            <div className="col-lg-12">
+            <div className="col-lg-12 custom-page-banner">
                 <div className="author-wrapper">
                     <div className="author-inner">
-                        <div className="rn-author-info-content">
+                        <div className="rn-author-info-content-custom">
                             <h4 className="title">About Us</h4>
                         </div>
                     </div>

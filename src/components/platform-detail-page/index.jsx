@@ -19,11 +19,11 @@ const OurPlatform = ({ space, className }) => (
             <div className="overlay"></div>
         </div>
         <div className="row padding-tb-50 align-items-center d-flex">
-            <div className="col-lg-12">
+            <div className="col-lg-12 custom-page-banner">
                 <div className="author-wrapper">
                     <div className="author-inner">
                         <div className="rn-author-info-content">
-                            <h4 className="title">Contact</h4>
+                            <h4 className="title">Our Platform</h4>
                         </div>
                     </div>
                 </div>

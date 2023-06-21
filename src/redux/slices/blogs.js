@@ -24,6 +24,10 @@ const slice = createSlice({
             state.isLoading = false;
             state.blogs = action.payload;
         },
+        getBlogDetailSuccess(state, action) {
+            state.isLoading = false;
+            state.singleBlog = action.payload;
+        },
     },
 });
 
@@ -46,16 +50,15 @@ export const getBlogs = (params) => {
     };
 };
 
-// export const getBlogDetails = (slug) => {
-//     return async (dispatch) => {
-//         try {
-//             const { data: res } = await BlogService.getBlogDetails(
-//                 slug
-//             );
-
-//         } catch (error) {
-//             dispatch(hasError(error));
-//         }
-//     };
-// };
+export const getBlogDetails = (slug) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } = await BlogService.getBlogDetails(slug);
+            console.log("res", res);
+            dispatch(slice.actions.getBlogDetailSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
 
