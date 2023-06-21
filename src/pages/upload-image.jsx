@@ -22,7 +22,7 @@ import { fData } from "@utils/formatNumber";
 // components
 import { Upload, UploadAvatar } from "@components/upload";
 import { ASSET_VIEW } from "@config";
-import Header from "@layout/header/header-01";
+import Header from "@layout/header";
 import { getCommunities, selectCommunities } from "@redux/slices/community";
 import { AssetUploadService } from "@services/assetUpload";
 import { CommunitiesService } from "@services/communities";
