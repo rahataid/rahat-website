@@ -92,7 +92,7 @@ const FunFact = ({ community }) => {
                         </div>
                     </div>
                     <div className="row mb--10">
-                        <div className="col-12 col-md-6 mt--5">
+                        <div className="col-12 col-md-12 mt--5">
                             <div className={clsx("single-counter-up mt--5")}>
                                 <div className="botton-title mb--50">
                                     Community Manager
@@ -103,22 +103,6 @@ const FunFact = ({ community }) => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-12 col-md-6 mt--5">
-                            {/* {community?.summary?.map((summary, key) => ( */}
-                            <div className={clsx("single-counter-up")}>
-                                <div className="botton-title">
-                                    Beneficiaries
-                                </div>
-                                <div className="row">
-                                    <div className="number counter-odomitter-active">
-                                        <CounterComp
-                                            total={summary?.total_beneficiaries}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                            {/* ))} */}
                         </div>
                     </div>
                 </div>
