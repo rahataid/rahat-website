@@ -40,6 +40,7 @@ const CounterComp = ({ total, inview }) => {
 };
 
 const FunFact = ({ community }) => {
+    console.log(community);
     const summary = community?.summary[0] || {};
 
     return (
@@ -64,13 +65,27 @@ const FunFact = ({ community }) => {
                         <div className="col-12 col-md-6 mt--5">
                             <div className={clsx("single-counter-up")}>
                                 <div className="botton-title">
-                                    Total Raised ($)
+                                    Total Raised
                                 </div>
                                 <div className="row">
+                                    <span>{community?.localCurrency}</span>
                                     <div className="number counter-odomitter-active">
                                         <CounterComp
-                                            total={community?.fundRaisedUsd}
+                                            total={community?.fundRaisedLocal}
                                         />
+                                    </div>
+                                </div>
+                                <div className="row d-flex">
+                                    <div className="d-flex align-items-center justify-content-end">
+                                        <div>
+                                            <p style={{ fontSize: '18px', color: '#007bb6' }}>$</p>
+                                        </div>
+                                        <div style={{ fontSize: '18px' }}>
+                                            <CounterComp
+                                                total={community?.fundRaisedUsd}
+
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -78,12 +93,12 @@ const FunFact = ({ community }) => {
                         <div className="col-12 col-md-6 mt--5">
                             <div className={clsx("single-counter-up")}>
                                 <div className="botton-title">
-                                    Total Raised ({community?.localCurrency})
+                                    Beneficiaries
                                 </div>
                                 <div className="row">
                                     <div className="number counter-odomitter-active">
                                         <CounterComp
-                                            total={community?.fundRaisedLocal}
+                                            total={community?.summary[0]?.total_beneficiaries}
                                         />
                                     </div>
                                 </div>
