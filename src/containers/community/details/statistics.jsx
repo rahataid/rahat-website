@@ -48,7 +48,14 @@ const FunFact = ({ community }) => {
                 <div className="col-12 col-md-6">
                     <div className="connect-thumbnail">
                         <div className="left-image">
-                            <MapView />
+                            <MapView
+                                mapData={
+                                    [{
+                                        latitude: community?.latitude,
+                                        longitude: community?.longitude
+                                    }]
+                                }
+                            />
                         </div>
                     </div>
                 </div>
