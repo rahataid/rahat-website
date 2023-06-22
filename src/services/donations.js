@@ -1,8 +1,10 @@
 import client from "@utils/impactClient";
 
 export const DonationsService = {
-    getDonationsList: () => {
-        return client.get(`/transactions`);
+    getDonationsList: (params) => {
+        return client.get(`/transactions`, {
+            params,
+        });
     },
     getDonationDetails: (id) => {
         return client.get(`/transactions/${id}`);
