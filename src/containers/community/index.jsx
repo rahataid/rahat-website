@@ -37,9 +37,9 @@ const ExploreProductArea = ({
                     </div>
                 </div>
                 <div className="row g-5">
-                    {communities?.rows?.length > 0 ? (
+                    {communities?.length > 0 ? (
                         <>
-                            {communities?.rows?.map((community) => (
+                            {communities?.map((community) => (
                                 <div
                                     key={community.id}
                                     className="col-4 col-lg-4 col-md-6 col-sm-6 col-12"

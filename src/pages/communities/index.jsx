@@ -11,7 +11,6 @@ import Wrapper from "src/layout/wrapper";
 import { wrapper } from "@redux/store";
 
 export default function Product({ communities, categories, countries }) {
-    console.log(communities);
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
