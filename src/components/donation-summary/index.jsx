@@ -1,13 +1,9 @@
-import { selectSingleDonation } from "@redux/slices/donation";
+import moment from "moment";
 import Image from "next/image";
-import { useSelector } from "react-redux";
 
-
-const Summary = ({ space, className }) => {
-    const donation = useSelector(selectSingleDonation);
-    console.log("donations", donation);
+const Summary = ({ donation }) => {
     return (
-        <div className='mt--50 mb--50'>
+        <div className="mt--50 mb--50">
             <div className="container">
                 <div className="row">
                     <div className="rn-about-card d-flex justify-content-between align-items-center">
@@ -25,13 +21,20 @@ const Summary = ({ space, className }) => {
                                 className="text-center"
                                 style={{ marginBottom: "5px" }}
                             >
-                                <span style={{ color: '#007bb6' }}>Transaction Hash:</span>  0xsjl02323020g0240v0240c3732
+                                <span style={{ color: "#007bb6" }}>
+                                    Transaction Hash:
+                                </span>{" "}
+                                {/* TODO: convert buffer to string */}
+                                0xsjl02323020g0240v0240c3732
                             </p>
                             <p
                                 className="text-center"
                                 style={{ marginBottom: "5px" }}
                             >
-                                <span style={{ color: '#007bb6' }}>Date</span>: 23 June 2023
+                                <span style={{ color: "#007bb6" }}>Date</span>:
+                                {moment(donation?.createdAt).format(
+                                    "MMMM Do YYYY"
+                                )}
                             </p>
                         </div>
                         <div className="col-lg-4 col-md-12 col-12 text-center">
@@ -42,7 +45,7 @@ const Summary = ({ space, className }) => {
                                 height={140}
                                 hideControls={true}
                             />
-                            <h6>Donee Name</h6>
+                            <h6>{donation?.donee?.name}</h6>
                         </div>
                     </div>
                 </div>
@@ -50,11 +53,7 @@ const Summary = ({ space, className }) => {
                     <div className="rn-about-card d-flex justify-content-center align-items-center">
                         <div className="col-12">
                             <p className="text-center">
-                                Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Error odit nesciunt, ad ullam dolorem sequi
-                                sed, numquam consequuntur officia, sunt voluptatem
-                                quis soluta accusantium? Consequatur non libero hic
-                                nisi exercitationem!
+                                {donation?.description}
                             </p>
                         </div>
                     </div>

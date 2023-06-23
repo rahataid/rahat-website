@@ -6,13 +6,13 @@ import Wrapper from "@layout/wrapper";
 import { getDonationDetails } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
 
-export default function DonationView({ donations }) {
+export default function DonationView({ donation }) {
     return (
         <Wrapper>
             <SEO pageTitle="Donations" />
             <Header />
             <main id="main-content">
-                <Summary />
+                <Summary donation={donation} />
             </main>
             <Footer />
         </Wrapper>
@@ -24,10 +24,11 @@ export const getServerSideProps = wrapper.getServerSideProps(
         async ({ query }) => {
             await store.dispatch(getDonationDetails(query?.id));
             const serializedDonations = store.getState().donation.donation;
+            console.log("first", serializedDonations);
             const serializedError = store.getState().donation.error;
             return {
                 props: {
-                    donations: serializedDonations,
+                    donation: serializedDonations,
                     error: serializedError,
                 },
             };
