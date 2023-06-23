@@ -4,7 +4,9 @@ import { OrganizationsService } from "@services/organization";
 const initialState = {
     isLoading: false,
     error: null,
-    organizations: [],
+    organizations: {
+        rows: [],
+    },
     organization: null,
 };
 
@@ -35,6 +37,13 @@ export default slice;
 export const { hasError } = slice.actions;
 
 export const selectOrganizations = (state) => state.organization.organizations;
+export const selectOrganizationRows = (state) =>
+    state.organization.organizations?.rows;
+export const selectOrganizationOptions = (state) =>
+    state?.organization?.organizations?.rows?.map((r) => ({
+        value: r.id,
+        label: r.name,
+    }));
 
 // Thunk for fetching organizations
 export const getOrganizations = (query) => {

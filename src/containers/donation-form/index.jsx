@@ -1,28 +1,24 @@
-/* eslint-disable @next/next/no-img-element */
 import { addDonationTransaction } from "@redux/slices/donation";
 import {
     getOrganizations,
-    selectOrganizations,
+    selectOrganizationOptions,
 } from "@redux/slices/organization";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import AsyncSelect from "react-select/async";
 
 const DonateForm = ({ className, space }) => {
     const dispatch = useDispatch();
-    const organizations = useSelector(selectOrganizations);
-    const [showProductModal, setShowProductModal] = useState(false);
-    const [selectedImage, setSelectedImage] = useState();
-    const [hasImageError, setHasImageError] = useState(false);
-    const [previewData, setPreviewData] = useState({});
-    const [organizationName, setOrganizationName] = useState("");
+    const organizations = useSelector(selectOrganizationOptions);
+    const [searchedOrganization, setSearchedOrganization] = useState(null);
     const [organizationId, setOrganizationId] = useState(null);
     const {
+        control,
         register,
         handleSubmit,
         formState: { errors },
@@ -31,184 +27,167 @@ const DonateForm = ({ className, space }) => {
         mode: "onChange",
     });
 
-    console.log(organizations);
-    const options = (inputValue, cb) => {
-        setTimeout(async () => {
-            await dispatch(getOrganizations({ name: inputValue }));
+    // const handleOrganizationChange = (selectedOption) => {
+    //     if (selectedOption) {
+    //         setOrganizationId(selectedOption.value);
+    //     } else {
+    //         setOrganizationId(null);
+    //     }
+    // };
 
-            setTimeout(() => {
-                cb(
-                    organizations.map((data) => {
-                        return { label: data.name, value: data.id };
-                    })
-                );
-                if (!organizations[0]) {
-                    setShowProductModal(true);
-                }
-            }, 2000);
+    useEffect(() => {
+        const filter = { perPage: 100 };
+        if (searchedOrganization) {
+            filter.name = searchedOrganization;
+        }
+        dispatch(getOrganizations(filter));
+    }, [dispatch, searchedOrganization]);
+
+    const loadOrganizationOptions = (inputValue, callback) => {
+        // Simulate API call or async logic to fetch organizations based on the input value
+        // const filteredOptions = organizations?.filter((org) =>
+        //     org.label.toLowerCase().includes(inputValue.toLowerCase())
+        // );
+
+        setSearchedOrganization(inputValue);
+
+        setTimeout(() => {
+            callback(organizations);
         }, 1000);
     };
 
-    // This function will be triggered when the file field change
-    const imageChange = (e) => {
-        if (e.target.files && e.target.files.length > 0) {
-            setSelectedImage(e.target.files[0]);
-        }
-    };
-
-    const handleOrganizationChange = (e) => {
-        setOrganizationId(e.value);
-    };
     const onSubmit = (data, e) => {
-        const { target } = e;
-        const submitBtn =
-            target.localName === "span" ? target.parentElement : target;
-        const isPreviewBtn = submitBtn.dataset?.btn;
-        setHasImageError(!selectedImage);
-        if (isPreviewBtn && selectedImage) {
-            setPreviewData({ ...data, image: selectedImage });
-            setShowProductModal(true);
-        }
-        if (!isPreviewBtn) {
-            notify();
-            reset();
-            setSelectedImage();
-        }
-        data.donorId = organizationId;
-        dispatch(addDonationTransaction(data));
+        const sendData = {
+            doneeId: data.donorId?.value,
+            amount: +data.amount,
+            description: data.description,
+            donorId: 1,
+            txHash: "0x23123",
+        };
+
+        console.log("sendData", sendData);
+        // data.donorId = organizationId;
+        dispatch(addDonationTransaction(sendData));
     };
-    // useEffect(() => {}, [organizations]);
 
     return (
-        <>
-            <div className={clsx("create-area mt--50", className)}>
-                <form action="#" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="container">
-                        <h3 className="mb--25">Donation Form</h3>
-                        <div className="row g-5">
-                            <div className="col-lg-12">
-                                <div className="form-wrapper-one">
-                                    <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="name"
-                                                    className="form-label"
-                                                >
-                                                    Organization Name
-                                                </label>
-                                                <AsyncSelect
-                                                    id="donorId"
-                                                    loadOptions={options}
-                                                    onChange={
-                                                        handleOrganizationChange
-                                                    }
-                                                />
-
-                                                {/* {organizations.map((result) => (
-                                                    <div
-                                                        key={result.id}
-                                                        style={{
-                                                            cursor: "pointer",
-                                                        }}
-                                                        onClick={() =>
-                                                            handleOptionChange(
-                                                                result
-                                                            )
+        <div className={clsx("create-area mt--50", className)}>
+            <form action="#" onSubmit={handleSubmit(onSubmit)}>
+                <div className="container">
+                    <h3 className="mb--25">Donation Form</h3>
+                    <div className="row g-5">
+                        <div className="col-lg-12">
+                            <div className="form-wrapper-one">
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <div className="input-box pb--20">
+                                            <label
+                                                htmlFor="name"
+                                                className="form-label"
+                                            >
+                                                Organization Name
+                                            </label>
+                                            <Controller
+                                                control={control}
+                                                name="doneeId"
+                                                render={({ field }) => (
+                                                    <AsyncSelect
+                                                        {...field}
+                                                        id="doneeId"
+                                                        isClearable
+                                                        cacheOptions
+                                                        defaultOptions
+                                                        loadOptions={
+                                                            loadOrganizationOptions
                                                         }
-                                                    >
-                                                        {result.name}
-                                                    </div>
-                                                ))} */}
-
-                                                {organizationName &&
-                                                    !organizations[0] && (
-                                                        <ErrorText>
-                                                            No organization
-                                                            Found
-                                                        </ErrorText>
-                                                    )}
-                                                {errors.name && (
+                                                        // onChange={
+                                                        //     handleOrganizationChange
+                                                        // }
+                                                    />
+                                                )}
+                                            />
+                                            {organizationId &&
+                                                organizations.length === 0 && (
                                                     <ErrorText>
-                                                        {errors.name?.message}
+                                                        No organization found
                                                     </ErrorText>
                                                 )}
-                                            </div>
+                                            {errors.donorId && (
+                                                <ErrorText>
+                                                    {errors.donorId.message}
+                                                </ErrorText>
+                                            )}
                                         </div>
-                                        <div className="col-md-6">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="price"
-                                                    className="form-label"
-                                                >
-                                                    Donation amount
-                                                </label>
-                                                <input
-                                                    id="price"
-                                                    placeholder="$500"
-                                                    {...register("price", {
-                                                        pattern: {
-                                                            value: /^[0-9]+$/,
-                                                            message:
-                                                                "Please enter a number",
-                                                        },
-                                                        required:
-                                                            "Amount is required",
-                                                    })}
-                                                />
-                                                {errors.price && (
-                                                    <ErrorText>
-                                                        {errors.price?.message}
-                                                    </ErrorText>
-                                                )}
-                                            </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-box pb--20">
+                                            <label
+                                                htmlFor="amount"
+                                                className="form-label"
+                                            >
+                                                Donation amount
+                                            </label>
+                                            <input
+                                                id="amount"
+                                                placeholder="$500"
+                                                {...register("amount", {
+                                                    pattern: {
+                                                        value: /^[0-9]+$/,
+                                                        message:
+                                                            "Please enter a number",
+                                                    },
+                                                    required:
+                                                        "Amount is required",
+                                                })}
+                                            />
+                                            {errors.price && (
+                                                <ErrorText>
+                                                    {errors.price.message}
+                                                </ErrorText>
+                                            )}
                                         </div>
-
-                                        <div className="col-md-12">
-                                            <div className="input-box pb--20">
-                                                <label
-                                                    htmlFor="Discription"
-                                                    className="form-label"
-                                                >
-                                                    Description
-                                                </label>
-                                                <textarea
-                                                    id="description"
-                                                    rows="3"
-                                                    placeholder="e. g. “After purchasing the product you can get item...”"
-                                                    {...register(
-                                                        "description",
-                                                        {
-                                                            required:
-                                                                "Description is required",
-                                                        }
-                                                    )}
-                                                />
-                                                {errors.discription && (
-                                                    <ErrorText>
-                                                        {
-                                                            errors.description
-                                                                ?.message
-                                                        }
-                                                    </ErrorText>
-                                                )}
-                                            </div>
+                                    </div>
+                                    <div className="col-md-12">
+                                        <div className="input-box pb--20">
+                                            <label
+                                                htmlFor="description"
+                                                className="form-label"
+                                            >
+                                                Description
+                                            </label>
+                                            <textarea
+                                                id="description"
+                                                rows="3"
+                                                placeholder="e.g. 'After purchasing the product you can get item...'"
+                                                {...register("description", {
+                                                    required:
+                                                        "Description is required",
+                                                })}
+                                            />
+                                            {errors.description && (
+                                                <ErrorText>
+                                                    {errors.description.message}
+                                                </ErrorText>
+                                            )}
                                         </div>
-                                        <div className="col-md-12 col-xl-8 mt_lg--15 mt_md--15 mt_sm--15">
-                                            <div className="input-box">
-                                                <Button type="submit btn-small">
-                                                    Donate
-                                                </Button>
-                                            </div>
+                                    </div>
+                                    <div className="col-md-12 col-xl-8 mt_lg--15 mt_md--15 mt_sm--15">
+                                        <div className="input-box">
+                                            <Button
+                                                type="submit"
+                                                className="btn-small"
+                                            >
+                                                Donate
+                                            </Button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
-        </>
+                </div>
+            </form>
+        </div>
     );
 };
 

@@ -9,7 +9,7 @@ export const DonationsService = {
     getDonationDetails: (id) => {
         return client.get(`/transactions/${id}`);
     },
-    addDonation: (payload) => {
-        return client.post(`/transactions`, { payload });
+    addDonation: (data) => {
+        return client.post(`/transactions`, { ...data });
     },
 };
