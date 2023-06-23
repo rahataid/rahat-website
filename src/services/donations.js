@@ -1,13 +1,15 @@
 import client from "@utils/impactClient";
 
 export const DonationsService = {
-    getDonationsList: () => {
-        return client.get(`/donations`);
+    getDonationsList: (params) => {
+        return client.get(`/transactions`, {
+            params,
+        });
     },
     getDonationDetails: (id) => {
-        return client.get(`/donations/${id}`);
+        return client.get(`/transactions/${id}`);
     },
-    getDonationTransactions: (id) => {
-        return client.get(`/donations/${id}/transactions`);
+    addDonation: (payload) => {
+        return client.post(`/transactions`, { payload });
     },
 };

@@ -1,73 +1,49 @@
-import Anchor from "@ui/anchor";
-import Button from "@ui/button";
 import clsx from "clsx";
 import Image from "next/image";
-import PropTypes from "prop-types";
 
-const DonationCard = ({
-    overlay,
+const TransactionCard = ({
+    donorImg,
     donorName,
-    donorImage,
-    cause,
+    description,
+    date,
     amount,
-    doneeName,
-    id,
-    path,
-}) => {
-    return (
-        <>
-            <div
-                className={clsx(
-                    "product-style-one",
-                    !overlay && "no-overlay",
-                    "with-placeBid"
-                )}
-            >
-                <div className="card-thumbnail">
-                    <Anchor path={path}>
-                        <Image
-                            src={donorImage}
-                            alt={"NFT_portfolio"}
-                            width={533}
-                            height={533}
-                        />
-                    </Anchor>
+    status,
+    className,
+}) => (
+    <div
+        className={clsx("single-donation-wrapper", className)}
+        style={{ border: "1px solid #cccaca", borderRadius: "15px" }}
+    >
+        <div className="inner">
+            <div className="status">{status ?? "Approved"}</div>
+            <div className="read-content">
+                <div className="thumbnail">
+                    <Image
+                        src={donorImg ?? "/images/portfolio/rahat.jpeg"}
+                        alt={donorName || "Nft_Profile"}
+                        width={500}
+                        height={500}
+                    />
                 </div>
-                <div className="mt-5 d-flex justify-content-between">
-                    <Anchor path={`${path}/${id}`}>
-                        <span className="product-name ">
-                            {donorName} to {doneeName}
-                        </span>
-                    </Anchor>
-                    <div className="pill">Pending</div>
-                </div>
-                <div className="d-flex justify-content-between">
-                    <span className="latest-bid">{cause}</span>
-                    <span className="latest-bid">{amount}</span>
-                </div>
-                <div className="bid-react-area">
-                    <Button
-                        // path={path}
-                        color="primary-alta"
-                        className="sal-animate mt--5"
-                        size="small"
-                    >
-                        More Details
-                    </Button>
+                <div className="content">
+                    <h6>{donorName ?? "Rahat --> Red Cross"}</h6>
+                    <p>
+                        {description ||
+                            "Donation for wounded soldiers of Ukraine.Donation for wounded soldiers of Ukraine."}
+                    </p>
+                    <div className="time-maintane">
+                        <div className="time data">
+                            <i className="feather-clock" />
+                            <span>{date ?? "12 June 2023"}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </>
-    );
-};
+            <div className="icone-area">
+                <span>${amount ?? "50,000"}</span>
+            </div>
+        </div>
+    </div>
+);
 
-DonationCard.propTypes = {
-    overlay: PropTypes.bool,
-
-    id: PropTypes.number,
-};
-
-DonationCard.defaultProps = {
-    overlay: false,
-};
-
-export default DonationCard;
+export default TransactionCard;

@@ -22,7 +22,7 @@ export default function Product({ communities, categories, countries }) {
                         sx={{
                             height: 400,
                         }}
-                        mapData={communities.map((r) => ({
+                        mapData={communities?.rows.map((r) => ({
                             latitude: r?.latitude,
                             longitude: r?.longitude,
                         }))}
@@ -46,7 +46,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
             await store.dispatch(getCategories());
             const serializedCommunities =
                 store.getState().community.communities;
-            serializedCommunities.forEach(({ country }) =>
+            serializedCommunities?.rows?.forEach(({ country }) =>
                 countries.push(country)
             );
             const categories = store.getState().category.categories;

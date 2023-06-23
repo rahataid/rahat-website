@@ -21,11 +21,11 @@ const slice = createSlice({
         },
         getOrganizationsSuccess(state, action) {
             state.isLoading = false;
-            state.communities = action.payload;
+            state.organizations = action.payload;
         },
         getOrganizationSuccess(state, action) {
             state.isLoading = false;
-            state.community = action.payload;
+            state.organization = action.payload;
         },
     },
 });
@@ -34,14 +34,14 @@ export default slice;
 
 export const { hasError } = slice.actions;
 
-export const selectOrganizations = (state) => state.organizaitons.organizaitons;
+export const selectOrganizations = (state) => state.organization.organizations;
 
 // Thunk for fetching organizations
-export const getOrganizations = (params) => {
+export const getOrganizations = (query) => {
     return async (dispatch) => {
         try {
             const { data: res } =
-                await OrganizationsService.getOrganizationsList();
+                await OrganizationsService.getOrganizationsList(query);
 
             dispatch(slice.actions.getOrganizationsSuccess(res));
         } catch (error) {

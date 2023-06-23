@@ -1,4 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { addDonationTransaction } from "@redux/slices/donation";
+import {
+    getOrganizations,
+    selectOrganizations,
+} from "@redux/slices/organization";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
@@ -6,7 +11,14 @@ import PropTypes from "prop-types";
 import { useForm } from "react-hook-form";
 
 const DonateForm = ({ className, space }) => {
-
+    const dispatch = useDispatch();
+    const organizations = useSelector(selectOrganizations);
+    const [showProductModal, setShowProductModal] = useState(false);
+    const [selectedImage, setSelectedImage] = useState();
+    const [hasImageError, setHasImageError] = useState(false);
+    const [previewData, setPreviewData] = useState({});
+    const [organizationName, setOrganizationName] = useState("");
+    const [organizationId, setOrganizationId] = useState(null);
     const {
         register,
         handleSubmit,
@@ -16,8 +28,34 @@ const DonateForm = ({ className, space }) => {
         mode: "onChange",
     });
 
+    console.log(organizations);
+    const options = (inputValue, cb) => {
+        setTimeout(async () => {
+            await dispatch(getOrganizations({ name: inputValue }));
+
+            setTimeout(() => {
+                cb(
+                    organizations.map((data) => {
+                        return { label: data.name, value: data.id };
+                    })
+                );
+                if (!organizations[0]) {
+                    setShowProductModal(true);
+                }
+            }, 2000);
+        }, 1000);
+    };
 
     // This function will be triggered when the file field change
+    const imageChange = (e) => {
+        if (e.target.files && e.target.files.length > 0) {
+            setSelectedImage(e.target.files[0]);
+        }
+    };
+
+    const handleOrganizationChange = (e) => {
+        setOrganizationId(e.value);
+    };
     const onSubmit = (data, e) => {
         const { target } = e;
         const submitBtn =
@@ -33,16 +71,14 @@ const DonateForm = ({ className, space }) => {
             reset();
             setSelectedImage();
         }
+        data.donorId = organizationId;
+        dispatch(addDonationTransaction(data));
     };
+    useEffect(() => {}, [organizations]);
 
     return (
         <>
-            <div
-                className={clsx(
-                    "create-area mt--50",
-                    className
-                )}
-            >
+            <div className={clsx("create-area mt--50", className)}>
                 <form action="#" onSubmit={handleSubmit(onSubmit)}>
                     <div className="container">
                         <h3 className="mb--25">Donation Form</h3>
@@ -58,14 +94,37 @@ const DonateForm = ({ className, space }) => {
                                                 >
                                                     Organization Name
                                                 </label>
-                                                <input
-                                                    id="name"
-                                                    placeholder="Red Cross"
-                                                    {...register("name", {
-                                                        required:
-                                                            "Name is required",
-                                                    })}
+                                                <AsyncSelect
+                                                    id="donorId"
+                                                    loadOptions={options}
+                                                    onChange={
+                                                        handleOrganizationChange
+                                                    }
                                                 />
+
+                                                {/* {organizations.map((result) => (
+                                                    <div
+                                                        key={result.id}
+                                                        style={{
+                                                            cursor: "pointer",
+                                                        }}
+                                                        onClick={() =>
+                                                            handleOptionChange(
+                                                                result
+                                                            )
+                                                        }
+                                                    >
+                                                        {result.name}
+                                                    </div>
+                                                ))} */}
+
+                                                {organizationName &&
+                                                    !organizations[0] && (
+                                                        <ErrorText>
+                                                            No organization
+                                                            Found
+                                                        </ErrorText>
+                                                    )}
                                                 {errors.name && (
                                                     <ErrorText>
                                                         {errors.name?.message}
@@ -108,24 +167,24 @@ const DonateForm = ({ className, space }) => {
                                                     htmlFor="Discription"
                                                     className="form-label"
                                                 >
-                                                    Discription
+                                                    Description
                                                 </label>
                                                 <textarea
-                                                    id="discription"
+                                                    id="description"
                                                     rows="3"
                                                     placeholder="e. g. “After purchasing the product you can get item...”"
                                                     {...register(
-                                                        "discription",
+                                                        "description",
                                                         {
                                                             required:
-                                                                "Discription is required",
+                                                                "Description is required",
                                                         }
                                                     )}
                                                 />
                                                 {errors.discription && (
                                                     <ErrorText>
                                                         {
-                                                            errors.discription
+                                                            errors.description
                                                                 ?.message
                                                         }
                                                     </ErrorText>

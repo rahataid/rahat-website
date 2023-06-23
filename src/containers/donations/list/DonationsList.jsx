@@ -1,8 +1,9 @@
+import TransactionCard from "@components/cards/transaction";
+import Pagination from "@components/pagination";
 import Button from "@ui/button";
 import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import DonationCard from "./DonationCard";
 
 const DonationsList = ({ className, space, donations }) => {
     const [hasMore, setHasMore] = useState(false);
@@ -25,23 +26,19 @@ const DonationsList = ({ className, space, donations }) => {
                 {donations.length > 0 ? (
                     <div className="row g-5">
                         {donations.map((donation) => (
-                            <div className="col-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                                <DonationCard
-                                    overlay
-                                    donorName={donation.donor.name}
-                                    donorImage={"/images/portfolio/tayaba.png"}
-                                    cause={donation.cause}
-                                    amount={donation.amount}
-                                    doneeImage={"/images/portfolio/tayaba.png"}
-                                    doneeName={donation.donee.name}
-                                    path={`/donations/${donation.id}`}
-                                />
+                            <div className="col-4 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <TransactionCard data={donation} />
                             </div>
                         ))}
                     </div>
                 ) : (
                     <p>No donations to display.</p>
                 )}
+                <Pagination
+                    pagination={donations?.meta}
+                    currentPage={donations?.meta?.currentPage}
+                    rootPage="/donations"
+                />
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="view-more-btn mt--50">

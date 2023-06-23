@@ -1,53 +1,29 @@
+import Summary from "@components/donation-summary";
 import SEO from "@components/seo";
-import { DonationInfo, DonorDoneeInfo } from "@containers/donations/details";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 import { getDonationDetails } from "@redux/slices/donation";
 import { wrapper } from "@redux/store";
-import TabContainer from "react-bootstrap/TabContainer";
-import TabContent from "react-bootstrap/TabContent";
-import TabPane from "react-bootstrap/TabPane";
 
-const DonationView = ({ donations }) => {
+export default function DonationView({ donations }) {
     return (
         <Wrapper>
-            <SEO pageTitle="Donation Details" />
+            <SEO pageTitle="Donations" />
             <Header />
-            <div className="edit-profile-area mt--50">
-                <div className="container">
-                    <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
-                        <div className="col-12 d-flex justify-content-between mb--30 align-items-center">
-                            <h4 className="title-left">Donation </h4>
-                        </div>
-                    </div>
-                    <TabContainer defaultActiveKey="nav-home">
-                        <div className="row plr--70 padding-control-edit-wrapper pl_md--0 pr_md--0 pl_sm--0 pr_sm--0">
-                            <div className="col-lg-12 col-md-12 col-sm-12 mt_sm--30">
-                                <TabContent className="tab-content-edit-wrapepr">
-                                    <TabPane eventKey="nav-home">
-                                        <DonationInfo donation={donations} />
-                                    </TabPane>
-                                    <DonorDoneeInfo donation={donations} />
-                                </TabContent>
-                            </div>
-                        </div>
-                    </TabContainer>
-                </div>
-            </div>
+            <main id="main-content">
+                <Summary />
+            </main>
             <Footer />
         </Wrapper>
     );
-};
-
-export default DonationView;
+}
 
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
             await store.dispatch(getDonationDetails(query?.id));
             const serializedDonations = store.getState().donation.donation;
-            console.log(serializedDonations);
             const serializedError = store.getState().donation.error;
             return {
                 props: {
