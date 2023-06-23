@@ -30,8 +30,8 @@ const IntroArea = ({ className, space, data }) => {
                                 <div className="author-inner">
                                     <div className="user-thumbnail">
                                         <Image
-                                            src={data.donorImg?.profileImage}
-                                            alt={data.donor?.name}
+                                            src="/images/portfolio/tayaba.png"
+                                            // alt={data.donor?.name}
                                             width={140}
                                             height={140}
                                             layout="fixed"
@@ -39,10 +39,14 @@ const IntroArea = ({ className, space, data }) => {
                                     </div>
                                     <div className="rn-author-info-content">
                                         <h4 className="title">
-                                            {data.donor?.name}
+                                            "Rahat"
+                                            {/* {data.donor?.name} */}
                                         </h4>
 
-                                        <p>{data.description}</p>
+                                        <p>
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam deserunt in tempora facere ipsam dignissimos mollitia nulla delectus totam ut. Fugiat temporibus eum eos est fuga facere vero sit mollitia?
+                                            {/* {data.description} */}
+                                        </p>
                                         {/* <div className="author-button-area">
                                             <button
                                                 type="button"
