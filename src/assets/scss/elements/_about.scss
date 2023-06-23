@@ -226,10 +226,55 @@
     height: 130%;
 }
 
+.rn-accept-card {
+    border: 1px solid var(--color-border);
+    background: #ffffff;
+    padding: 20px 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+    &.transparent-bg {
+        background: transparent;
+        border: 1px solid var(--color-border);
+        margin-top: 140px;
+
+        @media #{$smlg-device} {
+            margin-top: 0px;
+        }
+    }
+
+    &.widge-wrapper {
+        .inner {
+            margin-bottom: 0;
+        }
+    }
+
+    .inner {
+        margin-bottom: 0;
+
+        h3 {
+            font-weight: 400;
+            margin-bottom: 15px;
+            line-height: var(--h1);
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
+.summary-img {
+    height: 150px;
+    width: 150px;
+    border-radius: 5px;
+}
+
 .rn-about-card {
     border: 1px solid var(--color-border);
     background: #191925;
-    padding: 0 10px;
+    padding: 20px 10px;
     border-radius: 5px;
 
     &.transparent-bg {
