@@ -8,7 +8,10 @@ import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import clsx from "clsx";
 import PropTypes from "prop-types";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import AsyncSelect from "react-select/async";
 
 const DonateForm = ({ className, space }) => {
     const dispatch = useDispatch();
@@ -74,7 +77,7 @@ const DonateForm = ({ className, space }) => {
         data.donorId = organizationId;
         dispatch(addDonationTransaction(data));
     };
-    useEffect(() => {}, [organizations]);
+    // useEffect(() => {}, [organizations]);
 
     return (
         <>

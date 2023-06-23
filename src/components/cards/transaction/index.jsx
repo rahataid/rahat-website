@@ -17,7 +17,7 @@ const TransactionCard = ({ data, className }) => {
                         <div className="thumbnail">
                             <Image
                                 src={
-                                    data.donorImg
+                                    data?.donorImg
                                         ? data.donor.profileImage
                                         : "/images/portfolio/rahat.jpeg"
                                 }
@@ -45,7 +45,7 @@ const TransactionCard = ({ data, className }) => {
                         </div>
                     </div>
                     <div className="icone-area">
-                        <span>${data.amount ?? "-"}</span>
+                        <span>${data?.amount ?? "-"}</span>
                     </div>
                 </div>
             </Link>

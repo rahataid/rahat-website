@@ -23,9 +23,9 @@ const DonationsList = ({ className, space, donations }) => {
                     </div>
                 </div>
 
-                {donations.length > 0 ? (
+                {donations?.length > 0 ? (
                     <div className="row g-5">
-                        {donations.map((donation) => (
+                        {donations?.map((donation) => (
                             <div className="col-4 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <TransactionCard data={donation} />
                             </div>
