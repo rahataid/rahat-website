@@ -65,7 +65,6 @@ const DonateForm = ({ className, space }) => {
             txHash: "0x23123",
         };
 
-        console.log("sendData", sendData);
         // data.donorId = organizationId;
         dispatch(addDonationTransaction(sendData));
     };
