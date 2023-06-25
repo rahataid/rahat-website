@@ -50,12 +50,12 @@ const FunFact = ({ community }) => {
                     <div className="connect-thumbnail">
                         <div className="left-image">
                             <MapView
-                                mapData={
-                                    [{
+                                mapData={[
+                                    {
                                         latitude: community?.latitude,
-                                        longitude: community?.longitude
-                                    }]
-                                }
+                                        longitude: community?.longitude,
+                                    },
+                                ]}
                             />
                         </div>
                     </div>
@@ -64,9 +64,7 @@ const FunFact = ({ community }) => {
                     <div className="row mb--10">
                         <div className="col-12 col-md-6 mt--5">
                             <div className={clsx("single-counter-up")}>
-                                <div className="botton-title">
-                                    Total Raised
-                                </div>
+                                <div className="botton-title">Total Raised</div>
                                 <div className="row">
                                     <span>{community?.localCurrency}</span>
                                     <div className="number counter-odomitter-active">
@@ -78,12 +76,18 @@ const FunFact = ({ community }) => {
                                 <div className="row d-flex">
                                     <div className="d-flex align-items-center justify-content-end">
                                         <div>
-                                            <p style={{ fontSize: '18px', color: '#007bb6' }}>$</p>
+                                            <p
+                                                style={{
+                                                    fontSize: "18px",
+                                                    color: "#007bb6",
+                                                }}
+                                            >
+                                                $
+                                            </p>
                                         </div>
-                                        <div style={{ fontSize: '18px' }}>
+                                        <div style={{ fontSize: "18px" }}>
                                             <CounterComp
                                                 total={community?.fundRaisedUsd}
-
                                             />
                                         </div>
                                     </div>
@@ -98,7 +102,10 @@ const FunFact = ({ community }) => {
                                 <div className="row">
                                     <div className="number counter-odomitter-active">
                                         <CounterComp
-                                            total={community?.summary[0]?.total_beneficiaries}
+                                            total={
+                                                community?.summary[0]
+                                                    ?.total_beneficiaries
+                                            }
                                         />
                                     </div>
                                 </div>
@@ -114,7 +121,7 @@ const FunFact = ({ community }) => {
                                 </div>
                                 <div className="row">
                                     <div>
-                                        <h6>{community.managers}</h6>
+                                        <h6>{community?.managers}</h6>
                                     </div>
                                 </div>
                             </div>

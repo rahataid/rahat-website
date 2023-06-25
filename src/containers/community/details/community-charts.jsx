@@ -34,7 +34,7 @@ const CommunityChart = ({ projectId, community }) => {
             })
             .filter((data) => data);
     })[0];
-    const InternetData = community?.summary?.map((type) => {
+    const summaryData = community?.summary?.map((type) => {
         return Object.entries(type)
             ?.map(([key, values]) => {
                 let splitedData = key.split(`_`);
@@ -52,12 +52,11 @@ const CommunityChart = ({ projectId, community }) => {
             })
             .filter((data) => data);
     })[0];
-    console.log({ InternetData: InternetData[0] });
 
     return (
         <div>
             <div className="mt-5 row text-center">
-                {GenderData[0] && (
+                {GenderData?.[0] && (
                     <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
                             chart={GenderData}
@@ -66,7 +65,7 @@ const CommunityChart = ({ projectId, community }) => {
                     </div>
                 )}
 
-                {BankData[0] && (
+                {BankData?.[0] && (
                     <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
                             chart={BankData}
@@ -74,10 +73,10 @@ const CommunityChart = ({ projectId, community }) => {
                         />
                     </div>
                 )}
-                {InternetData[0] && (
+                {summaryData?.[0] && (
                     <div className="col-12 col-md-6 col-lg-4">
                         <Piechart
-                            chart={InternetData}
+                            chart={summaryData}
                             title={"Internet Distribution"}
                         />
                     </div>

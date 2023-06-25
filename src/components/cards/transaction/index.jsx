@@ -12,7 +12,7 @@ const TransactionCard = ({ data, className }) => {
         >
             <Link href={`/donations/${data?.id}`}>
                 <div className="inner">
-                    <div className="status">{data.status ?? "-"}</div>
+                    <div className="status">{data?.status ?? "-"}</div>
                     <div className="read-content">
                         <div className="thumbnail">
                             <Image
@@ -39,7 +39,7 @@ const TransactionCard = ({ data, className }) => {
                             <div className="time-maintane">
                                 <div className="time data">
                                     <i className="feather-clock" />
-                                    <span>{data.date ?? "12 June 2023"}</span>
+                                    <span>{data?.date ?? "-"}</span>
                                 </div>
                             </div>
                         </div>

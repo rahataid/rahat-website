@@ -23,7 +23,7 @@ const EditProfileImage = ({ community, id }) => {
                                             </div>
                                         ))} */}
                                     </div>
-                                    <p>{community.description}</p>
+                                    <p>{community?.description}</p>
                                 </div>
                             </div>
                         </div>
