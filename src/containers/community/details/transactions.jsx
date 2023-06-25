@@ -2,7 +2,7 @@ import TransactionCard from "@components/cards/transaction";
 import clsx from "clsx";
 
 const CommunityTransactions = ({ space, className, data }) => {
-
+    console.log("data", data);
     return (
         <div
             className={clsx(
@@ -16,21 +16,14 @@ const CommunityTransactions = ({ space, className, data }) => {
                     <h3 className="title">Funds Distributed</h3>
                 </div>
                 <div className="row g-6 activity-direction">
-                    {data.map((index) => (
+                    {data.map((d, index) => (
                         <div key={index} className="col-lg-12 mb_dec--15">
-                            <TransactionCard
-                                donorImg={data.donorImg}
-                                donorName={data.donorName}
-                                description={data.description}
-                                date={data.date}
-                                status={data.status}
-                                amount={data.amount}
-                            />
+                            <TransactionCard data={d} />
                         </div>
                     ))}
-                </div >
-            </div >
-        </div >
+                </div>
+            </div>
+        </div>
     );
 };
 

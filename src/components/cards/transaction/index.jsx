@@ -1,5 +1,6 @@
 import Iconify from "@components/iconify";
 import clsx from "clsx";
+import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,14 +33,15 @@ const TransactionCard = ({ data, className }) => {
                                 <Iconify icon="teenyicons:arrow-right-solid" />{" "}
                                 {data?.donee?.name}
                             </h6>
-                            <p>
-                                {data?.description ||
-                                    "Donation for wounded soldiers of Ukraine.Donation for wounded soldiers of Ukraine."}
-                            </p>
+                            <p>{data?.description}</p>
                             <div className="time-maintane">
                                 <div className="time data">
                                     <i className="feather-clock" />
-                                    <span>{data?.date ?? "-"}</span>
+                                    <span>
+                                        {moment
+                                            .unix(data?.timestamp)
+                                            .format("Do MMMM YYYY") ?? "-"}
+                                    </span>
                                 </div>
                             </div>
                         </div>
