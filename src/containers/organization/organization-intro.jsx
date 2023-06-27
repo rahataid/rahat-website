@@ -6,11 +6,19 @@ import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
-
-
-const AuthorIntroArea = ({ className, space, data }) => {
+import { useRouter } from "next/router";
+import { bufferToWalletAddress } from "@utils/string";
+import { ASSET_VIEW } from "@config";
+const AuthorIntroArea = ({ className, space, organization }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
+
+    const contractAddress = bufferToWalletAddress(
+        organization?.contractAddress
+    );
+    const profileImage = organization?.profileImage
+        ? `${ASSET_VIEW}/${contractAddress}/${organization?.profileImage}`
+        : "/images/portfolio/rahat.jpeg";
     return (
         <>
             <ShareModal
@@ -39,23 +47,24 @@ const AuthorIntroArea = ({ className, space, data }) => {
                         <div className="col-lg-12">
                             <div className="user-wrapper">
                                 <div className="user-inner">
-                                    {data?.image?.src && (
-                                        <div className="thumbnail">
-                                            <Image
-                                                src={data.image.src}
-                                                alt={
-                                                    data.image?.alt || data.name
-                                                }
-                                                width={140}
-                                                height={140}
-                                                layout="fixed"
-                                            />
-                                        </div>
-                                    )}
+                                    <div className="thumbnail">
+                                        <Image
+                                            src={profileImage}
+                                            alt={
+                                                "/images/portfolio/rahat.jpeg" ||
+                                                organization?.name
+                                            }
+                                            width={140}
+                                            height={140}
+                                            layout="fixed"
+                                        />
+                                    </div>
 
                                     <div className="rn-user-info-content">
-                                        <h4 className="title">{data.name}</h4>
-                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis expedita, recusandae est dolorum consequatur voluptas, ab beatae deserunt voluptatem omnis ullam officia exercitationem dolores non sed eum dignissimos hic laboriosam.</p>
+                                        <h4 className="title">
+                                            {organization?.name}
+                                        </h4>
+                                        <p>{organization?.description}</p>
                                         <div className="author-button-area">
                                             <button
                                                 type="button"

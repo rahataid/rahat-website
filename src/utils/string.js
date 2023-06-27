@@ -1,3 +1,5 @@
+import ethers from "ethers";
+
 export const extractAssetUploadData = (responseData) => {
     if (!responseData) {
         return null;
@@ -18,7 +20,7 @@ export const extractAssetUploadData = (responseData) => {
     return null;
 };
 
-const truncateEthAddress = (address) => {
+export const truncateEthAddress = (address) => {
     if (!address) return "";
     const truncateRegex = /^(0x[a-zA-Z0-9]{4})[a-zA-Z0-9]+([a-zA-Z0-9]{4})$/;
     const match = address.match(truncateRegex);
@@ -26,4 +28,6 @@ const truncateEthAddress = (address) => {
     return `${match[1]}…${match[2]}`;
 };
 
-export default truncateEthAddress;
+export function bufferToWalletAddress(buffer) {
+    return `0x${Buffer.from(buffer).toString("hex")}`;
+}

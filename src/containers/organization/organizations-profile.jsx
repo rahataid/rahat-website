@@ -8,10 +8,10 @@ import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
 
-const AuthorProfileArea = ({ className, data }) => {
-    const onSaleProducts = shuffleArray(data.products).slice(0, 10);
-    const ownedProducts = shuffleArray(data.products).slice(0, 10);
-    const createdProducts = shuffleArray(data.products).slice(0, 10);
+const AuthorProfileArea = ({ className, organization }) => {
+    // const onSaleProducts = shuffleArray(data.products).slice(0, 10);
+    // const ownedProducts = shuffleArray(data.products).slice(0, 10);
+    // const createdProducts = shuffleArray(data.products).slice(0, 10);
 
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
@@ -45,19 +45,22 @@ const AuthorProfileArea = ({ className, data }) => {
                     </div>
 
                     <TabContent className="tab-content rn-bid-content">
-                        <TabPane className="row d-flex g-5" eventKey="nav-donated">
+                        <TabPane
+                            className="row d-flex g-5"
+                            eventKey="nav-donated"
+                        >
                             {onSaleProducts?.map((prod) => (
                                 <div
                                     key={prod.id}
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Card
-                                        cover={''}
-                                        name={'Rahat'}
-                                        category={'Senior Citizen'}
-                                        country={'Nepal'}
-                                        currency={'$'}
-                                        fundRaisedLocal={'5000'}
+                                        cover={""}
+                                        name={"Rahat"}
+                                        category={"Senior Citizen"}
+                                        country={"Nepal"}
+                                        currency={"$"}
+                                        fundRaisedLocal={"5000"}
                                     />
                                 </div>
                             ))}
@@ -72,12 +75,12 @@ const AuthorProfileArea = ({ className, data }) => {
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Card
-                                        cover={''}
-                                        name={'Rahat'}
-                                        category={'Senior Citizen'}
-                                        country={'Nepal'}
-                                        currency={'$'}
-                                        fundRaisedLocal={'5000'}
+                                        cover={""}
+                                        name={"Rahat"}
+                                        category={"Senior Citizen"}
+                                        country={"Nepal"}
+                                        currency={"$"}
+                                        fundRaisedLocal={"5000"}
                                     />
                                 </div>
                             ))}
@@ -92,12 +95,12 @@ const AuthorProfileArea = ({ className, data }) => {
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Card
-                                        cover={''}
-                                        name={'Rahat'}
-                                        category={'Senior Citizen'}
-                                        country={'Nepal'}
-                                        currency={'$'}
-                                        fundRaisedLocal={'5000'}
+                                        cover={""}
+                                        name={"Rahat"}
+                                        category={"Senior Citizen"}
+                                        country={"Nepal"}
+                                        currency={"$"}
+                                        fundRaisedLocal={"5000"}
                                     />
                                 </div>
                             ))}
@@ -109,10 +112,11 @@ const AuthorProfileArea = ({ className, data }) => {
     );
 };
 
-AuthorProfileArea.propTypes = {
-    className: PropTypes.string,
-    data: PropTypes.shape({
-        products: PropTypes.arrayOf(ProductType),
-    }),
-};
+// AuthorProfileArea.propTypes = {
+//     className: PropTypes.string,
+//     data: PropTypes.shape({
+//         products: PropTypes.arrayOf(ProductType),
+//     }),
+// };
+
 export default AuthorProfileArea;

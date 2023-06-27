@@ -4,21 +4,34 @@ import OrganizationProfileArea from "@containers/organization/organizations-prof
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
+import { getOrganizationDetails } from "@redux/slices/organization";
+import { wrapper } from "@redux/store";
 
-// Demo data, delete when data is fetched from API
-import productData from "../../../data/products.json";
-import authorData from "../../../data/user.json";
-
-const OrganizationProfile = () => (
+const OrganizationProfile = ({ organization }) => (
     <Wrapper>
         <SEO pageTitle="Organization" />
         <Header />
         <main id="main-content">
-            <OrganizationIntroArea data={authorData} />
-            <OrganizationProfileArea data={{ products: productData }} />
+            <OrganizationIntroArea organization={organization} />
+            <OrganizationProfileArea organization={organization} />
         </main>
         <Footer />
     </Wrapper>
+);
+
+export const getServerSideProps = wrapper.getServerSideProps(
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(getOrganizationDetails(query?.id));
+            const organization = store.getState().organization.organization;
+            const serializedError = store.getState().organization.error;
+            return {
+                props: {
+                    organization,
+                    error: serializedError,
+                },
+            };
+        }
 );
 
 export default OrganizationProfile;

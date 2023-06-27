@@ -4,9 +4,7 @@ import { OrganizationsService } from "@services/organization";
 const initialState = {
     isLoading: false,
     error: null,
-    organizations: {
-        rows: [],
-    },
+    organizations: [],
     organization: null,
 };
 
@@ -59,7 +57,7 @@ export const getOrganizations = (query) => {
     };
 };
 
-export const organizationDetails = (id) => {
+export const getOrganizationDetails = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } =

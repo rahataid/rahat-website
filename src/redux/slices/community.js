@@ -110,7 +110,6 @@ export const getCommunityDetails = (address) => {
             const { data: res } = await CommunitiesService.getCommunitiyDetails(
                 address
             );
-
             dispatch(slice.actions.getCommunitySuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -125,7 +124,6 @@ export const getCommunityProjects = (id) => {
                 await CommunitiesService.getCommunitiyProjects(id);
             dispatch(slice.actions.getCommunityProjectsSuccess(res));
         } catch (error) {
-            console.log({ error });
             dispatch(hasError(error));
         }
     };
