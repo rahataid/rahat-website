@@ -32,12 +32,12 @@ const AuthorProfileArea = ({ className, organization }) => {
                                         >
                                             Donated
                                         </Nav.Link>
-                                        <Nav.Link
+                                        {/* <Nav.Link
                                             as="button"
                                             eventKey="nav-received"
                                         >
                                             Photos
-                                        </Nav.Link>
+                                        </Nav.Link> */}
                                     </Nav>
                                 </nav>
                             </div>
@@ -49,23 +49,23 @@ const AuthorProfileArea = ({ className, organization }) => {
                             className="row d-flex g-5"
                             eventKey="nav-donated"
                         >
-                            {onSaleProducts?.map((prod) => (
+                            {organization?.donatedItems?.map((transaction) => (
                                 <div
-                                    key={prod.id}
+                                    key={transaction.id}
                                     className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
                                 >
                                     <Card
                                         cover={""}
-                                        name={"Rahat"}
-                                        category={"Senior Citizen"}
+                                        name={transaction.doneeId}
+                                        category={transaction.status}
                                         country={"Nepal"}
                                         currency={"$"}
-                                        fundRaisedLocal={"5000"}
+                                        fundRaisedLocal={transaction.amount}
                                     />
                                 </div>
                             ))}
                         </TabPane>
-                        <TabPane
+                        {/* <TabPane
                             className="row g-5 d-flex"
                             eventKey="nav-received"
                         >
@@ -84,27 +84,7 @@ const AuthorProfileArea = ({ className, organization }) => {
                                     />
                                 </div>
                             ))}
-                        </TabPane>
-                        <TabPane
-                            className="row g-5 d-flex"
-                            eventKey="nav-pending"
-                        >
-                            {createdProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Card
-                                        cover={""}
-                                        name={"Rahat"}
-                                        category={"Senior Citizen"}
-                                        country={"Nepal"}
-                                        currency={"$"}
-                                        fundRaisedLocal={"5000"}
-                                    />
-                                </div>
-                            ))}
-                        </TabPane>
+                        </TabPane> */}
                     </TabContent>
                 </div>
             </TabContainer>
