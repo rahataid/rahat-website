@@ -91,7 +91,7 @@ const SearchForm = ({ categories, countries = [] }) => {
 
     return (
         <>
-            <div className="filter-select-option">
+            <div className="filter-select-option mb-3">
                 <NiceSelect
                     options={categories}
                     placeholder="Filter By Category"
@@ -100,7 +100,7 @@ const SearchForm = ({ categories, countries = [] }) => {
                     defaultCurrent={category}
                 />
             </div>
-            <div className="filter-select-option">
+            <div className="filter-select-option mb-3">
                 <NiceSelect
                     options={countries}
                     placeholder="Filter By Country"
@@ -109,7 +109,7 @@ const SearchForm = ({ categories, countries = [] }) => {
                     defaultCurrent={country}
                 />
             </div>
-            <form className="search-form-wrapper" action="">
+            <form className="search-form-wrapper mb-3" action="">
                 <input
                     type="search"
                     placeholder="Search Here"
@@ -130,7 +130,7 @@ const SearchForm = ({ categories, countries = [] }) => {
                     </div>
                 )} */}
             </form>
-            <div className="reset-icon">
+            <div className="reset-icon mb-3">
                 <button
                     type="button"
                     className="btn btn-sm btn-secondary"

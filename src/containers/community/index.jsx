@@ -25,15 +25,32 @@ const ExploreProductArea = ({
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
-                <div className="row">
-                    <div className="d-flex align-items-center justify-content-between mb--25">
-                        <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <h3>Communities</h3>
+                <div className="d-none d-lg-block">
+                    <div className="row">
+                        <div className="d-flex align-items-center justify-content-between mb--25">
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <h3>Communities</h3>
+                            </div>
+                            <SearchForm
+                                categories={sanitizedCategories}
+                                countries={sanitizedCountries}
+                            />
                         </div>
-                        <SearchForm
-                            categories={sanitizedCategories}
-                            countries={sanitizedCountries}
-                        />
+                    </div>
+                </div>
+
+                <div className="d-block d-lg-none">
+                    <div className="row">
+                        <div className="d-flex align-items-center justify-content-between mb--25">
+                            <div className="col-12">
+                                <h3 className="mb--25">Communities</h3>
+
+                                <SearchForm
+                                    categories={sanitizedCategories}
+                                    countries={sanitizedCountries}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="row g-5">
