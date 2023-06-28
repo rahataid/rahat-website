@@ -8,6 +8,7 @@ const initialState = {
         rows: [],
     },
     organization: null,
+    organizationTransactions: []
 };
 
 const slice = createSlice({
@@ -28,6 +29,10 @@ const slice = createSlice({
         getOrganizationSuccess(state, action) {
             state.isLoading = false;
             state.organization = action.payload;
+        },
+        getOrganizationTransactionsSuccess(state, action) {
+            state.isLoading = false;
+            state.organizationTransactions = action.payload;
         },
     },
 });
@@ -66,6 +71,18 @@ export const organizationDetails = (id) => {
                 await OrganizationsService.getOrganizationDetails(id);
 
             dispatch(slice.actions.getOrganizationSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
+
+export const getOrganizationTransactions = (walletAddress) => {
+    return async (dispatch) => {
+        try {
+            const { data: res } =
+                await OrganizationsService.getOrganizationTransactions(walletAddress);
+            dispatch(slice.actions.getOrganizationTransactionsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
         }
