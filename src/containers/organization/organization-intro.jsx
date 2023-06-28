@@ -1,21 +1,22 @@
 import ShareModal from "@components/modals/share-modal";
 import ShareDropdown from "@components/share-dropdown";
+import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
+import { bufferToWalletAddress } from "@utils/string";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { useRouter } from "next/router";
-import { bufferToWalletAddress } from "@utils/string";
-import { ASSET_VIEW } from "@config";
 const AuthorIntroArea = ({ className, space, organization }) => {
+    console.log(organization)
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
 
-    const contractAddress = bufferToWalletAddress(
-        organization?.contractAddress
-    );
+    const contractAddress = organization && bufferToWalletAddress(
+        organization?.contractAddress?.data
+    ) || ""
+
     const profileImage = organization?.profileImage
         ? `${ASSET_VIEW}/${contractAddress}/${organization?.profileImage}`
         : "/images/portfolio/rahat.jpeg";

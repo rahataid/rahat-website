@@ -7,8 +7,9 @@ import Wrapper from "@layout/wrapper";
 import { getOrganizationDetails } from "@redux/slices/organization";
 import { wrapper } from "@redux/store";
 
-const OrganizationProfile = ({ organization }) => (
-    <Wrapper>
+const OrganizationProfile = ({ organization }) => {
+    console.log(organization);
+    return (<Wrapper>
         <SEO pageTitle="Organization" />
         <Header />
         <main id="main-content">
@@ -16,8 +17,8 @@ const OrganizationProfile = ({ organization }) => (
             <OrganizationProfileArea organization={organization} />
         </main>
         <Footer />
-    </Wrapper>
-);
+    </Wrapper>)
+};
 
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>

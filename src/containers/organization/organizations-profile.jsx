@@ -1,8 +1,5 @@
 import Card from "@components/cards/community";
-import { shuffleArray } from "@utils/methods";
-import { ProductType } from "@utils/types";
 import clsx from "clsx";
-import PropTypes from "prop-types";
 import Nav from "react-bootstrap/Nav";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
@@ -56,7 +53,7 @@ const AuthorProfileArea = ({ className, organization }) => {
                                 >
                                     <Card
                                         cover={""}
-                                        name={transaction.doneeId}
+                                        name={transaction.donee.name}
                                         category={transaction.status}
                                         country={"Nepal"}
                                         currency={"$"}
