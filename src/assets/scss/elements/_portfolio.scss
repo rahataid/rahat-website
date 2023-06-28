@@ -416,6 +416,42 @@
         color: #ffff;
         background: #0ac9e7;
     }
+
+    .pill-ACCEPTED {
+        font-weight: bold;
+        font-size: 11px;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        border-radius: 100px 5px 5px 100px;
+        padding: 5px 12px 5px 12px;
+        color: #ffff;
+        background: #07b810;
+    }
+
+    .pill-PENDING {
+        font-weight: bold;
+        font-size: 11px;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        border-radius: 100px 5px 5px 100px;
+        padding: 5px 12px 5px 12px;
+        color: #ffff;
+        background: #db9408;
+    }
+
+    .pill-REJECTED {
+        font-weight: bold;
+        font-size: 11px;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        border-radius: 100px 5px 5px 100px;
+        padding: 5px 12px 5px 12px;
+        color: #ffff;
+        background: #e73a0a;
+    }
 }
 
 

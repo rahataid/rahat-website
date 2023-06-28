@@ -41,7 +41,7 @@ const Product = ({
                         // width={533}
                         />
                     </Anchor>
-                    <div className="pill">{category}</div>
+                    <div className={`${category} ? pill-${category} : pill`}>{category}</div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${address}`}>
