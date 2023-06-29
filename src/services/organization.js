@@ -7,4 +7,7 @@ export const OrganizationsService = {
     getOrganizationDetails: (id) => {
         return client.get(`/organizations/${id}`);
     },
+    getOrganizationTransactions: (walletAddress) => {
+        return client.get(`/organizations/${walletAddress}/transactions`);
+    },
 };

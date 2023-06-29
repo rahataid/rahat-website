@@ -39,7 +39,7 @@ const TransactionCard = ({ data, className }) => {
                                     <i className="feather-clock" />
                                     <span>
                                         {moment
-                                            .unix(data?.timestamp)
+                                            (data?.createdAt)
                                             .format("Do MMMM YYYY") ?? "-"}
                                     </span>
                                 </div>

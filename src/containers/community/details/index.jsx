@@ -6,14 +6,7 @@ import transaction from "../../../data/temp_community_transactions.json";
 import CommunityDescription from "./description";
 import CommunityPhotos from "./photos";
 
-const CommunityDetails = ({ community }) => {
-    const { query } = useRouter();
-    console.log("a", query?.address);
-    const filteredTransaction = transaction.filter(
-        (transaction) =>
-            query?.address.includes(transaction.donor.address) ||
-            query?.address.includes(transaction.donee.address)
-    );
+const CommunityDetails = ({ community, transactions }) => {
 
     return (
         <div className="rn-authore-profile-area">
@@ -22,7 +15,7 @@ const CommunityDetails = ({ community }) => {
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
                         <CommunityDescription community={community} />
                         <Statistics community={community} />
-                        <Transactions data={filteredTransaction} />
+                        <Transactions data={transactions} />
                         <CommunityChart community={community} />
                         <CommunityPhotos community={community} />
                     </div>

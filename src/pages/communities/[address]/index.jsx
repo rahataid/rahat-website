@@ -4,10 +4,11 @@ import CommunityIntro from "@containers/community/details/community-intro";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import { getCommunityDetails } from "@redux/slices/community";
+import { getOrganizationTransactions } from "@redux/slices/organization";
 import { wrapper } from "@redux/store";
 import Wrapper from "src/layout/wrapper";
 
-const Author = ({ community, id }) => (
+const Author = ({ community, transactions }) => (
     <Wrapper>
         <SEO
             pageTitle={community?.name}
@@ -17,7 +18,7 @@ const Author = ({ community, id }) => (
         <Header />
         <main id="main-content">
             <CommunityIntro community={community} />
-            <CommunityDetails community={community} />
+            <CommunityDetails community={community} transactions={transactions} />
         </main>
         <Footer />
     </Wrapper>
@@ -29,10 +30,17 @@ export const getServerSideProps = wrapper.getServerSideProps(
             await store.dispatch(getCommunityDetails(query?.address));
             const community = store.getState().community.community;
             const serializedError = store.getState().community.error;
+
+            await store.dispatch(getOrganizationTransactions(query?.address));
+            const transactions = store.getState().organization.organizationTransactions;
+            const serializedErrorOrganization = store.getState().organization.error;
+
             return {
                 props: {
-                    community,
+                    community,                    
                     error: serializedError,
+                    transactions,
+                    errorOrganization: serializedErrorOrganization
                 },
             };
         }

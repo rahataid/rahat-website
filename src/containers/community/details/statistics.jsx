@@ -40,7 +40,6 @@ const CounterComp = ({ total, inview }) => {
 };
 
 const FunFact = ({ community }) => {
-    console.log(community);
     const summary = community?.summary[0] || {};
 
     return (
