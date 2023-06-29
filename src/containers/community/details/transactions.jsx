@@ -15,11 +15,12 @@ const CommunityTransactions = ({ space, className, data }) => {
                     <h3 className="title">Transactions</h3>
                 </div>
                 <div className="row g-6 activity-direction">
-                    {data.map((d, index) => (
-                        <div key={index} className="col-lg-12 mb_dec--15">
-                            <TransactionCard data={d} />
-                        </div>
-                    ))}
+                    {data.length &&
+                        data?.map((d, index) => (
+                            <div key={index} className="col-lg-12 mb_dec--15">
+                                <TransactionCard data={d} />
+                            </div>
+                        ))}
                 </div>
             </div>
         </div>
