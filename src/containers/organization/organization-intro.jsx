@@ -1,21 +1,21 @@
 import ShareModal from "@components/modals/share-modal";
 import ShareDropdown from "@components/share-dropdown";
 import { ASSET_VIEW } from "@config";
-import Anchor from "@ui/anchor";
 import { bufferToWalletAddress } from "@utils/string";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
+
 const AuthorIntroArea = ({ className, space, organization }) => {
-    console.log(organization)
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
 
-    const contractAddress = organization && bufferToWalletAddress(
-        organization?.contractAddress?.data
-    ) || ""
+    const contractAddress =
+        (organization &&
+            bufferToWalletAddress(organization?.contractAddress?.data)) ||
+        "";
 
     const profileImage = organization?.profileImage
         ? `${ASSET_VIEW}/${contractAddress}/${organization?.profileImage}`
@@ -52,8 +52,8 @@ const AuthorIntroArea = ({ className, space, organization }) => {
                                         <Image
                                             src={profileImage}
                                             alt={
-                                                "/images/portfolio/rahat.jpeg" ||
-                                                organization?.name
+                                                organization?.name ||
+                                                "/images/portfolio/rahat.jpeg"
                                             }
                                             width={140}
                                             height={140}
@@ -78,12 +78,12 @@ const AuthorIntroArea = ({ className, space, organization }) => {
                                             <div className="count at-follw">
                                                 <ShareDropdown />
                                             </div>
-                                            <Anchor
+                                            {/* <Anchor
                                                 path="/user/1/edit-profile"
                                                 className="btn at-follw follow-button edit-btn"
                                             >
                                                 <i className="feather feather-edit" />
-                                            </Anchor>
+                                            </Anchor> */}
                                         </div>
                                     </div>
                                 </div>

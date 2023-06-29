@@ -79,7 +79,6 @@ export const requestOtp = (data) => async (dispatch) => {
         return otp?.data;
     } catch (error) {
         if (error?.response?.data) {
-            console.log("error", error?.response?.data);
             dispatch(setError(error?.response?.data));
         }
     }
@@ -93,7 +92,6 @@ export const verifyOtp = (data) => async (dispatch) => {
         return user?.data;
     } catch (error) {
         if (error?.response?.data) {
-            console.log("error", error?.response?.data);
             dispatch(setError(error?.response?.data));
         }
     }

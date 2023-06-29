@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { BlogService } from "@services/blogs";
-import { CommunitiesService } from "@services/communities";
 
 const initialState = {
     isLoading: false,
@@ -42,7 +41,6 @@ export const getBlogs = (params) => {
     return async (dispatch) => {
         try {
             const { data: res } = await BlogService.getBlogs();
-            console.log("res", res);
             dispatch(slice.actions.getBlogsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -54,11 +52,9 @@ export const getBlogDetails = (slug) => {
     return async (dispatch) => {
         try {
             const { data: res } = await BlogService.getBlogDetails(slug);
-            console.log("res", res);
             dispatch(slice.actions.getBlogDetailSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
         }
     };
 };
-

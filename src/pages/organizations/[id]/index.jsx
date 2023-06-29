@@ -8,16 +8,20 @@ import { getOrganizationDetails } from "@redux/slices/organization";
 import { wrapper } from "@redux/store";
 
 const OrganizationProfile = ({ organization }) => {
-    console.log(organization);
-    return (<Wrapper>
-        <SEO pageTitle="Organization" />
-        <Header />
-        <main id="main-content">
-            <OrganizationIntroArea organization={organization} />
-            <OrganizationProfileArea organization={organization} />
-        </main>
-        <Footer />
-    </Wrapper>)
+    return (
+        <Wrapper>
+            <SEO
+                pageTitle={organization?.name}
+                description={organization?.description}
+            />
+            <Header />
+            <main id="main-content">
+                <OrganizationIntroArea organization={organization} />
+                <OrganizationProfileArea organization={organization} />
+            </main>
+            <Footer />
+        </Wrapper>
+    );
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(

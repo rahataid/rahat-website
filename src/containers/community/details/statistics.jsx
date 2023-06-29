@@ -40,7 +40,7 @@ const CounterComp = ({ total, inview }) => {
 };
 
 const FunFact = ({ community }) => {
-    const summary = community?.summary[0] || {};
+    const summary = community?.summary?.[0] || {};
 
     return (
         <div className="container">
@@ -102,7 +102,7 @@ const FunFact = ({ community }) => {
                                     <div className="number counter-odomitter-active">
                                         <CounterComp
                                             total={
-                                                community?.summary[0]
+                                                community?.summary?.[0]
                                                     ?.total_beneficiaries
                                             }
                                         />

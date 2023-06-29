@@ -49,7 +49,6 @@ export const selectCommunities = (state) => state.community.communities;
 export const selectProjects = (state) => state.community.projects;
 export const selectGenderDistributionReport = (state) =>
     state.community.community.summary.map((type) => {
-        console.log(type);
         let data = type?.summaryData.map(([key, values]) => {
             let splitedData = key.split(`_`);
             if (splitedData[0] == "gender") {

@@ -20,7 +20,7 @@ const ShareModal = ({ show, handleModal }) => (
         )}
 
         <Modal.Header className="share-area">
-            <h5 className="modal-title">Share this NFT</h5>
+            <h5 className="modal-title">Share this ?</h5>
         </Modal.Header>
         <Modal.Body>
             <ul className="social-share-default">

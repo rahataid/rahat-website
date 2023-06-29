@@ -1,5 +1,4 @@
 import CommunityCard from "@components/cards/community";
-import Pagination from "@components/pagination";
 import SearchForm from "@components/search-form";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -78,11 +77,11 @@ const ExploreProductArea = ({
                         <p>No item to show</p>
                     )}
 
-                    <Pagination
+                    {/* <Pagination
                         pagination={communities?.meta}
                         currentPage={communities?.meta?.currentPage}
                         rootPage="/communities"
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

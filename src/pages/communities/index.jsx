@@ -21,7 +21,7 @@ export default function Product({ communities, categories, countries }) {
                         sx={{
                             height: 400,
                         }}
-                        mapData={communities?.rows?.map((r) => ({
+                        mapData={communities?.map((r) => ({
                             latitude: r?.latitude,
                             longitude: r?.longitude,
                         }))}

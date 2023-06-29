@@ -1,4 +1,5 @@
 import Card from "@components/cards/community";
+import { bufferToWalletAddress } from "@utils/string";
 import clsx from "clsx";
 import Nav from "react-bootstrap/Nav";
 import TabContainer from "react-bootstrap/TabContainer";
@@ -6,13 +7,9 @@ import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
 
 const AuthorProfileArea = ({ className, organization }) => {
-    // const onSaleProducts = shuffleArray(data.products).slice(0, 10);
-    // const ownedProducts = shuffleArray(data.products).slice(0, 10);
-    // const createdProducts = shuffleArray(data.products).slice(0, 10);
-
     return (
         <div className={clsx("rn-authore-profile-area", className)}>
-            <TabContainer defaultActiveKey="nav-profile">
+            <TabContainer defaultActiveKey="nav-donated">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -29,12 +26,12 @@ const AuthorProfileArea = ({ className, organization }) => {
                                         >
                                             Donated
                                         </Nav.Link>
-                                        {/* <Nav.Link
+                                        <Nav.Link
                                             as="button"
                                             eventKey="nav-received"
                                         >
-                                            Photos
-                                        </Nav.Link> */}
+                                            Received
+                                        </Nav.Link>
                                     </Nav>
                                 </nav>
                             </div>
@@ -46,42 +43,64 @@ const AuthorProfileArea = ({ className, organization }) => {
                             className="row d-flex g-5"
                             eventKey="nav-donated"
                         >
-                            {organization?.donatedItems?.map((transaction) => (
-                                <div
-                                    key={transaction.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Card
-                                        cover={""}
-                                        name={transaction.donee.name}
-                                        category={transaction.status}
-                                        country={"Nepal"}
-                                        currency={"$"}
-                                        fundRaisedLocal={transaction.amount}
-                                    />
-                                </div>
-                            ))}
+                            {organization?.donatedItems?.map((transaction) => {
+                                const address = bufferToWalletAddress(
+                                    transaction?.donee?.contractAddress?.data
+                                );
+                                // const profileImage = transaction?.donee
+                                //     ? `${ASSET_VIEW}/${address}/${transaction?.donee?.profileImage}`
+                                //     : "/images/portfolio/rahat.jpeg";
+                                return (
+                                    <div
+                                        key={transaction.id}
+                                        className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
+                                    >
+                                        <Card
+                                            cover={
+                                                transaction?.donee?.profileImage
+                                            }
+                                            address={address}
+                                            name={transaction.donee.name}
+                                            category={transaction.status}
+                                            country={"Nepal"}
+                                            currency={"$"}
+                                            fundRaisedLocal={transaction.amount}
+                                        />
+                                    </div>
+                                );
+                            })}
                         </TabPane>
-                        {/* <TabPane
-                            className="row g-5 d-flex"
+                        <TabPane
+                            className="row d-flex g-5"
                             eventKey="nav-received"
                         >
-                            {ownedProducts?.map((prod) => (
-                                <div
-                                    key={prod.id}
-                                    className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
-                                >
-                                    <Card
-                                        cover={""}
-                                        name={"Rahat"}
-                                        category={"Senior Citizen"}
-                                        country={"Nepal"}
-                                        currency={"$"}
-                                        fundRaisedLocal={"5000"}
-                                    />
-                                </div>
-                            ))}
-                        </TabPane> */}
+                            {organization?.receivedItems?.map((transaction) => {
+                                const address = bufferToWalletAddress(
+                                    transaction?.donor?.contractAddress?.data
+                                );
+                                // const profileImage = transaction?.donor
+                                //     ? `${ASSET_VIEW}/${address}/${transaction?.donor?.profileImage}`
+                                //     : "/images/portfolio/rahat.jpeg";
+                                return (
+                                    <div
+                                        key={transaction.id}
+                                        className="col-5 col-lg-4 col-md-6 col-sm-6 col-12"
+                                    >
+                                        <Card
+                                            cover={
+                                                transaction?.donor?.profileImage
+                                            }
+                                            address={address}
+                                            name={transaction.donor.name}
+                                            category={transaction.status}
+                                            country={"Nepal"}
+                                            currency={"$"}
+                                            fundRaisedLocal={transaction.amount}
+                                        />
+                                    </div>
+                                );
+                            })}
+                        </TabPane>
                     </TabContent>
                 </div>
             </TabContainer>

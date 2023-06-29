@@ -1,5 +1,3 @@
-import ethers from "ethers";
-
 export const extractAssetUploadData = (responseData) => {
     if (!responseData) {
         return null;
@@ -29,5 +27,6 @@ export const truncateEthAddress = (address) => {
 };
 
 export function bufferToWalletAddress(buffer) {
+    if (!buffer) return;
     return `0x${Buffer.from(buffer).toString("hex")}`;
 }
