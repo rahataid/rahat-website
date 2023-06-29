@@ -299,7 +299,7 @@ const FunFact = ({ className }) => {
                                 </CountUp>
                             </div>
 
-                            <div className="botton-title">Local Prtners</div>
+                            <div className="botton-title">Local Partners</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -352,7 +352,9 @@ const FunFact = ({ className }) => {
                                 </CountUp>
                             </div>
 
-                            <div className="botton-title">Local Prtners</div>
+                            <div className="botton-title">
+                                Nepal And Pakistan
+                            </div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">

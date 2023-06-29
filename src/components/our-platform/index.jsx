@@ -83,7 +83,13 @@ const OurPlatform = ({ space, className }) => (
                     <div className="col-12">
                         <a href="/platform-page">
                             <Button className="mt-5" size="medium">
-                                <i className="feather-list"></i>
+                                <i
+                                    className="feather-list"
+                                    style={{
+                                        position: "relative",
+                                        top: "1.5px",
+                                    }}
+                                ></i>
                                 Learn More
                             </Button>
                         </a>

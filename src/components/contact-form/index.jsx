@@ -2,10 +2,13 @@ import { useState } from "react";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
 import axios from "axios";
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import Image from "next/image";
+import Loader from "@components/loader";
 
 const ContactForm = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -27,20 +30,25 @@ const ContactForm = () => {
         }
     };
     const onSubmit = (data, e) => {
+        setIsLoading(true);
         const form = e.target;
         setServerState({ submitting: true });
-        axios({
-            method: "post",
-            url: "https://getform.io/f/7a6695a7-c8e3-442c-bc2f-d46d3b9a535e",
-            data,
-        })
+        // axios({
+        //     method: "post",
+        //     url: "/api/contactForm",
+        //     body: JSON.stringify(data),
+        // })
+        axios
+            .post("/api/contactForm", data)
             .then((_res) => {
+                setIsLoading(false);
                 handleServerResponse(true, "Thanks! for being with us", form);
             })
             .catch((err) => {
                 handleServerResponse(false, err.response.data.error, form);
             });
     };
+
     return (
         <>
             <div className="rn-author-bg-area position-relative ptb--150">
@@ -170,7 +178,7 @@ const ContactForm = () => {
                                     type="submit"
                                     size="medium"
                                 >
-                                    Send Message
+                                    {isLoading ? <Loader /> : "  Send Message"}
                                 </Button>
                             </div>
                             {serverState.status && (
