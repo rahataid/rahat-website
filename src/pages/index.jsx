@@ -5,6 +5,7 @@ import OurPlatform from "@components/our-platform";
 import SEO from "@components/seo";
 import WeAre from "@components/we-are";
 import HeroArea from "@containers/hero";
+import OurServices from "@components/our-services";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import { normalizedData } from "@utils/methods";
@@ -34,6 +35,7 @@ const Home = () => {
             <VideoArea data={content["video-section"]} />
             <Benefits />
             <OurPlatform />
+            <OurServices />
             <Footer />
         </Wrapper>
     );

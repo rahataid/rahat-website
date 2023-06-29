@@ -1,52 +1,52 @@
 [
     {
-        "id": "14",
+        "id": "19",
         "fname": "Santosh Shrestha",
         "designation": "CTO",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:",
-        "link_linkedin": "",
+        "link_mail": "mailto:santosh@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/rumsan/",
         "team_image": "https://assets.rumsan.com/rumsan-group/santosh-rahat-team.jpg"
     },
     {
-        "id": "15",
+        "id": "20",
         "fname": "Raktim Shrestha",
         "designation": "Full Stack Developer",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:",
-        "link_linkedin": "",
+        "link_mail": "mailto:raktim@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/raktim-shrestha-63a780109/",
         "team_image": "https://assets.rumsan.com/rumsan-group/raktim-rahat-team.jpg"
     },
     {
-        "id": "16",
+        "id": "21",
         "fname": "Manjik Shrestha",
         "designation": "BLockchain Developer",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:",
-        "link_linkedin": "",
+        "link_mail": "mailto:manjik.shrestha@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/manzik-shrestha-951b01b3/",
         "team_image": "https://assets.rumsan.com/rumsan-group/manjik-rahat-team.jpg"
     },
     {
-        "id": "17",
+        "id": "22",
         "fname": "Nishu Bade Shrestha",
         "designation": "Business Analyst",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:",
-        "link_linkedin": "",
+        "link_mail": "mailto:nishu.shrestha@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/nishubadeshrestha01/",
         "team_image": "https://assets.rumsan.com/rumsan-group/nishu-rahat-team-professional.jpg"
     },
     {
-        "id": "18",
+        "id": "23",
         "fname": "Sailendra Maharjan",
         "designation": "UAT Manager",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:",
-        "link_linkedin": "",
+        "link_mail": "mailto:sailendra.maharjan@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/sailendra-maharjan-b1773811a/",
         "team_image": "https://assets.rumsan.com/rumsan-group/sailendra-our-team-rahat.jpg"
     }
 ]

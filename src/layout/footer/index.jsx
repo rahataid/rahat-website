@@ -88,7 +88,10 @@ const Footer = ({ space, className, data }) => (
                             </ul>
                             <ul className="social-share-custom">
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        target="_blank"
+                                        href="https://twitter.com/rahataid"
+                                    >
                                         <span className="icon">
                                             <i className="feather-twitter" />
                                         </span>
@@ -96,14 +99,20 @@ const Footer = ({ space, className, data }) => (
                                 </li>
 
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        target="_blank"
+                                        href="https://www.linkedin.com/company/esatya/"
+                                    >
                                         <span className="icon">
                                             <i className="feather-linkedin" />
                                         </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        target="_blank"
+                                        href="https://esatya.medium.com/"
+                                    >
                                         <span className="icon">
                                             <i className="feather-book-open" />
                                         </span>
@@ -201,3 +210,4 @@ Footer.defaultProps = {
 };
 
 export default Footer;
+
