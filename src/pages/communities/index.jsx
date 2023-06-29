@@ -41,13 +41,14 @@ export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
             await store.dispatch(getCommunities(query));
-            const countries = [];
+            [];
             await store.dispatch(getCategories());
             const serializedCommunities =
                 store.getState().community.communities;
-            serializedCommunities?.rows?.forEach(({ country }) =>
-                countries.push(country)
-            );
+            const countries = [
+                ...new Set(serializedCommunities?.map((r) => r.country)),
+            ].map((country) => ({ text: country, value: country }));
+
             const categories = store.getState().category.categories;
             const serializedError = store.getState().community.error;
             return {

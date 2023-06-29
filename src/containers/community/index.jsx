@@ -12,11 +12,6 @@ const ExploreProductArea = ({
     categories,
     countries,
 }) => {
-    const sanitizedCountries = countries.map((name) => ({
-        value: name,
-        text: name,
-    }));
-
     const sanitizedCategories = categories.map((cat) => ({
         value: cat.id,
         text: cat.name,
@@ -33,7 +28,7 @@ const ExploreProductArea = ({
                             </div>
                             <SearchForm
                                 categories={sanitizedCategories}
-                                countries={sanitizedCountries}
+                                countries={countries}
                             />
                         </div>
                     </div>
@@ -47,7 +42,7 @@ const ExploreProductArea = ({
 
                                 <SearchForm
                                     categories={sanitizedCategories}
-                                    countries={sanitizedCountries}
+                                    countries={countries}
                                 />
                             </div>
                         </div>
