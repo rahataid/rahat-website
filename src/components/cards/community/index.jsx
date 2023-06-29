@@ -32,16 +32,18 @@ const Product = ({
                             src={
                                 cover
                                     ? `${ASSET_VIEW}/${address}/${cover}`
-                                    : "/images/portfolio/tayaba.png"
+                                    : "/images/logo/logo-dark.png"
                             }
                             alt={name}
                             ratio="6/4"
                             className="thumbnail-img"
-                        // height={533}
-                        // width={533}
+                            // height={533}
+                            // width={533}
                         />
                     </Anchor>
-                    <div className={`${category} ? pill-${category} : pill`}>{category}</div>
+                    <div className={`${category} ? pill-${category} : pill`}>
+                        {category}
+                    </div>
                 </div>
                 <div className="d-flex justify-content-between align-items-center">
                     <Anchor path={`${path}/${address}`}>
