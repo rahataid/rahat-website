@@ -21,7 +21,7 @@
     },
     {
         "id": 4,
-        "text": "Our Plartform",
+        "text": "Our Platform",
         "path": "/#our-platform"
     },
     {
@@ -29,11 +29,7 @@
         "text": "Projects",
         "path": "/project-showcase"
     },
-    {
-        "id": 6,
-        "text": "Contact Us",
-        "path": "/#footer"
-    },
+
     {
         "id": 5,
         "text": "Resources",
@@ -61,6 +57,16 @@
                 "target": "_blank"
             }
         ]
+    },
+    {
+        "id": 6,
+        "text": "Service",
+        "path": "/#our-services"
+    },
+    {
+        "id": 6,
+        "text": "Contact Us",
+        "path": "/#footer"
     }
 ]
 

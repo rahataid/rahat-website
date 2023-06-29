@@ -26,7 +26,7 @@ class MyDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body>
+                <body style={{ fontFamily: "Poppins,sans-serif" }}>
                     <Main />
                     <NextScript />
                 </body>
@@ -36,3 +36,4 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+

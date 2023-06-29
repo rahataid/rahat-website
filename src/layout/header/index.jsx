@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import headerData from "../../data/header.json";
 import menuData from "../../data/menu.json";
+import { Button } from "react-bootstrap";
 
 const Header = ({ className }) => {
     const sticky = useSticky();
@@ -41,7 +42,21 @@ const Header = ({ className }) => {
                                     <MainMenu menu={menuData} />
                                 </nav>
                             </div>
+                            <div className="header-right d-none d-xl-block">
+                                <div className="setting-option header-btn">
+                                    <div className="icon-box">
+                                        <a
+                                            className="btn btn-medium btn-primary"
+                                            href="/contact-form"
+                                            style={{ borderRadius: "50px" }}
+                                        >
+                                            Schedule For Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div className="header-right">
                             {/* {!isAuthenticated && (
                                 <div className="setting-option header-btn">
@@ -99,3 +114,4 @@ Header.propTypes = {
 };
 
 export default Header;
+

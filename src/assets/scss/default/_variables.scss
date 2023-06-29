@@ -73,8 +73,8 @@
     --transition: 0.4s;
 
     // Font Family
-    --font-primary: "Roboto", sans-serif;
-    --font-secondary: "Roboto", sans-serif;
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
 
     //Fonts Size
     --font-size-b1: 14px;
@@ -105,3 +105,4 @@ $md-layout: "only screen and (min-width: 768px) and (max-width: 991px)";
 $sm-layout: "only screen and (max-width: 767px)";
 $large-mobile: "only screen and (max-width: 575px)";
 $small-mobile: "only screen and (max-width: 479px)";
+
