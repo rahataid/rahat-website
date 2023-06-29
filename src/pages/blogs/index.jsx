@@ -1,17 +1,15 @@
-import React from "react";
-import Wrapper from "@layout/wrapper";
-import Header from "@layout/header";
+import BlogPage from "@components/blog-page";
 import SEO from "@components/seo";
 import Footer from "@layout/footer";
-import BlogPage from "@components/blog-page";
-import { wrapper } from "@redux/store";
+import Header from "@layout/header";
+import Wrapper from "@layout/wrapper";
 import { getBlogs } from "@redux/slices/blogs";
+import { wrapper } from "@redux/store";
 
 const BlogsPage = ({ blogs }) => {
-    console.log("blogs", blogs);
     return (
         <Wrapper>
-            <SEO pageTitle="blogs page" />
+            <SEO pageTitle="Blogs" description={"List of all blogs"} />
             <Header />
             <BlogPage blogs={blogs.data} />
             <Footer />
@@ -34,4 +32,3 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 export default BlogsPage;
-

@@ -1,15 +1,14 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import Wrapper from "@layout/wrapper";
 import SEO from "@components/seo";
-import Image from "next/image";
-import Header from "@layout/header";
 import Footer from "@layout/footer";
-import { getMonth } from "@utils/methods";
-import { ImageType } from "@utils/types";
+import Header from "@layout/header";
+import Wrapper from "@layout/wrapper";
 import { getBlogDetails } from "@redux/slices/blogs";
 import { wrapper } from "@redux/store";
+import { ImageType } from "@utils/types";
+import clsx from "clsx";
 import moment from "moment";
+import Image from "next/image";
+import PropTypes from "prop-types";
 
 const BlogDetailPage = ({ space, className, singleBlog }) => {
     console.log("singleBlog", singleBlog);
@@ -17,7 +16,11 @@ const BlogDetailPage = ({ space, className, singleBlog }) => {
     return (
         <>
             <Wrapper>
-                <SEO pageTitle="blogs page" />
+                <SEO
+                    pageTitle={singleBlog?.title}
+                    imageUrl={singleBlog?.image_url}
+                    description={singleBlog?.subhead}
+                />
                 <Header />
 
                 <div className="rn-author-bg-area position-relative ptb--150">
@@ -155,4 +158,3 @@ BlogDetailPage.defaultProps = {
 };
 
 export default BlogDetailPage;
-
