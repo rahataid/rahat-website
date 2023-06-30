@@ -1,10 +1,9 @@
-import PropTypes from "prop-types";
-import clsx from "clsx";
-import { TextType, SectionTitleType } from "@utils/types";
-import Image from "next/image";
 import Button from "@ui/button";
-import Link from "next/link";
+import clsx from "clsx";
 import moment from "moment";
+import Image from "next/image";
+import Link from "next/link";
+import PropTypes from "prop-types";
 
 const BLogPage = ({ space, className, blogs }) => (
     <>
@@ -84,15 +83,13 @@ const BLogPage = ({ space, className, blogs }) => (
                                                 <h4 className="title">
                                                     <Link
                                                         className="short-title"
-                                                        target="_blank"
-                                                        href="#"
+                                                        href={`/blogs/${blog?.slug}`}
                                                     >
                                                         {blog?.title}
                                                     </Link>
                                                 </h4>
 
                                                 <Link
-                                                    target="_blank"
                                                     href={`/blogs/${blog?.slug}`}
                                                 >
                                                     <Button
@@ -125,4 +122,3 @@ BLogPage.defaultProps = {
 };
 
 export default BLogPage;
-

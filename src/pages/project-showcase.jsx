@@ -1,14 +1,13 @@
-import React from "react";
-import Wrapper from "@layout/wrapper";
+import ProjectShowcasePage from "@components/project-showcase-page";
+import SEO from "@components/seo";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
-import SEO from "@components/seo";
-import ProjectShowcasePage from "@components/project-showcase-page";
+import Wrapper from "@layout/wrapper";
 
 const ProjectShowcaseDetailPage = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Contact Us" />
+            <SEO pageTitle="Project Showcase" />
             <Header />
             <ProjectShowcasePage />
             <Footer />
@@ -17,4 +16,3 @@ const ProjectShowcaseDetailPage = () => {
 };
 
 export default ProjectShowcaseDetailPage;
-

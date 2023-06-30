@@ -1,9 +1,9 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
+import Anchor from "@ui/anchor";
+import { SectionTitleType, TextType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
-import { TextType, SectionTitleType } from "@utils/types";
-import Anchor from "@ui/anchor";
+import PropTypes from "prop-types";
+import { useState } from "react";
 
 const ProjectShowcasePage = ({ space, className }) => {
     const [isHover, setIsHover] = useState(false);
@@ -75,7 +75,7 @@ const ProjectShowcasePage = ({ space, className }) => {
                                 <div className="inner">
                                     <div className="thumbnail">
                                         <Image
-                                            src="/images/project-showcase/project-showcase-1.jpg"
+                                            src="https://assets.rumsan.com/rumsan-group/cash-transfers-media-mentions.jpg"
                                             alt={"Personal Portfolio Images"}
                                             width={489}
                                             height={366}
@@ -143,7 +143,7 @@ const ProjectShowcasePage = ({ space, className }) => {
                                 <div className="inner">
                                     <div className="thumbnail">
                                         <Image
-                                            src="/images/project-showcase/project-showcase-1.jpg"
+                                            src="https://assets.rumsan.com/rumsan-group/tayaba-project-showcase-banner.jpg"
                                             alt={"Personal Portfolio Images"}
                                             width={489}
                                             height={366}
@@ -221,4 +221,3 @@ ProjectShowcasePage.defaultProps = {
 };
 
 export default ProjectShowcasePage;
-
