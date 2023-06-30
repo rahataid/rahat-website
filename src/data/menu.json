@@ -1,20 +1,5 @@
 [
     {
-        "id": 1,
-        "text": "Home",
-        "path": "/"
-    },
-    {
-        "id": 2,
-        "text": "Communities",
-        "path": "/communities"
-    },
-    {
-        "id": 3,
-        "text": "Donations",
-        "path": "/donations"
-    },
-    {
         "id": 3,
         "text": "About Us",
         "path": "/about-us"
@@ -66,5 +51,15 @@
         "id": 6,
         "text": "Contact Us",
         "path": "/#footer"
+    },
+    {
+        "id": 2,
+        "text": "Communities",
+        "path": "/communities"
+    },
+    {
+        "id": 3,
+        "text": "Impact Flow",
+        "path": "/donations"
     }
 ]
