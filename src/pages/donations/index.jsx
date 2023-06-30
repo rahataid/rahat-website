@@ -25,7 +25,9 @@ export default Donations;
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
-            await store.dispatch(getDonations(query));
+            await store.dispatch(
+                getDonations({ query, perPage: 100, page: 1 })
+            );
             const serializedDonations = store.getState().donation.donations;
             const serializedError = store.getState().donation.error;
             return {

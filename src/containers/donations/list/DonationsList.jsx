@@ -1,5 +1,4 @@
 import TransactionCard from "@components/cards/transaction";
-import Pagination from "@components/pagination";
 import Button from "@ui/button";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -34,11 +33,11 @@ const DonationsList = ({ className, space, donations }) => {
                 ) : (
                     <p>No donations to display.</p>
                 )}
-                <Pagination
+                {/* <Pagination
                     pagination={donations?.meta}
                     currentPage={donations?.meta?.currentPage}
                     rootPage="/donations"
-                />
+                /> */}
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="view-more-btn mt--50">
