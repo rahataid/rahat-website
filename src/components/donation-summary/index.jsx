@@ -5,17 +5,20 @@ import moment from "moment";
 import Image from "next/image";
 
 const Summary = ({ donation }) => {
+    console.log("donation", donation);
     const doneeProfileImage = donation?.donee?.profileImage
         ? `${ASSET_VIEW}/${bufferToWalletAddress(
-              donation?.donee?.address?.data
+              donation?.donee?.contractAddress?.data
           )}/${donation?.donee?.profileImage}`
-        : "/images/portfolio/rahat.jpeg";
+        : "/images/logo/logo-dark.png";
 
     const donorProfileImage = donation?.donor?.profileImage
         ? `${ASSET_VIEW}/${bufferToWalletAddress(
-              donation?.donor?.address?.data
+              donation?.donor?.contractAddress?.data
           )}/${donation?.donor?.profileImage}`
-        : "/images/portfolio/rahat.jpeg";
+        : "/images/logo/logo-dark.png";
+
+    console.log("doneeProfileImage", doneeProfileImage);
 
     return (
         <div className="mt--50 mb--50">
