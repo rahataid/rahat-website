@@ -29,7 +29,6 @@
         "text": "Projects",
         "path": "/project-showcase"
     },
-
     {
         "id": 5,
         "text": "Resources",
@@ -69,4 +68,3 @@
         "path": "/#footer"
     }
 ]
-
