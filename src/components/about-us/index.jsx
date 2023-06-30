@@ -25,7 +25,10 @@ const AboutUs = ({ space, className }) => (
                             alt=""
                             style={{ width: "256px", marginLeft: "-24px" }}
                         />
-                        <h2 style={{ fontSize: "40px", fontWeight: "300" }}>
+                        <h2
+                            className="custom-heading"
+                            // style={{ fontSize: "40px", fontWeight: "300" }}
+                        >
                             An open-source blockchain-based{" "}
                             <span style={{ color: "#007bb6" }}>
                                 {" "}
@@ -47,3 +50,4 @@ AboutUs.defaultProps = {
 };
 
 export default AboutUs;
+

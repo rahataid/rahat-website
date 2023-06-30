@@ -39,7 +39,7 @@ const BlogDetailPage = ({ space, className, singleBlog }) => {
                     <div className="col-lg-12 custom-page-banner">
                         <div className="author-wrapper">
                             <div className="author-inner">
-                                <div className="rn-author-info-content-custom">
+                                <div className="rn-author-info-content-custom-two">
                                     <h4 className="title">
                                         {singleBlog?.title}
                                     </h4>
@@ -158,3 +158,4 @@ BlogDetailPage.defaultProps = {
 };
 
 export default BlogDetailPage;
+

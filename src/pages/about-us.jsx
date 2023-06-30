@@ -7,7 +7,7 @@ import Wrapper from "@layout/wrapper";
 const AboutUsPage = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Contact Us" />
+            <SEO pageTitle="About Us" />
             <Header />
             <AboutUsDetails />
             <Footer />

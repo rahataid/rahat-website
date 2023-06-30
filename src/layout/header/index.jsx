@@ -12,7 +12,6 @@ const Header = ({ className }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
 
-
     return (
         <>
             <header
@@ -26,7 +25,10 @@ const Header = ({ className }) => {
                     <div className="header-inner">
                         <div className="header-left">
                             <Logo logo={headerData.logo} />
-                            <div className="mainmenu-wrapper">
+                            <div
+                                className="mainmenu-wrapper"
+                                style={{ marginLeft: "auto" }}
+                            >
                                 <nav
                                     id="sideNav"
                                     className="mainmenu-nav d-none d-xl-block"

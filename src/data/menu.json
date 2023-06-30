@@ -11,11 +11,6 @@
     },
     {
         "id": 5,
-        "text": "Projects",
-        "path": "/project-showcase"
-    },
-    {
-        "id": 5,
         "text": "Resources",
         "path": "#",
         "submenu": [
@@ -23,6 +18,11 @@
                 "id": 51,
                 "text": "Blogs",
                 "path": "/blogs"
+            },
+            {
+                "id": 55,
+                "text": "Projects",
+                "path": "/project-showcase"
             },
             {
                 "id": 52,
@@ -63,3 +63,4 @@
         "path": "/donations"
     }
 ]
+

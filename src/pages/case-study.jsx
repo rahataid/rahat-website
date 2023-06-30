@@ -7,7 +7,7 @@ import Wrapper from "@layout/wrapper";
 const ContactFormPage = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Contact Us" />
+            <SEO pageTitle="Case Study" />
             <Header />
             <CaseStudyPage />
             <Footer />
@@ -16,3 +16,4 @@ const ContactFormPage = () => {
 };
 
 export default ContactFormPage;
+

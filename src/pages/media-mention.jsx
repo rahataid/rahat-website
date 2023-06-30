@@ -8,7 +8,7 @@ import MediaMentionPage from "@components/media-mention-page";
 const MediaMentionDetailPage = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Contact Us" />
+            <SEO pageTitle="Media Mentions" />
             <Header />
             <MediaMentionPage />
             <Footer />
