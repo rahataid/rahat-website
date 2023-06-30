@@ -1,3 +1,4 @@
+import Anchor from "@ui/anchor";
 import moment from "moment";
 import Image from "next/image";
 
@@ -8,13 +9,16 @@ const Summary = ({ donation }) => {
                 <div className="row">
                     <div className="rn-about-card d-flex justify-content-between align-items-center">
                         <div className="col-lg-4 col-md-12 col-12 text-center">
-                            <Image
-                                className="summary-img mb--15"
-                                src={"/images/portfolio/rahat.jpeg"}
-                                width={140}
-                                height={140}
-                            />
-                            <h6>{donation?.donor?.name}</h6>
+                            <Anchor path={`/organizations/${donation?.donor?.id}`}>
+
+                                <Image
+                                    className="summary-img mb--15"
+                                    src={"/images/portfolio/rahat.jpeg"}
+                                    width={140}
+                                    height={140}
+                                />
+                                <h6>{donation?.donor?.name}</h6>
+                            </Anchor>
                         </div>
                         <div className="text col-lg-4 col-md-12 col-12">
                             <p
@@ -38,14 +42,17 @@ const Summary = ({ donation }) => {
                             </p>
                         </div>
                         <div className="col-lg-4 col-md-12 col-12 text-center">
-                            <Image
-                                className="summary-img mb--15"
-                                src={"/images/portfolio/rahat.jpeg"}
-                                width={140}
-                                height={140}
-                                hideControls={true}
-                            />
-                            <h6>{donation?.donee?.name}</h6>
+                            <Anchor path={`/organizations/${donation?.donee?.id}`}>
+
+                                <Image
+                                    className="summary-img mb--15"
+                                    src={"/images/portfolio/rahat.jpeg"}
+                                    width={140}
+                                    height={140}
+                                    hideControls={true}
+                                />
+                                <h6>{donation?.donee?.name}</h6>
+                            </Anchor>
                         </div>
                     </div>
                 </div>
@@ -59,7 +66,7 @@ const Summary = ({ donation }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
