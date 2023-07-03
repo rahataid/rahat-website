@@ -1,3 +1,4 @@
+import ProjectShowcasePage from "@components/project-showcase-page";
 import SEO from "@components/seo";
 import { DonationsList } from "@containers/donations/list";
 import Footer from "@layout/footer";
@@ -14,6 +15,7 @@ const Donations = ({ donations }) => {
             <SEO pageTitle="Donations" />
             <Header />
             <main id="main-content">
+                <ProjectShowcasePage showBanner={false} />
                 <DonationsList donations={donations?.rows} />
             </main>
             <Footer />
@@ -38,3 +40,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
             };
         }
 );
+
