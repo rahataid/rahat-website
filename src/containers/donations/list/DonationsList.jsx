@@ -17,8 +17,18 @@ const DonationsList = ({ className, space, donations }) => {
         >
             <div className="container">
                 <div className="row mb--50 align-items-center">
-                    <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div className="col-lg-12 col-md-6 col-sm-6 col-12">
                         <h3>Impact Flow</h3>
+                        <p className="mt--50">
+                            The Rahat ImpactFlow is a blockchain-based platform
+                            that aims to promote transparency and accountability
+                            in charitable donations by tracking the flow of
+                            funds from donors to donees. The platform allows
+                            donors to make donations to a variety of registered
+                            donees, and provides donees with the ability to
+                            manage and distribute these donations to their
+                            intended beneficiaries.
+                        </p>
                     </div>
                 </div>
 
@@ -72,3 +82,4 @@ DonationsList.defaultProps = {
 };
 
 export default DonationsList;
+

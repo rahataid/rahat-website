@@ -5,7 +5,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const ProjectShowcasePage = ({ space, className }) => {
+const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
     const [isHover, setIsHover] = useState(false);
 
     const handleMouseEnter = () => {
@@ -33,29 +33,36 @@ const ProjectShowcasePage = ({ space, className }) => {
     };
     return (
         <>
-            <div className="rn-author-bg-area position-relative ptb--150">
-                <Image
-                    src="/images/banner/contact-main-banner.jpg"
-                    alt="Slider BG"
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100}
-                    priority
-                />
+            {showBanner && (
+                <>
+                    <div className="rn-author-bg-area position-relative ptb--150">
+                        <Image
+                            src="/images/banner/contact-main-banner.jpg"
+                            alt="Slider BG"
+                            layout="fill"
+                            objectFit="cover"
+                            quality={100}
+                            priority
+                        />
 
-                <div className="overlay"></div>
-            </div>
-            <div className="row padding-tb-50 align-items-center d-flex">
-                <div className="col-lg-12 custom-page-banner">
-                    <div className="author-wrapper">
-                        <div className="author-inner">
-                            <div className="rn-author-info-content-custom">
-                                <h4 className="title">Project Showcase</h4>
+                        <div className="overlay"></div>
+                    </div>
+                    <div className="row padding-tb-50 align-items-center d-flex">
+                        <div className="col-lg-12 custom-page-banner">
+                            <div className="author-wrapper">
+                                <div className="author-inner">
+                                    <div className="rn-author-info-content-custom">
+                                        <h4 className="title">
+                                            Project Showcase
+                                        </h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </>
+            )}
+
             <div
                 className={clsx(
                     "rn-about-Quote-area",
@@ -64,6 +71,13 @@ const ProjectShowcasePage = ({ space, className }) => {
                 )}
             >
                 <div className="container">
+                    {!showBanner && (
+                        <div className="row mb--50 align-items-center">
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-12">
+                                <h3>Impact Stories</h3>
+                            </div>
+                        </div>
+                    )}
                     <div className="row g-5">
                         <div
                             className="col-lg-4 col-md-6 col-12 sal-animate"
@@ -221,3 +235,4 @@ ProjectShowcasePage.defaultProps = {
 };
 
 export default ProjectShowcasePage;
+

@@ -23,12 +23,23 @@ const ExploreProductArea = ({
                     <div className="row">
                         <div className="d-flex align-items-center justify-content-between mb--25">
                             <div className="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <h3>Communities</h3>
+                                <h3>Rahat Communities</h3>
                             </div>
                             <SearchForm
                                 categories={sanitizedCategories}
                                 countries={countries}
                             />
+                        </div>
+                        <div className="d-flex align-items-center justify-content-between mb--25">
+                            <p>
+                                Rahat community is a user-friendly web-based
+                                platform that enables communities to register
+                                and share their impacts, metrics, and statistics
+                                for raining fund to their organization. The
+                                platform is designed with varying levels of
+                                access for managers and moderators to update the
+                                community details.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -37,8 +48,16 @@ const ExploreProductArea = ({
                     <div className="row">
                         <div className="d-flex align-items-center justify-content-between mb--25">
                             <div className="col-12">
-                                <h3 className="mb--25">Communities</h3>
-
+                                <h3 className="mb--25">Rahat Communities</h3>
+                                <p>
+                                    Rahat community is a user-friendly web-based
+                                    platform that enables communities to
+                                    register and share their impacts, metrics,
+                                    and statistics for raining fund to their
+                                    organization. The platform is designed with
+                                    varying levels of access for managers and
+                                    moderators to update the community details.
+                                </p>
                                 <SearchForm
                                     categories={sanitizedCategories}
                                     countries={countries}
@@ -101,3 +120,4 @@ ExploreProductArea.defaultProps = {
 };
 
 export default ExploreProductArea;
+
