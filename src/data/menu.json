@@ -19,11 +19,7 @@
                 "text": "Blogs",
                 "path": "/blogs"
             },
-            {
-                "id": 55,
-                "text": "Projects",
-                "path": "/project-showcase"
-            },
+
             {
                 "id": 52,
                 "text": "Media Mentions",
@@ -63,4 +59,3 @@
         "path": "/donations"
     }
 ]
-
