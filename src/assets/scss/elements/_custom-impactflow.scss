@@ -278,76 +278,76 @@
     }
 }
 
-@media (max-width: 767px) {
-    .author-wrapper {
-        display: flex;
-        justify-content: flex-start;
+// @media (max-width: 767px) {
+//     .author-wrapper {
+//         display: flex;
+//         justify-content: flex-start;
 
-        .author-inner {
-            z-index: 100;
-            position: absolute;
-            top: 2%;
-            left: 0%;
+//         .author-inner {
+//             z-index: 100;
+//             position: absolute;
+//             top: 2%;
+//             left: 0%;
 
-            .rn-author-info-content-custom-two {
-                h4 {
-                    &.title {
-                        font-size: 14px;
-                        font-weight: 600;
-                        margin-bottom: 1px;
-                        color: #b91515;
-                    }
-                }
+//             .rn-author-info-content-custom-two {
+//                 h4 {
+//                     &.title {
+//                         font-size: 14px;
+//                         font-weight: 600;
+//                         margin-bottom: 1px;
+//                         color: #b91515;
+//                     }
+//                 }
 
-                p {
-                    color: #fff;
-                }
+//                 p {
+//                     color: #fff;
+//                 }
 
-                .social-follw {
-                    display: flex;
-                    justify-content: center;
-                    margin-bottom: 7px;
+//                 .social-follw {
+//                     display: flex;
+//                     justify-content: center;
+//                     margin-bottom: 7px;
 
-                    svg,
-                    i {
-                        margin-right: 10px;
-                        width: 14px;
-                        font-size: 14px;
-                        line-height: 1.8;
-                        color: var(--color-primary);
-                    }
+//                     svg,
+//                     i {
+//                         margin-right: 10px;
+//                         width: 14px;
+//                         font-size: 14px;
+//                         line-height: 1.8;
+//                         color: var(--color-primary);
+//                     }
 
-                    .user-name {
-                        position: relative;
-                        margin-top: 2px;
-                        color: #fff !important;
-                    }
-                }
+//                     .user-name {
+//                         position: relative;
+//                         margin-top: 2px;
+//                         color: #fff !important;
+//                     }
+//                 }
 
-                .follow-area {
-                    display: flex;
-                    justify-content: center;
+//                 .follow-area {
+//                     display: flex;
+//                     justify-content: center;
 
-                    .follow {
-                        &.followers {
-                            margin-right: 15px;
-                        }
+//                     .follow {
+//                         &.followers {
+//                             margin-right: 15px;
+//                         }
 
-                        span {
-                            color: var(--color-white);
-                            font-size: 16px;
-                            font-weight: 500;
+//                         span {
+//                             color: var(--color-white);
+//                             font-size: 16px;
+//                             font-weight: 500;
 
-                            a {
-                                margin-left: 3px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+//                             a {
+//                                 margin-left: 3px;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 .form-control {
     height: 55px;
@@ -383,3 +383,4 @@ input[type="number"] {
     border: none;
     // background: var(--color-white);
 }
+
