@@ -392,3 +392,14 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.rn-about-wrapper-custom {
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+
+.rn-about-wrapper-custom {
+    border: none;
+    // background: var(--color-white);
+}
+
