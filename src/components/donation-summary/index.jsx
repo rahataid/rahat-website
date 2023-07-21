@@ -1,20 +1,42 @@
+import { ASSET_VIEW } from "@config";
+import Anchor from "@ui/anchor";
+import { bufferToWalletAddress } from "@utils/string";
 import moment from "moment";
 import Image from "next/image";
 
 const Summary = ({ donation }) => {
+    console.log("donation", donation);
+    const doneeProfileImage = donation?.donee?.profileImage
+        ? `${ASSET_VIEW}/${bufferToWalletAddress(
+              donation?.donee?.contractAddress?.data
+          )}/${donation?.donee?.profileImage}`
+        : "/images/logo/logo-dark.png";
+
+    const donorProfileImage = donation?.donor?.profileImage
+        ? `${ASSET_VIEW}/${bufferToWalletAddress(
+              donation?.donor?.contractAddress?.data
+          )}/${donation?.donor?.profileImage}`
+        : "/images/logo/logo-dark.png";
+
+    console.log("doneeProfileImage", doneeProfileImage);
+
     return (
         <div className="mt--50 mb--50">
             <div className="container">
                 <div className="row">
                     <div className="rn-about-card d-flex justify-content-between align-items-center">
                         <div className="col-lg-4 col-md-12 col-12 text-center">
-                            <Image
-                                className="summary-img mb--15"
-                                src={"/images/portfolio/rahat.jpeg"}
-                                width={140}
-                                height={140}
-                            />
-                            <h6>{donation?.donor?.name}</h6>
+                            <Anchor
+                                path={`/organizations/${donation?.donor?.id}`}
+                            >
+                                <Image
+                                    className="summary-img mb--15"
+                                    src={donorProfileImage}
+                                    width={140}
+                                    height={140}
+                                />
+                                <h6>{donation?.donor?.name}</h6>
+                            </Anchor>
                         </div>
                         <div className="text col-lg-4 col-md-12 col-12">
                             <p
@@ -25,7 +47,9 @@ const Summary = ({ donation }) => {
                                     Transaction Hash:
                                 </span>{" "}
                                 {/* TODO: convert buffer to string */}
-                                0xsjl02323020g0240v0240c3732
+                                {bufferToWalletAddress(
+                                    donation?.txHash?.data
+                                )?.substring(0, 16)}
                             </p>
                             <p
                                 className="text-center"
@@ -38,14 +62,18 @@ const Summary = ({ donation }) => {
                             </p>
                         </div>
                         <div className="col-lg-4 col-md-12 col-12 text-center">
-                            <Image
-                                className="summary-img mb--15"
-                                src={"/images/portfolio/rahat.jpeg"}
-                                width={140}
-                                height={140}
-                                hideControls={true}
-                            />
-                            <h6>{donation?.donee?.name}</h6>
+                            <Anchor
+                                path={`/organizations/${donation?.donee?.id}`}
+                            >
+                                <Image
+                                    className="summary-img mb--15"
+                                    src={doneeProfileImage}
+                                    width={140}
+                                    height={140}
+                                    hideControls={true}
+                                />
+                                <h6>{donation?.donee?.name}</h6>
+                            </Anchor>
                         </div>
                     </div>
                 </div>

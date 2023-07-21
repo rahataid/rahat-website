@@ -12,7 +12,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
 
     const coverImage = community?.images?.cover
         ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
-        : "/images/bg/bg-img.jpg";
+        : "/images/bg/cover.jpg";
 
     return (
         <>

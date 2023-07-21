@@ -91,7 +91,7 @@ const AuthorProfileArea = ({ className, organization }) => {
                                                 transaction?.donor?.profileImage
                                             }
                                             address={address}
-                                            name={transaction.donor.name}
+                                            name={transaction?.donor?.name}
                                             category={transaction.status}
                                             country={"Nepal"}
                                             currency={"$"}
