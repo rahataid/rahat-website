@@ -4,7 +4,7 @@ const EditProfileImage = ({ community, id }) => {
         <>
             <div id={id} className="login-area message-area">
                 <div className="container">
-                    <div className="row d-flex align-items-center">
+                    <div className="row d-flex align-items-center mt-5">
                         <div className="col-12">
                             <div className="rn-address">
                                 <div className="inner">

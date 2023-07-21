@@ -11,7 +11,7 @@ const SingleSlide = ({ title, image, subtitle }) => {
                     src={image.src}
                     alt="Slider BG"
                     layout="fill"
-                    // objectFit="cover"
+                    objectFit="cover"
                     quality={100}
                     priority
                     className="slider-bg"

@@ -32,13 +32,7 @@ const ExploreProductArea = ({
                         </div>
                         <div className="d-flex align-items-center justify-content-between mb--25">
                             <p>
-                                Rahat community is a user-friendly web-based
-                                platform that enables communities to register
-                                and share their impacts, metrics, and statistics
-                                for raining fund to their organization. The
-                                platform is designed with varying levels of
-                                access for managers and moderators to update the
-                                community details.
+                                Rahat community is a beneficial platform that facilitates effective communication and collaboration between communities in need and potential donors or funders  by allowing communities to register and share their impacts, metrics, and statistics, the platform enables transparency and accountability in aid management.
                             </p>
                         </div>
                     </div>
@@ -50,13 +44,7 @@ const ExploreProductArea = ({
                             <div className="col-12">
                                 <h3 className="mb--25">Rahat Communities</h3>
                                 <p>
-                                    Rahat community is a user-friendly web-based
-                                    platform that enables communities to
-                                    register and share their impacts, metrics,
-                                    and statistics for raining fund to their
-                                    organization. The platform is designed with
-                                    varying levels of access for managers and
-                                    moderators to update the community details.
+                                    Rahat community is a beneficial platform that facilitates effective communication and collaboration between communities in need and potential donors or funders  by allowing communities to register and share their impacts, metrics, and statistics, the platform enables transparency and accountability in aid management.
                                 </p>
                                 <SearchForm
                                     categories={sanitizedCategories}
