@@ -14,7 +14,15 @@ const MainMenu = ({ menu }) => (
                     !!nav.megamenu && "with-megamenu"
                 )}
             >
-                <Anchor className="its_new" path={nav.path}>
+                <Anchor
+                    className="its_new"
+                    path={nav.path}
+                    style={{
+                        fontWeight: "600",
+                        color: "#18181b",
+                        fontSize: "15px",
+                    }}
+                >
                     {nav.text}
                 </Anchor>
                 {nav?.submenu && <SubMenu menu={nav.submenu} />}
@@ -29,3 +37,4 @@ MainMenu.propTypes = {
 };
 
 export default MainMenu;
+

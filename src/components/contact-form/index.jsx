@@ -77,16 +77,13 @@ const ContactForm = () => {
 
             <div className="container pt--100">
                 <div className="form-wrapper-one registration-area">
-                    <h3 className="mb--30 text-center">
-                        Fill the form to schedule demo
-                    </h3>
                     <form
                         className="rwt-dynamic-form"
                         id="contact-form"
                         onSubmit={handleSubmit(onSubmit)}
                     >
                         <div className="row">
-                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-name"
                                     className="form-label"
@@ -106,7 +103,7 @@ const ContactForm = () => {
                                     </ErrorText>
                                 )}
                             </div>
-                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-email"
                                     className="form-label"
@@ -130,7 +127,7 @@ const ContactForm = () => {
                                     </ErrorText>
                                 )}
                             </div>
-                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-phone"
                                     className="form-label"
@@ -138,7 +135,6 @@ const ContactForm = () => {
                                     Phone Number
                                 </label>
                                 <input
-                                    placeholder="Phone Number"
                                     name="phone"
                                     type="number"
                                     {...register("contactPhone", {
@@ -152,7 +148,7 @@ const ContactForm = () => {
                                 )}
                             </div>
 
-                            <div className="col-12 col-lg-12 col-sm-12 col-md-12mb-5">
+                            <div className="col-12 col-lg-12 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-message"
                                     className="form-label"
@@ -172,6 +168,64 @@ const ContactForm = () => {
                                     </ErrorText>
                                 )}
                             </div>
+
+                            <div className="col-12 col-lg-3 col-sm-12 col-md-12 mb-5">
+                                <div className="d-flex justify-content-between mt-2">
+                                    <span>Request for Demo?</span>
+                                    <div className="d-flex align-items-center">
+                                        <div className="input-box pb--20 rn-check-box">
+                                            <input
+                                                className="rn-check-box-input"
+                                                type="radio"
+                                                id="demoYes"
+                                                value="Yes"
+                                                {...register("isDemo", {
+                                                    required:
+                                                        "Plesae select an option",
+                                                })}
+                                            />
+                                            <label
+                                                className="rn-check-box-label"
+                                                htmlFor="demoYes"
+                                                style={{
+                                                    marginLeft: "20px",
+                                                }}
+                                            >
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div className="input-box pb--20 rn-check-box">
+                                            <input
+                                                className="rn-check-box-input"
+                                                type="radio"
+                                                id="demoNo"
+                                                value="No"
+                                                {...register("isDemo", {
+                                                    required:
+                                                        "Plesae select an option",
+                                                })}
+                                            />
+                                            <label
+                                                className="rn-check-box-label"
+                                                htmlFor="demoNo"
+                                                style={{
+                                                    marginLeft: "10px",
+                                                }}
+                                            >
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style={{ marginTop: "-25px" }}>
+                                    {errors.isDemo && (
+                                        <ErrorText>
+                                            {errors.isDemo?.message}
+                                        </ErrorText>
+                                    )}
+                                </div>
+                            </div>
+
                             <div className="col-12 d-flex justify-content-center">
                                 <Button
                                     className="mt-5"

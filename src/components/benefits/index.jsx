@@ -10,17 +10,18 @@ const Benefits = ({ space, className }) => (
             className
         )}
     >
-        <div className="row mb--40">
-            <div className="title-area text-center">
-                <h3 className="title mb--15">Benefits</h3>
-                <p className="subtitle">
-                    Rahat provides complete transparency of the flow of funds,
-                    enabling faster, cheaper, and effective aid distributions.
-                </p>
-            </div>
-        </div>
-
         <div className="container">
+            <div className="row mb--40">
+                <div className="title-area text-center">
+                    <h3 className="title mb--15">Benefits</h3>
+                    <p className="subtitle">
+                        Rahat provides complete transparency of the flow of
+                        funds, enabling faster, cheaper, and effective aid
+                        distributions.
+                    </p>
+                </div>
+            </div>
+
             <div className="row g-5">
                 <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div className="rn-service-one-custom">

@@ -368,3 +368,27 @@
     }
 }
 
+.form-control {
+    height: 55px;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: #f5f8fa;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background: #eee;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+

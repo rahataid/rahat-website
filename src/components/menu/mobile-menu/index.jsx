@@ -36,35 +36,49 @@ const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
                         {menu?.map((nav) => {
                             const hasChildren = !!nav.submenu || !!nav.megamenu;
                             return (
-                                <li
-                                    className={clsx(
-                                        !!nav.submenu && "has-droupdown",
-                                        !!nav.megamenu && "with-megamenu",
-                                        hasChildren && "has-children"
-                                    )}
-                                    id={nav.id}
-                                    key={nav.id}
-                                >
-                                    <Anchor
-                                        className="nav-link its_new"
-                                        path={hasChildren ? "#!" : nav.path}
-                                        onClick={
-                                            hasChildren
-                                                ? onClickHandler
-                                                : (e) => e
-                                        }
+                                <>
+                                    <li
+                                        className={clsx(
+                                            !!nav.submenu && "has-droupdown",
+                                            !!nav.megamenu && "with-megamenu",
+                                            hasChildren && "has-children"
+                                        )}
+                                        id={nav.id}
+                                        key={nav.id}
                                     >
-                                        {nav.text}
-                                    </Anchor>
-                                    {nav?.submenu && (
-                                        <SubMenu menu={nav.submenu} />
-                                    )}
-                                    {nav?.megamenu && (
-                                        <MegaMenu menu={nav.megamenu} />
-                                    )}
-                                </li>
+                                        <Anchor
+                                            className="nav-link its_new"
+                                            path={hasChildren ? "#!" : nav.path}
+                                            onClick={
+                                                hasChildren
+                                                    ? onClickHandler
+                                                    : (e) => e
+                                            }
+                                        >
+                                            {nav.text}
+                                        </Anchor>
+                                        {nav?.submenu && (
+                                            <SubMenu menu={nav.submenu} />
+                                        )}
+                                        {nav?.megamenu && (
+                                            <MegaMenu menu={nav.megamenu} />
+                                        )}
+                                    </li>
+                                </>
                             );
                         })}
+
+                        <div className="setting-option header-btn">
+                            <div className="icon-box">
+                                <a
+                                    className="btn btn-medium btn-primary mt-4"
+                                    href="/contact-form"
+                                    style={{ borderRadius: "50px" }}
+                                >
+                                    Schedule For Demo
+                                </a>
+                            </div>
+                        </div>
                     </ul>
                 </nav>
             </OffcanvasBody>
@@ -85,3 +99,4 @@ MobileMenu.propTypes = {
 };
 
 export default MobileMenu;
+

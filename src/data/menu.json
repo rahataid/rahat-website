@@ -48,11 +48,6 @@
         "path": "/#our-services"
     },
     {
-        "id": 6,
-        "text": "Contact Us",
-        "path": "/#footer"
-    },
-    {
         "id": 2,
         "text": "Communities",
         "path": "/communities"

@@ -6,6 +6,14 @@
             "banners": [
                 {
                     "id": 1,
+                    "title": "MIT Solve 2023 Rahat Global Challenge Finalist",
+                    "subtitle": "Help us receive a Community Award, vote now!",
+                    "image": {
+                        "src": "https://assets.rumsan.com/rumsan-group/mit-banner.jpg"
+                    }
+                },
+                {
+                    "id": 2,
                     "title": "Cash Transfer Program",
                     "subtitle": "In collaboration with Jaleshwar Municipality, UNICEF Nepal, Unicef Innovation Fund",
                     "image": {
@@ -13,7 +21,7 @@
                     }
                 },
                 {
-                    "id": 2,
+                    "id": 3,
                     "title": "H2O Wheels Distribution Program",
                     "subtitle": "In collaboration with Tayaba & SRSO",
                     "image": {

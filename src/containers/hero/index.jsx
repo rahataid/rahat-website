@@ -8,7 +8,7 @@ const sliderOptions = {
     arrows: true,
     adaptiveHeight: true,
     speed: 500,
-    autoplay: true,
+    autoplay: false,
     infinite: true,
     responsive: [
         {

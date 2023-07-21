@@ -7,7 +7,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:rumee@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/rumee-singh-6713339",
-        "team_image": "https://assets.rumsan.com/rumsan-group/rumi-rahat-team.jpg"
+        "team_image": "https://assets.rumsan.com/rumsan-group/ream-rahat-rumi.png"
     },
     {
         "id": "15",
@@ -17,17 +17,17 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:ashmita.manandhar@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/ashmita-manandhar-shrestha-a49054190/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/ashmita-rahat-team.jpg"
+        "team_image": "https://assets.rumsan.com/rumsan-group/rahat-team-asmita.png"
     },
     {
         "id": "16",
-        "fname": "Subhana Shrestha",
-        "designation": "Stakeholder Manager",
+        "fname": "Smriti Bhujel Chettri",
+        "designation": "Communication & Marketing",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:subhana.shrestha@rumsan.com",
-        "link_linkedin": "https://www.linkedin.com/in/subhana-shrestha-447026161/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/subhana-rahat-team.jpg"
+        "link_mail": "mailto:smriti.chhetri@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/smriti-chhetri/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/smriti-team-rahat.png"
     },
     {
         "id": "17",
@@ -37,7 +37,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:ruchin@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/ruchinsingh/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/ruchin-rahat-team.jpg"
+        "team_image": "https://assets.rumsan.com/rumsan-group/ruchin-team-rahat.png"
     },
     {
         "id": "18",
@@ -45,9 +45,79 @@
         "designation": "Project Officer",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:Hima.Rumsan@gmail.com",
+        "link_mail": "mailto:hima.rumsan@gmail.com",
         "link_linkedin": "https://www.linkedin.com/in/hima-tamang-408457241/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/our-team-rahat-hima-tamang.jpg"
+        "team_image": "https://assets.rumsan.com/rumsan-group/hima-rahat-team.png"
+    },
+    {
+        "id": "19",
+        "fname": "Santosh Shrestha",
+        "designation": "CTO",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:santosh@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/rumsan/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/santosh-team-rahat.png"
+    },
+    {
+        "id": "20",
+        "fname": "Raghav Kattel",
+        "designation": "Software Engineer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:raghav.rumsan@gmail.com",
+        "link_linkedin": "https://www.linkedin.com/in/argahv/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/raghav-team-rahat.png"
+    },
+    {
+        "id": "21",
+        "fname": "Manjik Shrestha",
+        "designation": "BLockchain Developer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:manjik.shrestha@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/manzik-shrestha-951b01b3/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/manjik-team-rahat.png"
+    },
+    {
+        "id": "22",
+        "fname": "Kanil Maharjan",
+        "designation": "Designer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:kanil.maharjan@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/kanil-maharjan-2a1b9a233/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/kanil-team-rahat.png"
+    },
+    {
+        "id": "23",
+        "fname": "Surpana Surkheti",
+        "designation": "Stakeholder Manager",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:surpana.surkheti@rahat.io",
+        "link_linkedin": "https://www.linkedin.com/in/surpana-surkheti-5bb868165/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/surpana-rahat-team.png"
+    },
+    {
+        "id": "23",
+        "fname": "Shristi Piya",
+        "designation": "Chief Development & Impact  Officer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:shristi@rumsan.com",
+        "link_linkedin": "https://www.linkedin.com/in/shristi-piya-27052210a/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/shristi-ream-rahat.png"
+    },
+    {
+        "id": "23",
+        "fname": "Shristi Khayargoli",
+        "designation": "Product Manager",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:shristi.khayargoli@agriclear.io",
+        "link_linkedin": "https://www.linkedin.com/in/shristi-khayargoli/",
+        "team_image": "https://assets.rumsan.com/rumsan-group/shristi-k-rahat-team.png"
     }
 ]
 
