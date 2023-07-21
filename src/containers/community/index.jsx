@@ -11,10 +11,12 @@ const ExploreProductArea = ({
     categories,
     countries,
 }) => {
-    const sanitizedCategories = categories.map((cat) => ({
-        value: cat.id,
-        text: cat.name,
-    }));
+    const sanitizedCategories = categories
+        .filter((c) => c?.name !== "Charitable Organization")
+        .map((cat) => ({
+            value: cat.id,
+            text: cat.name,
+        }));
 
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
@@ -32,7 +34,14 @@ const ExploreProductArea = ({
                         </div>
                         <div className="d-flex align-items-center justify-content-between mb--25">
                             <p>
-                                Rahat community is a beneficial platform that facilitates effective communication and collaboration between communities in need and potential donors or funders  by allowing communities to register and share their impacts, metrics, and statistics, the platform enables transparency and accountability in aid management.
+                                Rahat community is a beneficial platform that
+                                facilitates effective communication and
+                                collaboration between communities in need and
+                                potential donors or funders by allowing
+                                communities to register and share their impacts,
+                                metrics, and statistics, the platform enables
+                                transparency and accountability in aid
+                                management.
                             </p>
                         </div>
                     </div>
@@ -44,7 +53,14 @@ const ExploreProductArea = ({
                             <div className="col-12">
                                 <h3 className="mb--25">Rahat Communities</h3>
                                 <p>
-                                    Rahat community is a beneficial platform that facilitates effective communication and collaboration between communities in need and potential donors or funders  by allowing communities to register and share their impacts, metrics, and statistics, the platform enables transparency and accountability in aid management.
+                                    Rahat community is a beneficial platform
+                                    that facilitates effective communication and
+                                    collaboration between communities in need
+                                    and potential donors or funders by allowing
+                                    communities to register and share their
+                                    impacts, metrics, and statistics, the
+                                    platform enables transparency and
+                                    accountability in aid management.
                                 </p>
                                 <SearchForm
                                     categories={sanitizedCategories}
@@ -108,4 +124,3 @@ ExploreProductArea.defaultProps = {
 };
 
 export default ExploreProductArea;
-

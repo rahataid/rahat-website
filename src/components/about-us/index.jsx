@@ -19,7 +19,7 @@ const AboutUs = ({ space, className }) => (
                     </div>
                 </div>
                 <div className="col-lg-7">
-                    <div className="rn-about-wrapper">
+                    <div className="rn-about-wrapper-custom">
                         <img
                             src="https://assets.rumsan.com/rumsan-group/rahat-new-logo-color.png"
                             alt=""
