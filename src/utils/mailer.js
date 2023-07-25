@@ -16,7 +16,7 @@ async function contactForm(payload) {
         if (payload.isDemo === "Yes") {
             const mailOptions1 = {
                 from: "Rahat - Aid Token Distribution",
-                to: "mani@rumsan.net",
+                to: "team@rahat.io",
                 subject: "Rahat Website - Request for Demo",
                 html: `
                 <h2>Full Name:</h2>${payload.contactName}<br/>
@@ -1604,7 +1604,7 @@ async function contactForm(payload) {
         } else {
             const mailOptions = {
                 from: "Rahat - Aid Token Distribution",
-                to: "mani@rumsan.net",
+                to: "team@rahat.io",
                 subject: "Rahat Website - Contact Form",
                 html: `<h2> Get In Touch - Contact Form</h2><br/>
                 <h2>Full Name:</h2>${payload.contactName}<br/>
