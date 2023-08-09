@@ -6,8 +6,8 @@
     },
     {
         "id": 4,
-        "text": "Our Platform",
-        "path": "/#our-platform"
+        "text": "Our Features",
+        "path": "/#our-features"
     },
     {
         "id": 5,
@@ -49,3 +49,4 @@
         "path": "/communities"
     }
 ]
+

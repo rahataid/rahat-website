@@ -12,6 +12,7 @@ const ProductFeatures = ({ space, className }) => {
                 space === 1 && "rn-section-gapTop",
                 className
             )}
+            id="our-features"
         >
             <div className="container">
                 <div className="row mb--40">
