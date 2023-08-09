@@ -2,6 +2,7 @@ import AboutUs from "@components/about-us";
 import Benefits from "@components/benefits";
 import Milestones from "@components/milestones";
 import OurPlatform from "@components/our-platform";
+import ProductFeatures from "@containers/product-features";
 import SEO from "@components/seo";
 import WeAre from "@components/we-are";
 import HeroArea from "@containers/hero";
@@ -22,6 +23,7 @@ export async function getStaticProps() {
 const Home = () => {
     const content = normalizedData(homepageData?.content || []);
 
+    console.log("content", content);
     return (
         <Wrapper>
             <SEO pageTitle="Home" />
@@ -33,8 +35,9 @@ const Home = () => {
             <WeAre />
             <Milestones />
             <VideoArea data={content["video-section"]} />
-            <Benefits />
-            <OurPlatform />
+            {/* <Benefits /> */}
+            {/* <OurPlatform /> */}
+            <ProductFeatures />
             <OurServices />
             <Footer />
         </Wrapper>

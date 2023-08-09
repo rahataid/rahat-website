@@ -167,6 +167,14 @@
     min-width: 180px !important;
 }
 
+.short-title-features {
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    min-width: 180px !important;
+}
+
 .work-card {
     margin-bottom: 30px;
     position: relative;

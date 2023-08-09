@@ -1,3 +1,4 @@
+import ReadMoreBtn from "@components/read-more-button";
 import Anchor from "@ui/anchor";
 import { SectionTitleType, TextType } from "@utils/types";
 import clsx from "clsx";
@@ -115,7 +116,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                             <div className="category-info">
                                                 <div className="meta">
                                                     <span className="d-flex justify-content-center align-items-center">
-                                                        <Anchor
+                                                        {/* <Anchor
                                                             path="https://assets.rumsan.com/rumsan-group/rahat-jaleswor-showcase-project.pdf"
                                                             style={boxStyle}
                                                             onMouseEnter={
@@ -138,7 +139,8 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                                                     top: "2.5px",
                                                                 }}
                                                             />
-                                                        </Anchor>
+                                                        </Anchor> */}
+                                                        <ReadMoreBtn />
                                                     </span>
                                                 </div>
                                             </div>
