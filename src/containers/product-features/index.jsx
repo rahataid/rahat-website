@@ -19,9 +19,10 @@ const ProductFeatures = ({ space, className }) => {
                     <div className="title-area text-center">
                         <h3 className="title mb--15">Product Features</h3>
                         <p className="subtitle">
-                            Rahat provides complete transparency of the flow of
-                            funds, enabling faster, cheaper, and effective aid
-                            distributions.
+                            Empower aid distribution with our streamlined tool,
+                            personalized vouchers, inclusive communication,
+                            transparent donations, and impactful insights for
+                            effective assistance.
                         </p>
                     </div>
                 </div>
@@ -89,8 +90,11 @@ const ProductFeatures = ({ space, className }) => {
                                         Beneficiary Communication (IVR/SMS)
                                     </h4>
                                     <p className="description-feature short-title-features">
-                                        Enhance communication, empower
-                                        beneficiary community
+                                        Empower communities through IVR/SMS.
+                                        Personalized updates, and multilingual
+                                        outreach bridge gaps for inclusive,
+                                        efficient beneficiary communication and
+                                        support.
                                     </p>
                                     <ReadMoreBtn linkTo="/beneficiary-communication-ivr-sms" />
                                 </div>
