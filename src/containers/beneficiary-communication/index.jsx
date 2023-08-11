@@ -39,7 +39,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
         >
             <div className="container">
                 <div className="row align-items-center g-5">
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-2">
                         <div className="title-area">
                             <h3 className="title">
                                 Interactive Voice Response (IVR)
@@ -70,7 +70,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                         </div>
                     </div>
                 </div>
-                <div className="row align-items-center g-5 pt--50">
+                <div className="row align-items-center g-5 pt--20">
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
@@ -80,7 +80,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                             />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-1">
                         <div className="title-area">
                             <h3 className="title">SMS Messaging</h3>
                             <p className="">
@@ -100,8 +100,8 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                         </div>
                     </div>
                 </div>
-                <div className="row align-items-center g-5 pt--50">
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                <div className="row align-items-center g-5 pt--20">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-2">
                         <div className="title-area">
                             <h3 className="title">
                                 Language and Accessibility

@@ -37,7 +37,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
         >
             <div className="container">
                 <div className="row align-items-center g-5">
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-2">
                         <div className="title-area">
                             <h3 className="title">Donor Connectivity</h3>
                             <p className="">
@@ -80,7 +80,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                             />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-1">
                         <div className="title-area">
                             <h3 className="title">Multi-Donation Management</h3>
                             <p className="">
@@ -104,7 +104,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                     </div>
                 </div>
                 <div className="row align-items-center g-5 pt--50">
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-2">
                         <div className="title-area">
                             <h3 className="title">Donor Insights</h3>
                             <p className="">
@@ -127,7 +127,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                             </p>
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end custom-order-flexbox-1">
                         <div>
                             <img
                                 src="https://assets.rumsan.com/rumsan-group/access-3.png"
@@ -147,7 +147,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                             />
                         </div>
                     </div>
-                    <div className="col-12 col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-12 col-lg-6 col-md-12 col-sm-12 custom-order-flexbox-1">
                         <div className="title-area">
                             <h3 className="title">
                                 Public ERC20 Token Donations
