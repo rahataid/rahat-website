@@ -1,6 +1,6 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
 import clsx from "clsx";
+import PropTypes from "prop-types";
+import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";
 
@@ -34,7 +34,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={600}
+                                    end={21}
                                     duration={5}
                                 >
                                     {({ countUpRef }) => (
@@ -431,4 +431,3 @@ FunFact.propTypes = {
 };
 
 export default FunFact;
-
