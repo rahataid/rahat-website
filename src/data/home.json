@@ -7,10 +7,12 @@
                 {
                     "id": 1,
                     "title": "MIT Solve 2023 Rahat Global Challenge Finalist",
-                    "subtitle": "Help us receive a Community Award, vote now!",
+                    "subtitle": "Help us receive a Community Award",
                     "image": {
                         "src": "https://assets.rumsan.com/rumsan-group/mit-banner.jpg"
-                    }
+                    },
+                    "isBtnDisabled": true,
+                    "linkTo": "https://solve.mit.edu/challenges/financial-inclusion-challenge/solutions/70749#"
                 },
                 {
                     "id": 2,
@@ -18,7 +20,8 @@
                     "subtitle": "In collaboration with Jaleshwar Municipality, UNICEF Nepal, Unicef Innovation Fund",
                     "image": {
                         "src": "/images/bg/main-banner-01.jpg"
-                    }
+                    },
+                    "isBtnDisabled": false
                 },
                 {
                     "id": 3,
@@ -26,7 +29,8 @@
                     "subtitle": "In collaboration with Tayaba & SRSO",
                     "image": {
                         "src": "/images/bg/main-banner-02.jpg"
-                    }
+                    },
+                    "isBtnDisabled": false
                 }
             ]
         },

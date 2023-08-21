@@ -54,6 +54,8 @@ const HeroArea = ({ data }) => (
                             title={banner.title}
                             subtitle={banner.subtitle}
                             image={banner.image}
+                            isBtnDisabled={banner.isBtnDisabled}
+                            linkTo={banner.linkTo}
                         />
                     </SliderItem>
                 ))}
