@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { IDType, ImageType } from "@utils/types";
 
-const SingleSlide = ({ title, image, subtitle }) => {
+const SingleSlide = ({ title, image, subtitle, isBtnDisabled, linkTo }) => {
     return (
         <>
             {image?.src && (
@@ -34,6 +34,16 @@ const SingleSlide = ({ title, image, subtitle }) => {
                             >
                                 {subtitle}
                             </h5>
+                            {isBtnDisabled && (
+                                <a
+                                    href={linkTo}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="btn btn-medium btn-primary mt-3"
+                                >
+                                    Vote Now
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
