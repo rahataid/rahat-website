@@ -32,7 +32,7 @@ const AboutUs = ({ space, className }) => (
                             An open-source blockchain-based{" "}
                             <span style={{ color: "#007bb6" }}>
                                 {" "}
-                                Cash and Voucher Assistance{" "}
+                                financial access{" "}
                             </span>{" "}
                             platform to support vulnerable communities.
                         </h2>

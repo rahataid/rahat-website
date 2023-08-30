@@ -34,7 +34,7 @@ const VideoArea = ({
                 <div className="col-12 col-lg-6 col-sm-12">
                     <div className="rn-about-title-wrapper">
                         <h1>{title}</h1>
-                        <p>{subtitle}</p>
+                        <p className="mt-3">{subtitle}</p>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@ import Wrapper from "src/layout/wrapper";
 // Demo data
 import homepageData from "../data/home.json";
 import VideoArea from "@components/youtube-video";
+import OurEcosystem from "@containers/our-ecosystem";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
@@ -34,11 +35,12 @@ const Home = () => {
             <AboutUs />
             <WeAre />
             <Milestones />
-            <VideoArea data={content["video-section"]} />
+            {/* <VideoArea data={content["video-section"]} /> */}
             {/* <Benefits /> */}
             {/* <OurPlatform /> */}
-            <ProductFeatures />
-            <OurServices />
+            <OurEcosystem />
+            {/* <ProductFeatures /> */}
+            {/* <OurServices /> */}
             <Footer />
         </Wrapper>
     );

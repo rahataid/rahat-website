@@ -82,7 +82,7 @@ const AboutUsDetails = ({ space, className }) => (
                     {/* For Desktop View Only */}
                     <div className="d-none d-lg-block">
                         <div className="row justify-content-center g-5 pt--50">
-                            <div className="col-lg-4 col-12">
+                            <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
                                         src="https://assets.rumsan.com/rumsan-group/partners-and-collab-unicef.png"
@@ -91,7 +91,7 @@ const AboutUsDetails = ({ space, className }) => (
                                     <p>UNICEF Venture Fund StartUp Portfolio</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-12">
+                            <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
                                         src="https://assets.rumsan.com/rumsan-group/partner-and-collab-rahat.png"
@@ -103,13 +103,27 @@ const AboutUsDetails = ({ space, className }) => (
                                     </p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-12">
+                            <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
                                         src="https://assets.rumsan.com/rumsan-group/partners-and-collad-eth-foundation.png"
                                         alt="unicef"
                                     />
                                     <p>Sponsored by Ethereum Foundation.</p>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-12">
+                                <div className="rn-about-wrapper">
+                                    <a
+                                        href="https://bc100plus.org/"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/bc100-icon.png"
+                                            alt="unicef"
+                                        />
+                                        <p>We are a member of the BCC100+</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -245,6 +259,22 @@ const AboutUsDetails = ({ space, className }) => (
                                         alt="unicef"
                                     />
                                 </div>
+                            </div>
+                            <div className="col-lg-4 col-12">
+                                <a
+                                    href="https://bc100plus.org/"
+                                    target="_blank"
+                                >
+                                    <p style={{ margin: "15px" }}>
+                                        We are a member of the BCC100+
+                                    </p>
+                                    <div className="rn-about-wrapper">
+                                        <img
+                                            src="https://assets.rumsan.com/rumsan-group/bc100-icon.png"
+                                            alt="bcc100+"
+                                        />
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <div className="row justify-content-center g-5 ptb--50">

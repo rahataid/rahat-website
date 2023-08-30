@@ -128,16 +128,6 @@ const OurServices = ({ space, className }) => (
                         </div>
                     </div>
                 </div>
-                <div className="contact-cta-box-short spacing">
-                    <h3>Let's Chat !</h3>
-
-                    <a
-                        href="/contact-form"
-                        className="btn btn-medium btn-primary"
-                    >
-                        Try Our Demo
-                    </a>
-                </div>
             </div>
         </div>
     </div>

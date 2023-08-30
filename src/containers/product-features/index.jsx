@@ -17,7 +17,7 @@ const ProductFeatures = ({ space, className }) => {
             <div className="container">
                 <div className="row mb--40">
                     <div className="title-area text-center">
-                        <h3 className="title mb--15">Product Features</h3>
+                        <h3 className="title mb--15">Rahat CVA Features</h3>
                         <p className="subtitle">
                             Empower aid distribution with our streamlined tool,
                             personalized vouchers, inclusive communication,

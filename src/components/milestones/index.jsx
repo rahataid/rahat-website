@@ -78,7 +78,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={16000}
-                                    duration={4}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -172,7 +172,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={7900}
-                                    duration={4}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -226,7 +226,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={4200}
-                                    duration={4}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -279,7 +279,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={21}
-                                    duration={2}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -320,7 +320,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={2}
-                                    duration={2}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -375,7 +375,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={154}
-                                    duration={4}
+                                    duration={5}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -431,3 +431,4 @@ FunFact.propTypes = {
 };
 
 export default FunFact;
+
