@@ -38,11 +38,7 @@
             }
         ]
     },
-    {
-        "id": 6,
-        "text": "Services",
-        "path": "/#our-services"
-    },
+
     {
         "id": 2,
         "text": "Communities",
