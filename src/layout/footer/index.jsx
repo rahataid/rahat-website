@@ -153,7 +153,7 @@ const Footer = ({ space, className, data }) => (
                                     </div>
                                     <div className="col-6">
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-11.jpg"
+                                            src="https://assets.rumsan.com/esatya/sdg-climate-chane-13.png"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />

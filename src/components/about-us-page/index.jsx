@@ -42,17 +42,15 @@ const AboutUsDetails = ({ space, className }) => (
                 <div className="rn-about-title-wrapper">
                     <div className="custom-text-about-us">
                         <p style={{ margin: "0px 0px 10px" }}>
-                            Rahat (relief in Nepali) is an open source
-                            blockchain-based token cash and voucher assistance
-                            platform.
+                            Rahat (relief in Nepali) is an open-source
+                            blockchain-based financial access platform to
+                            support vulnerable communities..
                         </p>
 
                         <p style={{ margin: "0px 0px 10px" }}>
-                            Rahat manages and monitors the flow of transactions
-                            in token distribution projects maintaining end to
-                            end transparency for humanitarian agencies who need
-                            a transparent, efficient and cheaper way to
-                            distribute cash or goods in emergency response.
+                            We are building resilience against the impact of
+                            climate shocks through decentralized and transparent
+                            financial access.
                         </p>
 
                         <h5 className="mt-5" style={{ margin: "0px 0px 10px" }}>
