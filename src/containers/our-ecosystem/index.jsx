@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 import { TextType, SectionTitleType } from "@utils/types";
 // import Button from "@ui/button";
+import Image from "next/image";
 import ReadMoreBtn from "@components/read-more-button";
 
 const OurEcosystem = ({ space, className }) => {
@@ -27,17 +28,21 @@ const OurEcosystem = ({ space, className }) => {
 
                 <div className="row g-5">
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div className="rn-service-one color-shape-7">
+                        <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="icon">
-                                    <img
-                                        src="https://assets.rumsan.com/rumsan-group/cash-in-kind-logo.png"
-                                        alt=""
+                                <div className="thumbnail">
+                                    <Image
+                                        src="https://assets.rumsan.com/esatya/cva-ecosystem-banner.jpg"
+                                        alt="cva-ecosystem-banner"
+                                        width={489}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        Rahat Cash and Voucher Assistance
+                                        <a href="/cash-and-voucher-assistance-platform">
+                                            Rahat Cash and Voucher Assistance
+                                        </a>
                                     </h4>
                                     <p className="description-feature short-title-features">
                                         Revolutionize humanitarian assistance
@@ -54,17 +59,19 @@ const OurEcosystem = ({ space, className }) => {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div className="rn-service-one color-shape-7">
+                        <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="icon">
-                                    <img
-                                        src="https://assets.rumsan.com/rumsan-group/rahat-beema-icon.png"
-                                        alt=""
+                                <div className="thumbnail">
+                                    <Image
+                                        src="https://assets.rumsan.com/esatya/rahat-beema-banner.jpg"
+                                        alt="rahat-beema-banner"
+                                        width={489}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        Rahat Beema
+                                        <a href="/coming-soon">Rahat Beema</a>
                                     </h4>
                                     <p className="description-feature short-title-features">
                                         Experience an inclusive, speedy,
@@ -81,17 +88,21 @@ const OurEcosystem = ({ space, className }) => {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div className="rn-service-one color-shape-7">
+                        <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="icon">
-                                    <img
-                                        src="https://assets.rumsan.com/rumsan-group/rahat-anticipatory-action-icon.png"
-                                        alt=""
+                                <div className="thumbnail">
+                                    <Image
+                                        src="https://assets.rumsan.com/esatya/anticipatory-actions-banner.jpg"
+                                        alt="anticipatory-actions-banner"
+                                        width={489}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        Rahat Anticipatory Action
+                                        <a href="/coming-soon">
+                                            Rahat Anticipatory Action
+                                        </a>
                                     </h4>
                                     <p className="description-feature short-title-features">
                                         Rahat integrates smart contracts with
