@@ -31,6 +31,11 @@
                 "path": "/case-study"
             },
             {
+                "id": 56,
+                "text": "Press Release",
+                "path": "/press-release"
+            },
+            {
                 "id": 54,
                 "text": "Whitepaper",
                 "path": "https://assets.rumsan.com/rumsan-group/rahat-whitepaper.pdf",
