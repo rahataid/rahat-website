@@ -7,6 +7,7 @@ import { getBlogs } from "@redux/slices/blogs";
 import { wrapper } from "@redux/store";
 
 const BlogsPage = ({ blogs }) => {
+    console.log(blogs, "--------->");
     return (
         <Wrapper>
             <SEO pageTitle="Blogs" description={"List of all blogs"} />
@@ -32,3 +33,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
 );
 
 export default BlogsPage;
+
