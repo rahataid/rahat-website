@@ -71,7 +71,7 @@ const OurEcosystem = ({ space, className }) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/coming-soon">Rahat Beema</a>
+                                        <a href="/rahat-beema">Rahat Beema</a>
                                     </h4>
                                     <p className="description-feature short-title-features">
                                         Experience an inclusive, speedy,
@@ -100,7 +100,7 @@ const OurEcosystem = ({ space, className }) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/coming-soon">
+                                        <a href="/rahat-anticipatory-actions">
                                             Rahat Anticipatory Action
                                         </a>
                                     </h4>

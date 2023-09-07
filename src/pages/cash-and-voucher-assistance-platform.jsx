@@ -13,7 +13,7 @@ const CvaDetailPage = () => {
     const content = normalizedData(homepageData?.content || []);
     return (
         <Wrapper>
-            <SEO pageTitle="cva" />
+            <SEO pageTitle="CVA" />
             <Header />
             <MainBannerPage
                 pageTitle={"Cash And Voucher Assistance"}
