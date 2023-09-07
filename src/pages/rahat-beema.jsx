@@ -1,19 +1,19 @@
 import SEO from "@components/seo";
-import DigitalPrintedQrCards from "@containers/qr-card-vouchers";
+import RahatBeemaPage from "@containers/rahat-beema-page";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 
-const QrCardVoucherDetails = () => {
+const RahatBeemaDetailPage = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Digital Printed QR Card Vouchers" />
+            <SEO pageTitle="Rahat Beema" />
             <Header />
-            <DigitalPrintedQrCards />
+            <RahatBeemaPage />
             <Footer />
         </Wrapper>
     );
 };
 
-export default QrCardVoucherDetails;
+export default RahatBeemaDetailPage;
 

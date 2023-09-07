@@ -25,7 +25,7 @@ const PressReleaseViewPage = ({ space, className }) => (
                 <div className="author-wrapper">
                     <div className="author-inner">
                         <div className="rn-author-info-content-custom">
-                            <h4 className="title">Press Release</h4>
+                            <h4 className="title">Press Releases</h4>
                         </div>
                     </div>
                 </div>

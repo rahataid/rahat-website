@@ -82,7 +82,7 @@ const OurEcosystem = ({ space, className }) => {
                                         migrants, mitigating shocks from extreme
                                         weather events.
                                     </p>
-                                    <ReadMoreBtn linkTo="/coming-soon" />
+                                    <ReadMoreBtn linkTo="/rahat-beema" />
                                 </div>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const OurEcosystem = ({ space, className }) => {
                                         transfers, saving time and speeding
                                         process management before a crisis.
                                     </p>
-                                    <ReadMoreBtn linkTo="/coming-soon" />
+                                    <ReadMoreBtn linkTo="/rahat-anticipatory-actions" />
                                 </div>
                             </div>
                         </div>
