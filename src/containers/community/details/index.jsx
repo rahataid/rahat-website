@@ -12,7 +12,9 @@ const CommunityDetails = ({ community, transactions }) => {
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
                         <CommunityDescription community={community} />
                         <Statistics community={community} />
-                        <CommunityTransactions data={transactions} />
+                        {transactions.length > 0 && (
+                            <CommunityTransactions data={transactions} />
+                        )}
                         <CommunityChart community={community} />
                         <CommunityPhotos community={community} />
                     </div>
