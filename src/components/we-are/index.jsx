@@ -36,14 +36,6 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <img
-                                src="https://assets.rumsan.com/esatya/esp-final-whitebg.jpg"
-                                alt=""
-                            />
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper">
-                            <img
                                 src="https://assets.rumsan.com/rumsan-group/dpga-rahat.png"
                                 alt=""
                             />
