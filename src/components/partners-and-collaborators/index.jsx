@@ -33,7 +33,7 @@ const PartnersAndCollab = () => {
                 </div>
                 <div style={iconItemStyles}>
                     <img
-                        src="https://assets.rumsan.com/esatya/team-eth-foundation-logo.png"
+                        src="https://assets.rumsan.com/rumsan-group/village-capital-collab-logo.png"
                         alt="Icon 1"
                     />
                 </div>

@@ -7,6 +7,7 @@ import OurTeam from "../../data/our-team1.json";
 import PartnersAndCollab from "@components/partners-and-collaborators";
 import CollabAndPartners from "@components/collabs-and-partners";
 // import Team from "../../data/our-team2.json";
+import PhoneView from "../../data/our-team-mobile-latest.json";
 
 const iconStyles = {
     display: "flex",
@@ -496,12 +497,15 @@ const AboutUsDetails = ({ space, className }) => (
                     <div className="d-block d-lg-none">
                         <h1 style={{ fontSize: "21px" }}>Our Team</h1>
                         <div className="row g-5 justify-content-center align-items-center pt--50">
-                            {OurTeam.map((d) => (
+                            {PhoneView.map((d) => (
                                 <>
                                     <div key={d.id} className="col-lg-2 col-6">
                                         <div className="user-thumbnail">
                                             <img
-                                                style={{ borderRadius: "50%" }}
+                                                style={{
+                                                    borderRadius: "50%",
+                                                    width: "200px",
+                                                }}
                                                 src={d.team_image}
                                                 alt={d.fname}
                                             />
@@ -510,16 +514,16 @@ const AboutUsDetails = ({ space, className }) => (
                                                 <h5
                                                     style={{
                                                         margin: "0",
-                                                        fontSize: "18px",
+                                                        fontSize: "14px",
                                                     }}
                                                 >
                                                     {d.fname}
                                                 </h5>
                                                 <p
-                                                    className="pt--10"
+                                                    className=""
                                                     style={{
                                                         margin: "0",
-                                                        fontSize: "14px",
+                                                        fontSize: "10px",
                                                     }}
                                                 >
                                                     {d.designation}
@@ -528,7 +532,10 @@ const AboutUsDetails = ({ space, className }) => (
 
                                             <ul
                                                 className="social-copyright d-flex justify-content-center align-items-center"
-                                                style={{ padding: "0px" }}
+                                                style={{
+                                                    padding: "0px",
+                                                    marginTop: "-5px",
+                                                }}
                                             >
                                                 <li
                                                     style={{
