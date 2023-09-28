@@ -29,10 +29,14 @@ const Product = ({
                 <div className="thumbnail">
                     <Anchor path={`${path}/${address}`}>
                         <Image
+                            // src={
+                            //     cover
+                            //         ? `${ASSET_VIEW}/${address}/${cover}`
+                            //         : "/images/logo/logo-dark.png"
+                            // }
                             src={
-                                cover
-                                    ? `${ASSET_VIEW}/${address}/${cover}`
-                                    : "/images/logo/logo-dark.png"
+                                cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${name}/${cover}`
+    : "/images/bg/cover.jpg"
                             }
                             alt={name}
                             ratio="6/4"
