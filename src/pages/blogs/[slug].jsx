@@ -91,11 +91,13 @@ const BlogDetailPage = ({ space, className, singleBlog }) => {
                                             <div className="meta">
                                                 <span>
                                                     <i className="feather-calendar" />
-                                                    {singleBlog.created_at
+                                                    {singleBlog.published_date
                                                         ? moment(
-                                                              singleBlog.created_at
+                                                              singleBlog.published_date
                                                           ).format("LL")
-                                                        : "-"}
+                                                        : moment(
+                                                              singleBlog.created_at
+                                                          ).format("LL")}
                                                 </span>
                                             </div>
                                             <div className="meta">
