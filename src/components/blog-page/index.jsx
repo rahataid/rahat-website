@@ -64,11 +64,15 @@ const BLogPage = ({ space, className, blogs }) => (
                                                     <div className="meta">
                                                         <span>
                                                             <i className="feather-calendar" />
-                                                            {blog.created_at
+                                                            {blog.published_date
                                                                 ? moment(
-                                                                      blog.created_at
+                                                                      blog.published_date
                                                                   ).format("LL")
-                                                                : "-"}
+                                                                : moment(
+                                                                      blog.created_at
+                                                                  ).format(
+                                                                      "LL"
+                                                                  )}
                                                         </span>
                                                     </div>
                                                     <div className="meta">
@@ -122,3 +126,4 @@ BLogPage.defaultProps = {
 };
 
 export default BLogPage;
+
