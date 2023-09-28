@@ -9,9 +9,8 @@ import Wrapper from "src/layout/wrapper";
 
 // Demo Data
 import { wrapper } from "@redux/store";
-import Pagination from "@components/pagination";
 
-export default function Product({ communities, categories, countries}) {
+export default function Product({ communities, categories, countries }) {
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
@@ -44,13 +43,13 @@ export const getServerSideProps = wrapper.getServerSideProps(
             await store.dispatch(getCommunities(query));
             [];
             await store.dispatch(getCategories());
-            console.log(store.getState().community)
+            console.log(store.getState().community);
             const serializedCommunities =
                 store.getState().community.communities?.rows;
             const countries = [
                 ...new Set(serializedCommunities?.map((r) => r.country)),
             ].map((country) => ({ text: country, value: country }));
-         
+
             const categories = store.getState().category.categories;
             const serializedError = store.getState().community.error;
             return {

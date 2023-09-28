@@ -51,8 +51,9 @@ export const selectProjects = (state) => state.community.projects;
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await CommunitiesService.getCommunitiesList(params);
-            console.log(res)
+            const { data: res } = await CommunitiesService.getCommunitiesList(
+                params
+            );
 
             dispatch(slice.actions.getCommunitiesSuccess(res));
         } catch (error) {
