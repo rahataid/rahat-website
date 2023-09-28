@@ -11,6 +11,7 @@ module.exports = {
             "assets.rumsan.com",
             "rahat-rumsan.s3.amazonaws.com",
             "esatya.s3.amazonaws.com",
+            'rahat-rumsan.s3.us-east-1.amazonaws.com'
         ],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {

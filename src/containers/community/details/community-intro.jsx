@@ -10,9 +10,14 @@ const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
 
-    const coverImage = community?.images?.cover
-        ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
-        : "/images/bg/cover.jpg";
+    // const coverImage = community?.images?.cover
+    //     ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
+    //     : "/images/bg/cover.jpg";
+
+    const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
+    : "/images/bg/cover.jpg";
+    // community?.images?.cover
+    // ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
 
     return (
         <>
