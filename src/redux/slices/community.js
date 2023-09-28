@@ -6,7 +6,6 @@ const initialState = {
     error: null,
     communities: [],
     community: null,
-
     projects: [],
     transactions: [],
 };
@@ -47,55 +46,14 @@ export const { hasError } = slice.actions;
 
 export const selectCommunities = (state) => state.community.communities;
 export const selectProjects = (state) => state.community.projects;
-export const selectGenderDistributionReport = (state) =>
-    state.community.community.summary.map((type) => {
-        let data = type?.summaryData.map(([key, values]) => {
-            let splitedData = key.split(`_`);
-            if (splitedData[0] == "gender") {
-                return {
-                    label: splitedData[1],
-                    value: values,
-                };
-            }
-        });
-
-        return data;
-    });
-export const selectBankDistributionReport = (state) =>
-    state.community?.community?.summary?.map((type) => {
-        return type?.summaryData?.map(([key, values]) => {
-            let splitedData = key.split(`_`);
-            if (splitedData[0] == "bank") {
-                return {
-                    label: splitedData[1] == "yes" ? "hasBank" : "hasNotBank",
-                    value: values,
-                };
-            }
-        });
-    });
-export const selectInternetAccessDistributionReport = (state) =>
-    state.community.community.summary?.map((type) => {
-        return type?.summaryData?.map(([key, values]) => {
-            let splitedData = key.split(`_`);
-            if (splitedData[0] == "internet") {
-                return {
-                    label:
-                        splitedData[1] == "yes"
-                            ? "hasInternet"
-                            : "hasNotInternet",
-                    value: values,
-                };
-            }
-        });
-    });
 
 // Thunk for fetching communities
 export const getCommunities = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await CommunitiesService.getCommunitiesList(
-                params
-            );
+            const { data: res } = await CommunitiesService.getCommunitiesList(params);
+            console.log(res)
+
             dispatch(slice.actions.getCommunitiesSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -103,12 +61,13 @@ export const getCommunities = (params) => {
     };
 };
 
-export const getCommunityDetails = (address) => {
+export const getCommunityDetails = (id) => {
     return async (dispatch) => {
         try {
             const { data: res } = await CommunitiesService.getCommunitiyDetails(
-                address
+                id
             );
+
             dispatch(slice.actions.getCommunitySuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -123,6 +82,7 @@ export const getCommunityProjects = (id) => {
                 await CommunitiesService.getCommunitiyProjects(id);
             dispatch(slice.actions.getCommunityProjectsSuccess(res));
         } catch (error) {
+            console.log({ error });
             dispatch(hasError(error));
         }
     };
