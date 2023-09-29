@@ -18,8 +18,8 @@ const AuthorIntroArea = ({ className, space, community }) => {
         return`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
       }
 
-    const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
-    : "/images/bg/cover.jpg";
+    // const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
+    // : "/images/bg/cover.jpg";
     // community?.images?.cover
     // ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
 
@@ -30,8 +30,8 @@ const AuthorIntroArea = ({ className, space, community }) => {
                 handleModal={shareModalHandler}
             />
             <div className="rn-author-bg-area position-relative ptb--150">
-                <Image
-                    src={community?.images?.cover}
+                <img
+                    src={`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`}
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"
