@@ -46,6 +46,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
             console.log(store.getState().community);
             const serializedCommunities =
                 store.getState().community.communities?.rows;
+                console.log(serializedCommunities)
             const countries = [
                 ...new Set(serializedCommunities?.map((r) => r.country)),
             ].map((country) => ({ text: country, value: country }));
