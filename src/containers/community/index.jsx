@@ -17,7 +17,7 @@ const ExploreProductArea = ({
             value: cat.id,
             text: cat.name,
         }));
-
+      console.log(communities)
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
