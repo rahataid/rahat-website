@@ -14,6 +14,10 @@ const AuthorIntroArea = ({ className, space, community }) => {
     //     ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
     //     : "/images/bg/cover.jpg";
 
+    const customLoader = ({ src, width, quality }) => {
+        return`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
+      }
+
     const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
     : "/images/bg/cover.jpg";
     // community?.images?.cover
@@ -27,12 +31,11 @@ const AuthorIntroArea = ({ className, space, community }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src={coverImage}
+                    src={community?.images?.cover}
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"
-                    quality={100}
-                    priority
+                    loader={customLoader}
                 />
                 <div className="overlay"></div>
             </div>
