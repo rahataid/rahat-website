@@ -15,10 +15,10 @@ const AuthorIntroArea = ({ className, space, community }) => {
     //     : "/images/bg/cover.jpg";
 
     const customLoader = ({ src, width, quality }) => {
-        return`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
+        return`https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community.name}/${community?.images?.cover}`
       }
 
-    const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
+    const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community.name}/${community?.images?.cover}`
     : "/images/bg/cover.jpg";
     console.log(coverImage)
     // community?.images?.cover
