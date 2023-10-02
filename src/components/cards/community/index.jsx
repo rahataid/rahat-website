@@ -35,7 +35,7 @@ const Product = ({
                             //         : "/images/logo/logo-dark.png"
                             // }
                             src={
-                                cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${name}/${cover}`
+                                cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${name}/${cover}`
     : "/images/bg/cover.jpg"
                             }
                             alt={name}
