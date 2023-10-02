@@ -19,7 +19,7 @@ const CommunityPhotos = ({ className, community, id }) => {
                                 <Image
                                     className="grid-img"
                                     src={`
-                                    https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community?.name}/${photo}
+                                    https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community?.name}/${photo}
                                         `}
                                     alt={`${community?.name}-photo-${index}`}
                                     width={533}
