@@ -1,5 +1,4 @@
 import Image from "@components/image/Image";
-import { ASSET_VIEW } from "@config";
 import Anchor from "@ui/anchor";
 import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
@@ -35,8 +34,9 @@ const Product = ({
                             //         : "/images/logo/logo-dark.png"
                             // }
                             src={
-                                cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${name}/${cover}`
-    : "/images/bg/cover.jpg"
+                                cover
+                                    ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${name}/${cover}`
+                                    : "/images/bg/cover.jpg"
                             }
                             alt={name}
                             ratio="6/4"
