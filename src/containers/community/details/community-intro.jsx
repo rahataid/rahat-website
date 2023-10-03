@@ -1,5 +1,4 @@
 import ShareModal from "@components/modals/share-modal";
-import { ASSET_VIEW } from "@config";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
@@ -13,15 +12,15 @@ const AuthorIntroArea = ({ className, space, community }) => {
     // const coverImage = community?.images?.cover
     //     ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
     //     : "/images/bg/cover.jpg";
-  
 
     const customLoader = ({ src, width, quality }) => {
-        return`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
-      }
+        return `https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community.name}/${community?.images?.cover}`;
+    };
 
-    const coverImage =community?.images?.cover?`https://rahat-rumsan.s3.us-east-1.amazonaws.com/development/${community.name}/${community?.images?.cover}`
-    : "/images/bg/cover.jpg";
-    console.log(coverImage)
+    const coverImage = community?.images?.cover
+        ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community.name}/${community?.images?.cover}`
+        : "/images/bg/cover.jpg";
+    console.log(coverImage);
     // community?.images?.cover
     // ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
 
