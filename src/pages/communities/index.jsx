@@ -10,7 +10,7 @@ import Wrapper from "src/layout/wrapper";
 // Demo Data
 import { wrapper } from "@redux/store";
 
-export default function Product({ communities, categories, countries }) {
+export default function Product({ communities, categories, countries,meta }) {
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
@@ -31,6 +31,7 @@ export default function Product({ communities, categories, countries }) {
                     communities={communities}
                     countries={countries}
                     categories={categories}
+                    meta={meta}
                 />
             </main>
             <Footer />
@@ -46,7 +47,8 @@ export const getServerSideProps = wrapper.getServerSideProps(
             console.log(store.getState().community);
             const serializedCommunities =
                 store.getState().community.communities?.rows;
-                console.log(serializedCommunities)
+            const meta = store.getState().community?.communities?.meta
+            console.log(meta)
             const countries = [
                 ...new Set(serializedCommunities?.map((r) => r.country)),
             ].map((country) => ({ text: country, value: country }));
@@ -59,6 +61,7 @@ export const getServerSideProps = wrapper.getServerSideProps(
                     categories,
                     error: serializedError,
                     countries: Array.from(new Set(countries)),
+                    meta
                 },
             };
         }
