@@ -1,7 +1,11 @@
 import CommunityCard from "@components/cards/community";
+// import Pagination from "@components/pagination/pagination";
+import Pagination from "@components/pagination";
 import SearchForm from "@components/search-form";
+import { TablePagination } from "@mui/material";
 import clsx from "clsx";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const ExploreProductArea = ({
     className,
@@ -10,6 +14,7 @@ const ExploreProductArea = ({
     data,
     categories,
     countries,
+    meta
 }) => {
     const sanitizedCategories = categories
         .filter((c) => c?.name !== "Charitable Organization")
@@ -17,7 +22,11 @@ const ExploreProductArea = ({
             value: cat.id,
             text: cat.name,
         }));
-      console.log(communities)
+
+
+    
+
+
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
             <div className="container">
@@ -92,6 +101,7 @@ const ExploreProductArea = ({
                                         description={community.description}
                                         id={community.id}
                                         address={community?.address}
+                                        
                                     />
                                 </div>
                             ))}
@@ -100,11 +110,15 @@ const ExploreProductArea = ({
                         <p>No item to show</p>
                     )}
 
-                    {/* <Pagination
-                        pagination={communities?.meta}
-                        currentPage={communities?.meta?.currentPage}
+                    <Pagination
+                        pagination={meta}
+                        currentPage={meta?.currentPage}
                         rootPage="/communities"
-                    /> */}
+
+                    />
+              
+
+
                 </div>
             </div>
         </div>

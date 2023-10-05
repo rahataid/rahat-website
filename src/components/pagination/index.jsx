@@ -7,11 +7,10 @@ const Pagination = ({ pagination, className, currentPage, rootPage }) => {
     const isFirst = currentPage === 1;
     const isLast = pagination?.lastPage === currentPage;
     const numberOfPages = Math.ceil(pagination?.total / pagination?.perPage);
-    const previousPage = pagination?.prev
+    const previousPage = (currentPage - 1)
         ? `${rootPage}?page=${(currentPage - 1).toString()}`
         : rootPage;
-
-    const nextPage = pagination?.nextPage
+    const nextPage = (currentPage + 1)
         ? `${rootPage}?page=${(currentPage + 1).toString()}`
         : rootPage;
     return (
@@ -37,7 +36,7 @@ const Pagination = ({ pagination, className, currentPage, rootPage }) => {
                             <Anchor
                                 className="active"
                                 path={`${rootPage}/${
-                                    i === 0 ? "" : `page/${i + 1}`
+                                    i === 0 ? "" : `?page=${i + 1}`
                                 }`}
                             >
                                 {i + 1}
@@ -49,7 +48,7 @@ const Pagination = ({ pagination, className, currentPage, rootPage }) => {
                                 path={`${
                                     i === 0
                                         ? rootPage
-                                        : `${rootPage}/page/${i + 1}`
+                                        : `${rootPage}?page=${i + 1}`
                                 }`}
                             >
                                 {i + 1}

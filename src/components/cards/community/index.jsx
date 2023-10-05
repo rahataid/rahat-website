@@ -15,7 +15,7 @@ const Product = ({
     currency,
     path = "/communities",
 }) => {
-    const countrycode = codes[country].toLowerCase();
+    const countrycode = codes[country]?.toLowerCase();
     return (
         <>
             <div
@@ -66,10 +66,12 @@ const Product = ({
                         />
                         <span style={{ padding: 5 }}>{country}</span>
                     </span>
-                    <span>
-                        {currency}{" "}
-                        {fCurrency(Number(fundRaisedLocal)?.toFixed(0))}
-                    </span>
+                    {fundRaisedLocal > 0 && (
+                        <span>
+                            {currency}{" "}
+                            {fCurrency(Number(fundRaisedLocal)?.toFixed(0))}
+                        </span>
+                    )}
                 </div>
             </div>
         </>
@@ -81,3 +83,4 @@ Product.defaultProps = {
 };
 
 export default Product;
+

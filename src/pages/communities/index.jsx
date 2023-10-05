@@ -10,56 +10,59 @@ import Wrapper from "src/layout/wrapper";
 // Demo Data
 import { wrapper } from "@redux/store";
 
-export default function Product({ communities, categories, countries }) {
-  return (
-    <Wrapper>
-      <SEO pageTitle='Communities' />
-      <Header />
-      <main id='main-content'>
-        <div>
-          <MapView
-            sx={{
-              height: 400,
-            }}
-            mapData={communities?.map((r) => ({
-              latitude: r?.latitude,
-              longitude: r?.longitude,
-            }))}
-          />
-        </div>
-        <CommunityArea
-          communities={communities}
-          countries={countries}
-          categories={categories}
-        />
-      </main>
-      <Footer />
-    </Wrapper>
-  );
+export default function Product({ communities, categories, countries, meta }) {
+    return (
+        <Wrapper>
+            <SEO pageTitle="Communities" />
+            <Header />
+            <main id="main-content">
+                <div>
+                    <MapView
+                        sx={{
+                            height: 400,
+                        }}
+                        mapData={communities?.map((r) => ({
+                            latitude: r?.latitude,
+                            longitude: r?.longitude,
+                        }))}
+                    />
+                </div>
+                <CommunityArea
+                    communities={communities}
+                    countries={countries}
+                    categories={categories}
+                    meta={meta}
+                />
+            </main>
+            <Footer />
+        </Wrapper>
+    );
 }
 export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async ({ query }) => {
-      await store.dispatch(getCommunities({ ...query, perPage: 100 }));
-      [];
-      await store.dispatch(getCategories());
-      console.log(store.getState().community);
-      const serializedCommunities =
-        store.getState().community.communities?.rows;
-      console.log(serializedCommunities);
-      const countries = [
-        ...new Set(serializedCommunities?.map((r) => r.country)),
-      ].map((country) => ({ text: country, value: country }));
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(getCommunities(query));
+            [];
+            await store.dispatch(getCategories());
+            console.log(store.getState().community);
+            const serializedCommunities =
+                store.getState().community.communities?.rows;
+            const meta = store.getState().community?.communities?.meta;
+            console.log(meta);
+            const countries = [
+                ...new Set(serializedCommunities?.map((r) => r.country)),
+            ].map((country) => ({ text: country, value: country }));
 
-      const categories = store.getState().category.categories;
-      const serializedError = store.getState().community.error;
-      return {
-        props: {
-          communities: serializedCommunities,
-          categories,
-          error: serializedError,
-          countries: Array.from(new Set(countries)),
-        },
-      };
-    }
+            const categories = store.getState().category.categories;
+            const serializedError = store.getState().community.error;
+            return {
+                props: {
+                    communities: serializedCommunities,
+                    categories,
+                    error: serializedError,
+                    countries: Array.from(new Set(countries)),
+                    meta,
+                },
+            };
+        }
 );
