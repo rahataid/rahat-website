@@ -66,12 +66,12 @@ const Product = ({
                         />
                         <span style={{ padding: 5 }}>{country}</span>
                     </span>
-                    {fundRaisedLocal > 0 && (
+                    {/* {fundRaisedLocal > 0 && (
                         <span>
                             {currency}{" "}
                             {fCurrency(Number(fundRaisedLocal)?.toFixed(0))}
                         </span>
-                    )}
+                    )} */}
                 </div>
             </div>
         </>
