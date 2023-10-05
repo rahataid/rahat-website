@@ -11,6 +11,11 @@ import Wrapper from "src/layout/wrapper";
 import { wrapper } from "@redux/store";
 
 export default function Product({ communities, categories, countries, meta }) {
+    const jkl =communities?.map((r) => ({
+        latitude: r?.latitude,
+        longitude: r?.longitude,
+    }))
+    console.log(jkl);
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
@@ -41,7 +46,7 @@ export default function Product({ communities, categories, countries, meta }) {
 export const getServerSideProps = wrapper.getServerSideProps(
     (store) =>
         async ({ query }) => {
-            await store.dispatch(getCommunities(query));
+            await store.dispatch(getCommunities({...query,perPage:100}));
             [];
             await store.dispatch(getCategories());
             console.log(store.getState().community);
