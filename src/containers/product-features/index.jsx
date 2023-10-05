@@ -33,7 +33,7 @@ const ProductFeatures = ({ space, className }) => {
                             <div className="inner">
                                 <div className="icon">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/cash-in-kind-logo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/cash-in-kind-logo.png"
                                         alt=""
                                     />
                                 </div>
@@ -58,7 +58,7 @@ const ProductFeatures = ({ space, className }) => {
                             <div className="inner">
                                 <div className="icon">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/qr-card-logo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/qr-card-logo.png"
                                         alt=""
                                     />
                                 </div>
@@ -81,7 +81,7 @@ const ProductFeatures = ({ space, className }) => {
                             <div className="inner">
                                 <div className="icon">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/beneficiary-communication-logo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/beneficiary-communication-logo.png"
                                         alt=""
                                     />
                                 </div>
@@ -106,7 +106,7 @@ const ProductFeatures = ({ space, className }) => {
                             <div className="inner">
                                 <div className="icon">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/community-access-platform-logo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/community-access-platform-logo.png"
                                         alt=""
                                     />
                                 </div>

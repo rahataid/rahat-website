@@ -63,7 +63,7 @@ const AboutUsDetails = ({ space, className }) => (
                         <p style={{ margin: "0px 0px 10px" }}>
                             Rahat (relief in Nepali) is an open-source
                             blockchain-based financial access platform to
-                            support vulnerable communities..
+                            support vulnerable communities.
                         </p>
 
                         <p style={{ margin: "0px 0px 10px" }}>
@@ -101,7 +101,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-unicef.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-unicef.png"
                                         alt="unicef"
                                     />
                                     <p>UNICEF Venture Fund StartUp Portfolio</p>
@@ -110,7 +110,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partner-and-collab-rahat.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partner-and-collab-rahat.png"
                                         alt="digital-public-goods"
                                     />
                                     <p>
@@ -122,7 +122,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-12">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collad-eth-foundation.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collad-eth-foundation.png"
                                         alt="unicef"
                                     />
                                     <p>Sponsored by Ethereum Foundation.</p>
@@ -135,7 +135,7 @@ const AboutUsDetails = ({ space, className }) => (
                                         target="_blank"
                                     >
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/bc100-icon.png"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/bc100-icon.png"
                                             alt="unicef"
                                         />
                                         <p>We are a member of the BCC100+</p>
@@ -147,7 +147,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-g20-indonesia.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-g20-indonesia.png"
                                         alt="g20"
                                     />
                                     <p>We are one of the finalists of</p>
@@ -156,7 +156,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-usaid.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-usaid.png"
                                         alt="digital-public-goods"
                                     />
                                     <p>We are one of the finalists of</p>
@@ -165,7 +165,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-calp-network.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-calp-network.png"
                                         alt="calp-network"
                                     />
                                     <p>We are a member of the</p>
@@ -174,7 +174,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-3 col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-ccg.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-ccg.png"
                                         alt="ccg"
                                     />
                                     <p>We are a member of the</p>
@@ -185,7 +185,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-nrcs.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-nrcs.png"
                                         alt="redcross-nepal"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -195,7 +195,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-rotaract.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-rotaract.png"
                                         alt="rotaract-club-yala"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -204,7 +204,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-tayaba.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-tayaba.png"
                                         alt="tayaba"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -213,7 +213,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-rahat-leo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-rahat-leo.png"
                                         alt="leo-club"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -222,7 +222,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-somleng.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-somleng.png"
                                         alt="somleng"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -231,7 +231,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-srso.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-srso.png"
                                         alt="srso"
                                     />
                                     <p>Our Pilot Partners</p>
@@ -260,7 +260,7 @@ const AboutUsDetails = ({ space, className }) => (
                                 </p>
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-unicef.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-unicef.png"
                                         alt="unicef"
                                     />
                                 </div>
@@ -271,7 +271,7 @@ const AboutUsDetails = ({ space, className }) => (
                                 </p>
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partner-and-collab-rahat.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partner-and-collab-rahat.png"
                                         alt="digital-public-goods"
                                     />
                                 </div>
@@ -283,7 +283,7 @@ const AboutUsDetails = ({ space, className }) => (
 
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collad-eth-foundation.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collad-eth-foundation.png"
                                         alt="unicef"
                                     />
                                 </div>
@@ -298,7 +298,7 @@ const AboutUsDetails = ({ space, className }) => (
                                     </p>
                                     <div className="rn-about-wrapper">
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/bc100-icon.png"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/bc100-icon.png"
                                             alt="bcc100+"
                                         />
                                     </div>
@@ -314,7 +314,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-g20-indonesia.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-g20-indonesia.png"
                                         alt="g20"
                                     />
                                 </div>
@@ -322,7 +322,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-usaid.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-usaid.png"
                                         alt="digital-public-goods"
                                     />
                                 </div>
@@ -336,7 +336,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-calp-network.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-calp-network.png"
                                         alt="calp-network"
                                     />
                                 </div>
@@ -344,7 +344,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-6">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-ccg.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-ccg.png"
                                         alt="ccg"
                                     />
                                 </div>
@@ -359,7 +359,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-nrcs.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-nrcs.png"
                                         alt="redcross-nepal"
                                     />
                                 </div>
@@ -368,7 +368,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-rotaract.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-rotaract.png"
                                         alt="rotaract-club-yala"
                                     />
                                 </div>
@@ -376,7 +376,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-tayaba.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-tayaba.png"
                                         alt="tayaba"
                                     />
                                 </div>
@@ -384,7 +384,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-rahat-leo.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-rahat-leo.png"
                                         alt="leo-club"
                                     />
                                 </div>
@@ -392,7 +392,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-somleng.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-somleng.png"
                                         alt="somleng"
                                     />
                                 </div>
@@ -400,7 +400,7 @@ const AboutUsDetails = ({ space, className }) => (
                             <div className="col-lg-2 col-4">
                                 <div className="rn-about-wrapper">
                                     <img
-                                        src="https://assets.rumsan.com/rumsan-group/partners-and-collab-srso.png"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-srso.png"
                                         alt="srso"
                                     />
                                 </div>

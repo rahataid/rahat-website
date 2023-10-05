@@ -26,7 +26,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/launch.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/launch.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -69,7 +69,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/registered.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/registered.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -122,7 +122,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/social-engagement.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/social-engagement.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -163,7 +163,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/rumsan-group/rahat-metrics-woman.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-metrics-woman.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -217,7 +217,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/rumsan-group/children-mertics-rahat.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/children-mertics-rahat.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -270,7 +270,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/rumsan-group/local-partners-impact.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/local-partners-impact.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -311,7 +311,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/rumsan-group/nepal-pakistan-rahat-impact.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/nepal-pakistan-rahat-impact.png"
                                     alt=""
                                     style={{
                                         width: "60px",
@@ -366,7 +366,7 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/money.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/money.png"
                                     alt=""
                                     style={{
                                         width: "60px",

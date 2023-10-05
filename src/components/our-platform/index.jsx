@@ -98,7 +98,7 @@ const OurPlatform = ({ space, className }) => (
                 <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                     <div>
                         <img
-                            src="https://assets.rumsan.com/esatya/homepage-edited.png"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/homepage-edited.png"
                             alt=""
                         />
                     </div>

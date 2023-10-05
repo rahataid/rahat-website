@@ -176,7 +176,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/rahat-new-logo-color.png" alt="Raahat Logo" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 38%;max-width: 220.4px;" width="220.4"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-new-logo-color.png" alt="Raahat Logo" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 38%;max-width: 220.4px;" width="220.4"/>
                             
                         </td>
                     </tr>
@@ -407,7 +407,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/rumsanwallet-homepage-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rumsanwallet-homepage-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
                             
                         </td>
                     </tr>
@@ -515,7 +515,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/passcode-1-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/passcode-1-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
                             
                         </td>
                     </tr>
@@ -620,7 +620,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/mnemonics-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mnemonics-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
                             
                         </td>
                     </tr>
@@ -774,7 +774,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/admin-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 279px;" width="279"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/admin-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 279px;" width="279"/>
                             
                         </td>
                     </tr>
@@ -908,7 +908,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/lock-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/lock-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
                             
                         </td>
                     </tr>
@@ -1016,7 +1016,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img class="view-mobile" align="center" border="0" src="https://assets.rumsan.com/rumsan-group/passcode-2-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
+                            <img class="view-mobile" align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/passcode-2-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
                             
                         </td>
                     </tr>
@@ -1121,7 +1121,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                         
-                            <img class="view-mobile" align="center" border="0" src="https://assets.rumsan.com/rumsan-group/wallet-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
+                            <img class="view-mobile" align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/wallet-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 56%;max-width: 162.4px;" width="162.4"/>
                             
                         </td>
                     </tr>
@@ -1229,7 +1229,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img class="view-mobile" align="center" border="0" src="https://assets.rumsan.com/rumsan-group/scan-qr-code-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
+                            <img class="view-mobile" align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/scan-qr-code-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 68%;max-width: 197.2px;" width="197.2"/>
                             
                         </td>
                     </tr>
@@ -1319,7 +1319,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/confirm-template.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 143px;" width="143"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/confirm-template.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 143px;" width="143"/>
                             
                         </td>
                     </tr>
@@ -1346,7 +1346,7 @@ async function contactForm(payload) {
                     <tr>
                         <td class="v-text-align" style="padding-right: 0px;padding-left: 0px;" align="center">
                             
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/success-template-1.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 154px;" width="154"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/success-template-1.png" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 154px;" width="154"/>
                             
                         </td>
                     </tr>
@@ -1387,7 +1387,7 @@ async function contactForm(payload) {
                         <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 19.6px;">After completing this process, You will be logged in to the Agency app. </span></p>
                         <p style="font-size: 14px; line-height: 140%;">&nbsp;</p>
                     </div>
-                            <img align="center" border="0" src="https://assets.rumsan.com/rumsan-group/dashboard-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 590px;" width="590"/>
+                            <img align="center" border="0" src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/dashboard-template.png" alt="Image" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 590px;" width="590"/>
                             
                         </td>
                     </tr>
@@ -1504,35 +1504,35 @@ async function contactForm(payload) {
                         <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 15px">
                             <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                 <a href="https://github.com/esatya" title="github" target="_blank">
-                                    <img src="https://assets.rumsan.com/rumsan-group/github-footer-template.png" alt="github" title="github" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
+                                    <img src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/github-footer-template.png" alt="github" title="github" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                 </a>
                             </td></tr>
                         </tbody></table>
                         <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 15px">
                             <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                 <a href="https://discord.com/invite/p2kxaP2m8t" title="discord" target="_blank">
-                                    <img src="https://assets.rumsan.com/rumsan-group/discord-footer-template.png" alt="discord" title="discord" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
+                                    <img src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/discord-footer-template.png" alt="discord" title="discord" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                 </a>
                             </td></tr>
                         </tbody></table>
                         <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 15px">
                             <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                 <a href="https://www.linkedin.com/company/esatya/" title="LinkedIn" target="_blank">
-                                    <img src="https://assets.rumsan.com/hamro-lifebank/website/images/linkedin-transparent-logo.png" alt="LinkedIn" title="LinkedIn" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
+                                    <img src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/hamro-lifebank/website/images/linkedin-transparent-logo.png" alt="LinkedIn" title="LinkedIn" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                 </a>
                             </td></tr>
                         </tbody></table>
                         <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 15px">
                             <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                 <a href="https://twitter.com/rahataid" title="Twitter" target="_blank">
-                                    <img src="https://assets.rumsan.com/rumsan-group/new-consumer-footer-twitter.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
+                                    <img src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/new-consumer-footer-twitter.png" alt="Twitter" title="Twitter" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                 </a>
                             </td></tr>
                         </tbody></table>
                         <table align="left" border="0" cellspacing="0" cellpadding="0" width="32" height="32" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;margin-right: 0px">
                             <tbody><tr style="vertical-align: top"><td align="left" valign="middle" style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
                                 <a href="https://esatya.medium.com/" title="Medium" target="_blank">
-                                    <img src="https://assets.rumsan.com/rumsan-group/medium-logo.png" alt="Medium" title="Medium" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
+                                    <img src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/medium-logo.png" alt="Medium" title="Medium" width="32" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: none;height: auto;float: none;max-width: 32px !important">
                                 </a>
                             </td></tr>
                         </tbody></table>

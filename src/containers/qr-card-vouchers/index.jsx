@@ -7,7 +7,7 @@ const DigitalPrintedQrCards = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
-                src="https://assets.rumsan.com/rumsan-group/qr-card-feature-banner.jpg"
+                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/qr-card-feature-banner.jpg"
                 alt="Slider BG"
                 layout="fill"
                 objectFit="cover"
@@ -62,7 +62,7 @@ const DigitalPrintedQrCards = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/qr-card-vouchers-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/qr-card-vouchers-banner.png"
                                 alt=""
                             />
                         </div>
@@ -72,7 +72,7 @@ const DigitalPrintedQrCards = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/offline-redemption-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/offline-redemption-banner.png"
                                 alt=""
                             />
                         </div>
@@ -115,7 +115,7 @@ const DigitalPrintedQrCards = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/customization-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/customization-banner.png"
                                 alt=""
                             />
                         </div>

@@ -28,7 +28,7 @@ const Benefits = ({ space, className }) => (
                         <div className="inner">
                             <div className="mb-4">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/transparency.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/transparency.png"
                                     alt=""
                                     style={{ width: "60px" }}
                                 />
@@ -74,7 +74,7 @@ const Benefits = ({ space, className }) => (
                         <div className="inner">
                             <div className="mb-4">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/clock-fast.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/clock-fast.png"
                                     alt=""
                                     style={{ width: "60px" }}
                                 />
@@ -123,7 +123,7 @@ const Benefits = ({ space, className }) => (
                         <div className="inner">
                             <div className="mb-4">
                                 <img
-                                    src="https://assets.rumsan.com/esatya/losses.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/losses.png"
                                     alt=""
                                     style={{ width: "60px" }}
                                 />

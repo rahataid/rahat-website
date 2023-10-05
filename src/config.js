@@ -16,3 +16,4 @@ export const BLOG_CMS_HOST = process.env.NEXT_PUBLIC_CMS_API || "";
 
 export const SMTP_USER = process.env.NEXT_PUBLIC_SMTP_USER || "";
 export const SMTP_PASS = process.env.NEXT_PUBLIC_SMTP_PASS || "";
+export const RUMSAN_ASSETS_PATH = process.env.NEXT_PUBLIC_RUMSAN_ASSETS || "https://rumsan.nyc3.cdn.digitaloceanspaces.com"

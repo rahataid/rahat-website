@@ -23,7 +23,7 @@ const Footer = ({ space, className, data }) => (
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="widget-content-wrapper">
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/rumsan-logo-raha-footer.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rumsan-logo-raha-footer.png"
                                 alt=""
                                 style={{
                                     width: "245px",
@@ -132,28 +132,28 @@ const Footer = ({ space, className, data }) => (
                                 >
                                     <div className="col-6">
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-01.jpg"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-01.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
                                     </div>
                                     <div className="col-6">
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-02.jpg"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-02.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
                                     </div>
                                     <div className="col-6">
                                         <img
-                                            src="https://assets.rumsan.com/rumsan-group/sdc-compliances-rahat-05.jpg"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-05.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
                                     </div>
                                     <div className="col-6">
                                         <img
-                                            src="https://assets.rumsan.com/esatya/sdg-climate-chane-13.png"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/sdg-climate-chane-13.png"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
