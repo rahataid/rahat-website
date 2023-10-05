@@ -13,7 +13,7 @@ const AboutUs = ({ space, className }) => (
                 <div className="col-lg-5">
                     <div className="rn-about-title-wrapper">
                         <img
-                            src="https://assets.rumsan.com/esatya/rahat-homepage.jpg"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-homepage.jpg"
                             alt=""
                         />
                     </div>
@@ -21,7 +21,7 @@ const AboutUs = ({ space, className }) => (
                 <div className="col-lg-7">
                     <div className="rn-about-wrapper-custom">
                         <img
-                            src="https://assets.rumsan.com/rumsan-group/rahat-new-logo-color.png"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-new-logo-color.png"
                             alt=""
                             style={{ width: "256px", marginLeft: "-24px" }}
                         />

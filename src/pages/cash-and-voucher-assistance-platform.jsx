@@ -18,7 +18,7 @@ const CvaDetailPage = () => {
             <MainBannerPage
                 pageTitle={"Cash And Voucher Assistance"}
                 imageLink={
-                    "https://assets.rumsan.com/rumsan-group/cva-mainbanner-1.jpg"
+                    "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/cva-mainbanner-1.jpg"
                 }
             />
             <VideoArea data={content["video-section"]} />

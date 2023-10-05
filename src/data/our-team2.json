@@ -7,7 +7,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:santosh@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/rumsan/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/santosh-rahat-team.jpg"
+        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/santosh-rahat-team.jpg"
     },
     {
         "id": "20",
@@ -17,7 +17,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:raktim@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/raktim-shrestha-63a780109/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/raktim-rahat-team.jpg"
+        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/raktim-rahat-team.jpg"
     },
     {
         "id": "21",
@@ -27,7 +27,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:manjik.shrestha@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/manzik-shrestha-951b01b3/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/manjik-rahat-team.jpg"
+        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/manjik-rahat-team.jpg"
     },
     {
         "id": "22",
@@ -37,7 +37,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:nishu.shrestha@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/nishubadeshrestha01/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/nishu-rahat-team-professional.jpg"
+        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/nishu-rahat-team-professional.jpg"
     },
     {
         "id": "23",
@@ -47,7 +47,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:sailendra.maharjan@rumsan.com",
         "link_linkedin": "https://www.linkedin.com/in/sailendra-maharjan-b1773811a/",
-        "team_image": "https://assets.rumsan.com/rumsan-group/sailendra-our-team-rahat.jpg"
+        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sailendra-our-team-rahat.jpg"
     }
 ]
 

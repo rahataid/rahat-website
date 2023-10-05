@@ -7,7 +7,7 @@ const AnticipatoryActionsPage = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
-                src="https://assets.rumsan.com/rumsan-group/anticipatory-actions-main-banner.jpg"
+                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/anticipatory-actions-main-banner.jpg"
                 alt="Slider BG"
                 layout="fill"
                 objectFit="cover"
@@ -79,7 +79,7 @@ const AnticipatoryActionsPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/multi-signature-rahat-beema-image.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/multi-signature-rahat-beema-image.png"
                                 alt=""
                             />
                         </div>
@@ -89,7 +89,7 @@ const AnticipatoryActionsPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/alert-anticipatory-actions.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/alert-anticipatory-actions.png"
                                 alt=""
                                 style={{ width: "400px" }}
                             />
@@ -142,7 +142,7 @@ const AnticipatoryActionsPage = ({ space, className }) => (
                         <div>
                             <img
                                 style={{ width: "400px" }}
-                                src="https://assets.rumsan.com/rumsan-group/cash-transfer-anticipatory-actions.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/cash-transfer-anticipatory-actions.png"
                                 alt=""
                             />
                         </div>

@@ -190,7 +190,7 @@ const OurPlatform = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/esatya/op-dashboard-final-rmb.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/op-dashboard-final-rmb.png"
                                 alt=""
                             />
                         </div>
@@ -200,7 +200,7 @@ const OurPlatform = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/esatya/op-home-final.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/op-home-final.png"
                                 alt=""
                             />
                         </div>
@@ -374,7 +374,7 @@ const OurPlatform = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/esatya/op-rsm-final.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/op-rsm-final.png"
                                 alt=""
                             />
                         </div>

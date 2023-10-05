@@ -8,7 +8,8 @@ module.exports = {
     images: {
         domains: [
             "drive.google.com",
-            "assets.rumsan.com",
+            "rumsan.nyc3.cdn.digitaloceanspaces.com",
+            "rumsan.nyc3.cdn.digitaloceanspaces.com",
             "rahat-rumsan.s3.amazonaws.com",
             "esatya.s3.amazonaws.com",
             'rahat-rumsan.s3.us-east-1.amazonaws.com',

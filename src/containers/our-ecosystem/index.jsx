@@ -32,7 +32,7 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail">
                                     <Image
-                                        src="https://assets.rumsan.com/esatya/cva-ecosystem-banner.jpg"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
                                         alt="cva-ecosystem-banner"
                                         width={489}
                                         height={366}
@@ -63,7 +63,7 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail">
                                     <Image
-                                        src="https://assets.rumsan.com/esatya/rahat-beema-banner.jpg"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-beema-banner.jpg"
                                         alt="rahat-beema-banner"
                                         width={489}
                                         height={366}
@@ -92,7 +92,7 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail">
                                     <Image
-                                        src="https://assets.rumsan.com/esatya/anticipatory-actions-banner.jpg"
+                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/anticipatory-actions-banner.jpg"
                                         alt="anticipatory-actions-banner"
                                         width={489}
                                         height={366}

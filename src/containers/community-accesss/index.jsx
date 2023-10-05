@@ -7,7 +7,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
-                src="https://assets.rumsan.com/rumsan-group/community-feature-banner-main.jpg"
+                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/community-feature-banner-main.jpg"
                 alt="Slider BG"
                 layout="fill"
                 objectFit="cover"
@@ -63,7 +63,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/access-1-.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/access-1-.png"
                                 alt=""
                                 style={{ width: "600px" }}
                             />
@@ -74,7 +74,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/access-2.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/access-2.png"
                                 alt=""
                                 style={{ width: "600px" }}
                             />
@@ -130,7 +130,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end custom-order-flexbox-1">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/access-3.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/access-3.png"
                                 alt=""
                                 style={{ width: "600px" }}
                             />
@@ -141,7 +141,7 @@ const CommunityAccessPlatformDetails = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/access-4.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/access-4.png"
                                 alt=""
                                 style={{ width: "600px" }}
                             />

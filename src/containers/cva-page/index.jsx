@@ -7,7 +7,7 @@ const CvaPage = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
-                src="https://assets.rumsan.com/rumsan-group/cva-main-banner-feature.jpg"
+                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/cva-main-banner-feature.jpg"
                 alt="Slider BG"
                 layout="fill"
                 objectFit="cover"
@@ -76,7 +76,7 @@ const CvaPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/agency-dashboard-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/agency-dashboard-banner.png"
                                 alt=""
                             />
                         </div>
@@ -86,7 +86,7 @@ const CvaPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/vendor-app-main-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/vendor-app-main-banner.png"
                                 alt=""
                             />
                         </div>
@@ -143,7 +143,7 @@ const CvaPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/social-mobilizer-app-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/social-mobilizer-app-banner.png"
                                 alt=""
                             />
                         </div>
@@ -153,7 +153,7 @@ const CvaPage = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/beneficiary-management-banner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/beneficiary-management-banner.png"
                                 alt=""
                             />
                         </div>

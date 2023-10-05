@@ -7,7 +7,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
     <>
         <div className="rn-author-bg-area position-relative ptb--150">
             <Image
-                src="https://assets.rumsan.com/rumsan-group/sms-banner-feature-page.jpg"
+                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sms-banner-feature-page.jpg"
                 alt="Slider BG"
                 layout="fill"
                 objectFit="cover"
@@ -63,7 +63,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/ivr.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/ivr.png"
                                 alt=""
                                 style={{ width: "450px" }}
                             />
@@ -74,7 +74,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/sms-messaging.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sms-messaging.png"
                                 alt=""
                                 style={{ width: "450px" }}
                             />
@@ -118,7 +118,7 @@ const BeneficiaryCommunicationIvrSms = ({ space, className }) => (
                     <div className="col-12 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center">
                         <div>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/language-ivr-sms-.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/language-ivr-sms-.png"
                                 alt=""
                                 style={{ width: "500px" }}
                             />

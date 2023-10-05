@@ -20,7 +20,7 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <img
-                                src="https://assets.rumsan.com/esatya/unicef-fec-final.jpg"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/unicef-fec-final.jpg"
                                 alt=""
                             />
                         </div>
@@ -28,7 +28,7 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <img
-                                src="https://assets.rumsan.com/esatya/calpnet-edit-500.jpg"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/calpnet-edit-500.jpg"
                                 alt=""
                             />
                         </div>
@@ -36,7 +36,7 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/dpga-rahat.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/dpga-rahat.png"
                                 alt=""
                             />
                         </div>

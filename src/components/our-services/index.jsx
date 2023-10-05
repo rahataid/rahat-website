@@ -27,7 +27,7 @@ const OurServices = ({ space, className }) => (
                 <div className="col-lg-4 col-sm-6">
                     <div className="work-card">
                         <img
-                            src="https://assets.rumsan.com/rumsan-group/managed-service-rahat.jpg"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/managed-service-rahat.jpg"
                             alt="image"
                         />
 
@@ -62,7 +62,7 @@ const OurServices = ({ space, className }) => (
                 <div className="col-lg-4 col-sm-6">
                     <div className="work-card">
                         <img
-                            src="https://assets.rumsan.com/rumsan-group/white-lable-rahat.jpg"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/white-lable-rahat.jpg"
                             alt="image"
                         />
                         <div className="content">
@@ -97,7 +97,7 @@ const OurServices = ({ space, className }) => (
                 <div className="col-lg-4 col-sm-6">
                     <div className="work-card">
                         <img
-                            src="https://assets.rumsan.com/rumsan-group/pilots-trunkey-rahat.jpg"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/pilots-trunkey-rahat.jpg"
                             alt="image"
                         />
                         <div className="content">

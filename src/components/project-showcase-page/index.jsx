@@ -90,7 +90,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                 <div className="inner">
                                     <div className="thumbnail">
                                         <Image
-                                            src="https://assets.rumsan.com/rumsan-group/cash-transfers-media-mentions.jpg"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/cash-transfers-media-mentions.jpg"
                                             alt={"Personal Portfolio Images"}
                                             width={489}
                                             height={366}
@@ -107,7 +107,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                             </div>
                                         </div>
                                         <h4 className="title">
-                                            <Anchor path="https://assets.rumsan.com/rumsan-group/rahat-jaleswor-showcase-project.pdf">
+                                            <Anchor path="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-jaleswor-showcase-project.pdf">
                                                 UNICEF Nepal Cash Transfer Pilot
                                                 2023
                                             </Anchor>
@@ -117,7 +117,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                                 <div className="meta">
                                                     <span className="d-flex justify-content-center align-items-center">
                                                         {/* <Anchor
-                                                            path="https://assets.rumsan.com/rumsan-group/rahat-jaleswor-showcase-project.pdf"
+                                                            path="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-jaleswor-showcase-project.pdf"
                                                             style={boxStyle}
                                                             onMouseEnter={
                                                                 handleMouseEnter
@@ -159,7 +159,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                 <div className="inner">
                                     <div className="thumbnail">
                                         <Image
-                                            src="https://assets.rumsan.com/rumsan-group/tayaba-project-showcase-banner.jpg"
+                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/tayaba-project-showcase-banner.jpg"
                                             alt={"Personal Portfolio Images"}
                                             width={489}
                                             height={366}
@@ -176,7 +176,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                             </div>
                                         </div>
                                         <h3 className="title">
-                                            <Anchor path="https://assets.rumsan.com/rumsan-group/tayaba-project-showcase-banner.jpg">
+                                            <Anchor path="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/tayaba-project-showcase-banner.jpg">
                                                 Rahat X Tayaba Unites Together
                                             </Anchor>
                                         </h3>
@@ -185,7 +185,7 @@ const ProjectShowcasePage = ({ space, className, showBanner = true }) => {
                                                 <div className="meta">
                                                     <span className="d-flex justify-content-center align-items-center">
                                                         <Anchor
-                                                            path="https://assets.rumsan.com/rumsan-group/rahat-jaleswor-showcase-project.pdf"
+                                                            path="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-jaleswor-showcase-project.pdf"
                                                             style={boxStyle2}
                                                             onMouseEnter={
                                                                 handleMouseEnter2

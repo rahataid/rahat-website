@@ -23,20 +23,20 @@ const CollabAndPartners = () => {
                     <div style={iconStyles}>
                         <div style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/team-unicef-rahat-logo.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-unicef-rahat-logo.png"
                                 alt="Icon 1"
                             />
                         </div>
                     </div>
                     <div className="mt-3" style={iconItemStyles}>
                         <img
-                            src="https://assets.rumsan.com/esatya/team-g20-logo-rahat.png"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-g20-logo-rahat.png"
                             alt="Icon 1"
                         />
                     </div>
                     <div className="mt-3" style={iconItemStyles}>
                         <img
-                            src="https://assets.rumsan.com/rumsan-group/partners-and-collab-nrcs.png"
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-nrcs.png"
                             alt="Icon 1"
                         />
                     </div>
@@ -45,25 +45,25 @@ const CollabAndPartners = () => {
                     <div style={iconStyles}>
                         <div style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/team-dpc-rahat-logo.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-dpc-rahat-logo.png"
                                 alt="Icon 1"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/team-rahat-usaid-logo.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-rahat-usaid-logo.png"
                                 alt="Icon 1"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/team-rahat-collab-partner.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-rahat-collab-partner.png"
                                 alt="Icon 2"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/partners-and-collab-somleng.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-somleng.png"
                                 alt="Icon 7"
                             />
                         </div>
@@ -73,25 +73,25 @@ const CollabAndPartners = () => {
                     <div style={iconStyles}>
                         <div style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/village-capital-collab-logo.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/village-capital-collab-logo.png"
                                 alt="Icon 1"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/partners-and-collab-calp-network.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-calp-network.png"
                                 alt="Icon 1"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/partners-and-collab-tayaba.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-tayaba.png"
                                 alt="Icon 3"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/srso-mobile-view-team.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/srso-mobile-view-team.png"
                                 alt="Icon 8"
                             />
                         </div>
@@ -103,20 +103,20 @@ const CollabAndPartners = () => {
                             <a href="https://bc100plus.org/" target="_blank">
                                 {" "}
                                 <img
-                                    src="https://assets.rumsan.com/rumsan-group/bc100-icon.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/bc100-icon.png"
                                     alt="Icon 1"
                                 />
                             </a>
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/rumsan-group/partners-and-collab-ccg.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-ccg.png"
                                 alt="Icon 1"
                             />
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.com/esatya/leo-partner-collab-team-rahat.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/leo-partner-collab-team-rahat.png"
                                 alt="Icon 5"
                             />
                         </div>
