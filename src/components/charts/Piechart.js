@@ -51,7 +51,7 @@ export default function Piechart({
         plotOptions: {
             pie: {
                 donut: {
-                    size: "98%",
+                    size: "95%",
                     legend: {
                         show: false,
                     },
@@ -83,8 +83,9 @@ export default function Piechart({
                 type="pie"
                 series={chartSeries}
                 options={chartOptions}
-                height={260}
+                height={200}
             />
         </div>
     );
 }
+
