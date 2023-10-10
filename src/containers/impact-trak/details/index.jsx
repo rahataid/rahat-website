@@ -9,7 +9,7 @@ const ImpactDetailsPage = ({ data }) => {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 col-md-9 col-sm-12 mt_sm--30">
-                        <h3>ImpactTrak</h3>
+                        <h3 className="mt--20">Impact Trak</h3>
                         <ImpactDescCard data={data} />
                         <ImpactDescription data={data} />
                         <ImpactCharts data={data} />

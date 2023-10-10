@@ -10,10 +10,10 @@ const ImpactDescCard = ({ data }) => {
                             <div class="card-body">
                                 <div class="clearfix mb-3"></div>
                                 <div class="my-2 text-center">
-                                    <h1>{data?.donor?.name}</h1>
+                                    <h3>{data?.donor?.name}</h3>
                                 </div>
                                 <div class="mb-3">
-                                    <h5 class="text-uppercase text-center role text-muted">
+                                    <h5 class=" text-center role text-muted">
                                         Donor
                                     </h5>
                                 </div>
@@ -26,10 +26,10 @@ const ImpactDescCard = ({ data }) => {
                                 <div class="clearfix mb-3"></div>
 
                                 <div class="my-2 text-center">
-                                    <h1>{data?.donee?.name}</h1>
+                                    <h3>{data?.donee?.name}</h3>
                                 </div>
                                 <div class="mb-3">
-                                    <h5 class="text-uppercase text-center role text-muted">
+                                    <h5 class="text-center role text-muted">
                                         Receiver
                                     </h5>
                                 </div>

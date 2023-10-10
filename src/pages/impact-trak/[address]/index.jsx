@@ -5,15 +5,15 @@ import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 import { useRouter } from "next/router";
 import React from "react";
-import datas from "src/data/impact-trak.json";
+import datas from "../../../data/impact-trak.json";
 
 const ImpactTrak = () => {
     const router = useRouter();
     const { address } = router.query;
     const data = datas?.rows?.find(
-        (content) => content.donor.address === address
+        (content) => content?.donor?.address === address
     );
-    console.log(data);
+    console.log(address);
     return (
         <Wrapper>
             <SEO

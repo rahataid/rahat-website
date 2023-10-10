@@ -11,8 +11,8 @@ const ImpactTrakArea = ({ data, className }) => {
                     <div className=" card-deck row p-2">
                         <h3 className="">Summary</h3>
                         <ImpactTrackSummaryCard
-                            cardTitle="Benificiaries"
-                            total={data.meta.totalBenificiaries}
+                            cardTitle="Beneficiaries"
+                            total={data.meta.totalBeneficiaries}
                         />
                         <ImpactTrackSummaryCard
                             cardTitle="Amount"

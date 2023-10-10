@@ -1,29 +1,44 @@
 import Piechart from "@components/charts/Piechart";
-import Summary from "@components/donation-summary";
 import React from "react";
 
 const ChartData = ({ summary }) => {
-    const GenderData = Object.entries(summary?.gender).map(
-        ([label, value]) => ({
-            label,
-            value: parseInt(value),
-        })
-    );
+    console.log(summary);
 
-    const BankData = Object.entries(summary?.bankStatus).map(
-        ([label, value]) => ({
-            label,
-            value: parseInt(value),
-        })
-    );
+    // const GenderData =
+    //     Object?.entries(summary?.gender).map(([label, value]) => ({
+    //         label,
+    //         value: parseInt(value),
+    //     })) || [];
 
-    const summaryData = Object.entries(summary?.internetAccess).map(
-        ([label, value]) => ({
-            label,
-            value: parseInt(value),
-        })
-    );
+    const BankData = Object.keys(summary?.bankStatus || {}).map((subAspect) => {
+        const value = summary.bankStatus[subAspect];
+        return {
+            label: subAspect.replace(/_/g, " "), // Replace underscores with spaces
+            value: Number(value),
+        };
+    });
+    const GenderData = Object.keys(summary?.gender || {}).map((subAspect) => {
+        const value = summary.gender[subAspect];
+        return {
+            label: subAspect.replace(/_/g, " "), // Replace underscores with spaces
+            value: Number(value),
+        };
+    });
+    // const BankData =
+    //     Object?.entries(summary?.bankStatus).map(([label, value]) => ({
+    //         label,
+    //         value: parseInt(value),
+    //     })) || [];
 
+    const summaryData = Object.keys(summary?.internetAccess || {}).map(
+        (subAspect) => {
+            const value = summary.internetAccess[subAspect];
+            return {
+                label: subAspect.replace(/_/g, " "), // Replace underscores with spaces
+                value: Number(value),
+            };
+        }
+    );
     return (
         <div>
             <div className="mt-5 row text-center">

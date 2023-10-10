@@ -12,19 +12,23 @@ const ImpactTrackSummaryList = ({
     address,
 }) => {
     const changedDate = new Date(date);
-    const formattedDate = changedDate.toLocaleDateString();
+    const formattedDate = changedDate.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
 
     return (
         <div className="col-xs-12 col-sm-6 col-md-4 w-100">
             <Anchor path={`${path}/${address}`}>
-                <div className="rn-address mt-2">
-                    <div className="card-body">
+                <div className="rn-address mt--20">
+                    <div className="">
                         <div className="row">
-                            <div className="col">Date:{formattedDate}</div>
+                            <div className="col"> {formattedDate}</div>
                             <div className="col text-right">
                                 <h6 className="strong">
                                     <small className="text-muted">
-                                        Amount:{amount}
+                                        Amount : {amount}
                                     </small>
                                 </h6>
                             </div>
@@ -40,7 +44,7 @@ const ImpactTrackSummaryList = ({
                             <div className="col text-right">
                                 <h6 className="strong">
                                     <small className="text-muted">
-                                        Reciver : {donee.name}
+                                        Receiver : {donee.name}
                                     </small>
                                 </h6>
                             </div>
