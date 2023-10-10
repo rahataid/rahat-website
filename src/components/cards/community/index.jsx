@@ -12,6 +12,7 @@ const Product = ({
     fundRaisedLocal = 0,
     category,
     address,
+    district,
     currency,
     path = "/communities",
 }) => {
@@ -64,7 +65,10 @@ const Product = ({
                             src={`https://hatscripts.github.io/circle-flags/flags/${countrycode}.svg`}
                             width="20"
                         />
-                        <span style={{ padding: 5 }}>{country}</span>
+                        <span style={{ padding: 5 }}>
+                            {" "}
+                            {district} {country}
+                        </span>
                     </span>
                     {/* {fundRaisedLocal > 0 && (
                         <span>

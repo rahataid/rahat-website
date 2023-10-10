@@ -1,0 +1,240 @@
+{
+    "rows": [
+        {
+            "donor": {
+                "address": "0x792CBd5Fd1b245934d2815cfB958B49632c9CfF8",
+                "name": "Rumsan",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "https://www.rumsan.com"
+            },
+            "timestamp": 1640995200000,
+            "description": "Pilot 5.0",
+            "amount": 76000,
+            "currency": "NPR",
+            "fundRaisedUsd": "584.61",
+            "fundRaisedLocal": 76000,
+            "summary": {
+                "gender": {
+                    "MALE": "2",
+                    "FEMALE": "3",
+                    "OTHERS": "0",
+                    "UNKNOWN": "31"
+                },
+                "internetAccess": {
+                    "UNKNOWN": "31",
+                    "NO_INTERNET": "2",
+                    "PHONE_INTERNET": "0",
+                    "HOME_INTERNET": "3"
+                },
+                "phoneOwnership": {
+                    "UNKNOWN": "31",
+                    "NO_PHONE": "1",
+                    "FEATURE_PHONE": "1",
+                    "SMART_PHONE": "3"
+                },
+                "bankStatus": {
+                    "UNKNOWN": "31",
+                    "UNBANKED": "4",
+                    "BANKED": "1",
+                    "UNDERBANKED": "0"
+                }
+            },
+            "donee": {
+                "address": "0x1234588808123456712346789678901234567890",
+                "name": "Bandipur Community",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "http://www.com"
+            }
+        },
+        {
+            "donor": {
+                "address": "0xa593792fE51492888Bf78b51248D4A5428A33eEf",
+                "name": "Rumsan",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "https://www.rumsan.com"
+            },
+            "timestamp": 1647336600000,
+            "description": "Pilot 4.0",
+            "amount": 60000,
+            "currency": "NPR",
+            "fundRaisedUsd": "461.53",
+            "fundRaisedLocal": 60000,
+            "donee": {
+                "address": "0x1234588808123456712746789678901234567890",
+                "name": "Dumre Community",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "http://www.com"
+            },
+            "summary": {
+                "gender": {
+                    "MALE": "5",
+                    "FEMALE": "8",
+                    "OTHERS": "2",
+                    "UNKNOWN": "16"
+                },
+                "internetAccess": {
+                    "UNKNOWN": "10",
+                    "NO_INTERNET": "6",
+                    "PHONE_INTERNET": "4",
+                    "HOME_INTERNET": "12"
+                },
+                "phoneOwnership": {
+                    "UNKNOWN": "9",
+                    "NO_PHONE": "3",
+                    "FEATURE_PHONE": "5",
+                    "SMART_PHONE": "12"
+                },
+                "bankStatus": {
+                    "UNKNOWN": "8",
+                    "UNBANKED": "7",
+                    "BANKED": "10",
+                    "UNDERBANKED": "4"
+                }
+            }
+        },
+        {
+            "donor": {
+                "address": "0x9CD0C3Fb109e8165e8327aCBc054458Ab60837Be",
+                "name": "Dhana Yoga",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "https://www.com"
+            },
+            "timestamp": 1656630330000,
+            "description": "Pilot 3.0",
+            "amount": 150000,
+            "currency": "NPR",
+            "fundRaisedUsd": "1153.84",
+            "fundRaisedLocal": 150000,
+            "donee": {
+                "address": "0x1234588808123456712746789678901234567890",
+                "name": "Chepang Community Chitwan",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "http://www.com"
+            },
+            "summary": {
+                "gender": {
+                    "MALE": "10",
+                    "FEMALE": "15",
+                    "OTHERS": "5",
+                    "UNKNOWN": "20"
+                },
+                "internetAccess": {
+                    "UNKNOWN": "20",
+                    "NO_INTERNET": "5",
+                    "PHONE_INTERNET": "10",
+                    "HOME_INTERNET": "15"
+                },
+                "phoneOwnership": {
+                    "UNKNOWN": "20",
+                    "NO_PHONE": "5",
+                    "FEATURE_PHONE": "10",
+                    "SMART_PHONE": "15"
+                },
+                "bankStatus": {
+                    "UNKNOWN": "20",
+                    "UNBANKED": "5",
+                    "BANKED": "10",
+                    "UNDERBANKED": "15"
+                }
+            }
+        },
+        {
+            "donor": {
+                "address": "0x3c0DB3a6fD47D65B84bddE10B2175A02b6b1383c",
+                "name": "Rumsan",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "https://www.rumsan.com"
+            },
+            "timestamp": 1662872145000,
+            "description": "Pilot 2.0",
+            "amount": 30000,
+            "currency": "NPR",
+            "fundRaisedUsd": "230.76",
+            "fundRaisedLocal": 30000,
+            "donee": {
+                "address": "0x1234588808123486712746789678901234567890",
+                "name": "Kalanki Township",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "http://www.com"
+            },
+            "summary": {
+                "gender": {
+                    "MALE": "8",
+                    "FEMALE": "12",
+                    "OTHERS": "3",
+                    "UNKNOWN": "18"
+                },
+                "internetAccess": {
+                    "UNKNOWN": "18",
+                    "NO_INTERNET": "3",
+                    "PHONE_INTERNET": "8",
+                    "HOME_INTERNET": "12"
+                },
+                "phoneOwnership": {
+                    "UNKNOWN": "18",
+                    "NO_PHONE": "3",
+                    "FEATURE_PHONE": "8",
+                    "SMART_PHONE": "12"
+                },
+                "bankStatus": {
+                    "UNKNOWN": "18",
+                    "UNBANKED": "3",
+                    "BANKED": "8",
+                    "UNDERBANKED": "12"
+                }
+            }
+        },
+        {
+            "donor": {
+                "address": "0x3c0DB3a6fD47D65B84bddE10B2175A02b6b1383c",
+                "name": "Rumsan",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "https://www.rumsan.com"
+            },
+            "timestamp": 1672502399000,
+            "description": "Pilot 1.0",
+            "amount": 100000,
+            "currency": "NPR",
+            "fundRaisedUsd": "769.23",
+            "fundRaisedLocal": 100000,
+            "donee": {
+                "address": "0x1234588808123486712746789678901234567890",
+                "name": "Naxal Township",
+                "profile_image": "/images/portfolio/rahat.jpeg",
+                "url": "http://www.com"
+            },
+            "summary": {
+                "gender": {
+                    "MALE": "6",
+                    "FEMALE": "9",
+                    "OTHERS": "2",
+                    "UNKNOWN": "14"
+                },
+                "internetAccess": {
+                    "UNKNOWN": "14",
+                    "NO_INTERNET": "2",
+                    "PHONE_INTERNET": "6",
+                    "HOME_INTERNET": "9"
+                },
+                "phoneOwnership": {
+                    "UNKNOWN": "14",
+                    "NO_PHONE": "2",
+                    "FEATURE_PHONE": "6",
+                    "SMART_PHONE": "9"
+                },
+                "bankStatus": {
+                    "UNKNOWN": "14",
+                    "UNBANKED": "2",
+                    "BANKED": "6",
+                    "UNDERBANKED": "9"
+                }
+            }
+        }
+    ],
+    "meta": {
+        "totalBenificiaries": 199,
+        "totalAmount": 326000,
+        "totalCommunities": 5
+    }
+}
+

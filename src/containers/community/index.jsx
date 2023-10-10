@@ -101,6 +101,7 @@ const ExploreProductArea = ({
                                         description={community.description}
                                         id={community.id}
                                         address={community?.address}
+                                        district={community?.district}
                                         
                                     />
                                 </div>
