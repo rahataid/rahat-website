@@ -96,10 +96,6 @@ const MediaMentionPage = ({ space, className }) => (
                                                         support the audio
                                                         element.
                                                     </audio>
-                                                    <p className="mt-3">
-                                                        Listen instead of Read
-                                                        More.
-                                                    </p>
                                                 </div>
                                             )}
                                             {d.link && (
