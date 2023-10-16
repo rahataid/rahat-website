@@ -1,5 +1,21 @@
 [
     {
+        "id": "17",
+        "title": "The Power of owning your Career",
+        "icon": "pe-7s-note2",
+        "background_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/podcast.png",
+        "audio": "https://traffic.libsyn.com/pooyc/Developing_Career_Mindfulness_with_Rumee_Singh.mp3",
+        "date": "27th September, 2023"
+    },
+    {
+        "id": "16",
+        "title": "MIT Solve Awards Over $1.5 Million",
+        "icon": "pe-7s-note2",
+        "link": "https://impactventures.jnj.com/news/mit-solve-awards-over-1-5-million-in-funding-to-31-tech-based-innovators-addressing-global-challenges",
+        "background_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-awards-media-mention-banner.png",
+        "date": "18th September, 2023"
+    },
+    {
         "id": "15",
         "title": "Rahat Beema from Nepal: Finalist for MIT SOLVE 2023",
         "icon": "pe-7s-note2",

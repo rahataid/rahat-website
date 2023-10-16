@@ -41,6 +41,14 @@ const WeAre = () => (
                             />
                         </div>
                     </div>
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper">
+                            <img
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-logo-home-page.png"
+                                alt="mit-solve"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
