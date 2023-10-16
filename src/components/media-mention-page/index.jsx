@@ -69,6 +69,7 @@ const MediaMentionPage = ({ space, className }) => (
                                                     </span>
                                                 </div>
                                             </div>
+
                                             <h4 className="title">
                                                 <Link
                                                     target="_blank"
@@ -78,17 +79,42 @@ const MediaMentionPage = ({ space, className }) => (
                                                 </Link>
                                             </h4>
 
-                                            <Link
-                                                target="_blank"
-                                                href={d.link ? d.link : "#"}
-                                            >
-                                                <Button
-                                                    className="mt-5"
-                                                    size="medium"
+                                            {d.audio && (
+                                                <div className="mt-3">
+                                                    <audio
+                                                        controls
+                                                        style={{
+                                                            width: "100%",
+                                                        }}
+                                                    >
+                                                        <source
+                                                            audio="mp3"
+                                                            src={d.audio}
+                                                            type="audio/mpeg"
+                                                        />
+                                                        Your browser does not
+                                                        support the audio
+                                                        element.
+                                                    </audio>
+                                                    <p className="mt-3">
+                                                        Listen instead of Read
+                                                        More.
+                                                    </p>
+                                                </div>
+                                            )}
+                                            {d.link && (
+                                                <Link
+                                                    target="_blank"
+                                                    href={d.link ? d.link : "#"}
                                                 >
-                                                    Read More
-                                                </Button>
-                                            </Link>
+                                                    <Button
+                                                        className="mt-5"
+                                                        size="medium"
+                                                    >
+                                                        Read More
+                                                    </Button>
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

@@ -27,13 +27,20 @@ const PartnersAndCollab = () => {
                 </div>
                 <div style={iconItemStyles}>
                     <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-dpc-rahat-logo.png"
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-logo-about-us.png"
+                        alt="Icon 1"
+                    />
+                </div>
+
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/village-capital-collab-logo.png"
                         alt="Icon 1"
                     />
                 </div>
                 <div style={iconItemStyles}>
                     <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/village-capital-collab-logo.png"
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-dpc-rahat-logo.png"
                         alt="Icon 1"
                     />
                 </div>
@@ -47,18 +54,6 @@ const PartnersAndCollab = () => {
                 </div>
                 <div style={iconItemStyles}>
                     <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-g20-logo-rahat.png"
-                        alt="Icon 1"
-                    />
-                </div>
-                <div style={iconItemStyles}>
-                    <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-rahat-usaid-logo.png"
-                        alt="Icon 1"
-                    />
-                </div>
-                <div style={iconItemStyles}>
-                    <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-calp-network.png"
                         alt="Icon 1"
                     />
@@ -67,10 +62,16 @@ const PartnersAndCollab = () => {
             <div style={iconStyles}>
                 <div style={iconItemStyles}>
                     <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-ccg.png"
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-rahat-usaid-logo.png"
                         alt="Icon 1"
                     />
                 </div>
+                {/* <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-ccg.png"
+                        alt="Icon 1"
+                    />
+                </div> */}
                 <div style={iconItemStyles}>
                     <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-nrcs.png"
@@ -88,6 +89,14 @@ const PartnersAndCollab = () => {
                     <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-tayaba.png"
                         alt="Icon 3"
+                    />
+                </div>
+            </div>
+            <div style={iconStyles}>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-g20-logo-rahat.png"
+                        alt="Icon 1"
                     />
                 </div>
                 <div style={iconItemStyles}>

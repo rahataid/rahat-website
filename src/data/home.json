@@ -5,6 +5,15 @@
             "section": "hero-section",
             "banners": [
                 {
+                    "id": 1,
+                    "title": " 2023 MIT Solver",
+                    "subtitle": " GSR Foundation Prize Winner | Community Award Winner",
+                    "image": {
+                        "src": "/images/bg/main-banner-03.jpg"
+                    },
+                    "isBtnDisabled": false
+                },
+                {
                     "id": 2,
                     "title": "Cash Transfer Program",
                     "subtitle": "In collaboration with Jaleshwar Municipality, UNICEF Nepal, Unicef Innovation Fund",
@@ -39,3 +48,4 @@
         }
     ]
 }
+
