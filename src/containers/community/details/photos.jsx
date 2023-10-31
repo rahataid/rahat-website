@@ -1,4 +1,4 @@
-import { ASSET_VIEW } from "@config";
+import { ASSET_VIEW, STAGE_ENV } from "@config";
 import Image from "next/image";
 
 const CommunityPhotos = ({ className, community, id }) => {
@@ -19,7 +19,9 @@ const CommunityPhotos = ({ className, community, id }) => {
                                 <Image
                                     className="grid-img"
                                     src={`
-                                    https://rahat-rumsan.s3.us-east-1.amazonaws.com/community/${community?.name}/${photo}
+                                    https://rahat-rumsan.s3.us-east-1.amazonaws.com/${
+                                        STAGE_ENV ? "development" : "community"
+                                    }/${community?.name}/${photo}
                                         `}
                                     alt={`${community?.name}-photo-${index}`}
                                     width={533}
@@ -40,3 +42,4 @@ CommunityPhotos.defaultProps = {
 };
 
 export default CommunityPhotos;
+
