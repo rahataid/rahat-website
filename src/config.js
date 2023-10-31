@@ -21,3 +21,6 @@ export const RUMSAN_ASSETS_PATH =
     process.env.NEXT_PUBLIC_RUMSAN_ASSETS ||
     "https://rumsan.nyc3.cdn.digitaloceanspaces.com";
 
+export const AWS_ROOT_FOLDER_NAME =
+    process.env.NEXT_PUBLIC_AWS_ROOT_FOLDER_NAME;
+

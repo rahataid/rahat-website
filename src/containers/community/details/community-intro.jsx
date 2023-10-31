@@ -1,5 +1,5 @@
 import ShareModal from "@components/modals/share-modal";
-import { STAGE_ENV } from "@config";
+import { AWS_ROOT_FOLDER_NAME, STAGE_ENV } from "@config";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
@@ -15,15 +15,11 @@ const AuthorIntroArea = ({ className, space, community }) => {
     //     : "/images/bg/cover.jpg";
 
     const customLoader = ({ src, width, quality }) => {
-        return `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${
-            STAGE_ENV ? "development" : "community"
-        }/${community.name}/${community?.images?.cover}`;
+        return `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`;
     };
 
     const coverImage = community?.images?.cover
-        ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${
-              STAGE_ENV ? "development" : "community"
-          }/${community.name}/${community?.images?.cover}`
+        ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`
         : "/images/bg/cover.jpg";
     console.log(coverImage);
     // community?.images?.cover

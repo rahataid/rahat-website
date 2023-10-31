@@ -3,7 +3,7 @@ import Anchor from "@ui/anchor";
 import { fCurrency } from "@utils/formatNumber";
 import clsx from "clsx";
 import codes from "../../../data/country-codes.json";
-import { STAGE_ENV } from "@config";
+import { AWS_ROOT_FOLDER_NAME, STAGE_ENV } from "@config";
 
 const Product = ({
     overlay,
@@ -37,11 +37,7 @@ const Product = ({
                             // }
                             src={
                                 cover
-                                    ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${
-                                          STAGE_ENV
-                                              ? "development"
-                                              : "community"
-                                      }/${name}/${cover}`
+                                    ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${name}/${cover}`
                                     : "/images/bg/cover.jpg"
                             }
                             alt={name}
