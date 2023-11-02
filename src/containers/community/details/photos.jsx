@@ -1,4 +1,4 @@
-import { ASSET_VIEW, STAGE_ENV } from "@config";
+import { ASSET_VIEW, AWS_ROOT_FOLDER_NAME } from "@config";
 import Image from "next/image";
 
 const CommunityPhotos = ({ className, community, id }) => {
