@@ -1,0 +1,28 @@
+{
+    "title": "rahat-beema",
+    "content": [
+        {
+            "section": "beema-hero-section",
+            "banners": [
+                {
+                    "id": 1,
+                    "title": "Rahat Beema",
+                    "subtitle": "Empowering Vulnerable Populations through Decentralized & Transparent Parametric Insurance ",
+                    "image": {
+                        "src": "/images/bg/beema-banner-1.png"
+                    },
+                    "isBtnDisabled": false
+                },
+                {
+                    "id": 2,
+                    "title": "Rahat Beema 1",
+                    "subtitle": "Empowering Vulnerable Populations through Decentralized & Transparent Parametric Insurance ",
+                    "image": {
+                        "src": "/images/bg/beema-banner-1.png"
+                    },
+                    "isBtnDisabled": false
+                }
+            ]
+        }
+    ]
+}
