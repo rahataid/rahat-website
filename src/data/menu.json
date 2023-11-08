@@ -7,7 +7,25 @@
     {
         "id": 4,
         "text": "Our Ecosystem",
-        "path": "/#our-ecosystem"
+        "path": "/#our-ecosystem",
+        "submenu": [
+            {
+                "id": 21,
+                "text": "Rahat Cash and Voucher Assistance",
+                "path": "/cash-and-voucher-assistance-platform"
+            },
+
+            {
+                "id": 22,
+                "text": "Rahat Beema",
+                "path": "/rahat-beema"
+            },
+            {
+                "id": 23,
+                "text": "Rahat Anticipatory Action",
+                "path": "/rahat-anticipatory-actions"
+            }
+        ]
     },
     {
         "id": 5,
