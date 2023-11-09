@@ -11,7 +11,7 @@
         "submenu": [
             {
                 "id": 21,
-                "text": "Rahat Cash and Voucher Assistance",
+                "text": "CVA",
                 "path": "/cash-and-voucher-assistance-platform"
             },
 
@@ -22,7 +22,7 @@
             },
             {
                 "id": 23,
-                "text": "Rahat Anticipatory Action",
+                "text": "Anticipatory Action",
                 "path": "/rahat-anticipatory-actions"
             }
         ]
