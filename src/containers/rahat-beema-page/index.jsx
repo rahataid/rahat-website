@@ -5,7 +5,11 @@ import { SectionTitleType, TextType } from "@utils/types";
 import { normalizedData } from "@utils/methods";
 import HeroArea from "@containers/hero";
 import VideoArea from "@components/youtube-video";
+
 import RahatBeemaData from "../../data/rahat-beema.json";
+import RahatBeemaVideo from "@components/rahat-beema-video";
+import AchievementsBadges from "./achievements-badges";
+import KeyComponents from "./key-components";
 
 const RahatBeemaPage = ({ space, className }) => {
     const content = normalizedData(RahatBeemaData?.content || []);
@@ -15,7 +19,7 @@ const RahatBeemaPage = ({ space, className }) => {
             <main id="main-content">
                 <HeroArea data={content["beema-hero-section"]} />
             </main>
-            <VideoArea data={content["video-section"]} />
+            <RahatBeemaVideo data={content["video-section"]} />
             <div
                 className={clsx(
                     "rn-about-Quote-area",
@@ -149,6 +153,8 @@ const RahatBeemaPage = ({ space, className }) => {
                     </div>
                 </div>
             </div>
+            <KeyComponents />
+            <AchievementsBadges />
         </>
     );
 };
