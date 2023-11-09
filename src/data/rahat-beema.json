@@ -27,10 +27,11 @@
         {
             "section": "video-section",
             "title": "Our Solution",
-            "subtitle": "Rahat Beema is a blockchain-based micro-insurance platform that employs automated weather data to assess eligibility and provide coverage for low-income farmers and migrants, ultimately reducing the impact of extreme weather events on their lives. By offering faster processing, reduced costs, and transparent payout determination, Rahat Beema stands as a robust solution for enhancing the financial resilience of those often left underserved by traditional insurance systems.",
+            "subtitle": "Rahat Beema is a blockchain-based micro-insurance platform that employs automated weather data to assess eligibility and provide coverage for low-income farmers and migrants, ultimately reducing the impact of extreme weather events on their lives.",
+            "subtitle2": "By offering faster processing, reduced costs, and transparent payout determination, Rahat Beema stands as a robust solution for enhancing the financial resilience of those often left underserved by traditional insurance systems.",
             "images": [
                 {
-                    "src": "/images/bg/unicef-rahat-youtube-banner.jpg"
+                    "src": "/images/bg/beema-banner-2.png"
                 }
             ],
             "video": {

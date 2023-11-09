@@ -7,7 +7,7 @@ import { ImageType } from "@utils/types";
 const VideoArea = ({
     className,
     space,
-    data: { title, subtitle, images, video },
+    data: { title, subtitle, subtitle2, images, video },
 }) => (
     <div
         className={clsx(
@@ -35,6 +35,7 @@ const VideoArea = ({
                     <div className="rn-about-title-wrapper">
                         <h1>{title}</h1>
                         <p className="mt-3">{subtitle}</p>
+                        <p className="mt-3">{subtitle2}</p>
                     </div>
                 </div>
             </div>
