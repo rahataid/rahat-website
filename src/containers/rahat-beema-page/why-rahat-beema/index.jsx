@@ -23,7 +23,7 @@ const WhyRahatBeema = ({ space, className }) => {
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail d-flex justify-content-center">
                                     <Image
                                         src="/images/icon/efficient.png"
                                         alt="efficient-icon"
@@ -47,7 +47,7 @@ const WhyRahatBeema = ({ space, className }) => {
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail d-flex justify-content-center">
                                     <Image
                                         src="/images/icon/cheaper.png"
                                         alt="cheaper-icon"
@@ -71,7 +71,7 @@ const WhyRahatBeema = ({ space, className }) => {
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail d-flex justify-content-center">
                                     <Image
                                         src="/images/icon/transparent.png"
                                         alt="transparent-icon"
@@ -97,7 +97,7 @@ const WhyRahatBeema = ({ space, className }) => {
                     <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail d-flex justify-content-center">
                                     <Image
                                         src="/images/icon/inclusive.png"
                                         alt="inclusive-icon"

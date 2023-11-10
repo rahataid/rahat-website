@@ -1,5 +1,8 @@
+import { useState } from "react";
 import Image from "next/image";
 import Slider from "@ui/slider";
+import CountUp from "react-countup";
+import { InView } from "react-intersection-observer";
 
 const sliderOptions = {
     speed: 500,
@@ -8,6 +11,14 @@ const sliderOptions = {
 };
 
 const Annually = () => {
+    const [focus, setFocus] = useState(false);
+    const visibleChangeHandler = (isVisible) => {
+        if (isVisible) {
+            if (!focus) {
+                setFocus(true);
+            }
+        }
+    };
     return (
         <main id="main-content" className="mt--100 main-content">
             <div className="content-wrapper">
@@ -17,11 +28,11 @@ const Annually = () => {
                             Annually, Natural Disasters Push 26 Million People
                             into Poverty, Affecting Vulnerable Communities
                         </h2>
-                        <div className="col-lg-3 mobile-slider-wrapper d-block d-sm-none">
+                        <div className="col-lg-3 mobile-slider-wrapper d-block d-lg-none">
                             <Slider options={sliderOptions} className="slider">
                                 <img
                                     className="slides"
-                                    src="/images/bg/main-banner-04.png"
+                                    src="/images/bg/beema-mini-slider-banner-1.png"
                                 />
                                 <img
                                     className="slides"
@@ -31,45 +42,117 @@ const Annually = () => {
                         </div>
                         <br />
                         <p className="text-white">
-                            Rahat Beema serves marginalized communities,
-                            including low-income families, smallholder farmers,
-                            migrant labor workers, and vulnerable populations in
-                            disaster-prone regions. These individuals and
-                            families often lack the means to cope with the
-                            aftermath of disasters, making recovery difficult.
-                            <br />
-                            Traditional insurance schemes are unaffordable and
-                            come with complex claims processes, leaving them
-                            exposed to significant financial risks. Rahat Beema
-                            empowers them through accessible and affordable
-                            parametric microinsurance, leveraging blockchain
-                            smart contracts to ensure direct payouts and
-                            strengthen the financial resilience for those who
-                            need it the most.
+                            Rahat Beema supports underserved communities, such
+                            as low-income households, small-scale farmers,
+                            migrant laborers, and disaster-prone populations. By
+                            offering affordable, blockchain-based parametric
+                            microinsurance, it simplifies claims and provides
+                            direct payouts, enhancing financial resilience for
+                            those facing disaster-related financial challenges.
                         </p>
                         <div className="row">
-                            <div className="col-5 d-flex flex-column align-items-center">
+                            <div className="col-12 col-lg-3 d-flex flex-column align-items-center">
                                 <Image
                                     src="/images/icon/farmer.png"
                                     alt="farmer-icon"
-                                    width={150}
+                                    width={122}
                                     height={150}
                                 />
-                                <h4 className="text-white">1800+</h4>
-                                <p className="text-center text-white">
+                                <div className="d-flex">
+                                    <CountUp
+                                        start={focus ? 0 : null}
+                                        end={1800}
+                                        duration={5}
+                                    >
+                                        {({ countUpRef }) => (
+                                            <div>
+                                                <span
+                                                    className="odometer-custom text-white"
+                                                    ref={countUpRef}
+                                                    style={{
+                                                        fontSize: "20px",
+                                                        fontWeight: "600",
+                                                    }}
+                                                />
+                                                <InView
+                                                    as="span"
+                                                    onChange={(inView) =>
+                                                        visibleChangeHandler(
+                                                            inView
+                                                        )
+                                                    }
+                                                ></InView>
+                                            </div>
+                                        )}
+                                    </CountUp>
+                                    <span
+                                        className="text-white"
+                                        style={{
+                                            fontSize: "20px",
+                                            fontWeight: "600",
+                                        }}
+                                    >
+                                        +
+                                    </span>
+                                </div>
+                                <p
+                                    className="text-center text-white"
+                                    style={{ fontSize: "16px" }}
+                                >
                                     Access to smallholder <br />
                                     farmers
                                 </p>
                             </div>
-                            <div className="col-5 d-flex flex-column align-items-center">
+                            <div className="col-12 col-lg-3 d-flex flex-column align-items-center">
                                 <Image
                                     src="/images/icon/mobilizer.png"
                                     alt="mobilizer-icon"
-                                    width={150}
+                                    width={122}
                                     height={150}
                                 />
-                                <h4 className="text-white">100+</h4>
-                                <p className="text-white">Mobilizers</p>
+                                <div className="d-flex">
+                                    <CountUp
+                                        start={focus ? 0 : null}
+                                        end={100}
+                                        duration={5}
+                                    >
+                                        {({ countUpRef }) => (
+                                            <div>
+                                                <span
+                                                    className="odometer-custom text-white"
+                                                    ref={countUpRef}
+                                                    style={{
+                                                        fontSize: "20px",
+                                                        fontWeight: "600",
+                                                    }}
+                                                />
+                                                <InView
+                                                    as="span"
+                                                    onChange={(inView) =>
+                                                        visibleChangeHandler(
+                                                            inView
+                                                        )
+                                                    }
+                                                ></InView>
+                                            </div>
+                                        )}
+                                    </CountUp>
+                                    <span
+                                        className="text-white"
+                                        style={{
+                                            fontSize: "20px",
+                                            fontWeight: "600",
+                                        }}
+                                    >
+                                        +
+                                    </span>
+                                </div>
+                                <p
+                                    className="text-white"
+                                    style={{ fontSize: "16px" }}
+                                >
+                                    Mobilizers
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -77,7 +160,7 @@ const Annually = () => {
                         <Slider options={sliderOptions} className="slider">
                             <img
                                 className="slides"
-                                src="/images/bg/main-banner-04.png"
+                                src="/images/bg/beema-mini-slider-banner-1.png"
                             />
                             <img
                                 className="slides"
@@ -92,3 +175,4 @@ const Annually = () => {
 };
 
 export default Annually;
+
