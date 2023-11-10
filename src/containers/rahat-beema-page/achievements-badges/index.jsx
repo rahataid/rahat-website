@@ -6,9 +6,7 @@ const AchievementsBadges = () => (
         <div className="container">
             <div className="row mb--40">
                 <div className="title-area text-center">
-                    <h3 className="title mb--15">
-                        Achievements (Badges/ Logos)
-                    </h3>
+                    <h3 className="title mb--15">Achievements</h3>
                 </div>
             </div>
             {/* <div className="rn-weAre-one color-shape-7">
