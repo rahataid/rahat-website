@@ -12,6 +12,7 @@ module.exports = {
             "rumsan.nyc3.cdn.digitaloceanspaces.com",
             "rahat-rumsan.s3.amazonaws.com",
             "esatya.s3.amazonaws.com",
+            "assets.rumsan.net",
             'rahat-rumsan.s3.us-east-1.amazonaws.com',
             'rahat-rumsan.s3.us-east-1.amazonaws.com',
             'rahat.io',

@@ -14,7 +14,7 @@ const Index = () => {
         <Wrapper>
             <SEO pageTitle="Impact Trak" />
             <Header />
-            <main id="main-content">
+            <main id="main-content" className=" p-5">
                 <ImpactTrakArea data={data} />
             </main>
             <Footer />

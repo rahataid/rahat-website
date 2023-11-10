@@ -1,0 +1,85 @@
+.main-content {
+    position: relative;
+    background-image: url('/images/bg/beema-main-banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .content-wrapper {
+        background-color: rgba($color: #2b7ec1, $alpha: 0.7);
+
+    }
+
+
+    .mobile-slider-wrapper {
+        margin-top: 20px;
+
+        .slider {
+            overflow: hidden;
+            border-radius: 20px;
+            width: auto;
+            height: 500px;
+
+            @media only screen and (min-width: 690px) and (max-width: 1180px) {
+                height: 900px;
+            }
+
+            .slides {
+                width: auto;
+                height: 500px;
+
+                @media only screen and (min-width: 690px) and (max-width: 1180px) {
+                    height: 900px;
+                }
+            }
+        }
+    }
+
+    .slider-wrapper {
+        position: absolute;
+        top: -40px;
+        right: 60px;
+
+        @media only screen and (max-width: 1000px) {
+            position: static;
+        }
+
+        .slider {
+            overflow: hidden;
+            border-radius: 20px;
+            width: auto;
+            height: 650px;
+
+            .slides {
+                width: auto;
+                height: 650px;
+            }
+        }
+    }
+
+}
+
+.padding {
+    padding-right: 40px;
+
+    @media only screen and (min-width : 992px) {
+        padding-right: 0;
+    }
+}
+
+.badge-card {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner-badge {
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+            padding-bottom: 15px;
+        }
+    }
+}
