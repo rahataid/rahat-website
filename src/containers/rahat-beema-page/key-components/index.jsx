@@ -1,8 +1,5 @@
-import { SectionTitleType, TextType } from "@utils/types";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-// import Button from "@ui/button";
-// import ReadMoreBtn from "@components/read-more-button";
 import Image from "next/image";
 
 const KeyComponents = ({ space, className }) => {
@@ -13,7 +10,7 @@ const KeyComponents = ({ space, className }) => {
                 space === 1 && "rn-section-gapTop",
                 className
             )}
-            id="our-ecosystem"
+            id="rahat-beema-key-components"
         >
             <div className="container">
                 <div className="row mb--40">
@@ -109,7 +106,7 @@ const KeyComponents = ({ space, className }) => {
 
                 <div className="text-center g-5 mt-4">
                     <a
-                        href="/contact-form"
+                        href="/beema-key-components"
                         className="btn btn-medium btn-primary"
                     >
                         Learn More
@@ -123,10 +120,6 @@ const KeyComponents = ({ space, className }) => {
 KeyComponents.propTypes = {
     space: PropTypes.oneOf([1, 2]),
     className: PropTypes.string,
-    data: PropTypes.shape({
-        section_title: SectionTitleType,
-        texts: PropTypes.arrayOf(TextType),
-    }),
 };
 
 KeyComponents.defaultProps = {
