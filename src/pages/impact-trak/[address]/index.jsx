@@ -21,7 +21,7 @@ const ImpactTrak = () => {
             // description={community?.description}
             />
             <Header />
-            <main id="main-content">
+            <main id="main-content" className="m-3 p-5">
                 <ImpactDetailsPage data={data} />
             </main>
             <Footer />
