@@ -7,7 +7,7 @@
     {
         "id": 4,
         "text": "Our Ecosystem",
-        "path": "/#our-ecosystem",
+        "path": "#",
         "submenu": [
             {
                 "id": 21,

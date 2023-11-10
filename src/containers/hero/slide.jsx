@@ -34,6 +34,18 @@ const SingleSlide = ({ title, image, subtitle, isBtnDisabled, linkTo }) => {
                             >
                                 {subtitle}
                             </h5>
+                            {title === "2023 MIT Solver" && (
+                                <p
+                                    style={{
+                                        position: "absolute",
+                                        color: "white",
+                                        bottom: 10,
+                                        right: 10,
+                                    }}
+                                >
+                                    Photo Credit: MIT Solve
+                                </p>
+                            )}
                             {isBtnDisabled && (
                                 <a
                                     href={linkTo}

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import clsx from "clsx";
 import Image from "next/image";
-import VideoButton from "@ui/video-button";
 import { ImageType } from "@utils/types";
 import RahatVideoButton from "@ui/rahat-beema-video-button";
 
@@ -31,6 +30,7 @@ const RahatBeemaVideo = ({
                                 width={1368}
                                 height={610}
                             />
+                            <p>Source: MIT Solve</p>
                         </div>
                     )}
                 </div>
