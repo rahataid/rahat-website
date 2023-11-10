@@ -51,14 +51,32 @@ const MediaMentionPage = ({ space, className }) => (
                             >
                                 <div className={clsx("rn-blog", className)}>
                                     <div className="inner">
-                                        <div className="thumbnail">
-                                            <Image
-                                                src={d.background_image}
-                                                alt={d.title ? d.title : "-"}
-                                                width={489}
-                                                height={366}
-                                            />
-                                        </div>
+                                        {d.background_image && (
+                                            <div className="thumbnail">
+                                                <Image
+                                                    src={d.background_image}
+                                                    alt={
+                                                        d.title ? d.title : "-"
+                                                    }
+                                                    width={489}
+                                                    height={366}
+                                                />
+                                            </div>
+                                        )}
+                                        {d.video && (
+                                            <div className="thumbnail">
+                                                <iframe
+                                                    src={d.video}
+                                                    frameBorder="0"
+                                                    allowFullScreen
+                                                    width={411}
+                                                    height={308}
+                                                >
+                                                    Your browser does not
+                                                    support the audio element.
+                                                </iframe>
+                                            </div>
+                                        )}
 
                                         <div className="content">
                                             <div className="category-info">
@@ -96,10 +114,6 @@ const MediaMentionPage = ({ space, className }) => (
                                                         support the audio
                                                         element.
                                                     </audio>
-                                                    <p className="mt-3">
-                                                        Listen instead of Read
-                                                        More.
-                                                    </p>
                                                 </div>
                                             )}
                                             {d.link && (
@@ -114,6 +128,12 @@ const MediaMentionPage = ({ space, className }) => (
                                                         Read More
                                                     </Button>
                                                 </Link>
+                                            )}
+
+                                            {d.watch && (
+                                                <p className="mt-3">
+                                                    {d.watch}
+                                                </p>
                                             )}
                                         </div>
                                     </div>

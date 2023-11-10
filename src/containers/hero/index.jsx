@@ -8,7 +8,7 @@ const sliderOptions = {
     arrows: true,
     adaptiveHeight: true,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     infinite: true,
     responsive: [
         {
@@ -39,7 +39,10 @@ const sliderOptions = {
     ],
 };
 const HeroArea = ({ data }) => (
-    <div className="rn-slider-area fullscreen-slide">
+    <div
+        className="rn-slider-area fullscreen-slide"
+        style={{ position: "relative" }}
+    >
         {data?.banners && (
             <Slider
                 options={sliderOptions}
