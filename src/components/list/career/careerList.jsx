@@ -13,7 +13,7 @@ const CareerList = ({ career, path = "/career" }) => {
             }}
         >
             <Row className="my-4">
-                <Col className="d-flex align-items-center ">
+                <Col className="d-flex align-items-centers" sm={8}>
                     <Iconify
                         icon="ph:bag-bold"
                         width={30}
@@ -31,7 +31,7 @@ const CareerList = ({ career, path = "/career" }) => {
                         {career?.designation}
                     </span>
                 </Col>
-                <Col className="text-end">
+                <Col className="text-end" sm={4}>
                     <Link
                         href={`${path}/${career?.id}`}
                         className="fs-4 mx-4"
