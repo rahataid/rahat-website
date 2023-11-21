@@ -10,7 +10,7 @@ const index = () => {
         <Wrapper>
             <SEO pageTitle="Career" />
             <Header />
-            <main id="main-content" className=" p-2">
+            <main id="main-content">
                 <CareerContainer />
             </main>
             <Footer />
