@@ -7,25 +7,7 @@
     {
         "id": 4,
         "text": "Our Ecosystem",
-        "path": "#",
-        "submenu": [
-            {
-                "id": 21,
-                "text": "CVA",
-                "path": "/cash-and-voucher-assistance-platform"
-            },
-
-            {
-                "id": 22,
-                "text": "Rahat Beema",
-                "path": "/rahat-beema"
-            },
-            {
-                "id": 23,
-                "text": "Anticipatory Action",
-                "path": "/rahat-anticipatory-actions"
-            }
-        ]
+        "path": "/#our-ecosystem"
     },
     {
         "id": 5,
@@ -71,6 +53,11 @@
         "id": 6,
         "text": "Impact Trak",
         "path": "/impact-trak"
+    },
+    {
+        "id": 7,
+        "text": "Career",
+        "path": "/career"
     }
 ]
 

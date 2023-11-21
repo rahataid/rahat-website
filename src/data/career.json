@@ -1,0 +1,57 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "description": "We are looking for an energetic and highly motivated individual who enjoys networking and can ensure  commercial and strategic relationships with our key targeted partners. You should have a passion to work in the humanitarian sector, a strong understanding of IT operations, the zeal and patience to work with multiple stakeholders, and the ability to drive efficiency.",
+            "designation": "Outreach and Partnerships Manager",
+            "duration": "Full Time",
+            "required": 1,
+            "role": [
+                "Create a systematic, process-driven approach to partner outreach and relationship management",
+                "Research partners, identify key players, and generate interest",
+                "Source partnership opportunities with a range of stakeholders, including Financial Service Providers (FSPs), Government Agencies, Non-Governmental Organizations (NGOs), and other relevant entities",
+                "Negotiate and finalize deals in accordance with the company’s contract guidelines and policies",
+                "Collaborate closely with senior management and other teammates to ensure alignment of partnership strategies with Rahat's overall mission and objectives",
+                "Measure and prepare comprehensive reports on partnership development activities"
+            ],
+            "qualificationAndRequirements": [
+                "Bachelor's or Master’s degree in Humanitarian or Development Studies, Social Work, Business Administration, or other related field.",
+                "2+ years of experience in outreach and partnership or related roles",
+                "Genuine passion for humanitarian work and a commitment to supporting vulnerable communities.",
+                "Strong organizational, time management, positive attitude and multitasking skills.",
+                "Excellent communication and interpersonal abilities, with the capacity to work collaboratively in a diverse team environment.",
+                "Proficiency in Google Docs/MS Office suite (Word, Excel, PowerPoint) and other relevant software tools.",
+                "Attention to detail and a proactive approach to problem-solving.",
+                "Ability to work effectively in a fast-paced and dynamic startup setting, adapting to changing priorities.",
+                "Fluency in written and spoken Nepali and English."
+            ]
+        },
+        {
+            "id": 2,
+            "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
+            "designation": "Operation Manager",
+            "duration": "Full Time",
+            "required": 1,
+            "role": [
+                "Lead day-to-day operations of Rahat.",
+                "Collaborate with cross-functional teams to strategize and execute projects efficiently.",
+                "Track project progress and ensure timely achievement of milestones.",
+                "Expertly collect, organize, and manage data for data-driven decision-making and continuous improvement.",
+                "Identify and assess areas for process improvement, seeking innovative solutions for efficiency.",
+                "Provide administrative support to the executive team and other team members when required."
+            ],
+            "qualificationAndRequirements": [
+                "Bachelor's or Master’s degree in Humanitarian or Development Studies, Social Work, Business Administration, or other related field.",
+                "2+ years of experience in project coordination or related roles within the humanitarian sector is preferred.",
+                "Genuine passion for humanitarian work and a commitment to supporting vulnerable communities.",
+                "Strong organizational, time management, positive attitude and multitasking skills.",
+                "Excellent communication and interpersonal abilities, with the capacity to work collaboratively in a diverse team environment.",
+                "Proficiency in Google Docs/MS Office suite (Word, Excel, PowerPoint) and other relevant software tools.",
+                "Attention to detail and a proactive approach to problem-solving.",
+                "Ability to work effectively in a fast-paced and dynamic startup setting, adapting to changing priorities.",
+                "Fluency in written and spoken Nepali and English."
+            ]
+        }
+    ]
+}
+

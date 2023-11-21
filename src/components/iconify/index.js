@@ -5,8 +5,8 @@ import { Icon } from "@iconify/react";
 
 // ----------------------------------------------------------------------
 
-const Iconify = ({ icon, width = 20, sx, ...other }) => (
-    <Icon style={sx} icon={icon} {...other} />
+const Iconify = ({ icon, width, sx, ...other }) => (
+    <Icon style={sx} icon={icon} width={width ? width : 20} {...other} />
 );
 
 Iconify.propTypes = {
@@ -16,3 +16,4 @@ Iconify.propTypes = {
 };
 
 export default Iconify;
+
