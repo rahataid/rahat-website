@@ -20,10 +20,9 @@ function MapClusters({ mapData = [], ...other }) {
         },
         properties: {
             // cluster: true,
-            id: item.name,
+            id: item.country,
         },
     }));
-
     let data = {
         type: "FeatureCollection",
         crs: {
@@ -42,6 +41,7 @@ function MapClusters({ mapData = [], ...other }) {
 
         const mapboxSource = mapRef.current?.getSource("earthquakes");
 
+        console.log(mapboxSource);
         mapboxSource.getClusterExpansionZoom(clusterId, (err, zoom) => {
             if (err) {
                 return;
@@ -59,8 +59,8 @@ function MapClusters({ mapData = [], ...other }) {
         <>
             <Map
                 initialViewState={{
-                    longitude: 68.48329,
                     latitude: 28.31456,
+                    longitude: 68.48329,
                     zoom: 3,
                 }}
                 interactiveLayerIds={[clusterLayer.id || ""]}
@@ -87,3 +87,4 @@ function MapClusters({ mapData = [], ...other }) {
 }
 
 export default memo(MapClusters);
+

@@ -8,6 +8,7 @@ const initialState = {
     community: null,
     projects: [],
     transactions: [],
+    geoLocation: [],
 };
 
 const slice = createSlice({
@@ -33,6 +34,10 @@ const slice = createSlice({
             state.isLoading = false;
             state.projects = action.payload;
         },
+        getGeoSucess(state, action) {
+            state.isLoading = false;
+            state.geoLocation = action.payload;
+        },
         getCommunityTransactionsSuccess(state, action) {
             state.isLoading = false;
             state.transactions = action.payload;
@@ -56,6 +61,17 @@ export const getCommunities = (params) => {
             );
 
             dispatch(slice.actions.getCommunitiesSuccess(res));
+        } catch (error) {
+            dispatch(hasError(error));
+        }
+    };
+};
+
+export const getGeoLocation = () => {
+    return async (dispatch) => {
+        try {
+            const { data: res } = await CommunitiesService.getAllGeoLoation();
+            dispatch(slice.actions.getGeoSucess(res));
         } catch (error) {
             dispatch(hasError(error));
         }
@@ -88,3 +104,4 @@ export const getCommunityProjects = (id) => {
         }
     };
 };
+

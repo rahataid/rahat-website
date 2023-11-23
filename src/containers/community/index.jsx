@@ -14,7 +14,7 @@ const ExploreProductArea = ({
     data,
     categories,
     countries,
-    meta
+    meta,
 }) => {
     const sanitizedCategories = categories
         .filter((c) => c?.name !== "Charitable Organization")
@@ -22,10 +22,6 @@ const ExploreProductArea = ({
             value: cat.id,
             text: cat.name,
         }));
-
-
-    
-
 
     return (
         <div className={clsx("rn-product-area mt--50", className)}>
@@ -102,7 +98,6 @@ const ExploreProductArea = ({
                                         id={community.id}
                                         address={community?.address}
                                         district={community?.district}
-                                        
                                     />
                                 </div>
                             ))}
@@ -115,11 +110,7 @@ const ExploreProductArea = ({
                         pagination={meta}
                         currentPage={meta?.currentPage}
                         rootPage="/communities"
-
                     />
-              
-
-
                 </div>
             </div>
         </div>
@@ -139,3 +130,4 @@ ExploreProductArea.defaultProps = {
 };
 
 export default ExploreProductArea;
+

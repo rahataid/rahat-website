@@ -41,3 +41,4 @@ export const getCategories = (params) => {
         }
     };
 };
+
