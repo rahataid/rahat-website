@@ -6,6 +6,9 @@ export const CommunitiesService = {
             params: query,
         });
     },
+    getAllGeoLoation: () => {
+        return client.get("/communities/geoLocation");
+    },
     getCommunitiyDetails: (address) => {
         return client.get(`/communities/${address}`);
     },
@@ -16,3 +19,4 @@ export const CommunitiesService = {
         });
     },
 };
+

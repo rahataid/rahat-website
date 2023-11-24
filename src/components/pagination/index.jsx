@@ -4,15 +4,18 @@ import clsx from "clsx";
 import Anchor from "@ui/anchor";
 
 const Pagination = ({ pagination, className, currentPage, rootPage }) => {
+    console.log({ pagination, currentPage, rootPage });
     const isFirst = currentPage === 1;
     const isLast = pagination?.lastPage === currentPage;
     const numberOfPages = Math.ceil(pagination?.total / pagination?.perPage);
-    const previousPage = (currentPage - 1)
-        ? `${rootPage}?page=${(currentPage - 1).toString()}`
-        : rootPage;
-    const nextPage = (currentPage + 1)
-        ? `${rootPage}?page=${(currentPage + 1).toString()}`
-        : rootPage;
+    const previousPage =
+        currentPage - 1
+            ? `${rootPage}?page=${(currentPage - 1).toString()}`
+            : rootPage;
+    const nextPage =
+        currentPage + 1
+            ? `${rootPage}?page=${(currentPage + 1).toString()}`
+            : rootPage;
     return (
         <nav
             className={clsx("pagination-wrapper", className)}
@@ -84,3 +87,4 @@ Pagination.defaultProps = {
 };
 
 export default Pagination;
+
