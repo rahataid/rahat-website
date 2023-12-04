@@ -7,36 +7,31 @@ const CareerContainer = () => {
     return (
         <Container fluid className="p-0 m-0">
             <Container
-                className="mb-4  border"
-                style={{ background: "#4A8EBD", height: "300px" }}
+                className="mb-4 p-0 "
                 fluid
+                style={{
+                    position: "relative",
+                    backgroundImage: `url("/images/pic/career.png")`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center center",
+                    height: "300px",
+                }}
             >
                 <Container
-                    className="mt-5"
                     style={{
-                        fontFamily: "Poppins",
-                        fontStyle: "normal",
-                        fontWeight: 500,
-                        lineHeight: "normal",
-                        color: "white",
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                        backdropFilter: "blur(4px)",
+                        backgroundColor: "rgba(35 ,31 ,32, 0.3)",
                     }}
+                    className="d-flex align-items-center justify-content-center"
+                    fluid
                 >
-                    <Row className="p-3">
-                        <Image
-                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/career-icon-1.png"
-                            className="img-fluid "
-                            style={{
-                                width: "70px",
-                                height: "64px",
-                            }}
-                        />
-                    </Row>
-                    <Row className="p-3 fs-1 fw-bold">Career</Row>
-                    <Row className="px-3  fs-2">
-                        If you're passionate about building connections, driving
-                        collaborations, and making a positive impact, we want to
-                        hear from you.
-                    </Row>
+                    <h2 style={{ color: "#FFFFFF " }}>Career</h2>
                 </Container>
             </Container>
             <Container fluid className="p-4  mb-4 mt-4 text-center">
@@ -48,7 +43,7 @@ const CareerContainer = () => {
                         lineHeight: "normal",
                     }}
                 >
-                    <span style={{ color: "#4A8EBD" }}>Current</span> openings
+                    <span style={{ color: "#2B7EC1" }}>Current</span> openings
                 </h3>
                 <p>
                     Do you think you are a good fit? Apply now. We would love to

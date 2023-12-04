@@ -39,14 +39,16 @@ const ExploreProductArea = ({
                         </div>
                         <div className="d-flex align-items-center justify-content-between mb--25">
                             <p>
-                                Rahat community is a beneficial platform that
-                                facilitates effective communication and
-                                collaboration between communities in need and
-                                potential donors or funders by allowing
-                                communities to register and share their impacts,
-                                metrics, and statistics, the platform enables
-                                transparency and accountability in aid
-                                management.
+                                The Rahat Community Platform establishes
+                                connections between communities in need and
+                                potential donors or funders, encouraging
+                                effective communication and collaboration. It
+                                transparently shares community information,
+                                including needs, impacts, metrics, and
+                                statistics. This transparency ensures everyone
+                                sees how assistance creates positive change,
+                                emphasizing transparency and accountability in
+                                managing aid.
                             </p>
                         </div>
                     </div>
