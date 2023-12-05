@@ -13,7 +13,7 @@ const JobDetails = ({ data }) => {
                             fontStyle: "normal",
                             fontWeight: 500,
                             lineHeight: "normal",
-                            color: "black",
+                            color: "#231F20",
                         }}
                         className="fs-1"
                     >
@@ -27,7 +27,7 @@ const JobDetails = ({ data }) => {
                             fontStyle: "normal",
                             fontWeight: 500,
                             lineHeight: "normal",
-                            color: "black",
+                            color: "#231F20",
                         }}
                     >
                         <span>
@@ -42,7 +42,7 @@ const JobDetails = ({ data }) => {
                             fontStyle: "normal",
                             fontWeight: 500,
                             lineHeight: "normal",
-                            color: "black",
+                            color: "#231F20",
                         }}
                     >
                         <span>
@@ -62,7 +62,7 @@ const JobDetails = ({ data }) => {
                     fontStyle: "normal",
                     fontWeight: 500,
                     lineHeight: "normal",
-                    color: "black",
+                    color: "#231F20",
                 }}
             >
                 <h6>About Rahat</h6> <br />
@@ -82,7 +82,7 @@ const JobDetails = ({ data }) => {
                     fontStyle: "normal",
                     fontWeight: 500,
                     lineHeight: "normal",
-                    color: "black",
+                    color: "#231F20",
                 }}
             >
                 <h6>Job Description</h6> <br />
@@ -95,7 +95,7 @@ const JobDetails = ({ data }) => {
                     fontStyle: "normal",
                     fontWeight: 500,
                     lineHeight: "normal",
-                    color: "black",
+                    color: "#231F20",
                 }}
             >
                 <h6>Role</h6> <br />
@@ -108,7 +108,7 @@ const JobDetails = ({ data }) => {
                                     fontStyle: "normal",
                                     fontWeight: 500,
                                     lineHeight: "normal",
-                                    color: "black",
+                                    color: "#231F20",
                                 }}
                                 className="fs-3"
                             >
@@ -125,7 +125,7 @@ const JobDetails = ({ data }) => {
                     fontStyle: "normal",
                     fontWeight: 500,
                     lineHeight: "normal",
-                    color: "black",
+                    color: "#231F20",
                 }}
             >
                 <h6>Qualification</h6> <br />
@@ -138,7 +138,7 @@ const JobDetails = ({ data }) => {
                                     fontStyle: "normal",
                                     fontWeight: 500,
                                     lineHeight: "normal",
-                                    color: "black",
+                                    color: "#231F20",
                                 }}
                                 className="fs-3"
                             >
@@ -155,7 +155,7 @@ const JobDetails = ({ data }) => {
                     fontStyle: "normal",
                     fontWeight: 600,
                     lineHeight: "normal",
-                    color: "black",
+                    color: "#231F20",
                 }}
             >
                 <p>
@@ -163,7 +163,7 @@ const JobDetails = ({ data }) => {
                     CV with a cover letter along with their LinkedIn profile at
                     <span
                         style={{
-                            color: "#4A8EBD",
+                            color: "##2B7EC1",
                             marginLeft: 10,
                         }}
                     >

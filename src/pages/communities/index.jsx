@@ -17,6 +17,7 @@ export default function Product({
     meta,
     geoLocation,
 }) {
+    console.log(geoLocation);
     return (
         <Wrapper>
             <SEO pageTitle="Communities" />
@@ -28,8 +29,8 @@ export default function Product({
                             height: 400,
                         }}
                         mapData={geoLocation?.map((r) => ({
-                            latitude: r?.latitude,
-                            longitude: r?.longitude,
+                            latitude: r?.longitude,
+                            longitude: r?.latitude,
                             country: r?.country,
                         }))}
                     />

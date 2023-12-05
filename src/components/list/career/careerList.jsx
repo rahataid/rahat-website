@@ -17,7 +17,7 @@ const CareerList = ({ career, path = "/career" }) => {
                     <Iconify
                         icon="ph:bag-bold"
                         width={30}
-                        style={{ color: "#4A8EBD" }}
+                        style={{ color: "#231F20" }}
                     />
                     <span
                         className="fs-2 mx-4"
@@ -40,7 +40,7 @@ const CareerList = ({ career, path = "/career" }) => {
                             fontStyle: "normal",
                             fontWeight: 500,
                             lineHeight: "normal",
-                            color: "#4A8EBD",
+                            color: "#2B7EC1",
                         }}
                     >
                         Apply Now

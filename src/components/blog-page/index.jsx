@@ -6,7 +6,7 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 
 const BLogPage = ({ space, className, blogs }) => {
-    blogs.sort((a, b) => {
+    blogs?.sort((a, b) => {
         const dateA = a.published_date || a.created_at;
         const dateB = b.published_date || b.created_at;
         return new Date(dateB) - new Date(dateA);
@@ -45,7 +45,7 @@ const BLogPage = ({ space, className, blogs }) => {
             >
                 <div className="container">
                     <div className="row g-5">
-                        {blogs.map((blog) => {
+                        {blogs?.map((blog) => {
                             return (
                                 <>
                                     <div
