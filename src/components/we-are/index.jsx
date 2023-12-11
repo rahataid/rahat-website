@@ -30,8 +30,8 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper text-center">
                             <img
-                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/calpnet-edit-500.jpg"
-                                alt=""
+                                src="/images/logo/GSMA logo.png"
+                                alt="mit-solve"
                                 width="200px"
                             />
                         </div>
@@ -49,15 +49,6 @@ const WeAre = () => (
                         <div className="rn-about-wrapper text-center">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-logo-home-page.png"
-                                alt="mit-solve"
-                                width="200px"
-                            />
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
-                            <img
-                                src="/images/logo/GSMA.png"
                                 alt="mit-solve"
                                 width="200px"
                             />
