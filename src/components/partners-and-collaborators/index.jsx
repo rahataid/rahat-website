@@ -118,6 +118,12 @@ const PartnersAndCollab = () => {
                         alt="Icon 8"
                     />
                 </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="/images/logo/GSMA-Logo-Red-RGB.png"
+                        alt="Icon 9"
+                    />
+                </div>
             </div>
         </div>
     );

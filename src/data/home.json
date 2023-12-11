@@ -6,6 +6,15 @@
             "banners": [
                 {
                     "id": 1,
+                    "title": "GSMA INNOVATION FUND GRANTEE",
+                    "subtitle": "For Anticipatory Humanitarian Action",
+                    "image": {
+                        "src": "/images/bg/2023_Kigali_BootCamp_Day02_0571.jpg"
+                    },
+                    "isBtnDisabled": false
+                },
+                {
+                    "id": 2,
                     "title": "2023 MIT Solver",
                     "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
                     "image": {
@@ -14,7 +23,7 @@
                     "isBtnDisabled": false
                 },
                 {
-                    "id": 2,
+                    "id": 3,
                     "title": "Cash Transfer Program",
                     "subtitle": "In collaboration with Jaleshwar Municipality, UNICEF Nepal, Unicef Innovation Fund",
                     "image": {
@@ -23,7 +32,7 @@
                     "isBtnDisabled": false
                 },
                 {
-                    "id": 3,
+                    "id": 4,
                     "title": "H2O Wheels Distribution Program",
                     "subtitle": "In collaboration with Tayaba & SRSO",
                     "image": {
