@@ -13,7 +13,7 @@ const SEO = ({ pageTitle, description, imageUrl }) => (
         />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/RahatSymbol.png" />
 
         {/* Add any additional SEO-related meta tags here */}
         <meta name="author" content="Your Name" />
@@ -42,3 +42,4 @@ SEO.propTypes = {
 };
 
 export default SEO;
+
