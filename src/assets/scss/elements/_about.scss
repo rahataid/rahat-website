@@ -81,7 +81,7 @@
         isolation: isolate;
         inset: 0;
 
-        &>span {
+        & > span {
             z-index: -1;
         }
 
@@ -331,3 +331,4 @@
     margin: -5px auto 60px;
     max-width: 720px;
 }
+
