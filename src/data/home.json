@@ -6,19 +6,19 @@
             "banners": [
                 {
                     "id": 1,
-                    "title": "2023 MIT Solver",
-                    "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
+                    "title": "GSMA INNOVATION FUND GRANTEE",
+                    "subtitle": "For Anticipatory Humanitarian Action",
                     "image": {
-                        "src": "/images/bg/main-banner-04.png"
+                        "src": "/images/bg/2023_Kigali_BootCamp_Day02_0571.jpg"
                     },
                     "isBtnDisabled": false
                 },
                 {
                     "id": 2,
-                    "title": "GSMA INNOVATION FUND GRANTEE",
-                    "subtitle": "For Anticipatory Humanitarian Action",
+                    "title": "2023 MIT Solver",
+                    "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
                     "image": {
-                        "src": "/images/bg/2023_Kigali_BootCamp_Day02_0571.jpg"
+                        "src": "/images/bg/main-banner-04.png"
                     },
                     "isBtnDisabled": false
                 },
