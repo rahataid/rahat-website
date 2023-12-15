@@ -1,6 +1,14 @@
 [
     {
-        "id": "17",
+        "id": "19",
+        "title": "Crescent Enterprises Climate Innovation Prize",
+        "icon": "pe-7s-note2",
+        "link": " https://www.zawya.com/en/press-release/companies-news/crescent-enterprises-climate-innovation-prize-of-aed-735-000-awarded-to-4-global-entrepreneurs-iyifpaug",
+        "background_image": "/images/pic/COP28.png",
+        "date": "December 11, 2023"
+    },
+    {
+        "id": "18",
         "title": "Nepal’s blockchain future | Forkast IQ",
         "icon": "pe-7s-note2",
         "video": "https://www.youtube.com/embed/2DqcVMRV6ns",
