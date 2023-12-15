@@ -49,15 +49,10 @@
         "text": "Communities",
         "path": "/communities"
     },
-    {
-        "id": 6,
-        "text": "Impact Trak",
-        "path": "/impact-trak"
-    },
+
     {
         "id": 7,
         "text": "Career",
         "path": "/career"
     }
 ]
-

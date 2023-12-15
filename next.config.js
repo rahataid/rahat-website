@@ -16,6 +16,7 @@ module.exports = {
             'rahat-rumsan.s3.us-east-1.amazonaws.com',
             'rahat-rumsan.s3.us-east-1.amazonaws.com',
             'rahat.io',
+            'assets.rumsan.net',
             'rahat',
             'next'
         ],
