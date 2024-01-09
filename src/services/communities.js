@@ -13,6 +13,12 @@ export const CommunitiesService = {
         return client.get(`/communities/${address}`);
     },
 
+    updateByManager: (address, data) => {
+        return client.patch(`/communities/${address}/update`, {
+            ...data,
+        });
+    },
+
     uploadAsset: (id, assetData) => {
         return client.patch(`/communities/${id}/asset`, {
             ...assetData,

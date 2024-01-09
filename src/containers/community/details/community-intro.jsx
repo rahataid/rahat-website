@@ -1,18 +1,16 @@
+import Iconify from "@components/iconify";
 import ShareModal from "@components/modals/share-modal";
 import { AWS_ROOT_FOLDER_NAME, STAGE_ENV } from "@config";
 import { ImageType } from "@utils/types";
 import clsx from "clsx";
 import Image from "next/image";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { connector } from "@web3/connectors/metaMask";
 
 const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
-
-    // const coverImage = community?.images?.cover
-    //     ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
-    //     : "/images/bg/cover.jpg";
 
     const customLoader = ({ src, width, quality }) => {
         return `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`;
@@ -21,10 +19,12 @@ const AuthorIntroArea = ({ className, space, community }) => {
     const coverImage = community?.images?.cover
         ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`
         : "/images/bg/cover.jpg";
-    console.log(coverImage);
-    // community?.images?.cover
-    // ? `${ASSET_VIEW}/${community?.address}/${community?.images?.cover}`
 
+    useEffect(() => {
+        void connector.connectEagerly().catch(() => {
+            console.debug("Failed to connect eagerly to metamask");
+        });
+    }, []);
     return (
         <>
             <ShareModal

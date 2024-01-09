@@ -45,7 +45,7 @@ const WalletLoginButton = ({
             <span className="small-image">
                 <Image
                     src={imgSrc}
-                    alt="google login"
+                    alt="metamaskLogin"
                     width={26}
                     height={27}
                     layout="fixed"
@@ -57,3 +57,4 @@ const WalletLoginButton = ({
 };
 
 export default WalletLoginButton;
+

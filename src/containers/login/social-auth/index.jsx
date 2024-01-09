@@ -15,15 +15,15 @@ const SocialAuth = ({ className }) => {
             <p>Please select a wallet to connect into Rahat System.</p>
             {error && error?.reason}
             <MetaMaskCard
-                imgSrc={"/images/icons/wallet/1.png"}
+                imgSrc={"/images/icon/metamask.png"}
                 title={"MetaMask"}
                 component={WalletLoginButton}
             />
-            <CoinbaseCard
+            {/* <CoinbaseCard
                 imgSrc={"/images/icons/wallet/2.png"}
                 title={"Coinbase"}
                 component={WalletLoginButton}
-            />
+            /> */}
         </div>
     );
 };
@@ -32,3 +32,4 @@ SocialAuth.propTypes = {
     className: PropTypes.string,
 };
 export default SocialAuth;
+
