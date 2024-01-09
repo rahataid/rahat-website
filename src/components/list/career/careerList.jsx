@@ -40,10 +40,12 @@ const CareerList = ({ career, path = "/career" }) => {
                             fontStyle: "normal",
                             fontWeight: 500,
                             lineHeight: "normal",
-                            color: "#2B7EC1",
+                            color: ` ${
+                                career?.status === false ? "red" : "#2B7EC1"
+                            }  `,
                         }}
                     >
-                        Apply Now
+                        {career?.status === false ? "Closed" : "Apply Now"}
                     </Link>
                 </Col>
             </Row>
