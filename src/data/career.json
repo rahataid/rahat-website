@@ -6,7 +6,7 @@
             "designation": "Outreach and Partnerships Manager",
             "duration": "Full Time",
             "required": 1,
-            "status": false,
+            "status": true,
             "role": [
                 "Create a systematic, process-driven approach to partner outreach and relationship management",
                 "Research partners, identify key players, and generate interest",
@@ -33,7 +33,7 @@
             "designation": "Operation Manager",
             "duration": "Full Time",
             "required": 1,
-            "status": true,
+            "status": false,
             "role": [
                 "Lead day-to-day operations of Rahat.",
                 "Collaborate with cross-functional teams to strategize and execute projects efficiently.",
