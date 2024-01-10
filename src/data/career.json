@@ -6,6 +6,7 @@
             "designation": "Outreach and Partnerships Manager",
             "duration": "Full Time",
             "required": 1,
+            "status": true,
             "role": [
                 "Create a systematic, process-driven approach to partner outreach and relationship management",
                 "Research partners, identify key players, and generate interest",
@@ -32,6 +33,7 @@
             "designation": "Operation Manager",
             "duration": "Full Time",
             "required": 1,
+            "status": false,
             "role": [
                 "Lead day-to-day operations of Rahat.",
                 "Collaborate with cross-functional teams to strategize and execute projects efficiently.",
@@ -50,6 +52,57 @@
                 "Attention to detail and a proactive approach to problem-solving.",
                 "Ability to work effectively in a fast-paced and dynamic startup setting, adapting to changing priorities.",
                 "Fluency in written and spoken Nepali and English."
+            ]
+        },
+        {
+            "id": 3,
+            "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
+            "designation": "RFP for design and development of Rahat AA Services",
+            "objective": [
+                "Launch beneficiary validation and reporting module.",
+                "Develop off-ramping services for Rahat.",
+                "Develop multi-sig trigger mechanism in Rahat using smart contracts."
+            ],
+            "duration": "The development of this system shall start from Dec 2023 and be completed by May 2024.",
+            "status": false,
+            "type": "diff",
+            "scope": [
+                {
+                    "name": "Beneficiary Targeting and Reporting Module.",
+                    "heading": "Rahat aims to create a service that facilitates the efficient registration and management of beneficiaries, equipped with features and tools for categorization and filtering. It will enable aid agencies to register beneficiaries while providing administrators with centralized access to the collected data through a single dashboard. Also the dynamic reporting system shall be capable of generating comprehensive reports based on the provided beneficiary data fields, offering valuable demographic insights.  Clients are required to complete this module with following features",
+                    "listing": [
+                        "User-Friendly Registration Interface: Create an intuitive and user-friendly interface enabling efficient beneficiary registration.",
+                        "Seamless Kobotoolbox Integration: Integrate the module with Kobotoolbox to facilitate smooth and reliable mass data collection.",
+                        "Data Import/Export Functionality: Implement mechanisms to import beneficiary data from external sources through API and export data to Excel sheets for simplified data management.",
+                        "Data Handling and Correction Mechanism: Develop an intelligent solution to identify and manage duplicate data entries, ensuring data accuracy. There should be the bucket system to manage the beneficiaries in different categories",
+                        "Dynamic Reporting Engine: Build a flexible reporting engine capable of generating dynamic reports based on selected beneficiary data fields."
+                    ]
+                },
+                {
+                    "name": "Integration with Multi-Sig Trigger Mechanism",
+                    "heading": "Rahat envisions developing a versatile module that can seamlessly integrate with decision-making processes involving multiple stakeholders. This module will be used to trigger a function/service after a decision is made. The module aims to leverage user-owned wallets to confirm decisions through generated signatures. It will help our clients implement an efficient multi-trigger system to activate external services based on decisions endorsed by their stakeholders.  Clients undertaking the Integration with Multi-Sig Trigger Mechanism Module shall undertake the following essential features:",
+                    "listing": [
+                        "Wallet-based Signature Generation: Develop a secure and user-friendly wallet system integrated within Rahat to generate signatures for stakeholders. Wallet could also be owned by the IOT devices and generate a signature based on certain threshold",
+                        "Smart Contract Decision Storage: Create a Smart Contract infrastructure to securely store signatures and manage the decisions made by stakeholders.",
+                        "External Service Activation: Implement a dynamic multi-trigger system that can effectively initiate external services based on verified decisions.",
+                        "Configurable Signature Threshold: Allow configuration of the number of signatures required to activate the external services, offering flexibility in decision-making.",
+                        "Signature Verification Mechanism: Integrate a robust signature verification process to ensure the authenticity and validity of submitted signatures."
+                    ]
+                },
+                {
+                    "name": "Token off-ramping integration",
+                    "heading": "Rahat is committed to developing a robust system that empowers users to seamlessly off-ramp their Rahat tokens to fiat currency. The Integration of Token Off-Ramping module will facilitate Rahat-Token Holders to effortlessly convert their Rahat tokens into fiat currency.  Following are the essential requirements for this integration:",
+                    "listing": [
+                        "Financial Service Provider Integration: Integrate APIs of trusted financial service providers to enable secure and smooth exchange of fiat currency with the rahat tokens.",
+                        "Transaction Recording: Implement a comprehensive transaction recording system to document all off-ramping activities and maintain transparent records.",
+                        "API Development: Create a user-friendly API that can be seamlessly integrated with the Rahat system, facilitating token off-ramping for users."
+                    ]
+                }
+            ],
+            "paymentModality": [
+                "Upon agreement signing (Milestone 1) (33.33%)",
+                "Upon completion of Milestone 2 (33.33%)",
+                "Upon completion of Scope of work defined in the agreement (33.33%)"
             ]
         }
     ]

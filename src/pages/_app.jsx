@@ -13,6 +13,9 @@ import "../assets/css/feather.css";
 import "../assets/css/modal-video.css";
 import "../assets/scss/style.scss";
 import { wrapper } from "../redux/store";
+import { SnackbarProvider, closeSnackbar } from "notistack";
+import { IconButton } from "@mui/material";
+import Iconify from "@components/iconify";
 
 const MyApp = ({ Component, ...pageProps }) => {
     const { store, props } = wrapper.useWrappedStore(pageProps);
@@ -35,9 +38,31 @@ const MyApp = ({ Component, ...pageProps }) => {
             <PersistGate loading={null} persistor={store.__persistor}>
                 <ProviderExample>
                     <ThemeProvider defaultTheme="light">
-                        <AppContainer>
-                            <Component {...props.pageProps} />
-                        </AppContainer>
+                        <SnackbarProvider
+                            maxSnack={5}
+                            anchorOrigin={{
+                                vertical: "top",
+                                horizontal: "right",
+                            }}
+                            preventDuplicate
+                            autoHideDuration={3000}
+                            action={(snackbarId) => (
+                                <IconButton
+                                    size="small"
+                                    onClick={() => closeSnackbar(snackbarId)}
+                                    sx={{ p: 0.5 }}
+                                >
+                                    <Iconify
+                                        width={16}
+                                        icon="mingcute:close-line"
+                                    />
+                                </IconButton>
+                            )}
+                        >
+                            <AppContainer>
+                                <Component {...props.pageProps} />
+                            </AppContainer>
+                        </SnackbarProvider>
                     </ThemeProvider>
                 </ProviderExample>
             </PersistGate>
@@ -66,3 +91,4 @@ MyApp.propTypes = {
 };
 
 export default MyApp;
+
