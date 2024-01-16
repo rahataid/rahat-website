@@ -83,6 +83,7 @@
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-k-rahat-team.png"
     },
     {},
+    {},
     {
         "id": "20",
         "fname": "Raghav Kattel",
@@ -122,6 +123,27 @@
         "link_mail": "mailto:kanil.maharjan@rumsan.net",
         "link_linkedin": "https://www.linkedin.com/in/kanil-maharjan-2a1b9a233/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/kanil-team-rahat.png"
+    },
+    {},
+    {
+        "id": "27",
+        "fname": "Nirmal Chongbang",
+        "designation": "Project Coordinator",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:nirmal.chongbang@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/nirmal-chongbang-92a3a34a/",
+        "team_image": "/images/pic/nirmal.png"
+    },
+    {
+        "id": "27",
+        "fname": "Achyut Subedi ",
+        "designation": "Community Manager",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:achyut.subedi@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/achyut-subedi-16527079/",
+        "team_image": "/images/pic/achyut.png"
     }
 ]
 
