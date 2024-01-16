@@ -40,6 +40,12 @@
                 "text": "Whitepaper",
                 "path": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-whitepaper.pdf",
                 "target": "_blank"
+            },
+            {
+                "id": 57,
+                "text": "Reports",
+                "path": "/reports",
+                "target": "_blank"
             }
         ]
     },
@@ -56,3 +62,4 @@
         "path": "/career"
     }
 ]
+
