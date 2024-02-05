@@ -36,7 +36,11 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                             <Nav.Link
                                 as="button"
                                 eventKey="CVA"
-                                className="btn-large btn-light fs-3 p-3 m-3"
+                                className={`btn-large btn-light fs-3 p-3 m-3 ${
+                                    bannerKey === "CVA"
+                                        ? "border border-0"
+                                        : "border border-3"
+                                } `}
                                 style={{
                                     borderRadius: "50px",
                                     color: `${
@@ -59,7 +63,11 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                             <Nav.Link
                                 as="button"
                                 eventKey="AA"
-                                className="btn-large btn-light fs-3 p-3 m-3"
+                                className={`btn-large btn-light fs-3 p-3 m-3 ${
+                                    bannerKey === "AA"
+                                        ? "border border-0"
+                                        : "border border-3"
+                                } `}
                                 style={{
                                     borderRadius: "50px",
                                     color: `${
@@ -67,7 +75,6 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                                             ? "#FFFFFF"
                                             : "#2B7EC1"
                                     }`,
-                                    border: "1px solid #231F20",
                                     backgroundColor: `${
                                         bannerKey === "AA"
                                             ? "#2B7EC1"
