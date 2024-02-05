@@ -8001,6 +8001,9 @@ fieldset:disabled .btn {
 .text-primary {
     color: #0d6efd !important;
 }
+.text-primary-blue {
+    color: #2b7ec1 !important;
+}
 .text-secondary {
     color: #6c757d !important;
 }
@@ -11280,3 +11283,19 @@ fieldset:disabled .btn {
         display: none !important;
     }
 }
+
+/*  */
+
+.custom-link {
+    color: #2b7ec1; /* Change the link color */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Add padding to the links */
+}
+
+.custom-link:hover {
+    /* background-color: #e0e9f5; */
+    cursor: pointer;
+    color: white; /* Change the background color on hover */
+}
+
