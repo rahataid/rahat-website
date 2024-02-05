@@ -26,58 +26,76 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
     return (
         <Container fluid>
             <Row className="g-5 mt-2">
-                <div className="">
-                    <Tab.Container defaultActiveKey="CVA">
-                        <Nav
-                            className="product-tab-nav"
-                            activeKey={bannerKey}
-                            onSelect={(k) => setBannerKey(k)}
-                        >
-                            <div
-                                className=" nav d-flex justify-content-center"
+                <Tab.Container
+                    defaultActiveKey="CVA"
+                    activeKey={bannerKey}
+                    onSelect={(k) => setBannerKey(k)}
+                >
+                    <Nav className="nav d-flex justify-content-center">
+                        <div className="setting-option header-btn mx-5 mb-3 ">
+                            <Nav.Link
+                                as="button"
+                                eventKey="CVA"
+                                className="btn-large btn-light fs-3 p-3 m-3"
                                 style={{
-                                    borderBottom: "1px solid grey",
-                                    background: "none",
+                                    borderRadius: "50px",
+                                    color: `${
+                                        bannerKey === "CVA"
+                                            ? "#FFFFFF"
+                                            : "#2B7EC1"
+                                    }`,
+                                    border: "1px solid #231F20",
+                                    backgroundColor: `${
+                                        bannerKey === "CVA"
+                                            ? "#2B7EC1"
+                                            : "transparent"
+                                    }`,
                                 }}
                             >
-                                <Nav.Link
-                                    as="button"
-                                    eventKey="CVA"
-                                    className={`p-3 ${
-                                        bannerKey === "CVA" && "custom-link"
-                                    }`}
-                                >
-                                    Cash and Voucher Assistance Programs
-                                </Nav.Link>
-                                <Nav.Link
-                                    as="button"
-                                    eventKey="AA"
-                                    className={`p-3 ${
-                                        bannerKey === "AA" && "custom-link"
-                                    }`}
-                                >
-                                    Anticipatory Action Programs
-                                </Nav.Link>
-                            </div>
-                        </Nav>
-                        <Tab.Content>
-                            <Tab.Pane
-                                eventKey="CVA"
-                                className="lg-product_tab-pane"
-                            >
-                                <VideoArea data={content["video-section"]} />
-                                <CashAndVouvherAssistancePage />
-                                <OurServices />
-                            </Tab.Pane>
-                            <Tab.Pane
+                                Cash and Voucher Assistance Programs
+                            </Nav.Link>
+                        </div>
+                        <div className="setting-option header-btn mx-5">
+                            <Nav.Link
+                                as="button"
                                 eventKey="AA"
-                                className="lg-product_tab-pane"
+                                className="btn-large btn-light fs-3 p-3 m-3"
+                                style={{
+                                    borderRadius: "50px",
+                                    color: `${
+                                        bannerKey === "AA"
+                                            ? "#FFFFFF"
+                                            : "#2B7EC1"
+                                    }`,
+                                    border: "1px solid #231F20",
+                                    backgroundColor: `${
+                                        bannerKey === "AA"
+                                            ? "#2B7EC1"
+                                            : "transparent"
+                                    }`,
+                                }}
                             >
-                                <AnticipatoryActionsPage />
-                            </Tab.Pane>
-                        </Tab.Content>
-                    </Tab.Container>
-                </div>
+                                Anticipatory Action Programs
+                            </Nav.Link>
+                        </div>
+                    </Nav>
+                    <Tab.Content>
+                        <Tab.Pane
+                            eventKey="CVA"
+                            className="border border-3 rounded-end"
+                        >
+                            <VideoArea data={content["video-section"]} />
+                            <CashAndVouvherAssistancePage />
+                            <OurServices />
+                        </Tab.Pane>
+                        <Tab.Pane
+                            eventKey="AA"
+                            className="border border-3 rounded-end"
+                        >
+                            <AnticipatoryActionsPage />
+                        </Tab.Pane>
+                    </Tab.Content>
+                </Tab.Container>
             </Row>
         </Container>
     );
