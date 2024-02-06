@@ -87,18 +87,12 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                         </div>
                     </Nav>
                     <Tab.Content>
-                        <Tab.Pane
-                            eventKey="CVA"
-                            className="border border-3 rounded-end"
-                        >
+                        <Tab.Pane eventKey="CVA">
                             <VideoArea data={content["video-section"]} />
                             <CashAndVouvherAssistancePage />
                             <OurServices />
                         </Tab.Pane>
-                        <Tab.Pane
-                            eventKey="AA"
-                            className="border border-3 rounded-end"
-                        >
+                        <Tab.Pane eventKey="AA">
                             <AnticipatoryActionsPage />
                         </Tab.Pane>
                     </Tab.Content>

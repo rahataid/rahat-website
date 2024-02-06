@@ -35,8 +35,8 @@ const OurEcosystem = ({ space, className }) => {
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
                                         alt="cva-ecosystem-banner"
                                         style={{
-                                            width: 360,
-                                            height: 220,
+                                            width: 380,
+                                            height: 240,
                                         }}
                                     />
                                 </div>
@@ -65,15 +65,14 @@ const OurEcosystem = ({ space, className }) => {
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-beema-banner.jpg"
                                         alt="rahat-beema-banner"
                                         style={{
-                                            width: 360,
-                                            height: 220,
+                                            width: 380,
+                                            height: 240,
                                         }}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
                                         <a href="/rahat-beema">
-                                            {" "}
                                             Financial Resilience
                                         </a>
                                     </h4>
@@ -92,12 +91,12 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail text-center object-fit-cover">
                                     <Image
-                                        src="/images/pic/Financial&DigitalLiteracy.png"
+                                        src="/images/pic/fin04.jpg"
                                         alt="anticipatory-actions-banner"
                                         className="img-fluid"
                                         style={{
-                                            width: 360,
-                                            height: 220,
+                                            width: 380,
+                                            height: 240,
                                         }}
                                     />
                                 </div>
