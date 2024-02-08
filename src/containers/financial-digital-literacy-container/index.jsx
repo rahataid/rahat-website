@@ -16,7 +16,7 @@ const FinancialDigitalLiteracyContainer = () => {
                         >
                             <Image
                                 src={item.image}
-                                className="w-60 h-100 object-fit-cover shadow-1-strong rounded mb-4"
+                                className="w-100 h-100 object-fit-cover shadow-1-strong rounded mb-4"
                                 alt={`Image ${index + 1}`}
                             />
                         </Col>
