@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AnticipatoryActionsPage = ({ space, className }) => (
     <>
-        <div className="rn-author-bg-area position-relative ptb--150">
+        {/* <div className="rn-author-bg-area position-relative ptb--150">
             <Image
                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/anticipatory-actions-main-banner.jpg"
                 alt="Slider BG"
@@ -16,8 +16,8 @@ const AnticipatoryActionsPage = ({ space, className }) => (
             />
 
             <div className="overlay"></div>
-        </div>
-        <div className="row padding-tb-50 align-items-center d-flex">
+        </div> */}
+        {/* <div className="row padding-tb-50 align-items-center d-flex">
             <div className="col-lg-12 custom-page-banner">
                 <div className="author-wrapper">
                     <div className="author-inner">
@@ -27,7 +27,7 @@ const AnticipatoryActionsPage = ({ space, className }) => (
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         <div className={clsx("rn-about-Quote-area", space === 1, className)}>
             <div className="container pt--50">
                 <div className="row align-items-center g-5">

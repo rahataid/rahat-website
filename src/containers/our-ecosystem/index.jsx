@@ -3,7 +3,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 // import Button from "@ui/button";
 import ReadMoreBtn from "@components/read-more-button";
-import Image from "next/image";
+import { Image } from "react-bootstrap";
 
 const OurEcosystem = ({ space, className }) => {
     return (
@@ -30,30 +30,29 @@ const OurEcosystem = ({ space, className }) => {
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail text-center">
                                     <Image
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
                                         alt="cva-ecosystem-banner"
-                                        width={489}
-                                        height={366}
+                                        style={{
+                                            width: 380,
+                                            height: 240,
+                                        }}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/cash-and-voucher-assistance-platform">
-                                            Rahat Cash and Voucher Assistance
+                                        <a href="/financial-access">
+                                            Financial Access
                                         </a>
                                     </h4>
                                     <p className="description-feature short-title-features">
-                                        Revolutionize humanitarian assistance
-                                        with Cash and Voucher Solutions. Embrace
-                                        a more effective method of distributing
-                                        aid by empowering local communities,
-                                        promoting inclusivity, and generating a
-                                        positive impact.
+                                        Enable financial inclusion through our
+                                        Cash and Vouchers as well as
+                                        Anticipatory Actions initiatives.
                                     </p>
 
-                                    <ReadMoreBtn linkTo="/cash-and-voucher-assistance-platform" />
+                                    <ReadMoreBtn linkTo="/financial-access" />
                                 </div>
                             </div>
                         </div>
@@ -61,26 +60,26 @@ const OurEcosystem = ({ space, className }) => {
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail text-center">
                                     <Image
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-beema-banner.jpg"
                                         alt="rahat-beema-banner"
-                                        width={489}
-                                        height={366}
+                                        style={{
+                                            width: 380,
+                                            height: 240,
+                                        }}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/rahat-beema">Rahat Beema</a>
+                                        <a href="/rahat-beema">
+                                            Financial Resilience
+                                        </a>
                                     </h4>
                                     <p className="description-feature short-title-features">
-                                        Experience an inclusive, speedy,
-                                        cost-effective insurance system. Our
-                                        transparent approach utilizes automated
-                                        weather data to assess payout
-                                        eligibility for low-income farmers and
-                                        migrants, mitigating shocks from extreme
-                                        weather events.
+                                        Build financial resilience with our
+                                        transparent, inclusive, and automated
+                                        weather insurance experience.
                                     </p>
                                     <ReadMoreBtn linkTo="/rahat-beema" />
                                 </div>
@@ -90,31 +89,29 @@ const OurEcosystem = ({ space, className }) => {
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="rn-service-one-our-ecosystem color-shape-7">
                             <div className="inner">
-                                <div className="thumbnail">
+                                <div className="thumbnail text-center object-fit-cover">
                                     <Image
-                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/anticipatory-actions-banner.jpg"
+                                        src="/images/pic/fin04.jpg"
                                         alt="anticipatory-actions-banner"
-                                        width={489}
-                                        height={366}
+                                        className="img-fluid"
+                                        style={{
+                                            width: 380,
+                                            height: 240,
+                                        }}
                                     />
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/rahat-anticipatory-actions">
-                                            Rahat Anticipatory Action
+                                        <a href="/financial-digital-literacy">
+                                            Financial & Digital Literacy
                                         </a>
                                     </h4>
                                     <p className="description-feature short-title-features">
-                                        Rahat integrates smart contracts with
-                                        hydrological data for automated alerts
-                                        via voice and SMS. Streamlined cash aid
-                                        distribution empowers community bodies
-                                        and aid agencies with the ability to
-                                        trigger accountable and timely cash
-                                        transfers, saving time and speeding
-                                        process management before a crisis.
+                                        Integrating digital and financial
+                                        literacy into the distribution processes
+                                        of aid.
                                     </p>
-                                    <ReadMoreBtn linkTo="/rahat-anticipatory-actions" />
+                                    <ReadMoreBtn linkTo="/financial-digital-literacy" />
                                 </div>
                             </div>
                         </div>
@@ -150,3 +147,4 @@ OurEcosystem.defaultProps = {
 };
 
 export default OurEcosystem;
+
