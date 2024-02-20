@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Container, Row, Image } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import FinDigLiteracy from "../../data/fin-dig-liter.json";
-// import Image from "next/image";
+import Image from "next/image";
 const FinancialDigitalLiteracyContainer = () => {
     return (
         <Container>
@@ -18,6 +18,8 @@ const FinancialDigitalLiteracyContainer = () => {
                                 src={item.image}
                                 className="w-100 h-100 object-fit-cover shadow-1-strong rounded mb-4"
                                 alt={`Image ${index + 1}`}
+                                width={720}
+                                height={480}
                             />
                         </Col>
                     );
