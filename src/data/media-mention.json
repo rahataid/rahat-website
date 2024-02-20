@@ -4,15 +4,16 @@
         "title": "Crescent Enterprises Climate Innovation Prize",
         "icon": "pe-7s-note2",
         "link": " https://www.zawya.com/en/press-release/companies-news/crescent-enterprises-climate-innovation-prize-of-aed-735-000-awarded-to-4-global-entrepreneurs-iyifpaug",
-        "background_image": "/images/pic/COP28.png",
+        "background_image": "https://assets.rumsan.net/rumsan-group/cop28.png",
         "date": "11th December, 2023"
     },
+
     {
         "id": "19",
         "title": "Announcing the GSMA Innovation Fund for Anticipatory Humanitarian Action Cohort",
         "icon": "pe-7s-note2",
         "link": " https://www.gsma.com/mobilefordevelopment/blog/announcing-the-gsma-innovation-fund-for-anticipatory-humanitarian-action-cohort/?utm_source=Grantees&utm_medium=Social+Media&utm_campaign=Grantee+Announcement",
-        "background_image": "/images/pic/GSMAAnnouncement.png",
+        "background_image": "https://assets.rumsan.net/esatya/gsma-announcement-.png",
         "date": "25th November, 2023"
     },
     {
