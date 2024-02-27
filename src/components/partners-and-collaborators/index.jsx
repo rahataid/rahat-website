@@ -124,6 +124,12 @@ const PartnersAndCollab = () => {
                         alt="Icon 9"
                     />
                 </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/google-startup-logo.png"
+                        alt="Icon 1"
+                    />
+                </div>
             </div>
         </div>
     );
