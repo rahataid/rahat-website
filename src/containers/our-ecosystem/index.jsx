@@ -3,7 +3,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 // import Button from "@ui/button";
 import ReadMoreBtn from "@components/read-more-button";
-import { Image } from "react-bootstrap";
+import Image from "next/image";
 
 const OurEcosystem = ({ space, className }) => {
     return (
@@ -34,10 +34,8 @@ const OurEcosystem = ({ space, className }) => {
                                     <Image
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
                                         alt="cva-ecosystem-banner"
-                                        style={{
-                                            width: 380,
-                                            height: 240,
-                                        }}
+                                        width={489}
+                                        height={360}
                                     />
                                 </div>
                                 <div className="content">
@@ -64,10 +62,8 @@ const OurEcosystem = ({ space, className }) => {
                                     <Image
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-beema-banner.jpg"
                                         alt="rahat-beema-banner"
-                                        style={{
-                                            width: 380,
-                                            height: 240,
-                                        }}
+                                        width={489}
+                                        height={360}
                                     />
                                 </div>
                                 <div className="content">
@@ -91,13 +87,11 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail text-center object-fit-cover">
                                     <Image
-                                        src="/images/pic/fin04.jpg"
+                                        src="https://assets.rumsan.net/rumsan-group/11r1.jpg"
                                         alt="anticipatory-actions-banner"
                                         className="img-fluid"
-                                        style={{
-                                            width: 380,
-                                            height: 240,
-                                        }}
+                                        width={489}
+                                        height={360}
                                     />
                                 </div>
                                 <div className="content">
