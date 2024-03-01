@@ -1,5 +1,21 @@
 [
     {
+        "id": "22",
+        "title": "Using blockchain technology to streamline anticipatory action in Nepal",
+        "icon": "pe-7s-note2",
+        "link": "https://www.anticipation-hub.org/news/using-blockchain-technology-to-streamline-anticipatory-action-in-nepal",
+        "background_image": "https://assets.rumsan.net/rumsan-group/anticipatory-hub.jpg",
+        "date": "27th Feburary, 2024"
+    },
+    {
+        "id": "21",
+        "title": "Revolutionizing Humanitarian Aid: Digital Transformation Enhances Efficiency and Access",
+        "icon": "pe-7s-note2",
+        "link": " https://bnnbreaking.com/world/europe/revolutionizing-humanitarian-aid-digital-transformation-enhances-efficiency-and-access",
+        "background_image": "https://assets.rumsan.net/rumsan-group/bnn.jpg",
+        "date": "27th Feburary, 2024"
+    },
+    {
         "id": "20",
         "title": "Crescent Enterprises Climate Innovation Prize",
         "icon": "pe-7s-note2",
@@ -7,7 +23,6 @@
         "background_image": "https://assets.rumsan.net/rumsan-group/cop28.png",
         "date": "11th December, 2023"
     },
-
     {
         "id": "19",
         "title": "Announcing the GSMA Innovation Fund for Anticipatory Humanitarian Action Cohort",
@@ -80,4 +95,3 @@
         "date": "April 20, 2023"
     }
 ]
-

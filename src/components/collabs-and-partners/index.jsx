@@ -43,6 +43,12 @@ const CollabAndPartners = () => {
                             alt="Icon 2"
                         />
                     </div>
+                    <div className="mt-3" style={iconItemStyles}>
+                        <img
+                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/google-startup-logo.png"
+                            alt="Icon 5"
+                        />
+                    </div>
                 </div>
                 <div className="col-3">
                     <div style={iconStyles}>
@@ -121,6 +127,7 @@ const CollabAndPartners = () => {
                                 alt="Icon 5"
                             />
                         </div>
+
                     </div>
                 </div>
             </div>
