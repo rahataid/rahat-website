@@ -77,7 +77,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={18000}
+                                    end={19000}
                                     duration={5}
                                 >
                                     {({ countUpRef }) => (
