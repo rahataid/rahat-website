@@ -39,7 +39,6 @@
         "link_linkedin": "https://www.linkedin.com/in/shristi-piya-27052210a/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-ream-rahat.png"
     },
-
     {
         "id": "21",
         "fname": "Manjik Shrestha",
@@ -52,13 +51,13 @@
     },
     {
         "id": "15",
-        "fname": "Ashmita Manandhar",
-        "designation": "Project Manager",
+        "fname": "Aayushi Karmacharya",
+        "designation": "Outreach and Partnership Manager",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:ashmita.manandhar@rumsan.com",
-        "link_linkedin": "https://www.linkedin.com/in/ashmita-manandhar-shrestha-a49054190/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-team-asmita.png"
+        "link_mail": "mailto:ayushi.karmacharya@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/aayushi-karmacharya-125b3916b",
+        "team_image": "https://assets.rumsan.net/rumsan-group/aayushi-karmacharya-rahat-team.jpg"
     },
     {
         "id": "18",
@@ -80,7 +79,6 @@
         "link_linkedin": "https://www.linkedin.com/in/shristi-khayargoli/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-k-rahat-team.png"
     },
-
     {
         "id": "20",
         "fname": "Raghav Kattel",
@@ -123,16 +121,16 @@
     },
     {
         "id": "27",
-        "fname": "Nirmal Chongbang",
+        "fname": "Lakpa Tsering Tamang",
         "designation": "Project Coordinator",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "",
-        "link_linkedin": "https://www.linkedin.com/in/nirmal-chongbang-92a3a34a/",
-        "team_image": "/images/pic/nirmal.png"
+        "link_mail": "mailto:lakpa.tamang@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/lakpa-tsering-tamang-99373945/",
+        "team_image": "https://assets.rumsan.net/rumsan-group/lakpa-tsering-tamang-rahat-team.jpg"
     },
     {
-        "id": "27",
+        "id": "28",
         "fname": "Achyut Subedi ",
         "designation": "Community Manager",
         "icon_mail": "feather-mail",
@@ -142,4 +140,3 @@
         "team_image": "/images/pic/achyut.png"
     }
 ]
-

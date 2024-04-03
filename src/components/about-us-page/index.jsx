@@ -419,10 +419,10 @@ const AboutUsDetails = ({ space, className }) => (
                         <div className="row g-5 justify-content-center align-items-center pt--50">
                             {OurTeam.map((d) => (
                                 <>
-                                    <div key={d.id} className="col-lg-2 col-6">
+                                    <div key={d.id} className="col-lg-3 col-6">
                                         <div className="user-thumbnail">
                                             <img
-                                                style={{ borderRadius: "50%" }}
+                                                style={{ borderRadius: "50%", width: "250px" }}
                                                 src={d.team_image}
                                                 alt={d.fname}
                                             />
@@ -524,6 +524,8 @@ const AboutUsDetails = ({ space, className }) => (
                                                     style={{
                                                         margin: "0",
                                                         fontSize: "10px",
+                                                        whiteSpace: "nowrap",
+                                                        marginLeft: "-5px",
                                                     }}
                                                 >
                                                     {d.designation}
