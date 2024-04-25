@@ -35,7 +35,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={22}
-                                    duration={5}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -78,7 +78,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={19000}
-                                    duration={5}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -130,8 +130,8 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={77}
-                                    duration={5}
+                                    end={50}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -171,8 +171,8 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={7900}
-                                    duration={5}
+                                    end={9700}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -226,7 +226,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={4200}
-                                    duration={5}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -279,7 +279,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={22}
-                                    duration={5}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -319,8 +319,8 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={2}
-                                    duration={5}
+                                    end={3}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
@@ -353,7 +353,7 @@ const FunFact = ({ className }) => {
                             </div>
 
                             <div className="botton-title">
-                                Nepal And Pakistan
+                                Nepal, Pakistan & Indonesia
                             </div>
                         </div>
                     </div>
@@ -375,7 +375,7 @@ const FunFact = ({ className }) => {
                                 <CountUp
                                     start={focus ? 0 : null}
                                     end={154}
-                                    duration={5}
+                                    duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>

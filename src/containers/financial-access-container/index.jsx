@@ -36,10 +36,10 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                             <Nav.Link
                                 as="button"
                                 eventKey="CVA"
-                                className={`btn-large btn-light fs-3 p-3 m-3 ${
+                                className={`btn btn-large btn-primary ${
                                     bannerKey === "CVA"
-                                        ? "border border-0"
-                                        : "border border-3"
+                                        ? "border border-2"
+                                        : "border border-2"
                                 } `}
                                 style={{
                                     borderRadius: "50px",
@@ -48,12 +48,12 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                                             ? "#FFFFFF"
                                             : "#2B7EC1"
                                     }`,
-                                    border: "1px solid #231F20",
                                     backgroundColor: `${
                                         bannerKey === "CVA"
                                             ? "#2B7EC1"
                                             : "transparent"
                                     }`,
+                                    transition: "0s",
                                 }}
                             >
                                 Cash and Voucher Assistance Programs
@@ -63,10 +63,10 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                             <Nav.Link
                                 as="button"
                                 eventKey="AA"
-                                className={`btn-large btn-light fs-3 p-3 m-3 ${
+                                className={`btn btn-large btn-primary ${
                                     bannerKey === "AA"
-                                        ? "border border-0"
-                                        : "border border-3"
+                                        ? "border border-2"
+                                        : "border border-2"
                                 } `}
                                 style={{
                                     borderRadius: "50px",
@@ -80,6 +80,7 @@ const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
                                             ? "#2B7EC1"
                                             : "transparent"
                                     }`,
+                                    transition: "0s",
                                 }}
                             >
                                 Anticipatory Action Programs
