@@ -60,6 +60,12 @@
     }
 }
 
+.single-counter-up-custom {
+    @media #{$small-mobile} {
+        min-height: 265px;
+    }
+}
+
 .wETH {
     position: relative;
     display: inline-block;
