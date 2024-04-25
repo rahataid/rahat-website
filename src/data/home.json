@@ -5,6 +5,15 @@
             "section": "hero-section",
             "banners": [
                 {
+                    "id": 100,
+                    "title": "Rahat | Winner",
+                    "subtitle": "Circle’s Unlocking Impact Pitch Competition",
+                    "image": {
+                        "src": "https://assets.rumsan.net/rumsan-group/cricle-main-banner-slider.jpg"
+                    },
+                    "isBtnDisabled": false
+                },
+                {
                     "id": 1,
                     "title": "GSMA INNOVATION FUND GRANTEE",
                     "subtitle": "For Anticipatory Humanitarian Action",
