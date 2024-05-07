@@ -19,17 +19,18 @@ const BlogsPage = ({ blogs }) => {
 };
 
 export const getServerSideProps = wrapper.getServerSideProps(
-    (store) => async () => {
-        await store.dispatch(getBlogs());
-        const serializedBlogs = store.getState().blogs.blogs;
-        const serializedError = store.getState().blogs.error;
-        return {
-            props: {
-                blogs: serializedBlogs,
-                error: serializedError,
-            },
-        };
-    }
+    (store) =>
+        async ({ query }) => {
+            await store.dispatch(getBlogs(query));
+            const serializedBlogs = store.getState().blogs.blogs;
+            const serializedError = store.getState().blogs.error;
+            return {
+                props: {
+                    blogs: serializedBlogs,
+                    error: serializedError,
+                },
+            };
+        }
 );
 
 export default BlogsPage;

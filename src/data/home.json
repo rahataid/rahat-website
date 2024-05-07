@@ -39,15 +39,6 @@
                         "src": "/images/bg/main-banner-01.jpg"
                     },
                     "isBtnDisabled": false
-                },
-                {
-                    "id": 4,
-                    "title": "H2O Wheels Distribution Program",
-                    "subtitle": "In collaboration with Tayaba & SRSO",
-                    "image": {
-                        "src": "/images/bg/main-banner-02.jpg"
-                    },
-                    "isBtnDisabled": false
                 }
             ]
         },
