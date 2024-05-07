@@ -40,7 +40,7 @@ export const selectBlogs = (state) => state.blogs.blogs;
 export const getBlogs = (params) => {
     return async (dispatch) => {
         try {
-            const { data: res } = await BlogService.getBlogs();
+            const { data: res } = await BlogService.getBlogs(params);
             dispatch(slice.actions.getBlogsSuccess(res));
         } catch (error) {
             dispatch(hasError(error));
@@ -58,3 +58,4 @@ export const getBlogDetails = (slug) => {
         }
     };
 };
+
