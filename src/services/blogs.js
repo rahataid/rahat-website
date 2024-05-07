@@ -6,8 +6,10 @@ const api = axios.create({
 });
 
 export const BlogService = {
-    getBlogs: async () => {
-        return api.get("/blogs/projects/rahat?category=Blog");
+    getBlogs: async (params) => {
+        return api.get("/blogs/projects/rahat?category=Blog", {
+            params,
+        });
     },
     getBlogDetails: async (slug) => {
         return api.get(`/blogs/findbyslug/${slug}`);
