@@ -7,6 +7,7 @@ import Button from "@ui/button";
 import RecognitionsSlider from "@containers/recognitions-slider";
 import homepageData from "../../data/recognitions-image-slider.json";
 import { normalizedData } from "@utils/methods";
+import AwardAndPrizesRecognitions from "@containers/awards";
 
 const OurRecognitionPage = ({ space, className }) => {
     const content = normalizedData(homepageData?.content || []);
@@ -43,7 +44,10 @@ const OurRecognitionPage = ({ space, className }) => {
                             </p>
 
                             <div className="button-group">
-                                <Link href="https://www.unicef.org/innovation/venturefund/blockchain-financial-inclusion-graduation">
+                                <Link
+                                    href="https://www.unicef.org/innovation/venturefund/blockchain-financial-inclusion-graduation"
+                                    target="_blank"
+                                >
                                     <Button>Learn More</Button>
                                 </Link>
                             </div>
@@ -64,7 +68,10 @@ const OurRecognitionPage = ({ space, className }) => {
                             </p>
 
                             <div className="button-group">
-                                <Link href="https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/blog/announcing-the-gsma-innovation-fund-for-anticipatory-humanitarian-action-cohort/">
+                                <Link
+                                    href="https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/blog/announcing-the-gsma-innovation-fund-for-anticipatory-humanitarian-action-cohort/"
+                                    target="_blank"
+                                >
                                     <Button>Learn More</Button>
                                 </Link>
                             </div>
@@ -107,7 +114,10 @@ const OurRecognitionPage = ({ space, className }) => {
                             </p>
 
                             <div className="button-group">
-                                <Link href="https://bit.ly/3RkYZUC">
+                                <Link
+                                    href="https://bit.ly/3RkYZUC"
+                                    target="_blank"
+                                >
                                     <Button>Learn More</Button>
                                 </Link>
                             </div>
@@ -128,7 +138,10 @@ const OurRecognitionPage = ({ space, className }) => {
                             </p>
 
                             <div className="button-group">
-                                <Link href="https://events.withgoogle.com/startups-for-sustainable-development/">
+                                <Link
+                                    href="https://events.withgoogle.com/startups-for-sustainable-development/"
+                                    target="_blank"
+                                >
                                     <Button>Learn More</Button>
                                 </Link>
                             </div>
@@ -170,6 +183,8 @@ const OurRecognitionPage = ({ space, className }) => {
                         </div>
                     </div>
                 </div>
+
+                <AwardAndPrizesRecognitions />
             </div>
         </>
     );

@@ -19,7 +19,7 @@ const Home = () => {
     console.log("content", content);
     return (
         <Wrapper>
-            <SEO pageTitle="Home" />
+            <SEO pageTitle="Recognitions" />
             <Header />
             <main id="main-content">
                 <HeroArea data={content["hero-section"]} />

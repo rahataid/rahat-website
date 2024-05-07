@@ -30,15 +30,6 @@
                         "src": "/images/bg/slider-main-banner-mit.png"
                     },
                     "isBtnDisabled": false
-                },
-                {
-                    "id": 3,
-                    "title": "Cash Transfer Program",
-                    "subtitle": "In collaboration with Jaleshwar Municipality, UNICEF Nepal, Unicef Innovation Fund",
-                    "image": {
-                        "src": "/images/bg/main-banner-01.jpg"
-                    },
-                    "isBtnDisabled": false
                 }
             ]
         },

@@ -17,7 +17,10 @@ const MainBannerArea = () => (
                     </p>
 
                     <div className="button-group">
-                        <Link href="https://rahat.io/">
+                        <Link
+                            href="https://youtu.be/EDrsv7x97uc/"
+                            target="_blank"
+                        >
                             <Button>Watch video</Button>
                         </Link>
                     </div>

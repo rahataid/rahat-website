@@ -392,6 +392,18 @@ input[type="number"] {
     // background: var(--color-white);
 }
 
+.rn-about-wrapper-card-custom {
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    // min-height: 288px;
+}
+
+.rn-about-wrapper-card-custom {
+    border: none;
+    background: var(--color-white);
+}
+
 @media (max-width: 676px) {
     .custom-order-flexbox-2 {
         order: 2;
