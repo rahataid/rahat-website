@@ -104,6 +104,35 @@
                 "Upon completion of Milestone 2 (33.33%)",
                 "Upon completion of Scope of work defined in the agreement (33.33%)"
             ]
+        },
+        {
+            "id": 4,
+            "description": "We are looking for motivated individuals who are committed to joining our efforts to serve communities with technical as well as financial support. As a local community coordinator, you will onboard local community organizations to our community platform, engage with them, and manage them.",
+            "designation": "Local Community Coordinator",
+            "duration": " Contract Basis (Six Month)",
+            "required": 1,
+            "location": "Gandaki Ptovince",
+            "status": true,
+            "candidates": true,
+            "role": [
+                "Reach out to community organizations by call and emails and from your personal link.",
+                "Visit community organizations and pitch them about the Rahat and Rahat community platforms.",
+                "Onboard them by completing their needs assessment and other required resources, like photos and social media links.",
+                "Support the community manager in documenting and reflecting on the onboarded communities on the Rahat Community platform.",
+                "Support the community manager in organizing different virtual or physical workshops aimed at engaging the onboarded communities.",
+                "Handle queries and feedback received from community organizations."
+            ],
+            "qualificationAndRequirements": [
+                "Completed Bachelor’s degree in Social work, development studies, or related fields",
+                "Fresher’s can appl",
+                "Fluency in written and spoken Nepali and English",
+                "Excellent Microsoft Office applications skills (Google Docs, Google Sheets, Slides, and  Emails)"
+            ],
+            "benefits": [
+                "Competitive salary",
+                "Professional development opportunities",
+                "Collaborative and supportive work environment"
+            ]
         }
     ]
 }
