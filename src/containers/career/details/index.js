@@ -31,19 +31,20 @@ const JobDetails = ({ data }) => {
                                 lineHeight: "normal",
                                 color: "#231F20",
                             }}
-                            className="fs-2"
+                            className="fs-2 span-2"
                         >
                             {data?.designation}
                         </Col>
 
                         <Col
-                            className="fs-3"
+                            className="fs-3 "
                             style={{
                                 fontFamily: "Poppins",
                                 fontStyle: "normal",
                                 fontWeight: 500,
                                 lineHeight: "normal",
                                 color: "#231F20",
+                                padding: 10,
                             }}
                         >
                             <span>
@@ -82,6 +83,7 @@ const JobDetails = ({ data }) => {
                                     fontWeight: 500,
                                     lineHeight: "normal",
                                     color: "#231F20",
+                                    padding: 10,
                                 }}
                             >
                                 <span>
@@ -339,7 +341,7 @@ const JobDetails = ({ data }) => {
                     style={{
                         fontFamily: "Poppins",
                         fontStyle: "normal",
-                        fontWeight: 600,
+                        fontWeight: 500,
                         lineHeight: "normal",
                         color: "#231F20",
                     }}
@@ -378,7 +380,7 @@ const JobDetails = ({ data }) => {
                     style={{
                         fontFamily: "Poppins",
                         fontStyle: "normal",
-                        fontWeight: 600,
+                        fontWeight: 500,
                         lineHeight: "normal",
                         color: "#231F20",
                     }}
@@ -395,7 +397,7 @@ const JobDetails = ({ data }) => {
                                         lineHeight: "normal",
                                         color: "#231F20",
                                     }}
-                                    className="fs-4"
+                                    className="fs-3"
                                 >
                                     {content}
                                 </li>
