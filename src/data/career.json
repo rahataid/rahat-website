@@ -2,11 +2,12 @@
     "jobs": [
         {
             "id": 1,
+            "slug": "outreach-and-partnerships-manager",
             "description": "We are looking for an energetic and highly motivated individual who enjoys networking and can ensure  commercial and strategic relationships with our key targeted partners. You should have a passion to work in the humanitarian sector, a strong understanding of IT operations, the zeal and patience to work with multiple stakeholders, and the ability to drive efficiency.",
             "designation": "Outreach and Partnerships Manager",
             "duration": "Full Time",
             "required": 1,
-            "status": true,
+            "status": false,
             "role": [
                 "Create a systematic, process-driven approach to partner outreach and relationship management",
                 "Research partners, identify key players, and generate interest",
@@ -29,6 +30,7 @@
         },
         {
             "id": 2,
+            "slug": "operation-manager",
             "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
             "designation": "Operation Manager",
             "duration": "Full Time",
@@ -56,6 +58,7 @@
         },
         {
             "id": 3,
+            "slug": "rfp-for-design-and-development-of-rahat-aa-services",
             "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
             "designation": "RFP for design and development of Rahat AA Services",
             "objective": [
@@ -107,11 +110,12 @@
         },
         {
             "id": 4,
+            "slug": "local-community-coordinator",
             "description": "We are looking for motivated individuals who are committed to joining our efforts to serve communities with technical as well as financial support. As a local community coordinator, you will onboard local community organizations to our community platform, engage with them, and manage them.",
             "designation": "Local Community Coordinator",
-            "duration": " Contract Basis (Six Month)",
+            "duration": "Contract Basis (Six Month)",
             "required": 1,
-            "location": "Gandaki Ptovince",
+            "location": "Gandaki Province",
             "status": true,
             "candidates": true,
             "role": [
