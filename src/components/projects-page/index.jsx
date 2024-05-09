@@ -65,15 +65,6 @@ const ProjectPage = ({ space, className }) => (
                                         )}
 
                                         <div className="content">
-                                            <div className="category-info">
-                                                <div className="meta">
-                                                    <span>
-                                                        <i className="feather-calendar" />
-                                                        {d.date ? d.date : "-"}
-                                                    </span>
-                                                </div>
-                                            </div>
-
                                             <h4 className="title">
                                                 <Link
                                                     target="_blank"
