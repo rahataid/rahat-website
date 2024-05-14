@@ -36,11 +36,12 @@ const Home = () => {
             </main> */}
             {/* <AboutUs /> */}
             <WeAre />
-            <Milestones />
+
             {/* <VideoArea data={content["video-section"]} /> */}
             {/* <Benefits /> */}
             {/* <OurPlatform /> */}
             <OurEcosystem />
+            <Milestones />
             {/* <ProductFeatures /> */}
             {/* <OurServices /> */}
             <Footer />
