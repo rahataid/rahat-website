@@ -6,9 +6,9 @@ const WeAre = () => (
         <div className="container">
             <div className="row mb--40">
                 <div className="title-area text-center">
-                    <h3 className="title mb--15">Partners and Collaborators</h3>
+                    <h3 className="title mb--15">Partners and Supporters</h3>
                     <p className="subtitle">
-                        We are supported by various national and international
+                        We are honored to be supported by prestigious
                         organizations.
                     </p>
                 </div>
