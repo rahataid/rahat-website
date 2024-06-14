@@ -100,7 +100,7 @@ const Footer = ({ space, className, data }) => (
                                 <li>
                                     <a
                                         target="_blank"
-                                        href="https://www.linkedin.com/company/esatya/"
+                                        href="https://www.linkedin.com/company/rumsan/mycompany/?viewAsMember=true"
                                     >
                                         <span className="icon">
                                             <i className="feather-linkedin" />

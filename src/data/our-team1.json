@@ -120,16 +120,6 @@
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/kanil-team-rahat.png"
     },
     {
-        "id": "27",
-        "fname": "Lakpa Tsering Tamang",
-        "designation": "Project Coordinator",
-        "icon_mail": "feather-mail",
-        "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:lakpa.tamang@rumsan.net",
-        "link_linkedin": "https://www.linkedin.com/in/lakpa-tsering-tamang-99373945/",
-        "team_image": "https://assets.rumsan.net/rumsan-group/lakpa-tsering-tamang-rahat-team.jpg"
-    },
-    {
         "id": "28",
         "fname": "Achyut Subedi ",
         "designation": "Community Manager",
@@ -140,3 +130,4 @@
         "team_image": "/images/pic/achyut.png"
     }
 ]
+

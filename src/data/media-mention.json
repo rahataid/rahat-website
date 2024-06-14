@@ -1,5 +1,21 @@
 [
     {
+        "id": "25",
+        "title": "Startup Spotlight - Rumsan",
+        "icon": "pe-7s-note2",
+        "background_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/podcast.png",
+        "audio": "https://archive.rthk.hk/mp3/radio/contentIndex/radio3/the_close/m4a/20240612_3.m4a",
+        "date": "12th June, 2024"
+    },
+    {
+        "id": "24",
+        "title": "25 Women Shaping the Future",
+        "icon": "pe-7s-note2",
+        "link": "https://www.changenow.world/women-for-change-2024-campaign/",
+        "background_image": "https://assets.rumsan.net/rumsan-group/change-now-main-banner.png",
+        "date": "27th May, 2024"
+    },
+    {
         "id": "23",
         "title": "Evaluation of Blockchain-based Cash Transfer Pilot Programme in Nepal",
         "icon": "pe-7s-note2",
