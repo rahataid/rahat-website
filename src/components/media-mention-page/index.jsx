@@ -98,7 +98,7 @@ const MediaMentionPage = ({ space, className }) => (
                                             </h4>
 
                                             {d.audio && (
-                                                <div className="mt-3">
+                                                <div className="mt-5">
                                                     <audio
                                                         controls
                                                         style={{
