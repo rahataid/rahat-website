@@ -60,14 +60,14 @@
             "id": 3,
             "slug": "rfp-for-design-and-development-of-rahat-aa-services",
             "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
-            "designation": "RFP for design and development of Rahat AA Services",
+            "designation": "RFP for design and development of Rahat AA Services(July 13,2023)",
             "objective": [
                 "Launch beneficiary validation and reporting module.",
                 "Develop off-ramping services for Rahat.",
                 "Develop multi-sig trigger mechanism in Rahat using smart contracts."
             ],
             "duration": "The development of this system shall start from Dec 2023 and be completed by May 2024.",
-            "status": false,
+            "status": true,
             "type": "diff",
             "scope": [
                 {
@@ -116,7 +116,7 @@
             "duration": "Contract Basis (Six Month)",
             "required": 1,
             "location": "Gandaki Province",
-            "status": true,
+            "status": false,
             "candidates": true,
             "role": [
                 "Reach out to community organizations by call and emails and from your personal link.",
@@ -140,4 +140,3 @@
         }
     ]
 }
-
