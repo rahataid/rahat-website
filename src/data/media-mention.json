@@ -1,5 +1,29 @@
 [
     {
+        "id": "26",
+        "title": "Innovating For Social Impact WIth Rumee Singh",
+        "background_image": "https://assets.rumsan.net/rumsan-group/steam-podcast-series-.png",
+        "icon": "pe-7s-note2",
+        "audio": "https://podcasts.captivate.fm/media/6d091544-9625-470d-ad7c-921074eaf3bb/SP-072-Rumee-Singh.mp3",
+        "date": "21st July, 2024"
+    },
+    {
+        "id": "27",
+        "title": "BC100+ Podcast Series: Rahat – Blockchain For Climate Relief With Santosh Shrestha",
+        "icon": "pe-7s-note2",
+        "background_image": "https://assets.rumsan.net/rumsan-group/siswg-podcast-series-.png",
+        "link": "https://podcasts.apple.com/cz/podcast/rahat/id1688419844?i=1000662259658",
+        "date": "15th July, 2024"
+    },
+    {
+        "id": "29",
+        "title": "Unicef Growth Cohort Blog ",
+        "icon": "pe-7s-note2",
+        "link": "https://www.unicef.org/innovation/stories/investing-blockchain-web3-and-ai-social-impact",
+        "background_image": "https://assets.rumsan.net/rumsan-group/growth-cohort.png",
+        "date": "14th July, 2024"
+    },
+    {
         "id": "25",
         "title": "Startup Spotlight - Rumsan",
         "icon": "pe-7s-note2",
@@ -119,4 +143,3 @@
         "date": "April 20, 2023"
     }
 ]
-

@@ -40,7 +40,7 @@ const Footer = ({ space, className, data }) => (
 
                     <div className="col-lg-2 col-md-6 col-sm-6 col-12 mt_mobile--40">
                         <div className="">
-                            <h6 className="widget-title">Techonolgy</h6>
+                            <h6 className="widget-title">Technology</h6>
 
                             <ul className="footer-list-one">
                                 <li className="single-list">
@@ -54,7 +54,7 @@ const Footer = ({ space, className, data }) => (
                                 <li className="single-list">
                                     <a
                                         target="_blank"
-                                        href="https://github.com/esatya"
+                                        href="https://github.com/rahataid"
                                     >
                                         GitHub
                                     </a>
@@ -202,4 +202,3 @@ Footer.defaultProps = {
 };
 
 export default Footer;
-
