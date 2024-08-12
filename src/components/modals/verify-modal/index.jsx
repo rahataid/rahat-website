@@ -5,25 +5,25 @@ import Button from "@ui/button";
 import Swal from "sweetalert2";
 import { Suspense, useState } from "react";
 import SuspensewithSearchParams from "@components/utils/suspense-with-search-params";
+import { useParams, usePathname, useSearchParams } from "next/navigation";
 
 const ReportModal = ({ show, handleModal }) => {
     const { isConnected } = useAccount();
     const { data: signMessageData, signMessage } = useSignMessage();
+    const params = useSearchParams();
+    const newUrl = params.get("callBackUrl");
 
     const handleSubmitSignature = async (encryptedData) => {
         //Verify Signature
 
         const payload = { signature: signMessageData, encryptedData };
-        fetch(
-            `${process.env.NEXT_PUBLIC_HOST_URL}/beneficiaries/verify-signature`,
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(payload),
-            }
-        )
+        fetch(newUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+        })
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -31,11 +31,12 @@ const ReportModal = ({ show, handleModal }) => {
                 return response.json();
             })
             .then((data) => {
-                Swal.fire({
-                    title: "Wallet Verified Successfully",
-                    icon: "success",
-                });
-                resetState();
+                data &&
+                    Swal.fire({
+                        title: "Wallet Verified Successfully",
+                        icon: "success",
+                    });
+                // resetState();
             })
             .catch((error) => {
                 console.error("Error:", error);
@@ -94,7 +95,7 @@ const ReportModal = ({ show, handleModal }) => {
                                             value={`${encryptedData}   `}
                                             readOnly
                                             className="textarea"
-                                        ></textarea>
+                                        />
 
                                         {signMessageData && (
                                             <>
@@ -112,7 +113,7 @@ const ReportModal = ({ show, handleModal }) => {
                                                     }
                                                     readOnly
                                                     className="textarea"
-                                                ></textarea>
+                                                />
                                             </>
                                         )}
                                         {/* Verify Wallet Address button */}
