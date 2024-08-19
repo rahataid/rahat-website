@@ -39,7 +39,6 @@
         "link_linkedin": "https://www.linkedin.com/in/shristi-piya-27052210a/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-ream-rahat.png"
     },
-
     {
         "id": "21",
         "fname": "Manjik Shrestha",
@@ -52,18 +51,18 @@
     },
     {
         "id": "15",
-        "fname": "Ashmita Manandhar",
-        "designation": "Project Manager",
+        "fname": "Aayushi Karmacharya",
+        "designation": "Outreach and Partnership Manager",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:ashmita.manandhar@rumsan.com",
-        "link_linkedin": "https://www.linkedin.com/in/ashmita-manandhar-shrestha-a49054190/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rahat-team-asmita.png"
+        "link_mail": "mailto:ayushi.karmacharya@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/aayushi-karmacharya-125b3916b",
+        "team_image": "https://assets.rumsan.net/rumsan-group/aayushi-karmacharya-rahat-team.jpg"
     },
     {
         "id": "18",
         "fname": "Hima Tamang",
-        "designation": "Project Officer",
+        "designation": "M&E and Documentation Lead",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:hima.rumsan@gmail.com",
@@ -80,7 +79,6 @@
         "link_linkedin": "https://www.linkedin.com/in/shristi-khayargoli/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-k-rahat-team.png"
     },
-
     {
         "id": "20",
         "fname": "Raghav Kattel",
@@ -122,17 +120,7 @@
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/kanil-team-rahat.png"
     },
     {
-        "id": "27",
-        "fname": "Nirmal Chongbang",
-        "designation": "Project Coordinator",
-        "icon_mail": "feather-mail",
-        "icon_linkedin": "feather-linkedin",
-        "link_mail": "",
-        "link_linkedin": "https://www.linkedin.com/in/nirmal-chongbang-92a3a34a/",
-        "team_image": "/images/pic/nirmal.png"
-    },
-    {
-        "id": "27",
+        "id": "28",
         "fname": "Achyut Subedi ",
         "designation": "Community Manager",
         "icon_mail": "feather-mail",
@@ -142,4 +130,3 @@
         "team_image": "/images/pic/achyut.png"
     }
 ]
-

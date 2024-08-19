@@ -16,6 +16,7 @@ import Wrapper from "src/layout/wrapper";
 import homepageData from "../data/home.json";
 import VideoArea from "@components/youtube-video";
 import OurEcosystem from "@containers/our-ecosystem";
+import MainBannerArea from "@containers/homepage-main";
 
 export async function getStaticProps() {
     return { props: { className: "template-color-1" } };
@@ -29,16 +30,18 @@ const Home = () => {
         <Wrapper>
             <SEO pageTitle="Home" />
             <Header />
-            <main id="main-content">
+            <MainBannerArea />
+            {/* <main id="main-content">
                 <HeroArea data={content["hero-section"]} />
-            </main>
-            <AboutUs />
+            </main> */}
+            {/* <AboutUs /> */}
             <WeAre />
-            <Milestones />
+
             {/* <VideoArea data={content["video-section"]} /> */}
             {/* <Benefits /> */}
             {/* <OurPlatform /> */}
             <OurEcosystem />
+            <Milestones />
             {/* <ProductFeatures /> */}
             {/* <OurServices /> */}
             <Footer />

@@ -20,7 +20,7 @@ const Footer = ({ space, className, data }) => (
         >
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div className="col-lg-3 col-md-6 col-sm-6 col-12">
                         <div className="widget-content-wrapper">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/rumsan-logo-raha-footer.png"
@@ -32,16 +32,15 @@ const Footer = ({ space, className, data }) => (
                                 }}
                             />
                             <p>
-                                Rumsan provides blockchain consulting for your
-                                business and engineering requirements. We
-                                envision creating societal impact.
+                                Rumsan is a blockchain company focused on social
+                                impact.
                             </p>
                         </div>
                     </div>
 
                     <div className="col-lg-2 col-md-6 col-sm-6 col-12 mt_mobile--40">
                         <div className="">
-                            <h6 className="widget-title">Techonolgy</h6>
+                            <h6 className="widget-title">Technology</h6>
 
                             <ul className="footer-list-one">
                                 <li className="single-list">
@@ -55,7 +54,7 @@ const Footer = ({ space, className, data }) => (
                                 <li className="single-list">
                                     <a
                                         target="_blank"
-                                        href="https://github.com/esatya"
+                                        href="https://github.com/rahataid"
                                     >
                                         GitHub
                                     </a>
@@ -101,7 +100,7 @@ const Footer = ({ space, className, data }) => (
                                 <li>
                                     <a
                                         target="_blank"
-                                        href="https://www.linkedin.com/company/esatya/"
+                                        href="https://www.linkedin.com/company/rumsan/mycompany/?viewAsMember=true"
                                     >
                                         <span className="icon">
                                             <i className="feather-linkedin" />
@@ -122,7 +121,7 @@ const Footer = ({ space, className, data }) => (
                         </div>
                     </div>
 
-                    <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-12 mt_md--40 mt_sm--40">
                         <div className="">
                             <h6 className="widget-title">SDG Compliances</h6>
                             <div className="sdg-compliances">
@@ -130,30 +129,23 @@ const Footer = ({ space, className, data }) => (
                                     className="row"
                                     style={{ marginTop: "-1rem" }}
                                 >
-                                    <div className="col-6">
+                                    <div className="col-4">
                                         <img
                                             src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-01.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
                                     </div>
-                                    <div className="col-6">
-                                        <img
-                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-02.jpg"
-                                            alt=""
-                                            style={{ marginTop: "1rem" }}
-                                        />
-                                    </div>
-                                    <div className="col-6">
+                                    <div className="col-4">
                                         <img
                                             src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/sdc-compliances-rahat-05.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
                                     </div>
-                                    <div className="col-6">
+                                    <div className="col-4">
                                         <img
-                                            src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/sdg-climate-chane-13.png"
+                                            src="https://assets.rumsan.net/rumsan-group/sdg-9-rahat.jpg"
                                             alt=""
                                             style={{ marginTop: "1rem" }}
                                         />
@@ -210,4 +202,3 @@ Footer.defaultProps = {
 };
 
 export default Footer;
-

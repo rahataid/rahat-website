@@ -86,6 +86,7 @@
         "remark-html": "^15.0.1",
         "sal.js": "^0.8.5",
         "sass": "^1.45.0",
+        "sharp": "^0.33.3",
         "styled-components": "^6.0.0-rc.1",
         "sweetalert2": "^11.10.6",
         "viem": "^2.9.5",

@@ -5,7 +5,7 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 const JobDetails = ({ data }) => {
     return (
         <Container fluid>
-            <Container className="mt-5 p-5 border">
+            <Container className="mt-5 p-4 border">
                 {data?.type === "diff" ? (
                     <div className="text-center">
                         <h2
@@ -22,7 +22,7 @@ const JobDetails = ({ data }) => {
                         </h2>
                     </div>
                 ) : (
-                    <Row xs="1" md="3" sm>
+                    <Row xs="1" md="2" className="align-items-center">
                         <Col
                             style={{
                                 fontFamily: "Poppins",
@@ -31,19 +31,20 @@ const JobDetails = ({ data }) => {
                                 lineHeight: "normal",
                                 color: "#231F20",
                             }}
-                            className="fs-1"
+                            className="fs-2 span-2"
                         >
                             {data?.designation}
                         </Col>
 
                         <Col
-                            className="fs-3"
+                            className="fs-3 "
                             style={{
                                 fontFamily: "Poppins",
                                 fontStyle: "normal",
                                 fontWeight: 500,
                                 lineHeight: "normal",
                                 color: "#231F20",
+                                padding: 10,
                             }}
                         >
                             <span>
@@ -72,6 +73,28 @@ const JobDetails = ({ data }) => {
                             </span>
                             <span className="mx-5">{data?.required}</span>
                         </Col>
+
+                        {data?.location && (
+                            <Col
+                                className="fs-3"
+                                style={{
+                                    fontFamily: "Poppins",
+                                    fontStyle: "normal",
+                                    fontWeight: 500,
+                                    lineHeight: "normal",
+                                    color: "#231F20",
+                                    padding: 10,
+                                }}
+                            >
+                                <span>
+                                    <Iconify
+                                        icon="mdi:location"
+                                        width={25}
+                                    ></Iconify>
+                                </span>
+                                <span className="mx-5">{data?.location}</span>
+                            </Col>
+                        )}
                     </Row>
                 )}
             </Container>
@@ -114,13 +137,22 @@ const JobDetails = ({ data }) => {
                     <>
                         <h6>About Rahat</h6> <br />
                         <p>
-                            Rahat is a blockchain-based financial access
+                            {/* Rahat is a blockchain-based financial access
                             platform to support vulnerable communities and build
                             resilience against the impact of climate change. Our
                             offerings cater to humanitarian agencies and
                             financial institutions, facilitating impactful
                             change in financial access to the underbanked
-                            population.
+                            population. [] */}
+                            Rahat is a product of Rumsan Associates Pvt. Ltd.,
+                            an open-source blockchain-based financial access
+                            platform to support vulnerable communities and a
+                            community showcase platform. It uses a community
+                            platform to connect donors and communities to
+                            support their needs. Rahat also manages and monitors
+                            the flow of transactions in cash distribution
+                            projects, maintaining end-to-end transparency among
+                            various local communities and stakeholders.
                         </p>
                     </>
                 )}
@@ -241,7 +273,7 @@ const JobDetails = ({ data }) => {
                     <>
                         <h6>Role</h6> <br />
                         <ul>
-                            {data?.role?.map((content) => {
+                            {data?.role?.map((content, index) => {
                                 return (
                                     <li
                                         style={{
@@ -251,6 +283,7 @@ const JobDetails = ({ data }) => {
                                             lineHeight: "normal",
                                             color: "#231F20",
                                         }}
+                                        key={index}
                                         className="fs-3"
                                     >
                                         {content}
@@ -302,44 +335,77 @@ const JobDetails = ({ data }) => {
                     </>
                 )}
             </Container>
-
-            <Container
-                className="mt-5"
-                style={{
-                    fontFamily: "Poppins",
-                    fontStyle: "normal",
-                    fontWeight: 600,
-                    lineHeight: "normal",
-                    color: "#231F20",
-                }}
-            >
-                <h6>Payment Modality</h6> <br />
-                <p>
-                    The payment modality would be based on the following
-                    milestones
-                </p>
-                <div style={{ textAlign: "center" }}>
-                    <Image src="/images/pic/PaymentModality.png" />
-                </div>
-                <ul>
-                    {data?.paymentModality?.map((content) => {
-                        return (
-                            <li
-                                style={{
-                                    fontFamily: "Poppins",
-                                    fontStyle: "normal",
-                                    fontWeight: 500,
-                                    lineHeight: "normal",
-                                    color: "#231F20",
-                                }}
-                                className="fs-4"
-                            >
-                                {content}
-                            </li>
-                        );
-                    })}
-                </ul>
-            </Container>
+            {data?.paymentModality && (
+                <Container
+                    className="mt-5"
+                    style={{
+                        fontFamily: "Poppins",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "normal",
+                        color: "#231F20",
+                    }}
+                >
+                    <h6>Payment Modality</h6> <br />
+                    <p>
+                        The payment modality would be based on the following
+                        milestones
+                    </p>
+                    <div style={{ textAlign: "center" }}>
+                        <Image src="/images/pic/PaymentModality.png" />
+                    </div>
+                    <ul>
+                        {data?.paymentModality?.map((content) => {
+                            return (
+                                <li
+                                    style={{
+                                        fontFamily: "Poppins",
+                                        fontStyle: "normal",
+                                        fontWeight: 500,
+                                        lineHeight: "normal",
+                                        color: "#231F20",
+                                    }}
+                                    className="fs-4"
+                                >
+                                    {content}
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </Container>
+            )}
+            {data?.benefits && (
+                <Container
+                    className="mt-5"
+                    style={{
+                        fontFamily: "Poppins",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "normal",
+                        color: "#231F20",
+                    }}
+                >
+                    <h6>Benefits</h6> <br />
+                    <ul>
+                        {data?.benefits?.map((content) => {
+                            return (
+                                <li
+                                    style={{
+                                        fontFamily: "Poppins",
+                                        fontStyle: "normal",
+                                        fontWeight: 500,
+                                        lineHeight: "normal",
+                                        color: "#231F20",
+                                    }}
+                                    className="fs-3"
+                                >
+                                    {content}
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </Container>
+            )}
 
             {data?.type === "diff" ? (
                 <>
@@ -453,8 +519,13 @@ const JobDetails = ({ data }) => {
                                 marginLeft: 10,
                             }}
                         >
-                            anusha.thapa@rumsan.net.
+                            anusha.thapa@rumsan.net. &nbsp;
                         </span>
+                        {data?.candidates && (
+                            <>
+                                Female candidates are highly encouraged to apply
+                            </>
+                        )}
                     </p>
                 </Container>
             )}

@@ -31,19 +31,19 @@ const PartnersAndCollab = () => {
                         alt="Icon 1"
                     />
                 </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://assets.rumsan.net/rumsan-group/gsr-foundation-rahat-partner.png"
+                        alt="Icon 1"
+                    />
+                </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://assets.rumsan.net/rumsan-group/circle-rahat-partner.png"
+                        alt="Icon 1"
+                    />
+                </div>
 
-                <div style={iconItemStyles}>
-                    <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/village-capital-collab-logo.png"
-                        alt="Icon 1"
-                    />
-                </div>
-                <div style={iconItemStyles}>
-                    <img
-                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-dpc-rahat-logo.png"
-                        alt="Icon 1"
-                    />
-                </div>
                 <div style={iconItemStyles}>
                     <a href="https://bc100plus.org/" target="_blank">
                         <img
@@ -89,6 +89,18 @@ const PartnersAndCollab = () => {
                     <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-tayaba.png"
                         alt="Icon 3"
+                    />
+                </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/village-capital-collab-logo.png"
+                        alt="Icon 1"
+                    />
+                </div>
+                <div style={iconItemStyles}>
+                    <img
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-dpc-rahat-logo.png"
+                        alt="Icon 1"
                     />
                 </div>
             </div>

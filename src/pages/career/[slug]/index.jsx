@@ -9,8 +9,8 @@ import { useRouter } from "next/router";
 
 const Index = () => {
     const router = useRouter();
-    const { id } = router.query;
-    const data = datas?.jobs?.find((content) => content?.id.toString() === id);
+    const { slug } = router.query;
+    const data = datas?.jobs?.find((content) => content?.slug === slug);
 
     return (
         <Wrapper>

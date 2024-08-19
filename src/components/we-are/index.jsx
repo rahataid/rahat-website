@@ -4,17 +4,14 @@ import { Image } from "react-bootstrap";
 const WeAre = () => (
     <div className="rn-section-gapTop">
         <div className="container">
-            <div className="section-title-weare">
-                <h5>
-                    <strong style={{ fontWeight: "500" }}>
-                        We are a UNICEF Venture Fund Portfolio Startup and a
-                        Grantee of GSMA Innovation Fund for Anticipatory
-                        Humanitarian Action. Additionally, we have been
-                        recognized as the MIT Solver Team for 2023. Furthermore,
-                        the Digital Public Goods Alliance has designated us as a
-                        digital public good listed on the DPG registry.
-                    </strong>
-                </h5>
+            <div className="row mb--40">
+                <div className="title-area text-center">
+                    <h3 className="title mb--15">Partners and Supporters</h3>
+                    <p className="subtitle">
+                        We are honored to be supported by prestigious
+                        organizations.
+                    </p>
+                </div>
             </div>
             <div className="rn-weAre-one color-shape-7">
                 <div className="row g-5 d-flex justify-content-center">
@@ -22,7 +19,7 @@ const WeAre = () => (
                         <div className="rn-about-wrapper text-center">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/unicef-fec-final.jpg"
-                                alt=""
+                                alt="unicef-innovation"
                                 width="200px"
                             />
                         </div>
@@ -31,16 +28,7 @@ const WeAre = () => (
                         <div className="rn-about-wrapper text-center">
                             <img
                                 src="/images/logo/GSMA logo.png"
-                                alt="mit-solve"
-                                width="200px"
-                            />
-                        </div>
-                    </div>
-                    <div className="col-lg-3 col-md-6 col-6 text-center">
-                        <div className="rn-about-wrapper">
-                            <img
-                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/dpga-rahat.png"
-                                alt=""
+                                alt="gsma-logo"
                                 width="200px"
                             />
                         </div>
@@ -50,6 +38,53 @@ const WeAre = () => (
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-logo-home-page.png"
                                 alt="mit-solve"
+                                width="200px"
+                            />
+                        </div>
+                    </div>
+                    <div className="col-lg-3 col-md-6 col-6 text-center">
+                        <div className="rn-about-wrapper">
+                            <img
+                                src="https://assets.rumsan.net/rumsan-group/partners-gsr-foundation.png"
+                                alt="gsr-foundation-logo"
+                                width="200px"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="row g-5 d-flex justify-content-center pt--40">
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper text-center">
+                            <img
+                                src="https://assets.rumsan.net/rumsan-group/partners-circle-png.png"
+                                alt="circle-logo"
+                                width="200px"
+                            />
+                        </div>
+                    </div>
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper text-center">
+                            <img
+                                src="https://assets.rumsan.net/rumsan-group/partners-calp-network.png"
+                                alt="calp-network-logo"
+                                width="200px"
+                            />
+                        </div>
+                    </div>
+                    <div className="col-lg-3 col-md-6 col-6 text-center">
+                        <div className="rn-about-wrapper">
+                            <img
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/dpga-rahat.png"
+                                alt="dgpa-logo"
+                                width="200px"
+                            />
+                        </div>
+                    </div>
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper text-center">
+                            <img
+                                src="https://assets.rumsan.net/rumsan-group/partners-google-startup-png.png"
+                                alt="google-startup"
                                 width="200px"
                             />
                         </div>

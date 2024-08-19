@@ -35,7 +35,7 @@ const OurEcosystem = ({ space, className }) => {
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
                                         alt="cva-ecosystem-banner"
                                         width={489}
-                                        height={360}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
@@ -63,7 +63,7 @@ const OurEcosystem = ({ space, className }) => {
                                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/rahat-beema-banner.jpg"
                                         alt="rahat-beema-banner"
                                         width={489}
-                                        height={360}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
@@ -91,7 +91,7 @@ const OurEcosystem = ({ space, className }) => {
                                         alt="anticipatory-actions-banner"
                                         className="img-fluid"
                                         width={489}
-                                        height={360}
+                                        height={366}
                                     />
                                 </div>
                                 <div className="content">
@@ -110,17 +110,6 @@ const OurEcosystem = ({ space, className }) => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="contact-cta-box-short spacing">
-                    <h3>Let's Chat !</h3>
-
-                    <a
-                        href="/contact-form"
-                        className="btn btn-medium btn-primary"
-                    >
-                        Try Our Demo
-                    </a>
                 </div>
             </div>
         </div>

@@ -2,11 +2,12 @@
     "jobs": [
         {
             "id": 1,
+            "slug": "outreach-and-partnerships-manager",
             "description": "We are looking for an energetic and highly motivated individual who enjoys networking and can ensure  commercial and strategic relationships with our key targeted partners. You should have a passion to work in the humanitarian sector, a strong understanding of IT operations, the zeal and patience to work with multiple stakeholders, and the ability to drive efficiency.",
             "designation": "Outreach and Partnerships Manager",
             "duration": "Full Time",
             "required": 1,
-            "status": true,
+            "status": false,
             "role": [
                 "Create a systematic, process-driven approach to partner outreach and relationship management",
                 "Research partners, identify key players, and generate interest",
@@ -29,6 +30,7 @@
         },
         {
             "id": 2,
+            "slug": "operation-manager",
             "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
             "designation": "Operation Manager",
             "duration": "Full Time",
@@ -56,15 +58,16 @@
         },
         {
             "id": 3,
+            "slug": "rfp-for-design-and-development-of-rahat-aa-services",
             "description": "We are seeking a dedicated Operations Manager to build efficiency in our business processes and initiatives. As an Operations Manager at Rahat, you will be responsible for developing strategies, supporting and monitoring overall operations of Rahat. You should have a passion for humanitarian work, a strong understanding of IT operations, and the ability to drive efficiency.",
-            "designation": "RFP for design and development of Rahat AA Services",
+            "designation": "RFP for design and development of Rahat AA Services(July 13,2023)",
             "objective": [
                 "Launch beneficiary validation and reporting module.",
                 "Develop off-ramping services for Rahat.",
                 "Develop multi-sig trigger mechanism in Rahat using smart contracts."
             ],
             "duration": "The development of this system shall start from Dec 2023 and be completed by May 2024.",
-            "status": false,
+            "status": true,
             "type": "diff",
             "scope": [
                 {
@@ -104,7 +107,36 @@
                 "Upon completion of Milestone 2 (33.33%)",
                 "Upon completion of Scope of work defined in the agreement (33.33%)"
             ]
+        },
+        {
+            "id": 4,
+            "slug": "local-community-coordinator",
+            "description": "We are looking for motivated individuals who are committed to joining our efforts to serve communities with technical as well as financial support. As a local community coordinator, you will onboard local community organizations to our community platform, engage with them, and manage them.",
+            "designation": "Local Community Coordinator",
+            "duration": "Contract Basis (Six Month)",
+            "required": 1,
+            "location": "Gandaki Province",
+            "status": false,
+            "candidates": true,
+            "role": [
+                "Reach out to community organizations by call and emails and from your personal link.",
+                "Visit community organizations and pitch them about the Rahat and Rahat community platforms.",
+                "Onboard them by completing their needs assessment and other required resources, like photos and social media links.",
+                "Support the community manager in documenting and reflecting on the onboarded communities on the Rahat Community platform.",
+                "Support the community manager in organizing different virtual or physical workshops aimed at engaging the onboarded communities.",
+                "Handle queries and feedback received from community organizations."
+            ],
+            "qualificationAndRequirements": [
+                "Completed Bachelor’s degree in Social work, development studies, or related fields",
+                "Fresher’s can appl",
+                "Fluency in written and spoken Nepali and English",
+                "Excellent Microsoft Office applications skills (Google Docs, Google Sheets, Slides, and  Emails)"
+            ],
+            "benefits": [
+                "Competitive salary",
+                "Professional development opportunities",
+                "Collaborative and supportive work environment"
+            ]
         }
     ]
 }
-

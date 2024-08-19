@@ -17,7 +17,7 @@
             {
                 "id": 51,
                 "text": "Blogs",
-                "path": "/blogs"
+                "path": "/blogs?page=1&limit=100"
             },
 
             {
@@ -42,6 +42,11 @@
                 "target": "_blank"
             },
             {
+                "id": 56,
+                "text": "Our Projects",
+                "path": "/projects"
+            },
+            {
                 "id": 57,
                 "text": "Reports",
                 "path": "/reports",
@@ -49,7 +54,11 @@
             }
         ]
     },
-
+    {
+        "id": 9,
+        "text": "Recognitions",
+        "path": "/recognitions"
+    },
     {
         "id": 2,
         "text": "Communities",

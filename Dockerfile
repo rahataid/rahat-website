@@ -13,7 +13,8 @@ RUN yarn build
 FROM node:18-alpine3.17 AS prodDeps
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
-RUN yarn install --production
+RUN yarn add sharp && \
+  yarn install --production
 
 # Production image, copy all the files and run next
 FROM node:18-alpine3.17 AS runner

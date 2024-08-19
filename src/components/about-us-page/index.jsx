@@ -77,16 +77,17 @@ const AboutUsDetails = ({ space, className }) => (
                         </h5>
 
                         <p style={{ margin: "0px 0px 10px" }}>
-                            We aim to make humanitarian aid distribution
-                            efficient and transparent to support marginalized
-                            communities.
+                            To bridge the opportunity divide and break the
+                            poverty cycle by providing immediate access to
+                            financial aid, building financial resilience, and
+                            fostering digital financial literacy for the last
+                            billion.
                         </p>
-
+                        <h5 className="mt-5" style={{ margin: "0px 0px 10px" }}>
+                            Our Vision
+                        </h5>
                         <p style={{ margin: "0px" }}>
-                            Rahat strengthens financial inclusion for vulnerable
-                            community members and helps them receive cash
-                            transfers through local vendors in their
-                            communities.
+                            Financial Inclusion & Access for the last billion.
                         </p>
                     </div>
                 </div>
@@ -419,10 +420,13 @@ const AboutUsDetails = ({ space, className }) => (
                         <div className="row g-5 justify-content-center align-items-center pt--50">
                             {OurTeam.map((d) => (
                                 <>
-                                    <div key={d.id} className="col-lg-2 col-6">
+                                    <div key={d.id} className="col-lg-3 col-6">
                                         <div className="user-thumbnail">
                                             <img
-                                                style={{ borderRadius: "50%" }}
+                                                style={{
+                                                    borderRadius: "50%",
+                                                    width: "250px",
+                                                }}
                                                 src={d.team_image}
                                                 alt={d.fname}
                                             />
@@ -524,6 +528,8 @@ const AboutUsDetails = ({ space, className }) => (
                                                     style={{
                                                         margin: "0",
                                                         fontSize: "10px",
+                                                        whiteSpace: "nowrap",
+                                                        marginLeft: "-5px",
                                                     }}
                                                 >
                                                     {d.designation}
@@ -680,4 +686,3 @@ AboutUsDetails.defaultProps = {
 };
 
 export default AboutUsDetails;
-
