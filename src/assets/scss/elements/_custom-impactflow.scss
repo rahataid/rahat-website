@@ -5,6 +5,30 @@
     margin-top: -300px;
 }
 
+.custom-btn-primary-alta {
+    background: #212e48 !important;
+    color: var(--color-white);
+    transition: all 0.2s ease !important;
+}
+.custom-btn-primary-alta:hover {
+    background: #2b7ec1 !important;
+}
+
+.custom-btn-primary-verify {
+    background: #2b7ec1 !important;
+    color: var(--color-white);
+    transition: 5s !important;
+    width: auto !important;
+}
+.custom-btn-primary-verify:hover {
+    background: linear-gradient(
+        90deg,
+        #2b7ec1,
+        #3f9eeb 88%,
+        #3197eb
+    ) !important;
+}
+
 .author-wrapper {
     display: flex;
     justify-content: flex-start;

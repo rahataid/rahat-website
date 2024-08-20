@@ -16,6 +16,8 @@ import { wrapper } from "../redux/store";
 import { SnackbarProvider, closeSnackbar } from "notistack";
 import { IconButton } from "@mui/material";
 import Iconify from "@components/iconify";
+import { QueryProvider } from "src/providers/query-provider";
+import { Wagmi } from "src/providers/wagmi-provider";
 
 const MyApp = ({ Component, ...pageProps }) => {
     const { store, props } = wrapper.useWrappedStore(pageProps);
@@ -36,35 +38,39 @@ const MyApp = ({ Component, ...pageProps }) => {
     return (
         <ReduxProvider store={store}>
             <PersistGate loading={null} persistor={store.__persistor}>
-                <ProviderExample>
-                    <ThemeProvider defaultTheme="light">
-                        <SnackbarProvider
-                            maxSnack={5}
-                            anchorOrigin={{
-                                vertical: "top",
-                                horizontal: "right",
-                            }}
-                            preventDuplicate
-                            autoHideDuration={3000}
-                            action={(snackbarId) => (
-                                <IconButton
-                                    size="small"
-                                    onClick={() => closeSnackbar(snackbarId)}
-                                    sx={{ p: 0.5 }}
-                                >
-                                    <Iconify
-                                        width={16}
-                                        icon="mingcute:close-line"
-                                    />
-                                </IconButton>
-                            )}
-                        >
-                            <AppContainer>
-                                <Component {...props.pageProps} />
-                            </AppContainer>
-                        </SnackbarProvider>
-                    </ThemeProvider>
-                </ProviderExample>
+                <Wagmi>
+                    <QueryProvider>
+                        <ThemeProvider defaultTheme="light">
+                            <SnackbarProvider
+                                maxSnack={5}
+                                anchorOrigin={{
+                                    vertical: "top",
+                                    horizontal: "right",
+                                }}
+                                preventDuplicate
+                                autoHideDuration={3000}
+                                action={(snackbarId) => (
+                                    <IconButton
+                                        size="small"
+                                        onClick={() =>
+                                            closeSnackbar(snackbarId)
+                                        }
+                                        sx={{ p: 0.5 }}
+                                    >
+                                        <Iconify
+                                            width={16}
+                                            icon="mingcute:close-line"
+                                        />
+                                    </IconButton>
+                                )}
+                            >
+                                <AppContainer>
+                                    <Component {...props.pageProps} />
+                                </AppContainer>
+                            </SnackbarProvider>
+                        </ThemeProvider>
+                    </QueryProvider>
+                </Wagmi>
             </PersistGate>
         </ReduxProvider>
     );
