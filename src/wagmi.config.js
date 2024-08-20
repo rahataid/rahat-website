@@ -2,34 +2,22 @@
 
 import { getDefaultConfig } from "connectkit";
 import { createConfig, http } from "wagmi";
-import { polygonMumbai, mainnet, sepolia } from "wagmi/chains";
-import { safe } from "wagmi/connectors";
+import { mainnet, sepolia } from "wagmi/chains";
 
 export const config = createConfig(
     getDefaultConfig({
         chains: [
-            // mainnet,
+            mainnet,
             // sepolia,
-            // arbitrumGoerli,
-            // polygon,
-            polygonMumbai,
-            // arbitrumSepolia,
-            // rahatChain,
         ],
         batch: {
             multicall: true,
         },
         connectors: [
-            // walletConnect({
-            //   projectId: '1234',
-            // }),
-            safe(),
         ],
         transports: {
             [mainnet.id]: http(),
             [sepolia.id]: http(),
-            // [arbitrumSepolia.id]: http(),
-            [polygonMumbai.id]: http(),
         },
         walletConnectProjectId: "",
         // Required App Info
@@ -42,10 +30,4 @@ export const config = createConfig(
         appIcon: "https://family.co/logo.png", // your app's icon, no bigger than 1024x1024px (max. 1MB)
     })
 );
-
-// export default defineConfig({
-//   out: 'src/generated.ts',
-//   contracts: [],
-//   plugins: [],
-// });
 
