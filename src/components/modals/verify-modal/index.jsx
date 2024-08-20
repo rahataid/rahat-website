@@ -3,9 +3,9 @@ import Modal from "react-bootstrap/Modal";
 import { useSignMessage, useAccount } from "wagmi";
 import Button from "@ui/button";
 import Swal from "sweetalert2";
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import SuspensewithSearchParams from "@components/utils/suspense-with-search-params";
-import { useParams, usePathname, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 const ReportModal = ({ show, handleModal }) => {
     const { isConnected } = useAccount();
@@ -14,8 +14,6 @@ const ReportModal = ({ show, handleModal }) => {
     const newUrl = params.get("callBackUrl");
 
     const handleSubmitSignature = async (encryptedData) => {
-        //Verify Signature
-
         const payload = { signature: signMessageData, encryptedData };
         fetch(newUrl, {
             method: "POST",
@@ -123,15 +121,15 @@ const ReportModal = ({ show, handleModal }) => {
                                                 className="mr--10 w-auto"
                                                 onClick={
                                                     signMessageData ===
-                                                    undefined
+                                                        undefined
                                                         ? () =>
-                                                              handleSignMessage(
-                                                                  encryptedData
-                                                              )
+                                                            handleSignMessage(
+                                                                encryptedData
+                                                            )
                                                         : () =>
-                                                              handleSubmitSignature(
-                                                                  encryptedData
-                                                              )
+                                                            handleSubmitSignature(
+                                                                encryptedData
+                                                            )
                                                 }
                                             >
                                                 {signMessageData === undefined
