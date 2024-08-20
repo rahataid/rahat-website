@@ -4,33 +4,15 @@ import ConnectWallet from "@components/wallet/connect-wallet";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense, useState } from "react";
-import { useSignMessage, useAccount } from "wagmi";
 import SuspensewithSearchParams from "@components/utils/suspense-with-search-params";
 import VerifyModal from "@components/modals/verify-modal";
 
-export default function Home(className, space, clsx) {
-    // ... (rest of the code remains the same)
-    const [selectedOption, setSelectedOption] = useState("");
-    const [walletAddress, setWalletAddress] = useState("");
-    const { isConnected } = useAccount();
-    const { data: signMessageData, signMessage } = useSignMessage();
-
+export default function Home() {
     const [isVerifyModalOpen, setIsVerifyModalOpen] = useState(false);
     const verifyModalHandler = () => setIsVerifyModalOpen((prev) => !prev);
 
     return (
         <>
-            {/* <style jsx>{`
-                .container {
-                    margin: 0 auto;
-                    align-items: center;
-                    background-color: #000;
-                }
-                .verify-background {
-                    background-color: #000;
-                }
-            `}</style> */}
-
             <div style={{ background: "#F8F8FF", minHeight: "100vh" }}>
                 <div
                     className="container"
