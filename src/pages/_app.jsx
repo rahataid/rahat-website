@@ -18,6 +18,7 @@ import { IconButton } from "@mui/material";
 import Iconify from "@components/iconify";
 import { QueryProvider } from "src/providers/query-provider";
 import { Wagmi } from "src/providers/wagmi-provider";
+import GoogleAnalytics from "@components/google-analytics";
 
 const MyApp = ({ Component, ...pageProps }) => {
     const { store, props } = wrapper.useWrappedStore(pageProps);
@@ -38,6 +39,7 @@ const MyApp = ({ Component, ...pageProps }) => {
     return (
         <ReduxProvider store={store}>
             <PersistGate loading={null} persistor={store.__persistor}>
+                <GoogleAnalytics />
                 <Wagmi>
                     <QueryProvider>
                         <ThemeProvider defaultTheme="light">
@@ -97,4 +99,3 @@ MyApp.propTypes = {
 };
 
 export default MyApp;
-
