@@ -20,7 +20,7 @@ RUN yarn add sharp && \
 FROM node:18-alpine3.17 AS runner
 USER node
 WORKDIR /usr/src/app
-COPY --chown=node:node --from=builder /opt/app/.env ./
+# COPY --chown=node:node --from=builder /opt/app/.env ./
 COPY --chown=node:node --from=builder /opt/app/next.config.js ./
 COPY --chown=node:node --from=builder /opt/app/public ./public
 COPY --chown=node:node --from=builder /opt/app/.next ./.next
