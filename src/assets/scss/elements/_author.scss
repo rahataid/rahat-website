@@ -397,3 +397,18 @@
     z-index: 1;
 }
 
+@media (max-width: 768px) {
+    .author-wrapper .author-inner .rn-author-info-content {
+        margin-left: 10px;
+
+        h4.title {
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+

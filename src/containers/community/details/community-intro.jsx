@@ -39,7 +39,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                     objectFit="cover"
                     loader={customLoader}
                 />
-                <div className="overlay"></div>
+                <div className="overlay" />
             </div>
             <div
                 className={clsx(
@@ -53,8 +53,8 @@ const AuthorIntroArea = ({ className, space, community }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper">
                                 <div className="author-inner">
-                                    <div className="rn-author-info-content">
-                                        <h4 className="title">
+                                    <div className="rn-author-info-content ">
+                                        <h4 className="title ">
                                             {community?.name
                                                 ? community.name
                                                 : "Community Name"}
