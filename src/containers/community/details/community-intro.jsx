@@ -7,11 +7,44 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { connector } from "@web3/connectors/metaMask";
+import { truncateEthAddress } from "@utils/string";
+import { enqueueSnackbar } from "notistack";
 
 const AuthorIntroArea = ({ className, space, community }) => {
     const [isShareModalOpen, setIsShareModalOpen] = useState(false);
     const shareModalHandler = () => setIsShareModalOpen((prev) => !prev);
+    const [copyAction, setCopyAction] = useState(false);
 
+    const clickToCopy = (address) => {
+        navigator.clipboard.writeText(address);
+        setCopyAction(true);
+        enqueueSnackbar("Wallet Address Copied", {
+            variant: "info",
+            preventDuplicate: true,
+            autoHideDuration: 600,
+            anchorOrigin: {
+                vertical: "bottom",
+                horizontal: "left",
+            },
+            content: (key) => (
+                <div
+                    id={key}
+                    style={{
+                        backgroundColor: "#2B7EC1",
+                        color: "white",
+                        padding: "8px 16px",
+                        borderRadius: "4px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        width: "220px",
+                    }}
+                >
+                    Wallet Address Copied
+                </div>
+            ),
+            onClose: () => setCopyAction(false),
+        });
+    };
     const customLoader = ({ src, width, quality }) => {
         return `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`;
     };
@@ -39,7 +72,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
                     objectFit="cover"
                     loader={customLoader}
                 />
-                <div className="overlay"></div>
+                <div className="overlay" />
             </div>
             <div
                 className={clsx(
@@ -53,14 +86,41 @@ const AuthorIntroArea = ({ className, space, community }) => {
                         <div className="col-lg-12">
                             <div className="author-wrapper">
                                 <div className="author-inner">
-                                    <div className="rn-author-info-content">
-                                        <h4 className="title">
+                                    <div className="rn-author-info-content ">
+                                        <h4
+                                            className="title "
+                                            style={{ fontSize: "2.5rem" }}
+                                        >
                                             {community?.name
                                                 ? community.name
                                                 : "Community Name"}
                                         </h4>
-                                        <p className="address mb--15">
-                                            {community?.address}
+                                        <p
+                                            className="address mb--15"
+                                            style={{ fontSize: "2rem" }}
+                                        >
+                                            {truncateEthAddress(
+                                                community?.address
+                                            )}
+                                            <span
+                                                className="m-2"
+                                                onClick={() =>
+                                                    clickToCopy(
+                                                        community?.address
+                                                    )
+                                                }
+                                                style={{ cursor: "pointer" }}
+                                                title={"Click to copy"}
+                                            >
+                                                {copyAction ? (
+                                                    <Iconify icon="tabler:copy-check-filled" />
+                                                ) : (
+                                                    <Iconify
+                                                        icon="ph:copy"
+                                                        width={20}
+                                                    />
+                                                )}
+                                            </span>
                                         </p>
                                     </div>
                                 </div>
