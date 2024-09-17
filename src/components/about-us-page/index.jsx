@@ -418,82 +418,82 @@ const AboutUsDetails = ({ space, className }) => (
                     <div className="d-none d-lg-block">
                         <h1>Our Team</h1>
                         <div className="row g-5 justify-content-center align-items-center pt--50">
-                            {OurTeam.map((d) => (
-                                <>
-                                    <div key={d.id} className="col-lg-3 col-6">
-                                        <div className="user-thumbnail">
-                                            <img
+                            {OurTeam.map((d, index) => (
+                                <div
+                                    id={d.id}
+                                    key={`${d.id} - ${index}`}
+                                    className="col-lg-3 col-6"
+                                >
+                                    <div className="user-thumbnail">
+                                        <img
+                                            style={{
+                                                borderRadius: "50%",
+                                                width: "250px",
+                                            }}
+                                            src={d.team_image}
+                                            alt={d.fname}
+                                        />
+
+                                        <div className="title-post pt--20">
+                                            <h5
                                                 style={{
-                                                    borderRadius: "50%",
-                                                    width: "250px",
+                                                    margin: "0",
+                                                    fontSize: "18px",
                                                 }}
-                                                src={d.team_image}
-                                                alt={d.fname}
-                                            />
-
-                                            <div className="title-post pt--20">
-                                                <h5
-                                                    style={{
-                                                        margin: "0",
-                                                        fontSize: "18px",
-                                                    }}
-                                                >
-                                                    {d.fname}
-                                                </h5>
-                                                <p
-                                                    className="pt--10"
-                                                    style={{
-                                                        margin: "0",
-                                                        fontSize: "14px",
-                                                    }}
-                                                >
-                                                    {d.designation}
-                                                </p>
-                                            </div>
-
-                                            <ul
-                                                className="social-copyright d-flex justify-content-center align-items-center"
-                                                style={{ padding: "0px" }}
                                             >
-                                                <li
-                                                    style={{
-                                                        listStyle: "none",
-                                                    }}
-                                                >
-                                                    <a
-                                                        href={d.link_mail}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <i
-                                                            className={
-                                                                d.icon_mail
-                                                            }
-                                                        />
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        listStyle: "none",
-                                                        marginLeft: "10px",
-                                                    }}
-                                                >
-                                                    <a
-                                                        href={d.link_linkedin}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <i
-                                                            className={
-                                                                d.icon_linkedin
-                                                            }
-                                                        />
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                                {d.fname}
+                                            </h5>
+                                            <p
+                                                className="pt--10"
+                                                style={{
+                                                    margin: "0",
+                                                    fontSize: "14px",
+                                                }}
+                                            >
+                                                {d.designation}
+                                            </p>
                                         </div>
+
+                                        <ul
+                                            className="social-copyright d-flex justify-content-center align-items-center"
+                                            style={{ padding: "0px" }}
+                                        >
+                                            <li
+                                                style={{
+                                                    listStyle: "none",
+                                                }}
+                                            >
+                                                <a
+                                                    href={d.link_mail}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <i
+                                                        className={d.icon_mail}
+                                                    />
+                                                </a>
+                                            </li>
+                                            <li
+                                                style={{
+                                                    listStyle: "none",
+                                                    marginLeft: "10px",
+                                                }}
+                                            >
+                                                <a
+                                                    href={d.link_linkedin}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <i
+                                                        className={
+                                                            d.icon_linkedin
+                                                        }
+                                                    />
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -501,87 +501,87 @@ const AboutUsDetails = ({ space, className }) => (
                     <div className="d-block d-lg-none">
                         <h1 style={{ fontSize: "21px" }}>Our Team</h1>
                         <div className="row g-5 justify-content-center align-items-center pt--50">
-                            {PhoneView.map((d) => (
-                                <>
-                                    <div key={d.id} className="col-lg-2 col-6">
-                                        <div className="user-thumbnail">
-                                            <img
-                                                style={{
-                                                    borderRadius: "50%",
-                                                    width: "200px",
-                                                }}
-                                                src={d.team_image}
-                                                alt={d.fname}
-                                            />
+                            {PhoneView.map((d, index) => (
+                                <div
+                                    id={d.id}
+                                    key={`${d.id} - ${index}`}
+                                    className="col-lg-2 col-6"
+                                >
+                                    <div className="user-thumbnail">
+                                        <img
+                                            style={{
+                                                borderRadius: "50%",
+                                                width: "200px",
+                                            }}
+                                            src={d.team_image}
+                                            alt={d.fname}
+                                        />
 
-                                            <div className="title-post pt--20">
-                                                <h5
-                                                    style={{
-                                                        margin: "0",
-                                                        fontSize: "14px",
-                                                    }}
-                                                >
-                                                    {d.fname}
-                                                </h5>
-                                                <p
-                                                    className=""
-                                                    style={{
-                                                        margin: "0",
-                                                        fontSize: "10px",
-                                                        whiteSpace: "nowrap",
-                                                        marginLeft: "-5px",
-                                                    }}
-                                                >
-                                                    {d.designation}
-                                                </p>
-                                            </div>
-
-                                            <ul
-                                                className="social-copyright d-flex justify-content-center align-items-center"
+                                        <div className="title-post pt--20">
+                                            <h5
                                                 style={{
-                                                    padding: "0px",
-                                                    marginTop: "-5px",
+                                                    margin: "0",
+                                                    fontSize: "14px",
                                                 }}
                                             >
-                                                <li
-                                                    style={{
-                                                        listStyle: "none",
-                                                    }}
-                                                >
-                                                    <a
-                                                        href={d.link_mail}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <i
-                                                            className={
-                                                                d.icon_mail
-                                                            }
-                                                        />
-                                                    </a>
-                                                </li>
-                                                <li
-                                                    style={{
-                                                        listStyle: "none",
-                                                        marginLeft: "10px",
-                                                    }}
-                                                >
-                                                    <a
-                                                        href={d.link_linkedin}
-                                                        target="_blank"
-                                                        rel="noreferrer"
-                                                    >
-                                                        <i
-                                                            className={
-                                                                d.icon_linkedin
-                                                            }
-                                                        />
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                                {d.fname}
+                                            </h5>
+                                            <p
+                                                className=""
+                                                style={{
+                                                    margin: "0",
+                                                    fontSize: "10px",
+                                                    whiteSpace: "nowrap",
+                                                    marginLeft: "-5px",
+                                                }}
+                                            >
+                                                {d.designation}
+                                            </p>
                                         </div>
+
+                                        <ul
+                                            className="social-copyright d-flex justify-content-center align-items-center"
+                                            style={{
+                                                padding: "0px",
+                                                marginTop: "-5px",
+                                            }}
+                                        >
+                                            <li
+                                                style={{
+                                                    listStyle: "none",
+                                                }}
+                                            >
+                                                <a
+                                                    href={d.link_mail}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <i
+                                                        className={d.icon_mail}
+                                                    />
+                                                </a>
+                                            </li>
+                                            <li
+                                                style={{
+                                                    listStyle: "none",
+                                                    marginLeft: "10px",
+                                                }}
+                                            >
+                                                <a
+                                                    href={d.link_linkedin}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    <i
+                                                        className={
+                                                            d.icon_linkedin
+                                                        }
+                                                    />
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </>
+                                </div>
                             ))}
                         </div>
                     </div>
