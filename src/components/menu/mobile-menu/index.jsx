@@ -33,38 +33,36 @@ const MobileMenu = ({ isOpen, onClick, menu, logo }) => {
             <OffcanvasBody>
                 <nav>
                     <ul className="mainmenu">
-                        {menu?.map((nav) => {
+                        {menu?.map((nav, index) => {
                             const hasChildren = !!nav.submenu || !!nav.megamenu;
                             return (
-                                <>
-                                    <li
-                                        className={clsx(
-                                            !!nav.submenu && "has-droupdown",
-                                            !!nav.megamenu && "with-megamenu",
-                                            hasChildren && "has-children"
-                                        )}
-                                        id={nav.id}
-                                        key={nav.id}
+                                <li
+                                    className={clsx(
+                                        !!nav.submenu && "has-droupdown",
+                                        !!nav.megamenu && "with-megamenu",
+                                        hasChildren && "has-children"
+                                    )}
+                                    id={nav.id}
+                                    key={`${nav.id} - ${index}`}
+                                >
+                                    <Anchor
+                                        className="nav-link its_new"
+                                        path={hasChildren ? "#!" : nav.path}
+                                        onClick={
+                                            hasChildren
+                                                ? onClickHandler
+                                                : (e) => e
+                                        }
                                     >
-                                        <Anchor
-                                            className="nav-link its_new"
-                                            path={hasChildren ? "#!" : nav.path}
-                                            onClick={
-                                                hasChildren
-                                                    ? onClickHandler
-                                                    : (e) => e
-                                            }
-                                        >
-                                            {nav.text}
-                                        </Anchor>
-                                        {nav?.submenu && (
-                                            <SubMenu menu={nav.submenu} />
-                                        )}
-                                        {nav?.megamenu && (
-                                            <MegaMenu menu={nav.megamenu} />
-                                        )}
-                                    </li>
-                                </>
+                                        {nav.text}
+                                    </Anchor>
+                                    {nav?.submenu && (
+                                        <SubMenu menu={nav.submenu} />
+                                    )}
+                                    {nav?.megamenu && (
+                                        <MegaMenu menu={nav.megamenu} />
+                                    )}
+                                </li>
                             );
                         })}
 
@@ -99,4 +97,3 @@ MobileMenu.propTypes = {
 };
 
 export default MobileMenu;
-

@@ -7,6 +7,7 @@ import clsx from "clsx";
 import PropTypes from "prop-types";
 import headerData from "../../data/header.json";
 import menuData from "../../data/menu.json";
+import Head from "next/head";
 
 const Header = ({ className }) => {
     const sticky = useSticky();
@@ -108,4 +109,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
