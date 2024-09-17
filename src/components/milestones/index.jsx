@@ -436,10 +436,8 @@ const FunFact = ({ className }) => {
 
 FunFact.propTypes = {
     className: PropTypes.string,
-    counter: PropTypes.number.isRequired,
     title: PropTypes.string,
     suffix: PropTypes.string,
 };
 
 export default FunFact;
-

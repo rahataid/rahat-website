@@ -119,6 +119,11 @@
                 "id": 2,
                 "text": "Privacy Policy",
                 "path": "/privacy-policy"
+            },
+            {
+                "id": 3,
+                "text": "Cookie Policy",
+                "path": "/cookie-policy"
             }
         ]
     },

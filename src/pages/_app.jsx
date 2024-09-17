@@ -78,19 +78,6 @@ const MyApp = ({ Component, ...pageProps }) => {
     );
 };
 
-// MyApp.getInitialProps = wrapper.getInitialAppProps(
-//     (store) => async (appCtx) => {
-//         const childrenGip = await App.getInitialProps(appCtx);
-
-//         return {
-//             pageProps: {
-//                 ...childrenGip.pageProps,
-//                 appName: "Rahat",
-//             },
-//         };
-//     }
-// );
-
 MyApp.propTypes = {
     Component: PropTypes.elementType,
     pageProps: PropTypes.shape({

@@ -172,10 +172,23 @@ const Footer = ({ space, className, data }) => (
                                     Rumsan
                                 </a>{" "}
                                 Company.
+                                {""}
                             </span>
                             <FooterLinkWidget
                                 data={footerData["footer-link-widget"]}
                             />
+                            {/* <div>
+                                <a
+                                    href="#"
+                                    className="termly-display-preferences"
+                                    style={{
+                                        fontSize: "16px",
+                                        color: "#2b7ec1",
+                                    }}
+                                >
+                                    Consent Preferences
+                                </a>
+                            </div> */}
                         </div>
                     </div>
                     {/* <div className="col-lg-6 col-md-12 col-sm-12">

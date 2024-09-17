@@ -11,8 +11,8 @@ const MobileMenu = ({ isOpen, onClick, menu, logo }) => (
         <OffcanvasBody>
             <nav>
                 <ul className="mainmenu">
-                    {menu?.map((nav) => (
-                        <li id={nav.id} key={nav.id}>
+                    {menu?.map((nav, index) => (
+                        <li id={nav.id} key={`${nav.id} - ${index}`}>
                             <Link
                                 activeClass="active"
                                 className="nav-link smoth-animation"

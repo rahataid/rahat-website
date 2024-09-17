@@ -1,12 +1,12 @@
-import AboutUs from "@components/about-us";
-import Benefits from "@components/benefits";
+// import AboutUs from "@components/about-us";
+// import Benefits from "@components/benefits";
 import Milestones from "@components/milestones";
-import OurPlatform from "@components/our-platform";
-import ProductFeatures from "@containers/product-features";
+// import OurPlatform from "@components/our-platform";
+// import ProductFeatures from "@containers/product-features";
 import SEO from "@components/seo";
 import WeAre from "@components/we-are";
-import HeroArea from "@containers/hero";
-import OurServices from "@components/our-services";
+// import HeroArea from "@containers/hero";
+// import OurServices from "@components/our-services";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import { normalizedData } from "@utils/methods";
@@ -14,7 +14,7 @@ import Wrapper from "src/layout/wrapper";
 
 // Demo data
 import homepageData from "../data/home.json";
-import VideoArea from "@components/youtube-video";
+// import VideoArea from "@components/youtube-video";
 import OurEcosystem from "@containers/our-ecosystem";
 import MainBannerArea from "@containers/homepage-main";
 
@@ -24,8 +24,6 @@ export async function getStaticProps() {
 
 const Home = () => {
     const content = normalizedData(homepageData?.content || []);
-
-    console.log("content", content);
     return (
         <Wrapper>
             <SEO pageTitle="Home" />
@@ -50,4 +48,3 @@ const Home = () => {
 };
 
 export default Home;
-

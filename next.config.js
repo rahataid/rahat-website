@@ -13,12 +13,12 @@ module.exports = {
             "rahat-rumsan.s3.amazonaws.com",
             "esatya.s3.amazonaws.com",
             "assets.rumsan.net",
-            'rahat-rumsan.s3.us-east-1.amazonaws.com',
-            'rahat-rumsan.s3.us-east-1.amazonaws.com',
-            'rahat.io',
-            'assets.rumsan.net',
-            'rahat',
-            'next'
+            "rahat-rumsan.s3.us-east-1.amazonaws.com",
+            "rahat-rumsan.s3.us-east-1.amazonaws.com",
+            "rahat.io",
+            "assets.rumsan.net",
+            "rahat",
+            "next",
         ],
     },
     webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -43,5 +43,13 @@ module.exports = {
         // Warning: This allows production builds to successfully complete even if
         // your project has ESLint errors.
         ignoreDuringBuilds: true,
+    },
+    rewrites: async () => {
+        return [
+            {
+                source: "/cookie-policy",
+                destination: "/cookie-policy.html",
+            },
+        ];
     },
 };
