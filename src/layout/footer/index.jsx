@@ -177,10 +177,10 @@ const Footer = ({ space, className, data }) => (
                             <FooterLinkWidget
                                 data={footerData["footer-link-widget"]}
                             />
-                            <div>
+                            {/* <div>
                                 <a
                                     href="#"
-                                    class="termly-display-preferences"
+                                    className="termly-display-preferences"
                                     style={{
                                         fontSize: "16px",
                                         color: "#2b7ec1",
@@ -188,7 +188,7 @@ const Footer = ({ space, className, data }) => (
                                 >
                                     Consent Preferences
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     {/* <div className="col-lg-6 col-md-12 col-sm-12">
