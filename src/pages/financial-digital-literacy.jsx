@@ -3,22 +3,21 @@ import MainBannerPage from "@components/main-banner";
 import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
-import FinancialDigitalLiteracyContainer from "@containers/financial-digital-literacy-container";
+import FinancialDigitalLiteracyHomePage from "@containers/finance-digital-literacy-page";
 
 const FinancialDigitalLiteracy = () => {
     return (
         <Wrapper>
-            <SEO pageTitle="Financial Digital Literacy" />
+            <SEO pageTitle="Digital & Financial Literacy" />
             <Header />
             <MainBannerPage
-                pageTitle={"Financial Digital Literacy"}
+                pageTitle={"Digital & Financial Literacy"}
                 imageLink={"/images/banner/FinancialLiteracyBanner.png"}
             />
-            <FinancialDigitalLiteracyContainer />
+            <FinancialDigitalLiteracyHomePage />
             <Footer />
         </Wrapper>
     );
 };
 
 export default FinancialDigitalLiteracy;
-
