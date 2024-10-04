@@ -31,7 +31,7 @@ const CareerContainer = () => {
                     className="d-flex align-items-center justify-content-center"
                     fluid
                 >
-                    <h2 style={{ color: "#FFFFFF " }}>Career</h2>
+                    <h2 style={{ color: "#FFFFFF " }}>Career & Procurements</h2>
                 </Container>
             </Container>
             <Container fluid className="p-4  mb-4 mt-4 text-center">
@@ -60,4 +60,3 @@ const CareerContainer = () => {
 };
 
 export default CareerContainer;
-
