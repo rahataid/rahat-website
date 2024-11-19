@@ -34,7 +34,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={22}
+                                    end={32}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -77,7 +77,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={19000}
+                                    end={47000}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -145,7 +145,17 @@ const FunFact = ({ className }) => {
                                                 onChange={(inView) =>
                                                     visibleChangeHandler(inView)
                                                 }
-                                            ></InView>
+                                            >
+                                                <>
+                                                    <span
+                                                        style={{
+                                                            fontSize: "50px",
+                                                        }}
+                                                    >
+                                                        +
+                                                    </span>
+                                                </>
+                                            </InView>
                                         </div>
                                     )}
                                 </CountUp>
@@ -171,7 +181,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={9700}
+                                    end={14000}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -278,7 +288,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={22}
+                                    end={32}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
