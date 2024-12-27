@@ -1,7 +1,21 @@
 [
+     {
+        "id": "33",
+        "title": "Empowering Vulnerable Communities: Rahat’s Achham PWD Project",
+        "icon": "pe-7s-note2",
+        "link": "https://assets.rumsan.net/rumsan-group/project-35.0-achham-pwd-project-.pdf",
+        "background_image": "https://assets.rumsan.net/rumsan-group/pilot-35.-achham.png"
+    },
+    {
+        "id": "32",
+        "title": "Supporting the Vulnerable Community: Rahat’s Jalari Basti Project",
+        "icon": "pe-7s-note2",
+        "link": "https://assets.rumsan.net/rumsan-group/project-31.0-vulnerable-jalari-basti.pdf",
+        "background_image": "https://assets.rumsan.net/rumsan-group/pilot-31.0-jalari.png"
+    },
     {
         "id": "31",
-        "title": "Building Back Stronger: Rahat’s Konjyosom Flood Response Project ",
+        "title": "Building Back Stronger: Rahat’s Konjyosom Flood Response Project",
         "icon": "pe-7s-note2",
         "link": "https://assets.rumsan.net/rumsan-group/pilot-30-konjyosom-flood-response-project.pdf",
         "background_image": "https://assets.rumsan.net/rumsan-group/konjysom-banner.png"
