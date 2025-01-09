@@ -3,7 +3,7 @@ import React from "react";
 const iconStyles = {
     display: "flex",
     flexDirection: "row",
-    flexWrap: "wrap",
+    // flexWrap: "wrap",
     justifyContent: "center",
 };
 
@@ -58,6 +58,12 @@ const PartnersAndCollab = () => {
                         alt="Icon 1"
                     />
                 </div>
+                    <div style={iconItemStyles}>
+                    <img
+                        src="https://assets.rumsan.net/rumsan-group/stellar-logo.png"
+                        alt="Icon 1"
+                    />
+                </div>
             </div>
             <div style={iconStyles}>
                 <div style={iconItemStyles}>
@@ -75,6 +81,12 @@ const PartnersAndCollab = () => {
                 <div style={iconItemStyles}>
                     <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/partners-and-collab-nrcs.png"
+                        alt="Icon 1"
+                    />
+                </div>
+                  <div style={iconItemStyles}>
+                    <img
+                        src="https://assets.rumsan.net/rumsan-group/danish-redcross-logo-removebg-preview.png"
                         alt="Icon 1"
                     />
                 </div>
@@ -105,6 +117,12 @@ const PartnersAndCollab = () => {
                 </div>
             </div>
             <div style={iconStyles}>
+                  <div style={iconItemStyles}>
+                    <img
+                        src="https://assets.rumsan.net/rumsan-group/mercy-corp-logo.png"
+                        alt="Icon 1"
+                    />
+                </div>
                 <div style={iconItemStyles}>
                     <img
                         src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/team-g20-logo-rahat.png"
