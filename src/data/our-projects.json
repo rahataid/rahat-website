@@ -1,4 +1,18 @@
 [
+    {
+        "id": "35",
+        "title": "Rahat Community Platform",
+        "icon": "pe-7s-note2",
+        "link": "https://assets.rumsan.net/rumsan-group/rahat-community-platform.pdf",
+        "background_image": "https://assets.rumsan.net/rumsan-group/rahat-community-platform.png"
+    },
+    {
+        "id": "34",
+        "title": "Vision Care for underserved Communities",
+        "icon": "pe-7s-note2",
+        "link": "https://assets.rumsan.net/rumsan-group/vision-care-for-underserved-communities-.pdf",
+        "background_image": "https://assets.rumsan.net/rumsan-group/vision-care-for-underserved-communities.png"
+    },
      {
         "id": "33",
         "title": "Empowering Vulnerable Communities: Rahat’s Achham PWD Project",
