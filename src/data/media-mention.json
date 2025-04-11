@@ -1,5 +1,21 @@
 [
     {
+        "id": "0300004444",
+        "title": "Why Digital Literacy Matters in Our Communities?",
+        "icon": "pe-7s-note2",
+        "link": "https://techpana.com/2025/149849/lack-of-digital-literacy-traps-communities-in-online-scams",
+        "background_image": "https://assets.rumsan.net/rumsan-group/digital-literacy-main-banner.jpg",
+        "date": "10th March, 2025"
+    },
+    {
+        "id": "034444",
+        "title": "Pilot Launch | Rahat x Mercy Corps | Early Action, Safer Communities",
+        "icon": "pe-7s-note2",
+        "link": "https://medium.com/mercy-corps-social-venture-fund/pilot-launch-preparing-for-the-worst-anticipatory-action-with-cash-transfers-empowers-29838085e8d2",
+        "background_image": "https://assets.rumsan.net/rumsan-group/pilot-launch---rahat-x-mercy-corps-main-banner.jpg",
+        "date": "18th December, 2024"
+    },
+    {
         "id": "294",
         "title": "Circle Impact Founder Series",
         "icon": "pe-7s-note2",
@@ -159,3 +175,4 @@
         "date": "April 20, 2023"
     }
 ]
+
