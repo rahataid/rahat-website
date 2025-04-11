@@ -1,5 +1,12 @@
 [
     {
+        "id": "36",
+        "title": "Anticipatory Humanitarian Action Project 2024",
+        "icon": "pe-7s-note2",
+        "link": "https://assets.rumsan.net/rumsan-group/gsma-one-pager-main.pdf",
+        "background_image": "https://assets.rumsan.net/rumsan-group/gsma-project-main-banner.jpg"
+    },
+    {
         "id": "35",
         "title": "Rahat Community Platform",
         "icon": "pe-7s-note2",
@@ -13,7 +20,7 @@
         "link": "https://assets.rumsan.net/rumsan-group/vision-care-for-underserved-communities-.pdf",
         "background_image": "https://assets.rumsan.net/rumsan-group/vision-care-for-underserved-communities.png"
     },
-     {
+    {
         "id": "33",
         "title": "Empowering Vulnerable Communities: Rahat’s Achham PWD Project",
         "icon": "pe-7s-note2",
@@ -70,3 +77,4 @@
         "background_image": "https://assets.rumsan.net/rumsan-group/evaluation-report-media-mentions.jpg"
     }
 ]
+
