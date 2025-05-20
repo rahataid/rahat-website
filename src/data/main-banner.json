@@ -12,7 +12,7 @@
                         "src": "/images/bg/beema-banner-1.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Rahat Beema is a parametric insurance product designed to provide financial protection to vulnerable populations in Pakistan, particularly farmers and low-income households, against the adverse effects of climate change. By leveraging blockchain technology and smart contracts, Rahat Beema ensures transparency, efficiency, and trust in the insurance process. The product aims to empower communities by providing them with a safety net against climate-related risks, ultimately contributing to their resilience and well-being."
+                    "description": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports."
                 },
                 {
                     "id": 2,
@@ -22,7 +22,7 @@
                         "src": "/images/bg/main-banner-04.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "The Rahat Beema project has been recognized as a 2023 MIT Solver, receiving the prestigious GSR Foundation Prize and the Community Award. This recognition highlights the project's innovative approach to addressing climate change challenges and its potential to create a positive impact on vulnerable communities in Pakistan. The awards underscore the importance of leveraging technology and community engagement in developing effective solutions for climate resilience."
+                    "description": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers—empowering communities before crises hit."
                 }
             ]
         }

@@ -27,7 +27,7 @@ const sliderOptions = {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                dots: false,
+                dots: true,
                 arrows: true,
             },
         },
@@ -37,7 +37,7 @@ const sliderOptions = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: false,
+                arrows: true,
             },
         },
     ],
@@ -73,7 +73,7 @@ const MainSliderSection = ({ data }) => {
                                 ...sliderOptions,
                                 beforeChange: handleBeforeChange,
                             }}
-                            className="slider-activation-banner-3 slick-activation-06 slick-arrow-between rn-slick-dot-style"
+                            className="slider-activation-banner-3 slick-activation-06 slick-arrow-between-main-banner rn-slick-dot-style-main-banner"
                         >
                             {data?.banners.map((banner, index) => (
                                 <SliderItem
@@ -99,12 +99,14 @@ const MainSliderSection = ({ data }) => {
                                 color: "#333",
                             }}
                         >
-                            <h5 style={{ textAlign: "start" }}>
-                                {data.banners[currentSlide]?.title}
-                            </h5>
-                            <p style={{ textAlign: "start" }}>
-                                {data.banners[currentSlide]?.description}
-                            </p>
+                            <div style={{ padding: "20px 0 60px" }}>
+                                <h5 style={{ textAlign: "start" }}>
+                                    {data.banners[currentSlide]?.title}
+                                </h5>
+                                <p style={{ textAlign: "start" }}>
+                                    {data.banners[currentSlide]?.description}
+                                </p>
+                            </div>
                         </div>
                     </>
                 )}

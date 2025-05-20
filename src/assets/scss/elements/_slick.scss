@@ -80,6 +80,27 @@ button {
     }
 }
 
+.slick-arrow-between-main-banner {
+    position: relative;
+    button {
+        &.slide-arrow {
+            height: 30px;
+            width: 30px;
+            border-radius: 10%;
+
+            &.slick-prev {
+                top: 146% !important;
+                left: 40px !important;
+            }
+
+            &.slick-next {
+                top: 146% !important;
+                right: 40px !important;
+            }
+        }
+    }
+}
+
 .slick-dots {
     position: relative;
     margin-top: -5px;
@@ -116,3 +137,4 @@ button {
 .slick-next:before {
     display: none;
 }
+
