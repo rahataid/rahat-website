@@ -4,8 +4,14 @@ const AwardAndPrizes = () => (
     <div className="rn-section-gapTop">
         <div className="container">
             <div className="row mb--40">
-                <div className="title-area text-center">
-                    <h3 className="title mb--15">Awards</h3>
+                <div className="title-area text-left">
+                    <h3 className="title mb--15">
+                        Awards
+                        <p className="text-muted">
+                            Showcase media features, milestones, or visual
+                            highlights here.
+                        </p>
+                    </h3>
                 </div>
             </div>
             <div className="rn-weAre-one color-shape-7">
@@ -67,4 +73,3 @@ const AwardAndPrizes = () => (
 );
 
 export default AwardAndPrizes;
-
