@@ -8,6 +8,7 @@ import AwardAndPrizesRecognitions from "@containers/awards";
 import { useState } from "react";
 import RecognitionCard from "@components/recognitioncard/RecognitionCard";
 import recognitionRaw from "../../data/funder-recognition-items.json";
+import Highlights from "@containers/highlights";
 
 const contentData = recognitionRaw.content || [];
 
@@ -17,7 +18,6 @@ const OurRecognitionPage = ({ space, className }) => {
 
     return (
         <div className={clsx("container py-5", className)}>
-            {/* Bootstrap Tab Buttons */}
             <div className="d-flex justify-content-center gap-2 mb-4">
                 {["highlights", "recognition", "awards"].map((tab) => (
                     <button
@@ -36,27 +36,21 @@ const OurRecognitionPage = ({ space, className }) => {
                     </button>
                 ))}
             </div>
-            {/* Highlights Section */}
-            {activeTab === "highlights" && (
-                <div className="text-left py-5">
-                    <h3>Highlights</h3>
-                    <p className="text-muted">
-                        Showcase media features, milestones, or visual
-                        highlights here.
-                    </p>
+            <div className="container py-5">
+                <div className="row g-4">
+                    {activeTab === "highlights" && <Highlights />}
                 </div>
-            )}
-            {/* Recognition Section */}
+            </div>
             {activeTab === "recognition" && (
                 <div
                     className={clsx(
                         "rn-about-Quote-area",
-                        space === 1 && "pt--80"
+                        space === 1 && "pt-2"
                     )}
                 >
-                    <div className="container py-5">
+                    <div className="container py-2">
                         <div className="row g-4">
-                            <div className="text-left py-2 mb-">
+                            <div className="text-left py-2 ">
                                 <h3>Recognition/Funder</h3>
                                 <p className="text-muted">
                                     We proudly showcase our key recognitions and
@@ -110,7 +104,11 @@ const OurRecognitionPage = ({ space, className }) => {
             )}
 
             {/* Awards Section */}
-            {activeTab === "awards" && <AwardAndPrizesRecognitions />}
+            <div className="container">
+                <div className="row g-4">
+                    {activeTab === "awards" && <AwardAndPrizesRecognitions />}
+                </div>
+            </div>
         </div>
     );
 };

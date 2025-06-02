@@ -1,4 +1,3 @@
-// src/components/recognitioncard/RecognitionCard.jsx
 import React from "react";
 import Image from "next/image";
 import LearnMoreButton from "@components/learn-more-button";
@@ -9,22 +8,29 @@ const RecognitionCard = ({ image, alt, title, description, link }) => (
             <div
                 className="d-flex align-items-center justify-content-start mb-3"
                 style={{
-                    height: "60px",
-                    minHeight: "150px",
+                    height: "120px",
+                    width: "200px",
                     overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-start",
+                    objectPosition: "left top",
+                    marginBottom: "1rem",
+                    backgroundColor: "transparent",
                 }}
             >
                 <Image
                     src={image}
                     alt={alt || title}
-                    width={180}
-                    height={40}
+                    width={200}
+                    height={120}
                     style={{
                         objectFit: "contain",
                         maxHeight: "100%",
-                        width: "auto",
-                        height: "auto",
+                        maxWidth: "100%",
+                        borderRadius: "0.5rem",
                     }}
+                    priority
                 />
             </div>
 

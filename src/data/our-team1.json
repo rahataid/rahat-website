@@ -109,16 +109,7 @@
         "link_linkedin": "https://www.linkedin.com/in/smriti-chhetri/",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/smriti-team-rahat.png"
     },
-    {
-        "id": "22",
-        "fname": "Kanil Maharjan",
-        "designation": "Designer",
-        "icon_mail": "feather-mail",
-        "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:kanil.maharjan@rumsan.net",
-        "link_linkedin": "https://www.linkedin.com/in/kanil-maharjan-2a1b9a233/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/kanil-team-rahat.png"
-    },
+
     {
         "id": "28",
         "fname": "Achyut Subedi ",
