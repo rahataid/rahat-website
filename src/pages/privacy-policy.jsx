@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
         <div className="container" style={{ padding: "20px" }}>
             <h5>Rahat: Privacy Policy</h5>
             <p style={{ fontSize: "16px", margin: "0 0 20px" }}>
-                Last updated: 3 June 2025
+                Last updated: 8 May, 2025
             </p>
 
             <div style={{ marginTop: "20px" }}>
