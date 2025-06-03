@@ -15,14 +15,29 @@ const PrivacyPolicy = () => {
                     Rumsan Associates Pvt Ltd ("Rumsan", "we", "our", or "us",
                     "organization") for collecting, using, maintaining,
                     protecting, and disclosing your Personally Identifiable
-                    Information (PII) that are shared through (i) the Rahat App,
-                    which consists of a community tool, dashboard, and vendor
-                    app; (ii)it's{" "}
-                    <a href="https://rahat.io/" target="_blank">
-                        website
-                    </a>
-                    ; and (iii) the consulting services offered by Rumsan.
-                    <br /> <br />
+                    Information (PII) that are shared through
+                </p>
+                <ul style={{ marginTop: "-16px" }}>
+                    <li style={{ fontSize: "16px", color: "#000" }}>
+                        <strong>the Rahat App,</strong> which consists of a
+                        community tool, dashboard, and vendor app
+                    </li>
+                    <li style={{ fontSize: "16px", color: "#000" }}>
+                        it's{" "}
+                        <a
+                            href="https://rahat.io/"
+                            style={{ color: "#0d6efd" }}
+                            target="_blank"
+                        >
+                            <strong>website</strong>
+                        </a>
+                    </li>
+                    <li style={{ fontSize: "16px", color: "#000" }}>
+                        the <strong>consulting services</strong> offered by
+                        Rumsan
+                    </li>
+                </ul>
+                <p style={{ fontSize: "16px" }}>
                     We are committed to protecting the privacy of our users
                     (employees, contractors, vendors, customers, and partners)
                     and ensuring that all PIIs provided to us are handled in
@@ -42,7 +57,7 @@ const PrivacyPolicy = () => {
                 <p style={{ fontSize: "16px" }}>
                     We process PIIs based on the following lawful basis:
                 </p>
-                <ul style={{ marginTop: "-30px" }}>
+                <ul style={{ marginTop: "-16px" }}>
                     <li style={{ fontSize: "16px", color: "#000" }}>
                         <strong>Consent:</strong> Consent is obtained when you
                         give clear permission for your PII to be processed for
@@ -110,7 +125,7 @@ const PrivacyPolicy = () => {
                     </a>
                     . We ensure the following rights for our users:
                 </p>
-                <ul style={{ marginTop: "-30px" }}>
+                <ul style={{ marginTop: "-16px" }}>
                     <li style={{ fontSize: "16px", color: "#000" }}>
                         <strong>Right to Access:</strong> You have the right to
                         request access to your personal data to understand how
@@ -163,7 +178,7 @@ const PrivacyPolicy = () => {
                     or more of the following purposes, including, but not
                     limited to:
                 </p>
-                <ul style={{ marginTop: "-30px" }}>
+                <ul style={{ marginTop: "-16px" }}>
                     <li style={{ fontSize: "16px", color: "#000" }}>
                         <strong>
                             For record keeping and research purposes:
@@ -260,7 +275,7 @@ const PrivacyPolicy = () => {
                     data from unauthorized access, disclosure, alteration, or
                     destruction. Our security practices include:
                 </p>
-                <ul style={{ marginTop: "-30px" }}>
+                <ul style={{ marginTop: "-16px" }}>
                     <li style={{ fontSize: "16px", color: "#000" }}>
                         <strong>Access Control:</strong> We enforce strict
                         access control policies to ensure that only authorised
