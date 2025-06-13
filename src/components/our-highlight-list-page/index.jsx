@@ -1,0 +1,99 @@
+import Button from "@ui/button";
+import clsx from "clsx";
+import moment from "moment";
+import Image from "next/image";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import OurHighlightsData from "../../data/our-highlights.json";
+
+const OurHighlightListPage = ({ space, className }) => (
+    <>
+        <div
+            className={clsx(
+                "rn-about-Quote-area",
+                space === 1 && "rn-section-gapTop",
+                className
+            )}
+        >
+            <div className="container">
+                <h2 style={{ paddingBottom: "2rem" }}>Our Highlights</h2>
+                <div className="row g-5">
+                    {OurHighlightsData.map((d) => {
+                        return (
+                            <>
+                                <div
+                                    key={d._id}
+                                    className="col-lg-4 col-md-6 col-12 sal-animate"
+                                    data-sal="slide-up"
+                                    data-sal-duration="800"
+                                    data-sal-delay="150"
+                                >
+                                    <div className={clsx("rn-blog", className)}>
+                                        <div className="inner">
+                                            <div className="thumbnail">
+                                                <Image
+                                                    src={d.image_banner}
+                                                    alt={
+                                                        d.title ? d.title : "-"
+                                                    }
+                                                    width={489}
+                                                    height={366}
+                                                />
+                                            </div>
+
+                                            <div className="content">
+                                                <div className="category-info">
+                                                    <div className="meta">
+                                                        <span>
+                                                            <i className="feather-calendar" />
+                                                            {d.created_at
+                                                                ? moment(
+                                                                      d.created_at
+                                                                  ).format("LL")
+                                                                : "-"}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <h4 className="title">
+                                                    <Link
+                                                        className="short-title"
+                                                        href=""
+                                                    >
+                                                        {d?.title}
+                                                    </Link>
+                                                </h4>
+
+                                                <Link
+                                                    href={`/our-highlights/${d?.slug}`}
+                                                >
+                                                    <Button
+                                                        className="mt-5"
+                                                        size="medium"
+                                                    >
+                                                        Read More
+                                                    </Button>
+                                                </Link>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        );
+                    })}
+                </div>
+            </div>
+        </div>
+    </>
+);
+
+OurHighlightListPage.propTypes = {
+    space: PropTypes.oneOf([1, 2]),
+    className: PropTypes.string,
+};
+
+OurHighlightListPage.defaultProps = {
+    space: 1,
+};
+
+export default OurHighlightListPage;
+
