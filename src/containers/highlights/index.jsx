@@ -1,5 +1,5 @@
 import React from "react";
-import highlightsData from "../../data/highlights";
+import highlightsData from "../../data/highlights.json";
 import CustomCard from "@components/cards/custom";
 import Button from "@ui/button";
 import Link from "next/link";
@@ -12,21 +12,17 @@ const HighlightPage = () => {
                 Showcase media features, milestones, or visual highlights here.
             </p>
 
-            <div className="row g-4">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
                 {highlightsData.cardData.map((item, index) => (
-                    <div key={index} className="col-md-6 col-lg-4">
+                    <div key={index} className="col d-flex align-items-stretch">
                         <CustomCard
+                            
                             title={item.title}
                             thumbnail={item.thumbnail}
                         >
-                            <div className="d-flex justify-content-start mt-3">
-                                <Link
-                                    href={`/highlights/${item.slug}`}
-                                    passHref
-                                >
-                                    <Button size="medium">Read More</Button>
-                                </Link>
-                            </div>
+                            <Link href={`/highlights/${item.slug}`} passHref>
+                                <Button size="medium">Read More</Button>
+                            </Link>
                         </CustomCard>
                     </div>
                 ))}

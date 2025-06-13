@@ -1,48 +1,44 @@
 import Image from "next/image";
-import PropTypes from "prop-types";
+import styles from "./index.module.css";
 
 const CustomCard = ({ title, thumbnail, children }) => {
     return (
         <div
-            className="card p-4 h-100 rounded-4 border-0 shadow-sm"
+            className="card shadow-sm h-100 border-0"
             style={{
-                width: "420px",
-                height: "200px",
-                overflow: "hidden",
-                display: "flex",
-                flexDirection: "column",
+                flexGrow: 1,
                 borderRadius: "1.5rem",
+                padding: "2rem",
+                overflow: "hidden",
             }}
         >
-            <div className="mb-3">
+            <div className="thumbnail mb-3">
                 <Image
                     src={thumbnail}
                     alt={title}
-                    width={200}
-                    height={100}
-                    className="w-100 rounded"
-                    style={{ objectFit: "cover" }}
+                    width={489}
+                    height={300}
+                    className={styles.custom_card_image}
                     priority
                 />
             </div>
 
-            <h5 className="mb-3 fw-semibold">
+            <h5
+                className="mb-3 fw-semibold"
+                style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                }}
+            >
                 {title}
-                <p
-                    className="text-muted"
-                    style={{ lineHeight: "1.6", fontSize: "15px" }}
-                ></p>
             </h5>
 
-            {children}
+            <div className="mt-auto">{children}</div>
         </div>
     );
-};
-
-CustomCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    thumbnail: PropTypes.string.isRequired,
-    children: PropTypes.string.isRequired,
 };
 
 export default CustomCard;

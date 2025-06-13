@@ -9,6 +9,7 @@ import { useState } from "react";
 import RecognitionCard from "@components/recognitioncard/RecognitionCard";
 import recognitionRaw from "../../data/funder-recognition-items.json";
 import Highlights from "@containers/highlights";
+import "../../assets/css/global.module.css";
 
 const contentData = recognitionRaw.content || [];
 
@@ -57,18 +58,17 @@ const OurRecognitionPage = ({ space, className }) => {
                                     partnerships
                                 </p>
                             </div>
-
-                            {contentData.map((item, index) => (
-                                <RecognitionCard
-                                    key={index}
-                                    image={item.image}
-                                    alt={item.alt}
-                                    title={item.title}
-                                    description={item.description}
-                                    link={item.link}
-                                />
-                            ))}
-
+                            <div className="row g-4">
+                                {contentData.map((item, index) => (
+                                    <RecognitionCard
+                                        image={item.image}
+                                        alt={item.alt}
+                                        title={item.title}
+                                        description={item.description}
+                                        link={item.link}
+                                    />
+                                ))}
+                            </div>
                             <div className="col-12">
                                 <div className="rn-blog ">
                                     <div className="row align-items-top pt--20">

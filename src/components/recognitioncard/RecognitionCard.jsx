@@ -3,8 +3,8 @@ import Image from "next/image";
 import LearnMoreButton from "@components/learn-more-button";
 
 const RecognitionCard = ({ image, alt, title, description, link }) => (
-    <div className="col-lg-6 col-md-6 col-12 ">
-        <div className="card p-4 h-100 rounded-4 border-0 ">
+    <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div className="card p-4 h-100 rounded-4 border-0 d-flex flex-column justify-content-between ">
             <div
                 className="d-flex align-items-center justify-content-start mb-3"
                 style={{
@@ -49,6 +49,7 @@ const RecognitionCard = ({ image, alt, title, description, link }) => (
                         WebkitBoxOrient: "vertical",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
+                        
                     }}
                 >
                     {description}

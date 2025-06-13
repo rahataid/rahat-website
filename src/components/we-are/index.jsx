@@ -65,15 +65,9 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper text-center">
                             <img
-                                src="https://assets.rumsan.net/rumsan-group/mercy-corps-seeklogo.png"
-                                alt="calp-network-logo"
-                                style={{
-                                    width: "200px",
-                                    height: "200px",
-                                    maxWidth: "100%",
-                                    maxHeight: "100%",
-                                    objectFit: "contain",
-                                }}
+                                src="https://assets.rumsan.net/rumsan-group/mercy-corp-seeklogo.png"
+                                alt="mercy-corps-logo"
+                                width="200px"
                             />
                         </div>
                     </div>
