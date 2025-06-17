@@ -42,19 +42,13 @@ const OurHighlightListPage = ({ space, className }) => (
                                             </div>
 
                                             <div className="content">
-                                                <div className="category-info">
-                                                    <div className="meta">
-                                                        <span>
-                                                            <i className="feather-calendar" />
-                                                            {d.created_at
-                                                                ? moment(
-                                                                      d.created_at
-                                                                  ).format("LL")
-                                                                : "-"}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <h4 className="title">
+                                                <h4
+                                                    className="title"
+                                                    style={{
+                                                        fontSize: "2rem",
+                                                        fontWeight: "500",
+                                                    }}
+                                                >
                                                     <Link
                                                         className="short-title"
                                                         href=""

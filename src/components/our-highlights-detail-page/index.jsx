@@ -10,9 +10,7 @@ import PropTypes from "prop-types";
 
 const OurHighlightDetailPage = ({ space, className, OurhighlightsContent }) => {
     console.log(OurhighlightsContent, "----------->");
-    console.log("i am erererer");
-    // console.log("singleBlog", singleBlog);
-    // const date = new Date(post.date);
+
     return (
         <>
             <Wrapper>
@@ -81,20 +79,7 @@ const OurHighlightDetailPage = ({ space, className, OurhighlightsContent }) => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="content">
-                                        <div className="category-info">
-                                            <div className="meta">
-                                                <span>
-                                                    <i className="feather-calendar" />
-                                                    {OurhighlightsContent?.created_at
-                                                        ? moment(
-                                                              OurhighlightsContent?.created_at
-                                                          ).format("LL")
-                                                        : "-"}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div
                                         className="news-details ptb--20"
                                         dangerouslySetInnerHTML={{
