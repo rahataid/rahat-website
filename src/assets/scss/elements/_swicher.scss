@@ -99,13 +99,13 @@ html[data-theme="light"] .my_switcher .light {
 
         li.slick-active {
             button {
-                background: red !important;
+                background: #2b7ec1 !important;
                 border: 2px solid var(--color-primary);
             }
         }
 
         li button {
-            background: red !important;
+            background: #2b7ec1 !important;
             // border: px solid var(--color-primary);
         }
     }
