@@ -22,7 +22,7 @@ const OurRecognitionPage = ({ space, className }) => {
             >
                 <div className="container pt--80">
                     {/* Tabs */}
-                    <div style={{ marginBottom: 32 }}>
+                    <div>
                         <ul
                             style={{
                                 display: "flex",

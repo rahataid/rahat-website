@@ -11,12 +11,16 @@ const OurHighlightListPage = ({ space, className }) => (
         <div
             className={clsx(
                 "rn-about-Quote-area",
-                space === 1 && "rn-section-gapTop",
+                space === 1 && "rn-section-gapTop-custom",
                 className
             )}
         >
             <div className="container">
-                <h2 style={{ paddingBottom: "2rem" }}>Our Highlights</h2>
+                <div className="row mb--20">
+                    <div className="title-area">
+                        <h4 className="title mb--15">Our highlights</h4>
+                    </div>
+                </div>
                 <div className="row g-5">
                     {OurHighlightsData.map((d) => {
                         return (

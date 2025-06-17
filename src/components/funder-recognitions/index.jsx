@@ -68,11 +68,18 @@ const FunderRecognitions = ({ space, className }) => {
             <div
                 className={clsx(
                     "rn-about-Quote-area",
-                    space === 1 && "rn-section-gapTop",
+                    space === 1 && "rn-section-gapTop-custom",
                     className
                 )}
             >
                 <div className="container">
+                    <div className="row mb--20">
+                        <div className="title-area">
+                            <h4 className="title mb--15">
+                                Recognition / Funder
+                            </h4>
+                        </div>
+                    </div>
                     <div className="row row--30">
                         {recognitions.map((item) => (
                             <div

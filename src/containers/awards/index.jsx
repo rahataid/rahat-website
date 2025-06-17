@@ -2,11 +2,11 @@ import ReadMoreBtn from "@components/read-more-button";
 import React from "react";
 
 const AwardAndPrizes = () => (
-    <div className="rn-section-gapTop">
+    <div className="rn-section-gapTop-custom">
         <div className="container">
-            <div className="row mb--40">
-                <div className="title-area text-center">
-                    <h3 className="title mb--15">Awards</h3>
+            <div className="row mb--20">
+                <div className="title-area">
+                    <h4 className="title mb--15">Awards</h4>
                 </div>
             </div>
             <div className="rn-weAre-one color-shape-7">
