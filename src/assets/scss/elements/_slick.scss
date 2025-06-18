@@ -91,11 +91,21 @@ button {
             &.slick-prev {
                 top: 146% !important;
                 left: 40px !important;
+
+                @media (min-width: 1200px) and (max-width: 1400px) {
+                    top: 160% !important;
+                    left: 20px !important;
+                }
             }
 
             &.slick-next {
                 top: 146% !important;
                 right: 40px !important;
+
+                @media (min-width: 1200px) and (max-width: 1400px) {
+                    top: 160% !important;
+                    right: 20px !important;
+                }
             }
         }
     }

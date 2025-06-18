@@ -84,7 +84,7 @@ const FunderRecognitions = ({ space, className }) => {
                         {recognitions.map((item) => (
                             <div
                                 key={item.id}
-                                className="col-lg-4 col-md-6 col-sm-12 mt--30"
+                                className="col-lg-6 col-md-6 col-sm-12 mt--30"
                             >
                                 <div className={clsx("rn-blog", className)}>
                                     <div className="inner">

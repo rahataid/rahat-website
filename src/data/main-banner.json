@@ -6,23 +6,33 @@
             "banners": [
                 {
                     "id": 1,
-                    "title": "Rahat Beema",
-                    "subtitle": "Empowering Vulnerable Populations through Decentralized & Transparent Parametric Insurance ",
+                    "title": "Cash and Voucher Assistance (CVA) program ",
+                    "subtitle": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights.",
                     "image": {
-                        "src": "/images/bg/beema-banner-1.png"
+                        "src": "https://assets.rumsan.net/rahat/cash-and-voucher-assistance-cva-program-.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports."
+                    "description": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights."
                 },
                 {
                     "id": 2,
-                    "title": "2023 MIT Solver",
-                    "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
+                    "title": "Anticipatory Action",
+                    "subtitle": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers empowering communities before crises hit.",
                     "image": {
-                        "src": "/images/bg/main-banner-04.png"
+                        "src": "https://assets.rumsan.net/rahat/anticipatory-action.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers—empowering communities before crises hit."
+                    "description": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers empowering communities before crises hit."
+                },
+                {
+                    "id": 3,
+                    "title": "Communication Module",
+                    "subtitle": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports.",
+                    "image": {
+                        "src": "https://assets.rumsan.net/rahat/communication-module.png"
+                    },
+                    "isBtnDisabled": false,
+                    "description": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports."
                 }
             ]
         }

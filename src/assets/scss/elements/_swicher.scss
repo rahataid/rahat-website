@@ -95,7 +95,15 @@ html[data-theme="light"] .my_switcher .light {
 
 .rn-slick-dot-style-main-banner {
     .slick-dots {
-        bottom: -210px;
+        bottom: -21rem;
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            bottom: -27rem;
+        }
+
+        @media (max-width: 1199px) {
+            bottom: -2rem;
+        }
 
         li.slick-active {
             button {

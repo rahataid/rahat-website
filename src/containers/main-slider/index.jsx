@@ -9,17 +9,26 @@ const sliderOptions = {
     arrows: true,
     adaptiveHeight: true,
     speed: 500,
-    autoplay: false,
+    autoplay: true,
     infinite: true,
     beforeChange: (oldIndex, newIndex) => {
         // This will trigger before the slide changes
     },
     responsive: [
         {
-            breakpoint: 1124,
+            breakpoint: 1200,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                arrows: false,
             },
         },
         {
@@ -28,7 +37,7 @@ const sliderOptions = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: true,
+                arrows: false,
             },
         },
         {
@@ -37,7 +46,7 @@ const sliderOptions = {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,
-                arrows: true,
+                arrows: false,
             },
         },
     ],
@@ -99,7 +108,7 @@ const MainSliderSection = ({ data }) => {
                                 color: "#333",
                             }}
                         >
-                            <div style={{ padding: "20px 0 60px" }}>
+                            <div style={{ padding: "20px 0 100px" }}>
                                 <h5 style={{ textAlign: "start" }}>
                                     {data.banners[currentSlide]?.title}
                                 </h5>
