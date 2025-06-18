@@ -92,3 +92,30 @@ html[data-theme="light"] .my_switcher .light {
         bottom: -11px;
     }
 }
+
+.rn-slick-dot-style-main-banner {
+    .slick-dots {
+        bottom: -21rem;
+
+        @media (min-width: 1200px) and (max-width: 1400px) {
+            bottom: -27rem;
+        }
+
+        @media (max-width: 1199px) {
+            bottom: -2rem;
+        }
+
+        li.slick-active {
+            button {
+                background: #2b7ec1 !important;
+                border: 2px solid var(--color-primary);
+            }
+        }
+
+        li button {
+            background: #2b7ec1 !important;
+            // border: px solid var(--color-primary);
+        }
+    }
+}
+

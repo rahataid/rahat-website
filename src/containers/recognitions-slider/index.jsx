@@ -11,7 +11,6 @@ const SliderOptions = {
     autoplay: true,
     infinite: true,
     cssEase: "linear",
-    adaptiveHeight: false,
 };
 
 const HeroArea = ({ data }) => (
