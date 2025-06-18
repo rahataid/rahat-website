@@ -32,8 +32,8 @@ const Footer = ({ space, className, data }) => (
                                 }}
                             />
                             <p>
-                                Rumsan is a blockchain company focused on social
-                                impact.
+                                Rumsan is a frontier technology focused on
+                                social impact.
                             </p>
                         </div>
                     </div>
@@ -215,3 +215,4 @@ Footer.defaultProps = {
 };
 
 export default Footer;
+

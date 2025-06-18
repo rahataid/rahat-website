@@ -43,13 +43,13 @@ const CollabAndPartners = () => {
                             alt="Icon 2"
                         />
                     </div>
-                       <div className="mt-3" style={iconItemStyles}>
+                    <div className="mt-3" style={iconItemStyles}>
                         <img
                             src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/leo-partner-collab-team-rahat.png"
                             alt="Icon 5"
                         />
                     </div>
-                     <div className="mt-3" style={iconItemStyles}>
+                    <div className="mt-3" style={iconItemStyles}>
                         <img
                             src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/google-startup-logo.png"
                             alt="Icon 5"
@@ -82,7 +82,7 @@ const CollabAndPartners = () => {
                                 alt="Icon 7"
                             />
                         </div>
-                          <div className="mt-3" style={iconItemStyles}>
+                        <div className="mt-3" style={iconItemStyles}>
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/danish-redcross-logo-removebg-preview.png"
                                 alt="Icon 7"
@@ -116,9 +116,9 @@ const CollabAndPartners = () => {
                                 alt="Icon 8"
                             />
                         </div>
-                          <div className="mt-3" style={iconItemStyles}>
+                        <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.net/rumsan-group/stellar-logo.png"
+                                src="https://assets.rumsan.net/rahat/stellar-x-rahat.png"
                                 alt="Icon 8"
                             />
                         </div>
@@ -150,7 +150,7 @@ const CollabAndPartners = () => {
                                 alt="Icon 1"
                             />
                         </div>
-                           <div className="mt-3" style={iconItemStyles}>
+                        <div className="mt-3" style={iconItemStyles}>
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/mercy-corp-logo.png"
                                 alt="Icon 1"

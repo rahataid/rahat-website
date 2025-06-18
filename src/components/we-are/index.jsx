@@ -65,8 +65,8 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper text-center">
                             <img
-                                src="https://assets.rumsan.net/rumsan-group/partners-calp-network.png"
-                                alt="calp-network-logo"
+                                src="https://assets.rumsan.net/rahat/mercy-corps-partners-rahat.png"
+                                alt="mercy-corps-logo"
                                 width="200px"
                             />
                         </div>
