@@ -37,7 +37,8 @@ const OurRecognitionPage = ({ space, className }) => {
                                     key={tab.key}
                                     style={{
                                         cursor: "pointer",
-                                        padding: "8px 24px",
+                                        padding: "8px",
+                                        fontSize: "1.75rem",
                                         background:
                                             activeTab === tab.key
                                                 ? "#2C7FBE"
