@@ -437,6 +437,7 @@
 }
 .feather-mail:before {
     content: "\e98a";
+    color: #000000;
 }
 .feather-map:before {
     content: "\e98b";
