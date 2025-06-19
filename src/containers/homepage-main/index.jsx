@@ -14,8 +14,19 @@ const MainBannerArea = () => {
         <div className="slider-one rn-section-gapTop">
             <div className="container">
                 <div className="row row-reverce-sm align-items-center">
-                    <div className="col-lg-5 col-md-6 col-sm-12 mt_sm--50">
-                        <h2>Supporting Vulnerable communities</h2>
+                    <div className="col-lg-6 col-md-6 col-sm-12 mt_sm--50">
+                        <h2 style={{ fontSize: "5.6rem" }}>
+                            <span>
+                                Supporting <br />
+                            </span>
+
+                            <span
+                                style={{ color: "#2B7EC1", fontSize: "5.6rem" }}
+                            >
+                                {" "}
+                                Vulnerable communities
+                            </span>
+                        </h2>
 
                         <p>
                             through an open-source blockchain-based Financial
@@ -31,7 +42,7 @@ const MainBannerArea = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12 offset-lg-1">
+                    <div className="col-lg-5 col-md-6 col-sm-12 offset-lg-1">
                         <main id="main-content">
                             <MainSliderSection
                                 data={content["main-banner-hero-section"]}
