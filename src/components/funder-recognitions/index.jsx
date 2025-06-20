@@ -76,7 +76,7 @@ const FunderRecognitions = ({ space, className }) => {
                     <div className="row mb--20">
                         <div className="title-area">
                             <h4 className="title mb--15">
-                                Recognition / Funder
+                                Recognitions & Funder
                             </h4>
                         </div>
                     </div>
