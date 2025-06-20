@@ -32,7 +32,7 @@ const OurEcosystem = ({ space, className }) => {
                             <div className="inner">
                                 <div className="thumbnail text-center">
                                     <Image
-                                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/cva-ecosystem-banner.jpg"
+                                        src="https://assets.rumsan.net/rahat/financial-access.png"
                                         alt="cva-ecosystem-banner"
                                         width={489}
                                         height={366}

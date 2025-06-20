@@ -58,9 +58,9 @@ const PartnersAndCollab = () => {
                         alt="Icon 1"
                     />
                 </div>
-                    <div style={iconItemStyles}>
+                <div style={iconItemStyles}>
                     <img
-                        src="https://assets.rumsan.net/rumsan-group/stellar-logo.png"
+                        src="https://assets.rumsan.net/rahat/stellar-x-rahat.png"
                         alt="Icon 1"
                     />
                 </div>
@@ -84,7 +84,7 @@ const PartnersAndCollab = () => {
                         alt="Icon 1"
                     />
                 </div>
-                  <div style={iconItemStyles}>
+                <div style={iconItemStyles}>
                     <img
                         src="https://assets.rumsan.net/rumsan-group/danish-redcross-logo-removebg-preview.png"
                         alt="Icon 1"
@@ -117,7 +117,7 @@ const PartnersAndCollab = () => {
                 </div>
             </div>
             <div style={iconStyles}>
-                  <div style={iconItemStyles}>
+                <div style={iconItemStyles}>
                     <img
                         src="https://assets.rumsan.net/rumsan-group/mercy-corp-logo.png"
                         alt="Icon 1"

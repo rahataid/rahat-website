@@ -45,12 +45,6 @@
                 "id": 56,
                 "text": "Our Projects",
                 "path": "/projects"
-            },
-            {
-                "id": 57,
-                "text": "Reports",
-                "path": "/reports",
-                "target": "_blank"
             }
         ]
     },

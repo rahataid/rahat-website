@@ -803,6 +803,15 @@
         height: 800px !important;
     }
 }
+
+.fullscreen_image-banner-home-banner {
+    height: 100%;
+    width: 100%;
+    @media only screen and (min-width: 1199px) {
+        height: 400px !important;
+    }
+}
+
 .fullscreen_image-banner {
     .place-bet-area .winning-bid {
         flex-basis: 55%;
@@ -1585,3 +1594,4 @@
     --webkit-backdrop-filter: blur(12px);
     background-color: #ffffff0d;
 }
+
