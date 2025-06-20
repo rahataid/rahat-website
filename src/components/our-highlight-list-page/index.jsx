@@ -18,7 +18,7 @@ const OurHighlightListPage = ({ space, className }) => (
             <div className="container">
                 <div className="row mb--20">
                     <div className="title-area">
-                        <h4 className="title mb--15">Our highlights</h4>
+                        <h4 className="title mb--15">Our Highlights</h4>
                     </div>
                 </div>
                 <div className="row g-5">

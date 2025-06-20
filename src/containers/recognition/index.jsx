@@ -8,7 +8,7 @@ import FunderRecognitions from "@components/funder-recognitions";
 
 const TABS = [
     { key: "highlights", label: "Highlights" },
-    { key: "recognition", label: "Recognition/Funder" },
+    { key: "recognition", label: "Recognition & Funder" },
     { key: "awards", label: "Awards" },
 ];
 
@@ -38,7 +38,7 @@ const OurRecognitionPage = ({ space, className }) => {
                                     style={{
                                         cursor: "pointer",
                                         padding: "8px",
-                                        fontSize: "1.75rem",
+                                        fontSize: "1.7rem",
                                         background:
                                             activeTab === tab.key
                                                 ? "#2C7FBE"
