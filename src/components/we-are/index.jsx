@@ -65,8 +65,8 @@ const WeAre = () => (
                     <div className="col-lg-3 col-md-6 col-6">
                         <div className="rn-about-wrapper text-center">
                             <img
-                                src="https://assets.rumsan.net/rahat/rahat-stellar-partners.png"
-                                alt="stellar-logo"
+                                src="https://assets.rumsan.net/rumsan-group/460975741-ed7c5668-1f49-4b9a-ba83-c6052e69e87c.png"
+                                alt="mercy-corps-logo"
                                 width="200px"
                             />
                         </div>
@@ -96,4 +96,3 @@ const WeAre = () => (
 );
 
 export default WeAre;
-
