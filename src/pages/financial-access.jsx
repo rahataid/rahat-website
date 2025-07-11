@@ -16,7 +16,7 @@ const FinancialAccess = () => {
                 pageTitle={`${
                     bannerKey === "CVA"
                         ? "Cash and Voucher Assistance Programs"
-                        : "Anticipatory Action Programs"
+                        : "Empowering climate risk communities through efficient Anticipatory Actions"
                 }`}
                 imageLink={`${
                     bannerKey === "CVA"
