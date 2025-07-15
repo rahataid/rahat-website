@@ -2,34 +2,32 @@ import OurServices from "@components/our-services";
 import VideoArea from "@components/youtube-video";
 import CashAndVouvherAssistancePage from "@containers/cash-and-voucher-assistance";
 import { normalizedData } from "@utils/methods";
-import Link from "next/link";
 import React from "react";
-import {
-    Button,
-    Col,
-    Container,
-    Nav,
-    Row,
-    Stack,
-    Tab,
-    TabContainer,
-    TabContent,
-    TabPane,
-    Tabs,
-} from "react-bootstrap";
+import { Nav, Row, Tab } from "react-bootstrap";
 import homepageData from "../../data/home.json";
 import AnticipatoryActionsPage from "@containers/anticipatory-action-page";
 
-const FinancialAccessContainer = ({ bannerKey, setBannerKey }) => {
+const FinancialAccessContainer = ({
+    bannerKey,
+    setBannerKey,
+    handleTabClick,
+}) => {
     const content = normalizedData(homepageData?.content || []);
+
+    // Handle tab change without refresh
+    const onTabChange = (key) => {
+        if (handleTabClick) {
+            // Use the passed-down handler to update URL and state
+            handleTabClick(key);
+        } else {
+            // Fallback to just setting the state if no handler provided
+            setBannerKey(key);
+        }
+    };
 
     return (
         <Row className="g-5 mt-2">
-            <Tab.Container
-                defaultActiveKey="CVA"
-                activeKey={bannerKey}
-                onSelect={(k) => setBannerKey(k)}
-            >
+            <Tab.Container activeKey={bannerKey} onSelect={onTabChange}>
                 <Nav className="nav d-flex justify-content-center">
                     <div className="setting-option header-btn mx-5 mb-3 ">
                         <Nav.Link

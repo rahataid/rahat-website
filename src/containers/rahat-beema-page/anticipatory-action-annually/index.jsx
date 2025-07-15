@@ -22,7 +22,7 @@ const AnticipatoryActionAnnually = () => {
     return (
         <main id="main-content" className="mt--100 main-content">
             <div className="content-wrapper">
-                <div className="row pb--40 pl--50 pt--80 padding">
+                <div className="row pb--40 pl--40 pt--80 padding">
                     <div className="col-lg-8">
                         <h2 className="text-white">
                             Most humanitarian systems struggle to act in time.
@@ -34,11 +34,11 @@ const AnticipatoryActionAnnually = () => {
                             <Slider options={sliderOptions} className="slider">
                                 <img
                                     className="slides"
-                                    src="/images/bg/beema-mini-slider-banner-1.png"
+                                    src="https://assets.rumsan.net/rahat/aa-slider-01.png"
                                 />
                                 <img
                                     className="slides"
-                                    src="/images/bg/beema-mini-slider-banner-2.JPG"
+                                    src="https://assets.rumsan.net/rahat/aa-slider-02.png"
                                 />
                             </Slider>
                         </div>

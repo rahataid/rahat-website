@@ -42,14 +42,12 @@ priority
             <div
                 className={clsx("rn-about-Quote-area", space === 1, className)}
             >
-                <div className="pt--50">
-                    <AnticipatoryActionVideo data={content["video-section"]} />
-                    <WhyAnticipatoryAction />
-                    <AnticipatoryActionAnnually />
-                    <AnticipatoryKeyComponents />
-                    <AnticipatoryActionCaseStudyPage />
-                    <AchievementsBadgesAnticipatory />
-                </div>
+                <AnticipatoryActionVideo data={content["video-section"]} />
+                <WhyAnticipatoryAction />
+                <AnticipatoryActionAnnually />
+                <AnticipatoryKeyComponents />
+                <AnticipatoryActionCaseStudyPage />
+                <AchievementsBadgesAnticipatory />
             </div>
         </>
     );

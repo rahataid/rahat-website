@@ -40,7 +40,7 @@ const OurEcosystem = ({ space, className }) => {
                                 </div>
                                 <div className="content">
                                     <h4 className="title-feature">
-                                        <a href="/financial-access">
+                                        <a href="/financial-access?tab=CVA">
                                             Financial Access
                                         </a>
                                     </h4>
@@ -50,7 +50,7 @@ const OurEcosystem = ({ space, className }) => {
                                         Anticipatory Actions initiatives.
                                     </p>
 
-                                    <ReadMoreBtn linkTo="/financial-access" />
+                                    <ReadMoreBtn linkTo="/financial-access?tab=CVA" />
                                 </div>
                             </div>
                         </div>
