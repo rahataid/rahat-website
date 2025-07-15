@@ -1,14 +1,12 @@
 .main-content {
     position: relative;
-    background-image: url('/images/bg/beema-main-banner.jpg');
+    background-image: url("/images/bg/beema-main-banner.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
     .content-wrapper {
         background-color: rgba($color: #2b7ec1, $alpha: 0.7);
-
     }
-
 
     .mobile-slider-wrapper {
         margin-top: 20px;
@@ -55,13 +53,12 @@
             }
         }
     }
-
 }
 
 .padding {
     padding-right: 40px;
 
-    @media only screen and (min-width : 992px) {
+    @media only screen and (min-width: 992px) {
         padding-right: 0;
     }
 }
@@ -83,3 +80,20 @@
         }
     }
 }
+
+.badge-card-anticipatory {
+    padding: 10px;
+    background: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inner-badge {
+        transition: 0.2s all ease-in-out;
+
+        &:hover {
+            padding-bottom: 15px;
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+{
+    "title": "anticipatory-action",
+    "content": [
+        {
+            "section": "video-section",
+            "title": "Our Solution",
+            "subtitle": " Rahat Anticipatory Action (AA) is an open-source, blockchain-powered platform that enables aid agencies to deliver proactive assistance before disasters strike in the form of cash or in-kind. It uses weather oracles to automate alerts and aid distribution through smart contracts,  ensuring support reaches vulnerable communities instantly, transparently, and efficiently once specific disaster thresholds are met.",
+            "subtitle2": "By streamlining operations, reducing overhead, and providing real-time visibility into fund flows, Rahat AA helps humanitarian organizations act faster and more effectively. It empowers at-risk populations to prepare, protect, and recover before a crisis escalates. Built to overcome the delays and fragmentation of traditional aid systems, Rahat offers a scalable, tech-forward solution for anticipatory humanitarian action.",
+            "images": [
+                {
+                    "src": "https://assets.rumsan.net/rahat/aa-youtube-thumbnail.png"
+                }
+            ],
+            "video": {
+                "videoId": "n2K7AgS_g8Q"
+            }
+        }
+    ]
+}
+

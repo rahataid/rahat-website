@@ -4,10 +4,32 @@ import Footer from "@layout/footer";
 import Header from "@layout/header";
 import Wrapper from "@layout/wrapper";
 import FinancialAccessContainer from "@containers/financial-access-container";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 const FinancialAccess = () => {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const tabParam = searchParams.get("tab");
+
     const [bannerKey, setBannerKey] = useState("CVA");
+
+    useEffect(() => {
+        if (tabParam === "AA" || tabParam === "CVA") {
+            setBannerKey(tabParam);
+        }
+    }, [tabParam]);
+
+    const handleTabClick = (tab) => {
+        // Update URL with query param without full page refresh
+        router.push(`/financial-access?tab=${tab}`, undefined, {
+            shallow: true,
+            scroll: false,
+        });
+        setBannerKey(tab);
+    };
+
     return (
         <Wrapper>
             <SEO pageTitle="FinancialAccess" />
@@ -16,7 +38,7 @@ const FinancialAccess = () => {
                 pageTitle={`${
                     bannerKey === "CVA"
                         ? "Cash and Voucher Assistance Programs"
-                        : "Anticipatory Action Programs"
+                        : "Empowering climate risk communities through efficient Anticipatory Actions"
                 }`}
                 imageLink={`${
                     bannerKey === "CVA"
@@ -27,6 +49,7 @@ const FinancialAccess = () => {
             <FinancialAccessContainer
                 bannerKey={bannerKey}
                 setBannerKey={setBannerKey}
+                handleTabClick={handleTabClick}
             />
             <Footer />
         </Wrapper>
