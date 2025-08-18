@@ -49,7 +49,7 @@ const FunFact = ({ className }) => {
                                                 onChange={(inView) =>
                                                     visibleChangeHandler(inView)
                                                 }
-                                            ></InView>
+                                             />
                                         </div>
                                     )}
                                 </CountUp>
@@ -77,7 +77,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={80000}
+                                    end={109000}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -130,7 +130,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={50}
+                                    end={170}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -181,7 +181,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={14000}
+                                    end={53000}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -235,7 +235,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={4200}
+                                    end={3900}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -303,7 +303,7 @@ const FunFact = ({ className }) => {
                                                 onChange={(inView) =>
                                                     visibleChangeHandler(inView)
                                                 }
-                                            ></InView>
+                                             />
                                         </div>
                                     )}
                                 </CountUp>
@@ -329,7 +329,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={3}
+                                    end={7}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -347,14 +347,7 @@ const FunFact = ({ className }) => {
                                             >
                                                 {" "}
                                                 <>
-                                                    <span
-                                                        style={{
-                                                            fontSize: "24px",
-                                                            marginLeft: "-10px",
-                                                        }}
-                                                    >
-                                                        Countries
-                                                    </span>
+                                                 
                                                 </>
                                             </InView>
                                         </div>
@@ -363,7 +356,7 @@ const FunFact = ({ className }) => {
                             </div>
 
                             <div className="botton-title">
-                                Nepal, Pakistan & Indonesia
+                                Countries
                             </div>
                         </div>
                     </div>
