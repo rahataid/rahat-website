@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
 
-const AchievementsBadgesAnticipatory = () => (
+const AchievementsBadges = () => (
     <div className="rn-section-gapTop">
         <div className="container">
             <div className="row mb--40">
                 <div className="title-area text-center">
-                    <h3 className="title mb--15">Partners and Supporters</h3>
+                    <h3 className="title mb--15">Achievements</h3>
                 </div>
             </div>
             {/* <div className="rn-weAre-one color-shape-7">
@@ -43,51 +43,31 @@ const AchievementsBadgesAnticipatory = () => (
                     </div>
                 </div>
             </div> */}
-            <div className="d-flex gap-4 justify-content-center">
-                <div className="badge-card-anticipatory">
+            <div className="d-flex flex-wrap gap-5 justify-content-center">
+                <div className="badge-card">
                     <div className="inner-badge">
                         <Image
-                            src="https://assets.rumsan.net/rahat/aa-partners-01.png"
+                            src="/images/achievements/2023-solver-team-seal.png"
                             alt="2023-solver-team-seal"
                             width={300}
                             height={200}
                         />
                     </div>
                 </div>
-                <div className="badge-card-anticipatory">
+                <div className="badge-card">
                     <div className="inner-badge">
                         <Image
-                            src="https://assets.rumsan.net/rahat/aa-partners-02.png"
+                            src="/images/achievements/gsr.png"
                             alt="gsr"
                             width={300}
                             height={200}
                         />
                     </div>
                 </div>
-                <div className="badge-card-anticipatory">
+                <div className="badge-card">
                     <div className="inner-badge">
                         <Image
-                            src="https://assets.rumsan.net/rahat/aa-partners-03.png"
-                            alt="community-award"
-                            width={300}
-                            height={200}
-                        />
-                    </div>
-                </div>
-                <div className="badge-card-anticipatory">
-                    <div className="inner-badge">
-                        <Image
-                            src="https://assets.rumsan.net/rahat/aa-partners-04.png"
-                            alt="community-award"
-                            width={300}
-                            height={200}
-                        />
-                    </div>
-                </div>
-                <div className="badge-card-anticipatory">
-                    <div className="inner-badge">
-                        <Image
-                            src="https://assets.rumsan.net/rahat/aa-partners-05.png"
+                            src="/images/achievements/community-award.jfif"
                             alt="community-award"
                             width={300}
                             height={200}
@@ -99,5 +79,5 @@ const AchievementsBadgesAnticipatory = () => (
     </div>
 );
 
-export default AchievementsBadgesAnticipatory;
+export default AchievementsBadges;
 
