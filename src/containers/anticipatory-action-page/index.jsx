@@ -10,7 +10,7 @@ import WhyAnticipatoryAction from "@containers/why-anticipatory-action";
 import AnticipatoryActionAnnually from "@containers/rahat-beema-page/anticipatory-action-annually";
 import AnticipatoryKeyComponents from "@containers/rahat-beema-page/key-components-anticipatory";
 import AnticipatoryActionCaseStudyPage from "@containers/anticipatory-action-case-study";
-import AchievementsBadgesAnticipatory from "@containers/rahat-beema-page/achievements-badges";
+import AchievementsBadgesAnticipatory from "@containers/rahat-beema-page/achievements-badges-anticipatory";
 
 const AnticipatoryActionsPage = ({ space, className }) => {
     const content = normalizedData(AnticipatoryActionVideoData?.content || []);
