@@ -49,7 +49,7 @@ const FunFact = ({ className }) => {
                                                 onChange={(inView) =>
                                                     visibleChangeHandler(inView)
                                                 }
-                                             />
+                                            />
                                         </div>
                                     )}
                                 </CountUp>
@@ -77,7 +77,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={109000}
+                                    end={109}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -93,6 +93,15 @@ const FunFact = ({ className }) => {
                                                     visibleChangeHandler(inView)
                                                 }
                                             >
+                                                <>
+                                                    <span
+                                                        style={{
+                                                            fontSize: "40px",
+                                                        }}
+                                                    >
+                                                        K
+                                                    </span>
+                                                </>
                                                 <>
                                                     <span
                                                         style={{
@@ -181,7 +190,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={53000}
+                                    end={53}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -197,6 +206,15 @@ const FunFact = ({ className }) => {
                                                     visibleChangeHandler(inView)
                                                 }
                                             >
+                                                <>
+                                                    <span
+                                                        style={{
+                                                            fontSize: "40px",
+                                                        }}
+                                                    >
+                                                        K
+                                                    </span>
+                                                </>
                                                 <>
                                                     <span
                                                         style={{
@@ -303,7 +321,7 @@ const FunFact = ({ className }) => {
                                                 onChange={(inView) =>
                                                     visibleChangeHandler(inView)
                                                 }
-                                             />
+                                            />
                                         </div>
                                     )}
                                 </CountUp>
@@ -329,7 +347,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={7}
+                                    end={8}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -346,18 +364,14 @@ const FunFact = ({ className }) => {
                                                 }
                                             >
                                                 {" "}
-                                                <>
-                                                 
-                                                </>
+                                                <></>
                                             </InView>
                                         </div>
                                     )}
                                 </CountUp>
                             </div>
 
-                            <div className="botton-title">
-                                Countries
-                            </div>
+                            <div className="botton-title">Countries</div>
                         </div>
                     </div>
                     <div className="col-lg-3 col-sm-6 col-6">
@@ -369,20 +383,20 @@ const FunFact = ({ className }) => {
                         >
                             <div className="number counter-odomitter-active">
                                 <img
-                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/money.png"
-                                    alt=""
+                                    src="https://assets.rumsan.net/rahat/digital-literacy.png"
+                                    alt="digital-literacy"
                                     style={{
                                         width: "60px",
                                     }}
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={154}
+                                    end={41}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
                                         <div style={{ marginTop: "-30px" }}>
-                                            <>
+                                            {/* <>
                                                 <span
                                                     style={{
                                                         fontSize: "30px",
@@ -390,12 +404,13 @@ const FunFact = ({ className }) => {
                                                 >
                                                     $
                                                 </span>
-                                            </>
+                                            </> */}
                                             <span
                                                 className="odometer-custom"
                                                 ref={countUpRef}
                                                 style={{ fontSize: "4.5rem" }}
                                             />
+
                                             <InView
                                                 as="span"
                                                 onChange={(inView) =>
@@ -405,10 +420,19 @@ const FunFact = ({ className }) => {
                                                 <>
                                                     <span
                                                         style={{
-                                                            fontSize: "30px",
+                                                            fontSize: "40px",
                                                         }}
                                                     >
                                                         K
+                                                    </span>
+                                                </>
+                                                <>
+                                                    <span
+                                                        style={{
+                                                            fontSize: "50px",
+                                                        }}
+                                                    >
+                                                        +
                                                     </span>
                                                 </>
                                             </InView>
@@ -417,7 +441,7 @@ const FunFact = ({ className }) => {
                                 </CountUp>
                             </div>
 
-                            <div className="botton-title">Aid Distributed</div>
+                            <div className="botton-title">Digital Literacy</div>
                         </div>
                     </div>
                 </div>
