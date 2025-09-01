@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import Slider, { SliderItem } from "@ui/slider";
 import { IDType, ImageType } from "@utils/types";
 import PropTypes from "prop-types";
@@ -109,12 +110,59 @@ const MainSliderSection = ({ data }) => {
                             }}
                         >
                             <div style={{ padding: "20px 0 100px" }}>
-                                <h5 style={{ textAlign: "start" }}>
-                                    {data.banners[currentSlide]?.title}
-                                </h5>
+                                {data.banners[currentSlide]?.linkTo &&
+                                !data.banners[currentSlide]?.isBtnDisabled ? (
+                                    <Link
+                                        href={data.banners[currentSlide].linkTo}
+                                        style={{
+                                            textDecoration: "none",
+                                            color: "inherit",
+                                            cursor: "pointer",
+                                        }}
+                                    >
+                                        <h5
+                                            style={{
+                                                textAlign: "start",
+                                                color: "#2B7EC1",
+                                                transition: "color 0.3s ease",
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.target.style.color =
+                                                    "#5BA3E0";
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.target.style.color =
+                                                    "#2B7EC1";
+                                            }}
+                                        >
+                                            {data.banners[currentSlide]?.title}
+                                        </h5>
+                                    </Link>
+                                ) : (
+                                    <h5 style={{ textAlign: "start" }}>
+                                        {data.banners[currentSlide]?.title}
+                                    </h5>
+                                )}
                                 <p style={{ textAlign: "start" }}>
                                     {data.banners[currentSlide]?.description}
                                 </p>
+                                {data.banners[currentSlide]?.linkTo &&
+                                    !data.banners[currentSlide]
+                                        ?.isBtnDisabled && (
+                                        <Link
+                                            href={
+                                                data.banners[currentSlide]
+                                                    .linkTo
+                                            }
+                                            style={{
+                                                color: "#2B7EC1",
+                                                textDecoration: "none",
+                                                fontWeight: "600",
+                                                fontSize: "16px",
+                                                cursor: "pointer",
+                                            }}
+                                        ></Link>
+                                    )}
                             </div>
                         </div>
                     </>

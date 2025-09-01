@@ -12,7 +12,8 @@
                         "src": "https://assets.rumsan.net/rahat/cash-and-voucher-assistance-cva-program-.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights."
+                    "description": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights.",
+                    "linkTo": "/cash-and-voucher-assistance-platform"
                 },
                 {
                     "id": 2,
