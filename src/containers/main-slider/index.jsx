@@ -3,6 +3,7 @@ import Slider, { SliderItem } from "@ui/slider";
 import { IDType, ImageType } from "@utils/types";
 import PropTypes from "prop-types";
 import MainBannerSlider from "./slide";
+import Link from "next/link";
 
 const sliderOptions = {
     dots: true,
@@ -109,9 +110,22 @@ const MainSliderSection = ({ data }) => {
                             }}
                         >
                             <div style={{ padding: "20px 0 100px" }}>
-                                <h5 style={{ textAlign: "start" }}>
-                                    {data.banners[currentSlide]?.title}
-                                </h5>
+                                <Link href={data.banners[currentSlide]?.linkTo}>
+                                    <h5
+                                        style={{
+                                            textAlign: "start",
+                                            transition: "color 0.2s",
+                                        }}
+                                        className="main-slider-link-title"
+                                    >
+                                        {data.banners[currentSlide]?.title}
+                                    </h5>
+                                </Link>
+                                <style jsx>{`
+                                    .main-slider-link-title:hover {
+                                        color: #2b7ec1;
+                                    }
+                                `}</style>
                                 <p style={{ textAlign: "start" }}>
                                     {data.banners[currentSlide]?.description}
                                 </p>
