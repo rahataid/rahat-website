@@ -2,6 +2,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 
 import { IDType, ImageType } from "@utils/types";
+import Link from "next/link";
 
 const MainBannerSlider = ({
     title,
@@ -12,7 +13,7 @@ const MainBannerSlider = ({
 }) => {
     return (
         <>
-            {image?.src && (
+            <Link href={linkTo} rel="noopener noreferrer">
                 <Image
                     src={image.src}
                     alt="Slider BG"
@@ -22,7 +23,7 @@ const MainBannerSlider = ({
                     priority
                     className="slider-bg"
                 />
-            )}
+            </Link>
         </>
     );
 };
