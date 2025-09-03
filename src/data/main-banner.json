@@ -12,7 +12,8 @@
                         "src": "https://assets.rumsan.net/rahat/cash-and-voucher-assistance-cva-program-.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights."
+                    "description": "Deliver aid efficiently with personalized vouchers, transparent donations, inclusive communication, and real-time insights.",
+                    "linkTo": "https://rahat.io/financial-access?tab=CVA"
                 },
                 {
                     "id": 2,
@@ -22,7 +23,8 @@
                         "src": "https://assets.rumsan.net/rahat/anticipatory-action.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers empowering communities before crises hit."
+                    "description": "Automated alerts using smart contracts and hydrological data enable timely, accountable cash transfers empowering communities before crises hit.",
+                    "linkTo": "https://rahat.io/financial-access?tab=AA"
                 },
                 {
                     "id": 3,
@@ -32,7 +34,8 @@
                         "src": "https://assets.rumsan.net/rahat/communication-module.png"
                     },
                     "isBtnDisabled": false,
-                    "description": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports."
+                    "description": "Seamlessly manage SMS, Voice, and IVR campaigns from one platform with easy scheduling, manual triggers, and detailed performance reports.",
+                    "linkTo": "#"
                 }
             ]
         }

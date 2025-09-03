@@ -391,7 +391,7 @@ const FunFact = ({ className }) => {
                                 />
                                 <CountUp
                                     start={focus ? 0 : null}
-                                    end={41}
+                                    end={4100}
                                     duration={2}
                                 >
                                     {({ countUpRef }) => (
@@ -417,7 +417,7 @@ const FunFact = ({ className }) => {
                                                     visibleChangeHandler(inView)
                                                 }
                                             >
-                                                <>
+                                                {/* <>
                                                     <span
                                                         style={{
                                                             fontSize: "40px",
@@ -425,7 +425,7 @@ const FunFact = ({ className }) => {
                                                     >
                                                         K
                                                     </span>
-                                                </>
+                                                </> */}
                                                 <>
                                                     <span
                                                         style={{
