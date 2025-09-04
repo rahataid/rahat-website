@@ -32,8 +32,8 @@ const Footer = ({ space, className, data }) => (
                                 }}
                             />
                             <p>
-                                Rumsan is a frontier technology focused on
-                                social impact.
+                                Rumsan is a frontier technology company driving
+                                social impact through innovation.
                             </p>
                         </div>
                     </div>
