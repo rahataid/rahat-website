@@ -31,7 +31,7 @@
                 "path": "/case-study"
             },
             {
-                "id": 56,
+                "id": 59,
                 "text": "Press Releases",
                 "path": "/press-release"
             },
@@ -45,6 +45,11 @@
                 "id": 56,
                 "text": "Our Projects",
                 "path": "/projects"
+            },
+            {
+                "id": 57,
+                "text": "Awareness",
+                "path": "/awareness"
             }
         ]
     },
