@@ -573,3 +573,31 @@
     }
 }
 
+@media (min-width: 900px) and (max-width: 1010px) {
+    .bingo-patterns-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+        gap: 40px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 820px) and (max-width: 899px) {
+    .bingo-patterns-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 821px) and (max-width: 998px) {
+    .play-bingo-feature-grid {
+        display: grid;
+        // grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
