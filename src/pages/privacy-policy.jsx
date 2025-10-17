@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
         <div className="container" style={{ padding: "20px" }}>
             <h5>Rahat: Privacy Policy</h5>
             <p style={{ fontSize: "16px", margin: "0 0 20px" }}>
-                Last updated: 8 May, 2025
+                Last updated: 17 October, 2025
             </p>
 
             <div style={{ marginTop: "20px" }}>
@@ -234,17 +234,38 @@ const PrivacyPolicy = () => {
             </div>
 
             <div style={{ marginTop: "20px" }}>
-                <h5>5. Data Retention and Disposal</h5>
+                <h5>5. Data Retention, Transition, and Disposal</h5>
                 <p style={{ fontSize: "16px" }}>
                     We retain personal data only for the duration of the project
-                    agreement and for an additional 3 years following project
-                    closure. This period allows for the maintenance of necessary
-                    business records and financial reconciliation, as well as
-                    addressing any grievances raised by beneficiaries. Once
-                    personal data has fulfilled its intended purpose or upon
-                    request from the data subject, Rumsan will ensure its secure
-                    disposal in accordance with applicable data protection
-                    regulations.
+                    agreement and for an additional seven (7) years following
+                    project closure. This period allows for the maintenance of
+                    necessary business records, financial reconciliation, and
+                    addressing any grievances raised by beneficiaries.
+                    <br />
+                    <br />
+                    Upon project completion or termination of a contractual
+                    agreement, Rumsan ensures a secure transition or handover of
+                    relevant data to the authorized client, partner, or
+                    designated authority within the agreed-upon period between
+                    both parties. This includes transferring the database by
+                    generating database dump files, which are encrypted and
+                    securely transmitted to the client's server. The application
+                    codebase, along with static assets and configuration files,
+                    is packaged and delivered via encrypted archives or secure
+                    file transfer methods. Necessary backup copies are
+                    maintained during the agreed retention period. Once the
+                    handover is complete, Rumsan will not retain any personal
+                    data beyond the agreed retention period unless legally
+                    required.
+                    <br />
+                    <br />
+                    After the completion of data transition or once data has
+                    fulfilled its intended purpose, Rumsan ensures its secure
+                    disposal in accordance with applicable data protection laws
+                    and internal destruction protocols. Once personal data has
+                    fulfilled its intended purpose or upon request from the data
+                    subject, Rumsan will ensure its secure disposal in
+                    accordance with applicable data protection regulations.
                 </p>
             </div>
 
@@ -611,4 +632,3 @@ const PrivacyPolicy = () => {
 };
 
 export default PrivacyPolicy;
-
