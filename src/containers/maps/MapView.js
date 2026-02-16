@@ -23,18 +23,36 @@ const baseSettings = {
     scrollZoom: false,
 };
 
-const StyledMapContainer = styled("div")(({ theme, sx }) => {
-    return {
+const StyledMapContainer = styled("div")(({ theme, sx }) => ({
         zIndex: 0,
         height: 400,
         overflow: "hidden",
         position: "relative",
         ...sx,
-    };
-});
-
+    }));
 const MapView = ({ mapData, sx }) => {
     const theme = useTheme();
+
+    // Nepal boundaries
+    const NEPAL_BOUNDS = {
+        minLat: 26.3,
+        maxLat: 30.4,
+        minLng: 80.1,
+        maxLng: 88.2,
+    };
+
+    // Calculate zoom and center based on mapData
+    const getMapCenter = () => 
+        // NOTE: bound map to nepal because community lat long data is not accurate
+             ({
+                latitude: (NEPAL_BOUNDS.minLat + NEPAL_BOUNDS.maxLat) / 2,
+                longitude: (NEPAL_BOUNDS.minLng + NEPAL_BOUNDS.maxLng) / 2,
+                zoom: 5,
+            })
+
+    ;
+
+    const { latitude, longitude, zoom } = getMapCenter();
 
     return (
         <div>
@@ -43,6 +61,9 @@ const MapView = ({ mapData, sx }) => {
                     {...baseSettings}
                     mapData={mapData}
                     mapStyle={THEMES[theme.palette.mode]}
+                    initialLatitude={latitude}
+                    initialLongitude={longitude}
+                    initialZoom={zoom}
                 />
             </StyledMapContainer>
         </div>
