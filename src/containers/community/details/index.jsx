@@ -1,5 +1,6 @@
 import CommunityChart from "@containers/community/details/impact-metrics";
 import Statistics from "@containers/community/details/statistics";
+import CustomStats from "./customStats";
 import CommunityDescription from "./description";
 import CommunityPhotos from "./photos";
 import CommunityTransactions from "./transactions";
@@ -86,6 +87,7 @@ const CommunityDetails = ({ community, transactions }) => {
                         {transactions.length > 0 && (
                             <CommunityTransactions data={transactions} />
                         )}
+                        <CustomStats communityId={community?.address} />
                         <CommunityChart community={community} />
                         <CommunityPhotos community={community} />
                     </div>
