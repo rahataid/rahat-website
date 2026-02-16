@@ -1,0 +1,8 @@
+{
+  "0x9e2790Cc367bd413Fa37649c4734da550B69552C": [
+    { "label": "Total Donor", "value": "5000+", "icon": "mdi:account-heart" },
+    { "label": "Total Blood donation event", "value": "130+", "icon": "mdi:water-plus" },
+    { "label": "Total Blood Collected", "value": "6300+", "icon": "mdi:water" },
+    { "label": "Total Blood request managed", "value": "13300+", "icon": "mdi:water-check" }
+  ]
+}
