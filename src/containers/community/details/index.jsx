@@ -87,6 +87,7 @@ const CommunityDetails = ({ community, transactions }) => {
                         {transactions.length > 0 && (
                             <CommunityTransactions data={transactions} />
                         )}
+                        {/* custom data stats for community */}
                         <CustomStats communityId={community?.address} />
                         <CommunityChart community={community} />
                         <CommunityPhotos community={community} />
