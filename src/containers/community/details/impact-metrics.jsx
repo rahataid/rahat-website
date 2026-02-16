@@ -1,6 +1,9 @@
 import CommunityChart from "./community-charts";
 
-const CommunityCharts = ({ id, community }) => (
+const CommunityCharts = ({ id, community }) => {
+    if (!community?.summary[0]?.bank_no) return null;
+    
+    return (
     <div id={id} className="container">
         <div className="row g-5">
             <div className="col-lg-12">
@@ -13,6 +16,6 @@ const CommunityCharts = ({ id, community }) => (
             <CommunityChart community={community} />
         </div>
     </div>
-);
+)};
 
 export default CommunityCharts;

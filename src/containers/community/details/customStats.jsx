@@ -1,8 +1,7 @@
 import PropTypes from "prop-types";
 import statsData from "../../../data/custom-community-stat-data.json";
 
-// This was created to show custom stats for community which are not part of the original data model . 
-// The data is currently hardcoded in a JSON file 
+const CustomStats = ({ communityId }) => {
     const stats = statsData[communityId];
     if (!stats) return null;
     return (
