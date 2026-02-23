@@ -1,16 +1,16 @@
 # Install dependencies only when needed
-FROM node:18-alpine3.17 AS deps
+FROM node:18.20.8-alpine3.19 AS deps
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
 RUN yarn install 
 
-FROM node:18-alpine3.17 AS builder
+FROM node:18.20.8-alpine3.19 AS builder
 WORKDIR /opt/app
 COPY . .
 COPY --from=deps /opt/app/node_modules ./node_modules
 RUN yarn build
 
-FROM node:18-alpine3.17 AS proddeps
+FROM node:18.20.8-alpine3.19 AS proddeps
 WORKDIR /opt/app
 COPY package.json yarn.lock ./
 RUN apk add --no-cache python3 make g++ && \
@@ -18,7 +18,7 @@ RUN apk add --no-cache python3 make g++ && \
   yarn install --production
 
 # Production image, copy all the files and run next
-FROM node:18-alpine3.17 AS runner
+FROM node:18.20.8-alpine3.19 AS runner
 USER node
 WORKDIR /usr/src/app
 # COPY --chown=node:node --from=builder /opt/app/.env ./
