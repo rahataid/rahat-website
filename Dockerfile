@@ -2,7 +2,7 @@
 FROM node:18-alpine3.18 AS deps
 WORKDIR /opt/app
 COPY pnpm-lock.yaml package.json ./
-RUN npm install -g pnpm && \
+RUN npm install -g pnpm@9 && \
   pnpm install --frozen-lockfile && \
   pnpm store prune
 
@@ -10,13 +10,13 @@ FROM node:18-alpine3.18 AS builder
 WORKDIR /opt/app
 COPY . .
 COPY --from=deps /opt/app/node_modules ./node_modules
-RUN npm install -g pnpm && \
+RUN npm install -g pnpm@9 && \
   pnpm build
 
 FROM node:18-alpine3.18 AS proddeps
 WORKDIR /opt/app
 COPY pnpm-lock.yaml package.json ./
-RUN npm install -g pnpm && \
+RUN npm install -g pnpm@9 && \
   apk add --no-cache python3 make g++ && \
   pnpm install --prod --frozen-lockfile && \
   pnpm store prune && \
