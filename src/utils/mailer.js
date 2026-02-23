@@ -16,7 +16,7 @@ async function contactForm(payload) {
         if (payload.isDemo === "Yes") {
             const mailOptions1 = {
                 from: "Rahat - Aid Token Distribution",
-                to: "team@rahat.io",
+                to: "demorequest+team@rahat.io",
                 subject: "Rahat Website - Request for Demo",
                 html: `
                 <h2>Full Name:</h2>${payload.contactName}<br/>
