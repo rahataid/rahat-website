@@ -113,6 +113,6 @@
     },
     "version": "1.0.0",
     "main": "index.js",
-    "author": "<abiskar.rumsan@gmail.com>",
+    "packageManager": "yarn@1.22.22",
     "license": "MIT"
 }
