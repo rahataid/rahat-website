@@ -15,8 +15,8 @@ async function contactForm(payload) {
 
         if (payload.isDemo === "Yes") {
             const mailOptions1 = {
-                from: "Rahat - Aid Token Distribution",
-                to: "demorequest+team@rahat.io",
+                from: `"Rahat - Aid Token Distribution" <${SMTP_USER}>`,
+                to: "team+demorequest@rahat.io",
                 subject: "Rahat Website - Request for Demo",
                 html: `
                 <h2>Full Name:</h2>${payload.contactName}<br/>
@@ -25,7 +25,7 @@ async function contactForm(payload) {
                 <h2>Message:</h2>${payload.contactMessage}<br/>`,
             };
             const mailOptions2 = {
-                from: "Rahat - Aid Token Distribution",
+                from: `"Rahat - Aid Token Distribution" <${SMTP_USER}>`,
                 to: `${payload.contactEmail.trim()}`,
                 subject: "Rahat Website - Request for Demo",
                 html: `<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -1603,7 +1603,7 @@ async function contactForm(payload) {
             await transporter.sendMail(mailOptions2);
         } else {
             const mailOptions = {
-                from: "Rahat - Aid Token Distribution",
+                from: `"Rahat - Aid Token Distribution" <${SMTP_USER}>`,
                 to: "team@rahat.io",
                 subject: "Rahat Website - Contact Form",
                 html: `<h2> Get In Touch - Contact Form</h2><br/>
