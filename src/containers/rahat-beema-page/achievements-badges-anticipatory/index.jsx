@@ -94,6 +94,17 @@ const AchievementsBadgesAnticipatory = () => (
                         />
                     </div>
                 </div>
+                <div className="badge-card-anticipatory">
+                    <div className="inner-badge">
+                        <Image
+                            src="https://assets.rumsan.net/rahat/aa-partners-06-red-cross.png"
+                            alt="community-award"
+                            width={300}
+                            height={200}
+                            
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -31,9 +31,8 @@ const Footer = ({ space, className, data }) => (
                                     marginTop: "-30px",
                                 }}
                             />
-                            <p>
-                                Rumsan is a frontier technology company driving
-                                social impact through innovation.
+                            <p className="rn-footer-describe">
+                                 Rumsan is an impact innovation company that uses blockchain and AI to support governments, impact companies and dev/humanitarian sectors bridge yesterday's problems with tomorrow's solutions.
                             </p>
                         </div>
                     </div>
