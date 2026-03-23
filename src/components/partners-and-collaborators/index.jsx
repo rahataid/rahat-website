@@ -150,7 +150,7 @@ const PartnersAndCollab = () => {
                 </div>
                 <div style={iconItemStyles}>
                     <img
-                        src="/images/logo/GSMA-Logo-Red-RGB.png"
+                        src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/logo/GSMA-Logo-Red-RGB.png"
                         alt="Icon 9"
                     />
                 </div>

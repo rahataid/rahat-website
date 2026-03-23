@@ -51,7 +51,7 @@ const AuthorIntroArea = ({ className, space, community }) => {
 
     const coverImage = community?.images?.cover
         ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${community.name}/${community?.images?.cover}`
-        : "/images/bg/cover.jpg";
+        : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/cover.jpg";
 
     useEffect(() => {
         void connector.connectEagerly().catch(() => {

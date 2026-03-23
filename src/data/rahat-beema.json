@@ -9,7 +9,7 @@
                     "title": "Rahat Beema",
                     "subtitle": "Empowering Vulnerable Populations through Decentralized & Transparent Parametric Insurance ",
                     "image": {
-                        "src": "/images/bg/beema-banner-1.png"
+                        "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/beema-banner-1.png"
                     },
                     "isBtnDisabled": false
                 },
@@ -18,7 +18,7 @@
                     "title": "2023 MIT Solver",
                     "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
                     "image": {
-                        "src": "/images/bg/main-banner-04.png"
+                        "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/main-banner-04.png"
                     },
                     "isBtnDisabled": false
                 }
@@ -31,7 +31,7 @@
             "subtitle2": "By offering faster processing, reduced costs, and transparent payout determination, Rahat Beema stands as a robust solution for enhancing the financial resilience of those often left underserved by traditional insurance systems.",
             "images": [
                 {
-                    "src": "/images/bg/beema-banner-2.png"
+                    "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/beema-banner-2.png"
                 }
             ],
             "video": {

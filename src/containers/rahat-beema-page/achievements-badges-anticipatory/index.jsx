@@ -14,7 +14,7 @@ const AchievementsBadgesAnticipatory = () => (
                     <div className="col-lg-4 col-md-6 col-6">
                         <div className="rn-about-wrapper">
                             <Image
-                                src="/images/achievements/2023-solver-team-seal.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/achievements/2023-solver-team-seal.png"
                                 alt="data-monitoring.png"
                                 width={200}
                                 height={200}

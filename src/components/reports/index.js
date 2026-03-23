@@ -10,7 +10,7 @@ const ReportsPage = () => {
                 fluid
                 style={{
                     position: "relative",
-                    // backgroundImage: `url("/images/pic/career.png")`,
+                    // backgroundImage: `url("https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/pic/career.png")`,
                     backgroundColor: "#2B7EC1",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
