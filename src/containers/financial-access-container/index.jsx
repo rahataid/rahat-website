@@ -29,31 +29,6 @@ const FinancialAccessContainer = ({
         <Row className="g-5 mt-2">
             <Tab.Container activeKey={bannerKey} onSelect={onTabChange}>
                 <Nav className="nav d-flex justify-content-center">
-                    <div className="setting-option header-btn mx-5 mb-3 ">
-                        <Nav.Link
-                            as="button"
-                            eventKey="CVA"
-                            className={`btn btn-large btn-primary ${
-                                bannerKey === "CVA"
-                                    ? "border border-2"
-                                    : "border border-2"
-                            } `}
-                            style={{
-                                borderRadius: "50px",
-                                color: `${
-                                    bannerKey === "CVA" ? "#FFFFFF" : "#2B7EC1"
-                                }`,
-                                backgroundColor: `${
-                                    bannerKey === "CVA"
-                                        ? "#2B7EC1"
-                                        : "transparent"
-                                }`,
-                                transition: "0s",
-                            }}
-                        >
-                            Cash and Voucher Assistance Programs
-                        </Nav.Link>
-                    </div>
                     <div className="setting-option header-btn mx-5">
                         <Nav.Link
                             as="button"
@@ -77,6 +52,31 @@ const FinancialAccessContainer = ({
                             }}
                         >
                             Anticipatory Action Programs
+                        </Nav.Link>
+                    </div>
+                    <div className="setting-option header-btn mx-5 mb-3 ">
+                        <Nav.Link
+                            as="button"
+                            eventKey="CVA"
+                            className={`btn btn-large btn-primary ${
+                                bannerKey === "CVA"
+                                    ? "border border-2"
+                                    : "border border-2"
+                            } `}
+                            style={{
+                                borderRadius: "50px",
+                                color: `${
+                                    bannerKey === "CVA" ? "#FFFFFF" : "#2B7EC1"
+                                }`,
+                                backgroundColor: `${
+                                    bannerKey === "CVA"
+                                        ? "#2B7EC1"
+                                        : "transparent"
+                                }`,
+                                transition: "0s",
+                            }}
+                        >
+                            Cash and Voucher Assistance Programs
                         </Nav.Link>
                     </div>
                 </Nav>
