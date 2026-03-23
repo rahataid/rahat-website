@@ -19,7 +19,7 @@ const AuthorIntroArea = ({ className, space, organization }) => {
 
     const profileImage = organization?.profileImage
         ? `${ASSET_VIEW}/${contractAddress}/${organization?.profileImage}`
-        : "/images/portfolio/rahat.jpeg";
+        : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/portfolio/rahat.jpeg";
     return (
         <>
             <ShareModal
@@ -28,7 +28,7 @@ const AuthorIntroArea = ({ className, space, organization }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src="/images/bg/bg-img.jpg"
+                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/bg-img.jpg"
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"
@@ -53,7 +53,7 @@ const AuthorIntroArea = ({ className, space, organization }) => {
                                             src={profileImage}
                                             alt={
                                                 organization?.name ||
-                                                "/images/portfolio/rahat.jpeg"
+                                                "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/portfolio/rahat.jpeg"
                                             }
                                             width={140}
                                             height={140}
