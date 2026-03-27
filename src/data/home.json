@@ -18,7 +18,7 @@
                     "title": "GSMA INNOVATION FUND GRANTEE",
                     "subtitle": "For Anticipatory Humanitarian Action",
                     "image": {
-                        "src": "/images/bg/2023_Kigali_BootCamp_Day02_0571.jpg"
+                        "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/2023_Kigali_BootCamp_Day02_0571.jpg"
                     },
                     "isBtnDisabled": false
                 },
@@ -27,7 +27,7 @@
                     "title": "2023 MIT Solver",
                     "subtitle": "GSR Foundation Prize Winner | Community Award Winner",
                     "image": {
-                        "src": "/images/bg/slider-main-banner-mit.png"
+                        "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/slider-main-banner-mit.png"
                     },
                     "isBtnDisabled": false
                 }
@@ -39,7 +39,7 @@
             "subtitle": "In Jaleshwor Municipality in Mahottari District, through the collaborative efforts of UNICEF and Rumsan - powered by support from UNICEF Innovation - blockchain technology is now being utilized to provide timely cash transfers to those in need.",
             "images": [
                 {
-                    "src": "/images/bg/unicef-rahat-youtube-banner.jpg"
+                    "src": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/unicef-rahat-youtube-banner.jpg"
                 }
             ],
             "video": {

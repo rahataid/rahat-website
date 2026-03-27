@@ -49,7 +49,7 @@ const AuthorProfileArea = ({ className, organization }) => {
                                 );
                                 // const profileImage = transaction?.donee
                                 //     ? `${ASSET_VIEW}/${address}/${transaction?.donee?.profileImage}`
-                                //     : "/images/portfolio/rahat.jpeg";
+                                //     : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/portfolio/rahat.jpeg";
                                 return (
                                     <div
                                         key={transaction.id}
@@ -80,7 +80,7 @@ const AuthorProfileArea = ({ className, organization }) => {
                                 );
                                 // const profileImage = transaction?.donor
                                 //     ? `${ASSET_VIEW}/${address}/${transaction?.donor?.profileImage}`
-                                //     : "/images/portfolio/rahat.jpeg";
+                                //     : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/portfolio/rahat.jpeg";
                                 return (
                                     <div
                                         key={transaction.id}
