@@ -12,7 +12,7 @@ const FinancialDigitalLiteracy = () => {
             <Header />
             <MainBannerPage
                 pageTitle={"Digital & Financial Literacy"}
-                imageLink={"/images/banner/FinancialLiteracyBanner.png"}
+                imageLink={"https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/banner/FinancialLiteracyBanner.png"}
             />
             <FinancialDigitalLiteracyHomePage />
             <Footer />

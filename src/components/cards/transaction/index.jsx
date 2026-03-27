@@ -20,7 +20,7 @@ const TransactionCard = ({ data, className }) => {
                                 src={
                                     data?.donorImg
                                         ? data.donor.profileImage
-                                        : "/images/portfolio/rahat.jpeg"
+                                        : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/portfolio/rahat.jpeg"
                                 }
                                 alt={data?.donor?.name || "Nft_Profile"}
                                 width={500}

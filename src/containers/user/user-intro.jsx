@@ -19,7 +19,7 @@ const AuthorIntroArea = ({ className, space, data }) => {
             />
             <div className="rn-author-bg-area position-relative ptb--150">
                 <Image
-                    src="/images/bg/bg-img.jpg"
+                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/bg-img.jpg"
                     alt="Slider BG"
                     layout="fill"
                     objectFit="cover"

@@ -38,7 +38,7 @@ const Product = ({
                             src={
                                 cover
                                     ? `https://rahat-rumsan.s3.us-east-1.amazonaws.com/${AWS_ROOT_FOLDER_NAME}/${name}/${cover}`
-                                    : "/images/bg/cover.jpg"
+                                    : "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/cover.jpg"
                             }
                             alt={name}
                             ratio="6/4"

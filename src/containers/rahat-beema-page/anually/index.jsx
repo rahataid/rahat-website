@@ -32,7 +32,7 @@ const Annually = () => {
                             <Slider options={sliderOptions} className="slider">
                                 <img
                                     className="slides"
-                                    src="/images/bg/beema-mini-slider-banner-1.png"
+                                    src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/beema-mini-slider-banner-1.png"
                                 />
                                 <img
                                     className="slides"
@@ -160,7 +160,7 @@ const Annually = () => {
                         <Slider options={sliderOptions} className="slider">
                             <img
                                 className="slides"
-                                src="/images/bg/beema-mini-slider-banner-1.png"
+                                src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/bg/beema-mini-slider-banner-1.png"
                             />
                             <img
                                 className="slides"
