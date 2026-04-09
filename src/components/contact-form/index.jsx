@@ -5,13 +5,10 @@ import axios from "axios";
 import { set, useForm } from "react-hook-form";
 import Image from "next/image";
 import Loader from "@components/loader";
-import ReCAPTCHA from "react-google-recaptcha";
-import { useRef } from "react";
 
 const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const recaptchaRef = useRef(null);
-    const [captchaError, setCaptchaError] = useState("");
+
     const {
         register,
         handleSubmit,
@@ -33,12 +30,6 @@ const ContactForm = () => {
         }
     };
     const onSubmit = (data, e) => {
-        const token = recaptchaRef.current.getValue(); //get recaptcha token
-        if (!token) {
-            setCaptchaError("Please verify that you are not a robot.");
-            return;
-        }
-        setCaptchaError("");
         setIsLoading(true);
         const form = e.target;
         setServerState({ submitting: true });
@@ -48,16 +39,12 @@ const ContactForm = () => {
         //     body: JSON.stringify(data),
         // })
         axios
-   .post("/api/contactForm", { ...data, recaptchaToken: token })
+            .post("/api/contactForm", data)
             .then((_res) => {
                 setIsLoading(false);
-                recaptchaRef.current.reset();
                 handleServerResponse(true, "Thanks! for being with us", form);
-
             })
             .catch((err) => {
-                setIsLoading(false);
-                recaptchaRef.current.reset();
                 handleServerResponse(false, err.response.data.error, form);
             });
     };
@@ -238,13 +225,7 @@ const ContactForm = () => {
                                     )}
                                 </div>
                             </div>
- <div className="col-12 d-flex flex-column align-items-center">
-            <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-            />
-            {captchaError && <ErrorText>{captchaError}</ErrorText>}
-        </div>
+
                             <div className="col-12 d-flex justify-content-center">
                                 <Button
                                     className="mt-5"
@@ -273,3 +254,4 @@ const ContactForm = () => {
     );
 };
 export default ContactForm;
+
