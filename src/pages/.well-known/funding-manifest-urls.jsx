@@ -2,7 +2,8 @@
 export async function getServerSideProps({ res }) {
     res.setHeader('Content-Type', 'text/plain');
     const urls = [
-        'https://github.com/rahataid/rahat-platform/blob/main/funding.json'
+        'https://github.com/rahataid/rahat-platform/blob/main/funding.json',
+        'https://rahat.io/funding.json'
     ];
 
     res.write(urls.join('\n'));
