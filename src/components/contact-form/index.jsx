@@ -1,13 +1,18 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
-import axios from "axios";
 import { set, useForm } from "react-hook-form";
 import Image from "next/image";
 import Loader from "@components/loader";
+import ReCAPTCHA from "react-google-recaptcha";
+import { DemoService } from "@services/demo";
+import { RECAPTCHA_SITE_KEY } from "@config";
 
 const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState(null);
+    const [captchaError, setCaptchaError] = useState(null);
+    const recaptchaRef = useRef(null);
 
     const {
         register,
@@ -25,27 +30,36 @@ const ContactForm = () => {
             submitting: false,
             status: { ok, msg },
         });
+        recaptchaRef.current?.reset();
+        setCaptchaToken(null);
         if (ok) {
             form.reset();
         }
     };
     const onSubmit = (data, e) => {
+        if (!captchaToken) {
+            setCaptchaError("Please verify that you are not a robot");
+            return;
+        }
+        setCaptchaError(null);
         setIsLoading(true);
         const form = e.target;
         setServerState({ submitting: true });
-        // axios({
-        //     method: "post",
-        //     url: "/api/contactForm",
-        //     body: JSON.stringify(data),
-        // })
-        axios
-            .post("/api/contactForm", data)
+        DemoService.submit({
+            ...data,
+            recaptchaToken: captchaToken,
+        })
             .then((_res) => {
                 setIsLoading(false);
                 handleServerResponse(true, "Thanks! for being with us", form);
             })
             .catch((err) => {
-                handleServerResponse(false, err.response.data.error, form);
+                setIsLoading(false);
+                handleServerResponse(
+                    false,
+                    err.response?.data?.message || "Something went wrong",
+                    form
+                );
             });
     };
 
@@ -83,7 +97,7 @@ const ContactForm = () => {
                         onSubmit={handleSubmit(onSubmit)}
                     >
                         <div className="row">
-                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-name"
                                     className="form-label"
@@ -95,6 +109,11 @@ const ContactForm = () => {
                                     type="text"
                                     {...register("contactName", {
                                         required: "Name is required",
+                                        pattern: {
+                                            value: /^[A-Za-z\s]+$/,
+                                            message:
+                                                "Numbers and symbols are not allowed",
+                                        },
                                     })}
                                 />
                                 {errors.contactName && (
@@ -103,7 +122,33 @@ const ContactForm = () => {
                                     </ErrorText>
                                 )}
                             </div>
-                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
+                                <label
+                                    htmlFor="contact-organization"
+                                    className="form-label"
+                                >
+                                    Organization Name
+                                </label>
+                                <input
+                                    id="contact-organization"
+                                    type="text"
+                                    {...register("contactOrganization", {
+                                        required:
+                                            "Organization name is required",
+                                        pattern: {
+                                            value: /^[A-Za-z\s]+$/,
+                                            message:
+                                                "Numbers and symbols are not allowed",
+                                        },
+                                    })}
+                                />
+                                {errors.contactOrganization && (
+                                    <ErrorText>
+                                        {errors.contactOrganization?.message}
+                                    </ErrorText>
+                                )}
+                            </div>
+                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-email"
                                     className="form-label"
@@ -127,7 +172,7 @@ const ContactForm = () => {
                                     </ErrorText>
                                 )}
                             </div>
-                            <div className="col-12 col-lg-4 col-sm-12 col-md-12 mb-5">
+                            <div className="col-12 col-lg-6 col-sm-12 col-md-12 mb-5">
                                 <label
                                     htmlFor="contact-phone"
                                     className="form-label"
@@ -169,64 +214,22 @@ const ContactForm = () => {
                                 )}
                             </div>
 
-                            <div className="col-12 col-lg-3 col-sm-12 col-md-12 mb-5">
-                                <div className="d-flex justify-content-between mt-2">
-                                    <span>Request for Demo?</span>
-                                    <div className="d-flex align-items-center">
-                                        <div className="input-box pb--20 rn-check-box">
-                                            <input
-                                                className="rn-check-box-input"
-                                                type="radio"
-                                                id="demoYes"
-                                                value="Yes"
-                                                {...register("isDemo", {
-                                                    required:
-                                                        "Plesae select an option",
-                                                })}
-                                            />
-                                            <label
-                                                className="rn-check-box-label"
-                                                htmlFor="demoYes"
-                                                style={{
-                                                    marginLeft: "20px",
-                                                }}
-                                            >
-                                                Yes
-                                            </label>
-                                        </div>
-                                        <div className="input-box pb--20 rn-check-box">
-                                            <input
-                                                className="rn-check-box-input"
-                                                type="radio"
-                                                id="demoNo"
-                                                value="No"
-                                                {...register("isDemo", {
-                                                    required:
-                                                        "Plesae select an option",
-                                                })}
-                                            />
-                                            <label
-                                                className="rn-check-box-label"
-                                                htmlFor="demoNo"
-                                                style={{
-                                                    marginLeft: "10px",
-                                                }}
-                                            >
-                                                No
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div style={{ marginTop: "-25px" }}>
-                                    {errors.isDemo && (
-                                        <ErrorText>
-                                            {errors.isDemo?.message}
-                                        </ErrorText>
-                                    )}
-                                </div>
+                            <div className="col-12 d-flex flex-column align-items-center mt-3">
+                                <ReCAPTCHA
+                                    ref={recaptchaRef}
+                                    sitekey={RECAPTCHA_SITE_KEY}
+                                    onChange={(token) => {
+                                        setCaptchaToken(token);
+                                        setCaptchaError(null);
+                                    }}
+                                    onExpired={() => setCaptchaToken(null)}
+                                />
+                                {captchaError && (
+                                    <ErrorText>{captchaError}</ErrorText>
+                                )}
                             </div>
 
-                            <div className="col-12 d-flex justify-content-center">
+                            <div className="col-12 d-flex flex-column align-items-center">
                                 <Button
                                     className="mt-5"
                                     type="submit"
@@ -237,11 +240,16 @@ const ContactForm = () => {
                             </div>
                             {serverState.status && (
                                 <p
-                                    className={`mt-4 font-14 ${
+                                    className={`mt-4 mb-0 font-14 ${
                                         !serverState.status.ok
                                             ? "text-danger"
-                                            : "text-success"
+                                            : ""
                                     }`}
+                                    style={
+                                        serverState.status.ok
+                                            ? { color: "#2C7FBF" }
+                                            : undefined
+                                    }
                                 >
                                     {serverState.status.msg}
                                 </p>
