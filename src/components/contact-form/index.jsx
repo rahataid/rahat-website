@@ -1,12 +1,21 @@
 import { useRef, useState } from "react";
 import Button from "@ui/button";
 import ErrorText from "@ui/error-text";
-import { set, useForm } from "react-hook-form";
+import NiceSelect from "@ui/nice-select";
+import { Controller, set, useForm } from "react-hook-form";
 import Image from "next/image";
 import Loader from "@components/loader";
 import ReCAPTCHA from "react-google-recaptcha";
 import { DemoService } from "@services/demo";
 import { RECAPTCHA_SITE_KEY } from "@config";
+
+const serviceOption = [
+    { value: "AA", text: "AA" },
+    { value: "CVA", text: "CVA" },
+    { value: "Microlearning", text: "Microlearning" },
+    { value: "All of the above", text: "All of the above" },
+    { value: "Others", text: "Others" },
+];
 
 const ContactForm = () => {
     const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +26,7 @@ const ContactForm = () => {
     const {
         register,
         handleSubmit,
+        control,
         formState: { errors },
     } = useForm({
         mode: "onChange",
@@ -36,6 +46,7 @@ const ContactForm = () => {
             form.reset();
         }
     };
+
     const onSubmit = (data, e) => {
         if (!captchaToken) {
             setCaptchaError("Please verify that you are not a robot");
@@ -195,6 +206,35 @@ const ContactForm = () => {
 
                             <div className="col-12 col-lg-12 col-sm-12 col-md-12 mb-5">
                                 <label
+                                    htmlFor="contact-services"
+                                    className="form-label"
+                                >
+                                    Choose your Services
+                                </label>
+                                <Controller
+                                    name="contactService"
+                                    control={control}
+                                    rules={{ required: "Please select a service" }}
+                                    render={({ field: { onChange, value } }) => (
+                                        <NiceSelect
+                                            options={serviceOption}
+                                            placeholder="Select a service"
+                                            defaultCurrent={serviceOption.find(
+                                                (o) => o.value === value
+                                            )}
+                                            onChange={(item) => onChange(item?.value ?? item)}
+                                        />
+                                    )}
+                                />
+                                {errors.contactService && (
+                                    <ErrorText>
+                                        {errors.contactService?.message}
+                                    </ErrorText>
+                                )}
+                            </div>
+
+                            <div className="col-12 col-lg-12 col-sm-12 col-md-12 mb-5">
+                                <label
                                     htmlFor="contact-message"
                                     className="form-label"
                                 >
@@ -240,11 +280,10 @@ const ContactForm = () => {
                             </div>
                             {serverState.status && (
                                 <p
-                                    className={`mt-4 mb-0 font-14 ${
-                                        !serverState.status.ok
+                                    className={`mt-4 mb-0 font-14 ${!serverState.status.ok
                                             ? "text-danger"
                                             : ""
-                                    }`}
+                                        }`}
                                     style={
                                         serverState.status.ok
                                             ? { color: "#2C7FBF" }

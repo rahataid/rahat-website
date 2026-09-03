@@ -5,6 +5,8 @@ const api = axios.create({
     baseURL: BLOG_CMS_HOST,
 });
 
+export const BLOGS_PAGE_SIZE = 9;
+
 export const BlogService = {
     getBlogs: async (params) => {
         return api.get("/blogs/projects/rahat?category=Blog", {
@@ -15,4 +17,3 @@ export const BlogService = {
         return api.get(`/blogs/findbyslug/${slug}`);
     },
 };
-
