@@ -71,26 +71,6 @@
     },
     {
         "id": "23",
-        "fname": "Shristi Khayargoli",
-        "designation": "Product Manager",
-        "icon_mail": "feather-mail",
-        "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:shristi.khayargoli@agriclear.io",
-        "link_linkedin": "https://www.linkedin.com/in/shristi-khayargoli/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/shristi-k-rahat-team.png"
-    },
-    {
-        "id": "20",
-        "fname": "Raghav Kattel",
-        "designation": "Software Engineer",
-        "icon_mail": "feather-mail",
-        "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:raghav.rumsan@gmail.com",
-        "link_linkedin": "https://www.linkedin.com/in/argahv/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/raghav-team-rahat.png"
-    },
-    {
-        "id": "23",
         "fname": "Surpana Surkheti",
         "designation": "Stakeholder Manager",
         "icon_mail": "feather-mail",
@@ -100,14 +80,44 @@
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/surpana-rahat-team.png"
     },
     {
-        "id": "16",
-        "fname": "Smriti Chettri",
-        "designation": "Communication Associate",
+        "id": "29",
+        "fname": "Sanjil Shahi",
+        "designation": "Project Manager",
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
-        "link_mail": "mailto:smriti.chhetri@rumsan.net",
-        "link_linkedin": "https://www.linkedin.com/in/smriti-chhetri/",
-        "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/smriti-team-rahat.png"
+        "link_mail": "mailto:sanjil.shahi@rahat.io",
+        "link_linkedin": "https://www.linkedin.com/in/sanjil-shahi-08440b263",
+        "team_image": "https://assets.rumsan.net/rahat/sanjil.jpg"
+    },
+    {
+        "id": "31",
+        "fname": "Anupama Koirala",
+        "designation": "Software Engineer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:anupama.koirala@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/anupama-koirala",
+        "team_image": "https://assets.rumsan.net/rahat/anupama.jpg"
+    },
+    {
+        "id": "32",
+        "fname": "Subash Parajuli",
+        "designation": "Software Engineer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:subash.rumsan@gmail.com",
+        "link_linkedin": "https://www.linkedin.com/in/subash-parajuli",
+        "team_image": "https://assets.rumsan.net/rahat/subash.jpg"
+    },
+    {
+        "id": "33",
+        "fname": "Mohit Rajbhandari",
+        "designation": "Software Engineer",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:mohitrumsan@gmail.com",
+        "link_linkedin": "https://www.linkedin.com/in/mohit-rajbhandari-03a059234",
+        "team_image": "https://assets.rumsan.net/rahat/mohit.jpg"
     },
     {
         "id": "28",
@@ -116,8 +126,18 @@
         "icon_mail": "feather-mail",
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:achyut.subedi@rumsan.net",
-        "link_linkedin": "https://www.linkedin.com/in/achyut-subedi-16527079/",
+        "link_linkedin": "https://www.linkedin.com/in/achyut-subedi-16527079",
         "team_image": "https://rumsan.nyc3.cdn.digitaloceanspaces.com/rahat/images/pic/achyut.png"
+    },
+    {
+        "id": "30",
+        "fname": "Krisha Sherpa",
+        "designation": "Communication Associate",
+        "icon_mail": "feather-mail",
+        "icon_linkedin": "feather-linkedin",
+        "link_mail": "mailto:krisha.sherpa@rumsan.net",
+        "link_linkedin": "https://www.linkedin.com/in/krisha-sherpa",
+        "team_image": "https://assets.rumsan.net/rahat/krisha.jpg"
     }
 ]
 
