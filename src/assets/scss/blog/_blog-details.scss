@@ -163,6 +163,10 @@
     }
 
     blockquote {
+        /* Keep the quote box off floated CMS images instead of overlapping them,
+           dropping below the float when the leftover width is too narrow */
+        display: flow-root;
+        min-width: min(100%, 320px);
         border-left: 4px solid var(--color-primary, #0066cc);
         padding: 12px 20px;
         margin: 20px 0;

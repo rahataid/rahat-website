@@ -97,7 +97,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:anupama.koirala@rumsan.net",
         "link_linkedin": "https://www.linkedin.com/in/anupama-koirala",
-        "team_image": "https://assets.rumsan.net/rahat/anupama.jpg"
+        "team_image": "https://assets.rumsan.net/rahat/anupama.png"
     },
     {
         "id": "32",
@@ -107,7 +107,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:subash.rumsan@gmail.com",
         "link_linkedin": "https://www.linkedin.com/in/subash-parajuli",
-        "team_image": "https://assets.rumsan.net/rahat/subash.jpg"
+        "team_image": "https://assets.rumsan.net/rahat/subash-1-square.jpg"
     },
     {
         "id": "33",
@@ -117,7 +117,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:mohitrumsan@gmail.com",
         "link_linkedin": "https://www.linkedin.com/in/mohit-rajbhandari-03a059234",
-        "team_image": "https://assets.rumsan.net/rahat/mohit.jpg"
+        "team_image": "https://assets.rumsan.net/rahat/mohit-1-square.jpg"
     },
     {
         "id": "28",
@@ -137,7 +137,7 @@
         "icon_linkedin": "feather-linkedin",
         "link_mail": "mailto:krisha.sherpa@rumsan.net",
         "link_linkedin": "https://www.linkedin.com/in/krisha-sherpa",
-        "team_image": "https://assets.rumsan.net/rahat/krisha.jpg"
+        "team_image": "https://assets.rumsan.net/rahat/krisha.png"
     }
 ]
 
