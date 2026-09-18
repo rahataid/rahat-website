@@ -43,12 +43,12 @@ const CareerContainer = () => {
                         lineHeight: "normal",
                     }}
                 >
-                    <span style={{ color: "#2B7EC1" }}>Current</span> openings
+                    {/* <span style={{ color: "#2B7EC1" }}>Current</span> openings */}
                 </h3>
-                <p>
+                {/* <p>
                     Do you think you are a good fit? Apply now. We would love to
                     meet you.
-                </p>
+                </p> */}
             </Container>
             <Stack className="p-4" gap={3}>
                 {data?.jobs?.map((career) => {
@@ -60,3 +60,4 @@ const CareerContainer = () => {
 };
 
 export default CareerContainer;
+
