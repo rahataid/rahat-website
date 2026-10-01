@@ -5,6 +5,15 @@
             "section": "hero-section",
             "banners": [
                 {
+                    "id": 101,
+                    "title": "Digital@UNGA Awards 2026 Winner",
+                    "subtitle": "Digital Frontier Award",
+                    "image": {
+                        "src": "https://assets.rumsan.net/rahat/rahat-highlights-unga.jpg"
+                    },
+                    "isBtnDisabled": false
+                },
+                {
                     "id": 100,
                     "title": "Rahat | Winner",
                     "subtitle": "Circle’s Unlocking Impact Pitch Competition",
