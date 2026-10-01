@@ -47,6 +47,19 @@ const SingleSlide = ({ title, image, subtitle, isBtnDisabled, linkTo }) => {
                                 </p>
                             )}
 
+                            {title === "Digital@UNGA Awards 2026 Winner" && (
+                                <p
+                                    style={{
+                                        position: "absolute",
+                                        color: "white",
+                                        bottom: 10,
+                                        right: 10,
+                                    }}
+                                >
+                                    Photo Credit: UNGA
+                                </p>
+                            )}
+
                             {title === "GSMA INNOVATION FUND GRANTEE" && (
                                 <p
                                     style={{
