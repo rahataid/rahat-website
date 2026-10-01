@@ -12,6 +12,25 @@ const AwardAndPrizes = () => (
             <div className="rn-weAre-one color-shape-7">
                 <div className="row g-5 d-flex justify-content-center">
                     <div className="col-lg-3 col-md-6 col-12">
+                        <a
+                            href="https://www.itu.int/hub/2026/09/digitalunga-awards-projects-reaching-people/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="rn-about-wrapper-card-custom text-center">
+                                <img
+                                    src="https://assets.rumsan.net/rumsan-group/digital-unga.png"
+                                    alt="digital-unga-award"
+                                    width="200px"
+                                />
+                                <p className="mt--10">
+                                    Digital@UNGA Awards 2026 - Digital Frontier
+                                    Award
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div className="col-lg-3 col-md-6 col-12">
                         <div className="rn-about-wrapper-card-custom text-center">
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/mit-solve-award-banner.png"
@@ -36,8 +55,8 @@ const AwardAndPrizes = () => (
                             </p>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 col-12 text-center">
-                        <div className="rn-about-wrapper-card-custom">
+                    <div className="col-lg-3 col-md-6 col-12">
+                        <div className="rn-about-wrapper-card-custom text-center">
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/partners-gsr-foundation.png"
                                 alt="gsr-foundation-logo"
