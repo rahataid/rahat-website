@@ -35,14 +35,28 @@ const OurHighlightListPage = ({ space, className }) => (
                                     <div className={clsx("rn-blog", className)}>
                                         <div className="inner">
                                             <div className="thumbnail">
-                                                <Image
-                                                    src={d.image_banner}
-                                                    alt={
-                                                        d.title ? d.title : "-"
-                                                    }
-                                                    width={489}
-                                                    height={366}
-                                                />
+                                                <Link
+                                                    href={`/our-highlights/${d?.slug}`}
+                                                >
+                                                    <Image
+                                                        src={d.image_banner}
+                                                        alt={
+                                                            d.title ? d.title : "-"
+                                                        }
+                                                        width={489}
+                                                        height={286}
+                                                        style={{
+                                                            width: "100%",
+                                                            height: "auto",
+                                                            aspectRatio:
+                                                                "3153 / 1844",
+                                                            objectFit: "cover",
+                                                            objectPosition:
+                                                                "center",
+                                                            borderRadius: "5px",
+                                                        }}
+                                                    />
+                                                </Link>
                                             </div>
 
                                             <div className="content">
@@ -55,7 +69,7 @@ const OurHighlightListPage = ({ space, className }) => (
                                                 >
                                                     <Link
                                                         className="short-title"
-                                                        href=""
+                                                        href={`/our-highlights/${d?.slug}`}
                                                     >
                                                         {d?.title}
                                                     </Link>
