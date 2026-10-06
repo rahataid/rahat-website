@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "react-bootstrap";
 
 const WeAre = () => (
     <div className="rn-section-gapTop">
@@ -16,7 +15,7 @@ const WeAre = () => (
             <div className="rn-weAre-one color-shape-7">
                 <div className="row g-5 d-flex justify-content-center">
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/esatya/unicef-fec-final.jpg"
                                 alt="unicef-innovation"
@@ -25,7 +24,7 @@ const WeAre = () => (
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="/images/logo/GSMA logo.png"
                                 alt="gsma-logo"
@@ -34,7 +33,7 @@ const WeAre = () => (
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/mit-solve-logo-home-page.png"
                                 alt="mit-solve"
@@ -42,8 +41,8 @@ const WeAre = () => (
                             />
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 col-6 text-center">
-                        <div className="rn-about-wrapper">
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/partners-gsr-foundation.png"
                                 alt="gsr-foundation-logo"
@@ -54,7 +53,7 @@ const WeAre = () => (
                 </div>
                 <div className="row g-5 d-flex justify-content-center pt--40">
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/partners-circle-png.png"
                                 alt="circle-logo"
@@ -63,16 +62,16 @@ const WeAre = () => (
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
-                                src="https://assets.rumsan.net/rumsan-group/460975741-ed7c5668-1f49-4b9a-ba83-c6052e69e87c.png"
-                                alt="mercy-corps-logo"
+                                src="https://assets.rumsan.net/rahat/prosper-global-logo.png"
+                                alt="prosper-global-logo"
                                 width="200px"
                             />
                         </div>
                     </div>
-                    <div className="col-lg-3 col-md-6 col-6 text-center">
-                        <div className="rn-about-wrapper">
+                    <div className="col-lg-3 col-md-6 col-6">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://rumsan.nyc3.cdn.digitaloceanspaces.com/rumsan-group/dpga-rahat.png"
                                 alt="dgpa-logo"
@@ -81,7 +80,7 @@ const WeAre = () => (
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-6">
-                        <div className="rn-about-wrapper text-center">
+                        <div className="rn-about-wrapper text-center d-flex align-items-center justify-content-center h-100">
                             <img
                                 src="https://assets.rumsan.net/rumsan-group/partners-google-startup-png.png"
                                 alt="google-startup"
