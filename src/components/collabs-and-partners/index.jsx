@@ -152,7 +152,7 @@ const CollabAndPartners = () => {
                         </div>
                         <div className="mt-3" style={iconItemStyles}>
                             <img
-                                src="https://assets.rumsan.net/rumsan-group/mercy-corp-logo.png"
+                                src="https://assets.rumsan.net/rahat/prosper-global-logo.png"
                                 alt="Icon 1"
                             />
                         </div>
