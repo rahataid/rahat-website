@@ -1,4 +1,3 @@
-import ReadMoreBtn from "@components/read-more-button";
 import React from "react";
 
 const AwardAndPrizes = () => (
@@ -11,6 +10,26 @@ const AwardAndPrizes = () => (
             </div>
             <div className="rn-weAre-one color-shape-7">
                 <div className="row g-5 d-flex justify-content-center">
+                    <div className="col-lg-3 col-md-6 col-12">
+                        <a
+                            href="https://meaningful.business/team-member/rumee-singh/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className="rn-about-wrapper-card-custom text-center">
+                                <img
+                                    src="https://assets.rumsan.net/rumsan-test/meaningful-business-100-rumee.jpg"
+                                    alt="meaningful-business-100"
+                                    width="200px"
+                                    style={{ padding: "7px" }}
+                                />
+                                <p className="mt--10">
+                                    The 2026 Meaningful
+                                    <br /> Business 100
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                     <div className="col-lg-3 col-md-6 col-12">
                         <a
                             href="https://www.itu.int/hub/2026/09/digitalunga-awards-projects-reaching-people/"
